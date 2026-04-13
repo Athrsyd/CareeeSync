@@ -1,0 +1,604 @@
+{
+    "careers": [
+        {
+            "id": "frontend_dev",
+            "name": "Frontend Developer",
+            "skills": [
+                {
+                    "id": "html",
+                    "name": "HTML",
+                    "weight": 15,
+                    "level": "basic"
+                },
+                {
+                    "id": "css",
+                    "name": "CSS",
+                    "weight": 15,
+                    "level": "basic"
+                },
+                {
+                    "id": "javascript",
+                    "name": "JavaScript",
+                    "weight": 20,
+                    "level": "intermediate"
+                },
+                {
+                    "id": "react",
+                    "name": "React",
+                    "weight": 25,
+                    "level": "advanced"
+                }
+            ]
+        },
+        {
+            "id": "backend_dev",
+            "name": "Backend Developer",
+            "skills": [
+                {
+                    "id": "nodejs",
+                    "name": "Node.js",
+                    "weight": 20,
+                    "level": "intermediate"
+                },
+                {
+                    "id": "database",
+                    "name": "Database",
+                    "weight": 20,
+                    "level": "intermediate"
+                },
+                {
+                    "id": "api",
+                    "name": "API Development",
+                    "weight": 20,
+                    "level": "advanced"
+                },
+                {
+                    "id": "auth",
+                    "name": "Authentication",
+                    "weight": 15,
+                    "level": "advanced"
+                }
+            ]
+        },
+        {
+            "id": "uiux_designer",
+            "name": "UI/UX Designer",
+            "skills": [
+                {
+                    "id": "figma",
+                    "name": "Figma",
+                    "weight": 25,
+                    "level": "intermediate"
+                },
+                {
+                    "id": "design_thinking",
+                    "name": "Design Thinking",
+                    "weight": 20,
+                    "level": "advanced"
+                },
+                {
+                    "id": "user_research",
+                    "name": "User Research",
+                    "weight": 20,
+                    "level": "intermediate"
+                },
+                {
+                    "id": "prototyping",
+                    "name": "Prototyping",
+                    "weight": 15,
+                    "level": "advanced"
+                }
+            ]
+        },
+        {
+            "id": "digital_marketing",
+            "name": "Digital Marketing",
+            "skills": [
+                {
+                    "id": "seo",
+                    "name": "SEO",
+                    "weight": 20,
+                    "level": "intermediate"
+                },
+                {
+                    "id": "social_media",
+                    "name": "Social Media Marketing",
+                    "weight": 20,
+                    "level": "basic"
+                },
+                {
+                    "id": "content_marketing",
+                    "name": "Content Marketing",
+                    "weight": 20,
+                    "level": "intermediate"
+                },
+                {
+                    "id": "ads",
+                    "name": "Paid Ads",
+                    "weight": 20,
+                    "level": "advanced"
+                }
+            ]
+        },
+        {
+            "id": "graphic_designer",
+            "name": "Graphic Designer",
+            "skills": [
+                {
+                    "id": "photoshop",
+                    "name": "Photoshop",
+                    "weight": 20,
+                    "level": "intermediate"
+                },
+                {
+                    "id": "illustrator",
+                    "name": "Illustrator",
+                    "weight": 20,
+                    "level": "intermediate"
+                },
+                {
+                    "id": "layout",
+                    "name": "Layout Design",
+                    "weight": 15,
+                    "level": "basic"
+                },
+                {
+                    "id": "branding",
+                    "name": "Branding",
+                    "weight": 20,
+                    "level": "advanced"
+                }
+            ]
+        },
+        {
+            "id": "data_analyst",
+            "name": "Data Analyst",
+            "skills": [
+                {
+                    "id": "excel",
+                    "name": "Excel",
+                    "weight": 20,
+                    "level": "basic"
+                },
+                {
+                    "id": "sql",
+                    "name": "SQL",
+                    "weight": 20,
+                    "level": "intermediate"
+                },
+                {
+                    "id": "data_visualization",
+                    "name": "Data Visualization",
+                    "weight": 20,
+                    "level": "advanced"
+                },
+                {
+                    "id": "statistics",
+                    "name": "Statistics",
+                    "weight": 20,
+                    "level": "advanced"
+                }
+            ]
+        },
+        {
+            "id": "teacher",
+            "name": "Teacher",
+            "skills": [
+                {
+                    "id": "teaching",
+                    "name": "Teaching",
+                    "weight": 20,
+                    "level": "basic"
+                },
+                {
+                    "id": "communication",
+                    "name": "Communication",
+                    "weight": 20,
+                    "level": "intermediate"
+                },
+                {
+                    "id": "lesson_plan",
+                    "name": "Lesson Planning",
+                    "weight": 20,
+                    "level": "advanced"
+                },
+                {
+                    "id": "class_management",
+                    "name": "Class Management",
+                    "weight": 20,
+                    "level": "advanced"
+                }
+            ]
+        },
+        {
+            "id": "nurse",
+            "name": "Nurse",
+            "skills": [
+                {
+                    "id": "patient_care",
+                    "name": "Patient Care",
+                    "weight": 25,
+                    "level": "basic"
+                },
+                {
+                    "id": "medical_knowledge",
+                    "name": "Medical Knowledge",
+                    "weight": 20,
+                    "level": "intermediate"
+                },
+                {
+                    "id": "emergency",
+                    "name": "Emergency Handling",
+                    "weight": 20,
+                    "level": "advanced"
+                },
+                {
+                    "id": "communication",
+                    "name": "Communication",
+                    "weight": 15,
+                    "level": "advanced"
+                }
+            ]
+        },
+        {
+            "id": "accountant",
+            "name": "Accountant",
+            "skills": [
+                {
+                    "id": "bookkeeping",
+                    "name": "Bookkeeping",
+                    "weight": 20,
+                    "level": "basic"
+                },
+                {
+                    "id": "tax",
+                    "name": "Taxation",
+                    "weight": 20,
+                    "level": "advanced"
+                },
+                {
+                    "id": "financial_report",
+                    "name": "Financial Reporting",
+                    "weight": 20,
+                    "level": "intermediate"
+                },
+                {
+                    "id": "excel",
+                    "name": "Excel",
+                    "weight": 15,
+                    "level": "intermediate"
+                }
+            ]
+        },
+        {
+            "id": "entrepreneur",
+            "name": "Entrepreneur",
+            "skills": [
+                {
+                    "id": "business_strategy",
+                    "name": "Business Strategy",
+                    "weight": 20,
+                    "level": "advanced"
+                },
+                {
+                    "id": "marketing",
+                    "name": "Marketing",
+                    "weight": 20,
+                    "level": "intermediate"
+                },
+                {
+                    "id": "finance",
+                    "name": "Financial Management",
+                    "weight": 20,
+                    "level": "advanced"
+                },
+                {
+                    "id": "leadership",
+                    "name": "Leadership",
+                    "weight": 20,
+                    "level": "advanced"
+                }
+            ]
+        },
+        {
+            "id": "chef",
+            "name": "Chef",
+            "skills": [
+                {
+                    "id": "cooking",
+                    "name": "Cooking",
+                    "weight": 25,
+                    "level": "basic"
+                },
+                {
+                    "id": "food_safety",
+                    "name": "Food Safety",
+                    "weight": 20,
+                    "level": "intermediate"
+                },
+                {
+                    "id": "menu_planning",
+                    "name": "Menu Planning",
+                    "weight": 20,
+                    "level": "advanced"
+                },
+                {
+                    "id": "presentation",
+                    "name": "Food Presentation",
+                    "weight": 15,
+                    "level": "advanced"
+                }
+            ]
+        },
+        {
+            "id": "photographer",
+            "name": "Photographer",
+            "skills": [
+                {
+                    "id": "camera",
+                    "name": "Camera Handling",
+                    "weight": 20,
+                    "level": "basic"
+                },
+                {
+                    "id": "lighting",
+                    "name": "Lighting",
+                    "weight": 20,
+                    "level": "intermediate"
+                },
+                {
+                    "id": "editing",
+                    "name": "Photo Editing",
+                    "weight": 20,
+                    "level": "advanced"
+                },
+                {
+                    "id": "composition",
+                    "name": "Composition",
+                    "weight": 20,
+                    "level": "advanced"
+                }
+            ]
+        },
+        {
+            "id": "mechanic",
+            "name": "Mechanic",
+            "skills": [
+                {
+                    "id": "engine",
+                    "name": "Engine Repair",
+                    "weight": 25,
+                    "level": "basic"
+                },
+                {
+                    "id": "diagnostic",
+                    "name": "Diagnostics",
+                    "weight": 20,
+                    "level": "intermediate"
+                },
+                {
+                    "id": "tools",
+                    "name": "Tools Handling",
+                    "weight": 20,
+                    "level": "advanced"
+                },
+                {
+                    "id": "safety",
+                    "name": "Safety Procedures",
+                    "weight": 15,
+                    "level": "advanced"
+                }
+            ]
+        },
+        {
+            "id": "civil_engineer",
+            "name": "Civil Engineer",
+            "skills": [
+                {
+                    "id": "autocad",
+                    "name": "AutoCAD",
+                    "weight": 20,
+                    "level": "intermediate"
+                },
+                {
+                    "id": "structure",
+                    "name": "Structural Analysis",
+                    "weight": 25,
+                    "level": "advanced"
+                },
+                {
+                    "id": "project_management",
+                    "name": "Project Management",
+                    "weight": 20,
+                    "level": "advanced"
+                },
+                {
+                    "id": "math",
+                    "name": "Engineering Math",
+                    "weight": 15,
+                    "level": "basic"
+                }
+            ]
+        },
+        {
+            "id": "electrician",
+            "name": "Electrician",
+            "skills": [
+                {
+                    "id": "wiring",
+                    "name": "Wiring",
+                    "weight": 25,
+                    "level": "basic"
+                },
+                {
+                    "id": "circuit",
+                    "name": "Circuit Analysis",
+                    "weight": 20,
+                    "level": "intermediate"
+                },
+                {
+                    "id": "safety",
+                    "name": "Electrical Safety",
+                    "weight": 20,
+                    "level": "advanced"
+                },
+                {
+                    "id": "troubleshooting",
+                    "name": "Troubleshooting",
+                    "weight": 20,
+                    "level": "advanced"
+                }
+            ]
+        },
+        {
+            "id": "barista",
+            "name": "Barista",
+            "skills": [
+                {
+                    "id": "coffee",
+                    "name": "Coffee Brewing",
+                    "weight": 25,
+                    "level": "basic"
+                },
+                {
+                    "id": "latte_art",
+                    "name": "Latte Art",
+                    "weight": 20,
+                    "level": "intermediate"
+                },
+                {
+                    "id": "customer_service",
+                    "name": "Customer Service",
+                    "weight": 20,
+                    "level": "advanced"
+                },
+                {
+                    "id": "machine",
+                    "name": "Machine Handling",
+                    "weight": 15,
+                    "level": "advanced"
+                }
+            ]
+        },
+        {
+            "id": "sales",
+            "name": "Sales Executive",
+            "skills": [
+                {
+                    "id": "communication",
+                    "name": "Communication",
+                    "weight": 25,
+                    "level": "basic"
+                },
+                {
+                    "id": "negotiation",
+                    "name": "Negotiation",
+                    "weight": 20,
+                    "level": "intermediate"
+                },
+                {
+                    "id": "product_knowledge",
+                    "name": "Product Knowledge",
+                    "weight": 20,
+                    "level": "advanced"
+                },
+                {
+                    "id": "closing",
+                    "name": "Closing Sales",
+                    "weight": 20,
+                    "level": "advanced"
+                }
+            ]
+        },
+        {
+            "id": "content_creator",
+            "name": "Content Creator",
+            "skills": [
+                {
+                    "id": "video_editing",
+                    "name": "Video Editing",
+                    "weight": 20,
+                    "level": "basic"
+                },
+                {
+                    "id": "storytelling",
+                    "name": "Storytelling",
+                    "weight": 20,
+                    "level": "intermediate"
+                },
+                {
+                    "id": "social_media",
+                    "name": "Social Media",
+                    "weight": 20,
+                    "level": "advanced"
+                },
+                {
+                    "id": "branding",
+                    "name": "Personal Branding",
+                    "weight": 20,
+                    "level": "advanced"
+                }
+            ]
+        },
+        {
+            "id": "hr",
+            "name": "HR Specialist",
+            "skills": [
+                {
+                    "id": "recruitment",
+                    "name": "Recruitment",
+                    "weight": 20,
+                    "level": "basic"
+                },
+                {
+                    "id": "communication",
+                    "name": "Communication",
+                    "weight": 20,
+                    "level": "intermediate"
+                },
+                {
+                    "id": "employee_relations",
+                    "name": "Employee Relations",
+                    "weight": 20,
+                    "level": "advanced"
+                },
+                {
+                    "id": "hr_admin",
+                    "name": "HR Administration",
+                    "weight": 20,
+                    "level": "advanced"
+                }
+            ]
+        },
+        {
+            "id": "logistics",
+            "name": "Logistics Officer",
+            "skills": [
+                {
+                    "id": "inventory",
+                    "name": "Inventory Management",
+                    "weight": 20,
+                    "level": "basic"
+                },
+                {
+                    "id": "supply_chain",
+                    "name": "Supply Chain",
+                    "weight": 20,
+                    "level": "intermediate"
+                },
+                {
+                    "id": "coordination",
+                    "name": "Coordination",
+                    "weight": 20,
+                    "level": "advanced"
+                },
+                {
+                    "id": "planning",
+                    "name": "Planning",
+                    "weight": 20,
+                    "level": "advanced"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,653 @@
+{
+    "projects": [
+        {
+            "skill_id": "html",
+            "title": "Struktur Website",
+            "description": "Buat file index.html lalu susun struktur menggunakan header, main, dan footer. Tambahkan teks di tiap bagian dan tampilkan di browser.",
+            "output": "Mampu membuat struktur halaman website menggunakan HTML",
+            "tools": [
+                "VS Code"
+            ],
+            "difficulty": "easy",
+            "duration": "2 jam"
+        },
+        {
+            "skill_id": "css",
+            "title": "Styling Website",
+            "description": "Hubungkan file CSS ke HTML. Atur warna, font, dan gunakan flexbox atau grid untuk layout sederhana.",
+            "output": "Mampu melakukan styling website menggunakan CSS",
+            "tools": [
+                "CSS"
+            ],
+            "difficulty": "easy",
+            "duration": "3 jam"
+        },
+        {
+            "skill_id": "javascript",
+            "title": "Form Validasi",
+            "description": "Buat form input nama dan email. Tambahkan validasi agar form tidak bisa dikirim jika kosong.",
+            "output": "Mampu membuat form interaktif dengan validasi menggunakan JavaScript",
+            "tools": [
+                "JavaScript"
+            ],
+            "difficulty": "medium",
+            "duration": "4 jam"
+        },
+        {
+            "skill_id": "react",
+            "title": "Mini App React",
+            "description": "Buat project React dengan 2 halaman dan gunakan state untuk menampilkan data sederhana.",
+            "output": "Mampu mengembangkan aplikasi web sederhana menggunakan React",
+            "tools": [
+                "React"
+            ],
+            "difficulty": "hard",
+            "duration": "1-2 hari"
+        },
+        {
+            "skill_id": "nodejs",
+            "title": "API Sederhana",
+            "description": "Buat server Express dan endpoint GET untuk mengembalikan data JSON.",
+            "output": "Mampu membuat REST API sederhana menggunakan Node.js",
+            "tools": [
+                "Node.js"
+            ],
+            "difficulty": "medium",
+            "duration": "1 hari"
+        },
+        {
+            "skill_id": "database",
+            "title": "Desain Database",
+            "description": "Buat tabel user dengan id, nama, email dan gambarkan relasi sederhana.",
+            "output": "Mampu merancang struktur database sederhana",
+            "tools": [
+                "MySQL"
+            ],
+            "difficulty": "medium",
+            "duration": "4 jam"
+        },
+        {
+            "skill_id": "api",
+            "title": "Integrasi API",
+            "description": "Ambil data dari API menggunakan fetch atau axios lalu tampilkan di halaman web.",
+            "output": "Mampu mengintegrasikan API ke dalam aplikasi",
+            "tools": [
+                "Fetch"
+            ],
+            "difficulty": "hard",
+            "duration": "1 hari"
+        },
+        {
+            "skill_id": "auth",
+            "title": "Sistem Login",
+            "description": "Buat login sederhana dengan email dan password lalu validasi user.",
+            "output": "Mampu membuat sistem autentikasi pengguna",
+            "tools": [
+                "JWT"
+            ],
+            "difficulty": "hard",
+            "duration": "1-2 hari"
+        },
+        {
+            "skill_id": "figma",
+            "title": "Desain UI",
+            "description": "Buat 2 halaman UI (login dan dashboard) menggunakan komponen sederhana.",
+            "output": "Mampu membuat desain UI aplikasi menggunakan Figma",
+            "tools": [
+                "Figma"
+            ],
+            "difficulty": "medium",
+            "duration": "1 hari"
+        },
+        {
+            "skill_id": "design_thinking",
+            "title": "Analisis Masalah",
+            "description": "Identifikasi 1 masalah user lalu tuliskan solusi menggunakan pendekatan design thinking.",
+            "output": "Mampu menganalisis masalah dan merancang solusi berbasis user",
+            "tools": [
+                "Docs"
+            ],
+            "difficulty": "medium",
+            "duration": "1 hari"
+        },
+        {
+            "skill_id": "user_research",
+            "title": "Wawancara User",
+            "description": "Buat 5 pertanyaan lalu wawancarai minimal 1 orang dan catat hasilnya.",
+            "output": "Mampu melakukan riset pengguna dan mengambil insight",
+            "tools": [
+                "Form"
+            ],
+            "difficulty": "medium",
+            "duration": "3 jam"
+        },
+        {
+            "skill_id": "prototyping",
+            "title": "Prototype",
+            "description": "Buat prototype klik di Figma dari desain yang sudah dibuat.",
+            "output": "Mampu membuat prototype interaktif aplikasi",
+            "tools": [
+                "Figma"
+            ],
+            "difficulty": "medium",
+            "duration": "4 jam"
+        },
+        {
+            "skill_id": "seo",
+            "title": "Optimasi SEO",
+            "description": "Tambahkan meta title, description, dan struktur heading (H1-H3) pada halaman web.",
+            "output": "Mampu mengoptimasi website agar SEO friendly",
+            "tools": [
+                "Google Tools"
+            ],
+            "difficulty": "medium",
+            "duration": "1 hari"
+        },
+        {
+            "skill_id": "social_media",
+            "title": "Konten Sosial Media",
+            "description": "Buat 5 konten postingan dengan caption dan jadwal posting.",
+            "output": "Mampu membuat dan merencanakan konten sosial media",
+            "tools": [
+                "Canva"
+            ],
+            "difficulty": "easy",
+            "duration": "1 hari"
+        },
+        {
+            "skill_id": "content_marketing",
+            "title": "Artikel Marketing",
+            "description": "Tulis 1 artikel minimal 300 kata dengan struktur pembuka, isi, dan penutup.",
+            "output": "Mampu membuat konten marketing dalam bentuk artikel",
+            "tools": [
+                "Docs"
+            ],
+            "difficulty": "medium",
+            "duration": "3 jam"
+        },
+        {
+            "skill_id": "ads",
+            "title": "Campaign Iklan",
+            "description": "Rancang campaign iklan dengan target audience, budget, dan tujuan.",
+            "output": "Mampu merancang strategi campaign iklan digital",
+            "tools": [
+                "Meta Ads"
+            ],
+            "difficulty": "hard",
+            "duration": "1 hari"
+        },
+        {
+            "skill_id": "photoshop",
+            "title": "Edit Gambar",
+            "description": "Edit 1 gambar dengan crop, brightness, dan tambahkan teks.",
+            "output": "Mampu mengedit gambar menggunakan Photoshop",
+            "tools": [
+                "Photoshop"
+            ],
+            "difficulty": "medium",
+            "duration": "2 jam"
+        },
+        {
+            "skill_id": "illustrator",
+            "title": "Desain Vector",
+            "description": "Buat 1 ilustrasi sederhana menggunakan bentuk dasar.",
+            "output": "Mampu membuat desain vector sederhana",
+            "tools": [
+                "Illustrator"
+            ],
+            "difficulty": "medium",
+            "duration": "3 jam"
+        },
+        {
+            "skill_id": "layout",
+            "title": "Layout Poster",
+            "description": "Buat poster sederhana dengan teks, gambar, dan komposisi rapi.",
+            "output": "Mampu membuat layout desain poster yang rapi",
+            "tools": [
+                "Canva"
+            ],
+            "difficulty": "easy",
+            "duration": "2 jam"
+        },
+        {
+            "skill_id": "branding",
+            "title": "Brand Identity",
+            "description": "Buat logo sederhana dan tentukan warna serta font brand.",
+            "output": "Mampu membuat identitas brand sederhana",
+            "tools": [
+                "Figma"
+            ],
+            "difficulty": "hard",
+            "duration": "1 hari"
+        },
+        {
+            "skill_id": "excel",
+            "title": "Analisis Data",
+            "description": "Masukkan data lalu gunakan SUM dan AVERAGE untuk menghitung hasil.",
+            "output": "Mampu mengolah dan menganalisis data menggunakan Excel",
+            "tools": [
+                "Excel"
+            ],
+            "difficulty": "easy",
+            "duration": "3 jam"
+        },
+        {
+            "skill_id": "sql",
+            "title": "Query Data",
+            "description": "Buat tabel dan jalankan query SELECT untuk mengambil data.",
+            "output": "Mampu melakukan query data menggunakan SQL",
+            "tools": [
+                "MySQL"
+            ],
+            "difficulty": "medium",
+            "duration": "4 jam"
+        },
+        {
+            "skill_id": "data_visualization",
+            "title": "Visualisasi Data",
+            "description": "Buat grafik dari data menggunakan chart di Excel.",
+            "output": "Mampu menyajikan data dalam bentuk visualisasi",
+            "tools": [
+                "Excel"
+            ],
+            "difficulty": "medium",
+            "duration": "3 jam"
+        },
+        {
+            "skill_id": "statistics",
+            "title": "Analisis Statistik",
+            "description": "Hitung mean, median, dan nilai maksimum dari data.",
+            "output": "Mampu melakukan analisis statistik dasar",
+            "tools": [
+                "Excel"
+            ],
+            "difficulty": "medium",
+            "duration": "3 jam"
+        },
+        {
+            "skill_id": "teaching",
+            "title": "Simulasi Mengajar",
+            "description": "Pilih materi lalu jelaskan ke teman selama 5 menit.",
+            "output": "Mampu menyampaikan materi pembelajaran secara efektif",
+            "tools": [
+                "PowerPoint"
+            ],
+            "difficulty": "easy",
+            "duration": "2 jam"
+        },
+        {
+            "skill_id": "lesson_plan",
+            "title": "RPP",
+            "description": "Buat rencana pembelajaran sederhana dengan tujuan dan materi.",
+            "output": "Mampu menyusun rencana pembelajaran",
+            "tools": [
+                "Docs"
+            ],
+            "difficulty": "medium",
+            "duration": "3 jam"
+        },
+        {
+            "skill_id": "class_management",
+            "title": "Manajemen Kelas",
+            "description": "Tuliskan strategi mengatur kelas agar kondusif.",
+            "output": "Mampu mengelola kelas secara efektif",
+            "tools": [
+                "Docs"
+            ],
+            "difficulty": "medium",
+            "duration": "3 jam"
+        },
+        {
+            "skill_id": "patient_care",
+            "title": "Perawatan Pasien",
+            "description": "Buat checklist langkah dasar merawat pasien.",
+            "output": "Mampu melakukan perawatan dasar pasien",
+            "tools": [
+                "SOP"
+            ],
+            "difficulty": "medium",
+            "duration": "3 jam"
+        },
+        {
+            "skill_id": "medical_knowledge",
+            "title": "Dasar Medis",
+            "description": "Pelajari materi dasar medis lalu rangkum poin penting.",
+            "output": "Mampu memahami dasar pengetahuan medis",
+            "tools": [
+                "Docs"
+            ],
+            "difficulty": "medium",
+            "duration": "3 jam"
+        },
+        {
+            "skill_id": "emergency",
+            "title": "Penanganan Darurat",
+            "description": "Tuliskan langkah-langkah penanganan kondisi darurat.",
+            "output": "Mampu melakukan penanganan dasar kondisi darurat",
+            "tools": [
+                "SOP"
+            ],
+            "difficulty": "hard",
+            "duration": "4 jam"
+        },
+        {
+            "skill_id": "bookkeeping",
+            "title": "Pembukuan",
+            "description": "Catat minimal 10 transaksi pemasukan dan pengeluaran.",
+            "output": "Mampu melakukan pembukuan keuangan sederhana",
+            "tools": [
+                "Excel"
+            ],
+            "difficulty": "easy",
+            "duration": "3 jam"
+        },
+        {
+            "skill_id": "tax",
+            "title": "Perhitungan Pajak",
+            "description": "Hitung pajak sederhana dari data transaksi.",
+            "output": "Mampu menghitung pajak sederhana",
+            "tools": [
+                "Excel"
+            ],
+            "difficulty": "medium",
+            "duration": "3 jam"
+        },
+        {
+            "skill_id": "financial_report",
+            "title": "Laporan Keuangan",
+            "description": "Susun laporan keuangan dari data yang ada.",
+            "output": "Mampu menyusun laporan keuangan",
+            "tools": [
+                "Excel"
+            ],
+            "difficulty": "medium",
+            "duration": "4 jam"
+        },
+        {
+            "skill_id": "business_strategy",
+            "title": "Strategi Bisnis",
+            "description": "Tentukan ide bisnis lalu buat model bisnis sederhana.",
+            "output": "Mampu menyusun strategi bisnis sederhana",
+            "tools": [
+                "Docs"
+            ],
+            "difficulty": "hard",
+            "duration": "1 hari"
+        },
+        {
+            "skill_id": "marketing",
+            "title": "Strategi Marketing",
+            "description": "Tentukan target pasar dan cara promosi produk.",
+            "output": "Mampu merancang strategi pemasaran",
+            "tools": [
+                "Docs"
+            ],
+            "difficulty": "medium",
+            "duration": "3 jam"
+        },
+        {
+            "skill_id": "finance",
+            "title": "Manajemen Keuangan",
+            "description": "Atur pemasukan dan pengeluaran dalam tabel.",
+            "output": "Mampu mengelola keuangan dasar",
+            "tools": [
+                "Excel"
+            ],
+            "difficulty": "medium",
+            "duration": "3 jam"
+        },
+        {
+            "skill_id": "leadership",
+            "title": "Leadership",
+            "description": "Pimpin tim kecil dan buat evaluasi hasil kerja.",
+            "output": "Mampu memimpin dan mengevaluasi tim",
+            "tools": [
+                "Docs"
+            ],
+            "difficulty": "medium",
+            "duration": "3 jam"
+        },
+        {
+            "skill_id": "cooking",
+            "title": "Memasak",
+            "description": "Pilih resep lalu masak dan dokumentasikan hasilnya.",
+            "output": "Mampu memasak menu sederhana sesuai resep",
+            "tools": [
+                "Dapur"
+            ],
+            "difficulty": "easy",
+            "duration": "2 jam"
+        },
+        {
+            "skill_id": "food_safety",
+            "title": "Food Safety",
+            "description": "Buat checklist kebersihan saat memasak.",
+            "output": "Mampu menerapkan standar kebersihan makanan",
+            "tools": [
+                "SOP"
+            ],
+            "difficulty": "medium",
+            "duration": "2 jam"
+        },
+        {
+            "skill_id": "menu_planning",
+            "title": "Menu Planning",
+            "description": "Buat daftar menu untuk 1 hari.",
+            "output": "Mampu merancang menu makanan",
+            "tools": [
+                "Docs"
+            ],
+            "difficulty": "medium",
+            "duration": "3 jam"
+        },
+        {
+            "skill_id": "camera",
+            "title": "Fotografi",
+            "description": "Ambil 5 foto dengan angle berbeda.",
+            "output": "Mampu mengambil foto dengan teknik dasar fotografi",
+            "tools": [
+                "Camera"
+            ],
+            "difficulty": "easy",
+            "duration": "2 jam"
+        },
+        {
+            "skill_id": "lighting",
+            "title": "Lighting",
+            "description": "Atur pencahayaan untuk menghasilkan foto yang terang.",
+            "output": "Mampu mengatur pencahayaan dalam fotografi",
+            "tools": [
+                "Lampu"
+            ],
+            "difficulty": "medium",
+            "duration": "2 jam"
+        },
+        {
+            "skill_id": "editing",
+            "title": "Edit Foto",
+            "description": "Edit foto dengan brightness dan contrast.",
+            "output": "Mampu mengedit foto menggunakan tools editing",
+            "tools": [
+                "Lightroom"
+            ],
+            "difficulty": "medium",
+            "duration": "2 jam"
+        },
+        {
+            "skill_id": "engine",
+            "title": "Perbaikan Mesin",
+            "description": "Identifikasi bagian mesin dan catat langkah pemeriksaan.",
+            "output": "Mampu memahami dasar perbaikan mesin",
+            "tools": [
+                "Toolkit"
+            ],
+            "difficulty": "hard",
+            "duration": "1 hari"
+        },
+        {
+            "skill_id": "diagnostic",
+            "title": "Diagnosa Mesin",
+            "description": "Cek kerusakan mesin dan tuliskan hasilnya.",
+            "output": "Mampu melakukan diagnosa kerusakan mesin",
+            "tools": [
+                "Tools"
+            ],
+            "difficulty": "medium",
+            "duration": "3 jam"
+        },
+        {
+            "skill_id": "autocad",
+            "title": "Gambar Teknik",
+            "description": "Buat desain sederhana menggunakan AutoCAD.",
+            "output": "Mampu membuat gambar teknik menggunakan AutoCAD",
+            "tools": [
+                "AutoCAD"
+            ],
+            "difficulty": "medium",
+            "duration": "1 hari"
+        },
+        {
+            "skill_id": "structure",
+            "title": "Analisis Struktur",
+            "description": "Hitung struktur sederhana menggunakan rumus dasar.",
+            "output": "Mampu melakukan analisis struktur dasar",
+            "tools": [
+                "Excel"
+            ],
+            "difficulty": "hard",
+            "duration": "1 hari"
+        },
+        {
+            "skill_id": "wiring",
+            "title": "Instalasi Listrik",
+            "description": "Buat skema wiring sederhana.",
+            "output": "Mampu membuat instalasi listrik sederhana",
+            "tools": [
+                "Toolkit"
+            ],
+            "difficulty": "medium",
+            "duration": "4 jam"
+        },
+        {
+            "skill_id": "circuit",
+            "title": "Rangkaian Listrik",
+            "description": "Analisis rangkaian listrik sederhana.",
+            "output": "Mampu memahami dan menganalisis rangkaian listrik",
+            "tools": [
+                "Tools"
+            ],
+            "difficulty": "medium",
+            "duration": "3 jam"
+        },
+        {
+            "skill_id": "coffee",
+            "title": "Membuat Kopi",
+            "description": "Buat 1 minuman kopi sesuai resep.",
+            "output": "Mampu membuat minuman kopi sesuai standar",
+            "tools": [
+                "Coffee Machine"
+            ],
+            "difficulty": "easy",
+            "duration": "1 jam"
+        },
+        {
+            "skill_id": "latte_art",
+            "title": "Latte Art",
+            "description": "Latihan membuat pola sederhana pada kopi.",
+            "output": "Mampu membuat latte art sederhana",
+            "tools": [
+                "Milk"
+            ],
+            "difficulty": "medium",
+            "duration": "2 jam"
+        },
+        {
+            "skill_id": "communication",
+            "title": "Public Speaking",
+            "description": "Presentasikan topik selama 3-5 menit dan rekam.",
+            "output": "Mampu berkomunikasi dan berbicara di depan umum",
+            "tools": [
+                "Slide"
+            ],
+            "difficulty": "medium",
+            "duration": "2 jam"
+        },
+        {
+            "skill_id": "negotiation",
+            "title": "Negosiasi",
+            "description": "Simulasikan negosiasi harga.",
+            "output": "Mampu melakukan negosiasi secara efektif",
+            "tools": [
+                "Roleplay"
+            ],
+            "difficulty": "medium",
+            "duration": "2 jam"
+        },
+        {
+            "skill_id": "video_editing",
+            "title": "Edit Video",
+            "description": "Gabungkan klip video dan tambahkan teks serta musik.",
+            "output": "Mampu mengedit video menggunakan tools editing",
+            "tools": [
+                "CapCut"
+            ],
+            "difficulty": "medium",
+            "duration": "3 jam"
+        },
+        {
+            "skill_id": "storytelling",
+            "title": "Storytelling",
+            "description": "Buat cerita pendek dengan alur yang jelas.",
+            "output": "Mampu membuat storytelling yang menarik",
+            "tools": [
+                "Docs"
+            ],
+            "difficulty": "medium",
+            "duration": "2 jam"
+        },
+        {
+            "skill_id": "recruitment",
+            "title": "Rekrutmen",
+            "description": "Seleksi kandidat berdasarkan CV.",
+            "output": "Mampu melakukan proses rekrutmen sederhana",
+            "tools": [
+                "Docs"
+            ],
+            "difficulty": "medium",
+            "duration": "3 jam"
+        },
+        {
+            "skill_id": "employee_relations",
+            "title": "Relasi Karyawan",
+            "description": "Buat solusi dari konflik kerja sederhana.",
+            "output": "Mampu mengelola hubungan karyawan",
+            "tools": [
+                "Docs"
+            ],
+            "difficulty": "medium",
+            "duration": "3 jam"
+        },
+        {
+            "skill_id": "inventory",
+            "title": "Manajemen Stok",
+            "description": "Catat keluar masuk barang minimal 10 data.",
+            "output": "Mampu mengelola stok barang",
+            "tools": [
+                "Excel"
+            ],
+            "difficulty": "easy",
+            "duration": "3 jam"
+        },
+        {
+            "skill_id": "supply_chain",
+            "title": "Supply Chain",
+            "description": "Buat alur distribusi barang.",
+            "output": "Mampu memahami alur supply chain",
+            "tools": [
+                "Docs"
+            ],
+            "difficulty": "medium",
+            "duration": "3 jam"
+        }
+    ]
+}
