@@ -14,7 +14,7 @@ use App\Models\UserCareer;
 use App\Models\ProjectsFinished;
 use App\Models\Portfolio;
 
-#[Fillable(['name', 'email', 'password'])]
+#[Fillable(['username', 'email', 'password'])]
 #[Hidden(['password', 'remember_token'])]
 class User extends Authenticatable
 {

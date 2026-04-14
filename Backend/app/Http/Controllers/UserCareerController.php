@@ -3,8 +3,82 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Validator;
+use Illuminate\Support\Facades\Auth;
+use App\Models\UserCareer;
 
 class UserCareerController extends Controller
 {
-    //
+    public function InputCareer(Request $request)
+    {
+        $validate = Validator::make($request->all(), [
+            'career_name' => "string|required",
+            'skills_mastery' => "string|required",
+            'level' => "string|required"
+        ], [
+            'career_name.required' => "Career name wajib diisi!",
+            'skills_mastery.required' => "Skills mastery wajib diisi!",
+            'level.required' => "Level wajib diisi!"
+        ]);
+
+        if ($validate->fails()) {
+            return response()->json([
+                'message' => $validate->errors()
+            ], 422);
+        }
+
+        $userCareer = UserCareer::create([
+            'user_id' => Auth::id(),
+            'career_name' => $request->career_name,
+            'skills_mastery' => $request->skills_mastery,
+            'level' => $request->level
+        ]);
+
+        return response()->json([
+            'message' => "Career berhasil ditambahkan!",
+            'data' => $userCareer
+        ], 201);
+    }
+    public function GetCareer()
+    {
+        $userCareers = UserCareer::where('user_id', Auth::id())->get();
+
+        return response()->json([
+            'message' => "Career berhasil diambil!",
+            'data' => $userCareers
+        ], 200);
+    }
+    public function UpdateCareer(Request $request, string $id)
+    {
+        $validasi = Validator::make($request->all(), [
+            'skills_mastery' => "string|required",
+            'level' => "string|required"
+        ], [
+            'skills_mastery.required' => "Skills mastery wajib diisi!",
+            'level.required' => "Level wajib diisi!"
+        ]);
+
+        if ($validasi->fails()) {
+            return response()->json([
+                'message' => $validasi->errors()
+            ], 422);
+        }
+
+        $userCareer = UserCareer::find($id);
+        if (!$userCareer) {
+            return response()->json([
+                'message' => "Career tidak ditemukan!"
+            ], 404);
+        }
+
+        $userCareer->update([
+            'skills_mastery' => $request->skills_mastery,
+            'level' => $request->level
+        ]);
+
+        return response()->json([
+            'message' => "Career berhasil diperbarui!",
+            'data' => $userCareer
+        ], 200);
+    }
 }

@@ -14,6 +14,10 @@ class UserCareer extends Model
         'level',
     ];
 
+    protected $casts = [
+        'skills_mastery' => 'array',
+    ];
+
     public function user()
     {
         return $this->belongsTo(User::class);
