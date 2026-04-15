@@ -3,7 +3,7 @@ import {useEffect} from 'react'
 import { Routes, Route, useNavigate, useLocation } from 'react-router-dom'
 import Auth from '../page/Auth/Auth';
 import Pretest from '../page/Pretest/Pretest';
-import Dashboard from '../page/Dashboard/DashComponent/NavDash';
+import Dashboard from '../page/Dashboard/Dashboard';
 
 
 const Router = () => {

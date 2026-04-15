@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import Logo from '../../../assets/Logo_CareerSync.svg'
+import Logo from '../../assets/Logo_CareerSync.svg'
 
 
 const NavIcon = [
@@ -101,9 +101,8 @@ const SidebarIcon = ({ item }) => {
 
 const NavDash = () => {
   return (
-    <aside className="bg-nav top-0 left-0 h-screen w-40 border-t-0">
+    <aside className="bg-nav h-screen shrink w-40 border-t-0">
       <div className="flex w-full h-full flex-row md:justify-start justify-around gap-5 items-center lg:flex-col lg:items-center md:py-6 md:flex-col md:items-center">
-
         {/* Logo */}
         <div className="flex flex-row justify-center items-center mb-4 w-full">
           <Link to="/" className="flex items-center gap-2">
@@ -119,6 +118,35 @@ const NavDash = () => {
             <SidebarIcon key={item.id} item={item} />
           </Link>
         ))}
+
+        <div className="w-35 h-[1.25px] bg-[#5482B4] mt-auto"></div>
+        <div className="flex flex-row items-center justify-start w-35 h-10 pl-2 cursor-pointer hover:bg-white rounded-full">
+          <div className="flex flex-col justify-center items-center h-12 w-12">
+            <svg
+              width="30"
+              height="30"
+              viewBox="0 0 40 40"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M26.8751 20C26.8751 19.6685 26.7434 19.3505 26.509 19.1161C26.2746 18.8817 25.9566 18.75 25.6251 18.75H7.33678L10.6051 15.95C10.7299 15.8432 10.8324 15.7129 10.9068 15.5664C10.9811 15.42 11.026 15.2604 11.0386 15.0966C11.0513 14.9329 11.0317 14.7683 10.9807 14.6121C10.9298 14.456 10.8486 14.3114 10.7418 14.1867C10.635 14.0619 10.5046 13.9594 10.3582 13.885C10.2118 13.8106 10.0522 13.7658 9.88842 13.7531C9.72468 13.7404 9.56004 13.7601 9.40391 13.8111C9.24778 13.862 9.10321 13.9432 8.97845 14.05L3.14512 19.05C3.00789 19.1673 2.89772 19.313 2.82218 19.477C2.74664 19.641 2.70752 19.8194 2.70752 20C2.70752 20.1806 2.74664 20.359 2.82218 20.523C2.89772 20.687 3.00789 20.8326 3.14512 20.95L8.97845 25.95C9.2304 26.1657 9.55773 26.2725 9.88842 26.2469C10.2191 26.2212 10.5261 26.0653 10.7418 25.8133C10.9575 25.5614 11.0643 25.234 11.0386 24.9034C11.013 24.5727 10.8571 24.2657 10.6051 24.05L7.33845 21.25H25.6251C25.9566 21.25 26.2746 21.1183 26.509 20.8839C26.7434 20.6495 26.8751 20.3315 26.8751 20Z"
+                fill="#021124"
+              />
+              <path
+                d="M15.625 13.3333C15.625 14.5033 15.625 15.0883 15.9067 15.51C16.028 15.6913 16.1837 15.847 16.365 15.9683C16.7867 16.25 17.3717 16.25 18.5417 16.25H25.625C26.6196 16.25 27.5734 16.6451 28.2766 17.3483C28.9799 18.0516 29.375 19.0054 29.375 20C29.375 20.9946 28.9799 21.9484 28.2766 22.6516C27.5734 23.3549 26.6196 23.75 25.625 23.75H18.5417C17.3717 23.75 16.7867 23.75 16.365 24.03C16.1835 24.1518 16.0278 24.3081 15.9067 24.49C15.625 24.9117 15.625 25.4967 15.625 26.6667C15.625 31.38 15.625 33.7383 17.09 35.2017C18.5533 36.6667 20.91 36.6667 25.6233 36.6667H27.29C32.0067 36.6667 34.3617 36.6667 35.8267 35.2017C37.2917 33.7383 37.2917 31.38 37.2917 26.6667V13.3333C37.2917 8.61999 37.2917 6.26166 35.8267 4.79833C34.3617 3.33499 32.005 3.33333 27.2917 3.33333H25.625C20.91 3.33333 18.5533 3.33333 17.09 4.79833C15.625 6.26166 15.625 8.61999 15.625 13.3333Z"
+                fill="#021124"
+              />
+            </svg>
+          </div>
+          <div className="w-20">
+            <h1 className="text-sm font-bold font-inclusive-sans ml-2">
+              Logout
+            </h1>
+          </div>
+        </div>
       </div>
     </aside>
   );
