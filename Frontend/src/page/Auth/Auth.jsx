@@ -15,9 +15,9 @@ const Auth = () => {
     return (
         <div className='w-full h-screen flex flex-col items-center justify-center gap-4 relative'>
             <div className="background relative -z-30"></div>
-            <div className={`container z-10 bg-[#021124]/50 w-4/5 h-4/5 rounded-xl backdrop-blur-xl flex items-center gap-6 overflow-hidden`}>
+            <div className={`container z-10 bg-[#021124]/50 w-7/8 h-4/5 rounded-xl backdrop-blur-xl flex items-center gap-6 overflow-hidden`}>
                 
-                <div className={`containter flex flex-col justify-center w-1/2 h-full text-white transition-all duration-500 ease-in-out transform ${
+                <div className={`containter flex flex-col justify-center w-1/2 h-full text-white transition-all duration-700 ease-in-out transform ${
                     isSignIn ? 'translate-x-full opacity-100' : 'translate-x-0 opacity-100'
                 }`}>
                     <div className={`realtive ${isSignIn ? 'text-end items-end px-10' : 'items-start text-justify pl-10 p-17'}`}>
@@ -30,8 +30,8 @@ const Auth = () => {
                     </div>
                 </div>
 
-                <div className={`container w-1/2 h-full bg-[#021124]/90 rounded-xl text-white transition-all duration-500 ease-in-out transform ${
-                    isSignIn ? '-translate-x-131' : 'translate-x-0'
+                <div className={`container w-1/2 h-full bg-[#021124]/90 rounded-xl text-white transition-all duration-700 ease-in-out transform ${
+                    isSignIn ? '-translate-x-143' : 'translate-x-0'
                 }`}>
                     <div className="container flex flex-row items-center justify-center h-full w-full">
                         <div className="container w-3/4 h-full flex flex-col items-start justify-center gap-4">

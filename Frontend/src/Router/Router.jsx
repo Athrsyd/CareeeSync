@@ -2,6 +2,7 @@
 import {useEffect} from 'react'
 import { Routes, Route, useNavigate, useLocation } from 'react-router-dom'
 import Auth from '../page/Auth/Auth';
+import Pretest from '../page/Pretest/Pretest';
 
 
 const Router = () => {
@@ -21,6 +22,7 @@ const Router = () => {
         <Routes>
             <Route path="/" element={'hello'} />
             <Route path="/auth" element={<Auth />} />
+            <Route path="/pretest" element={<Pretest />} />
         </Routes>
     )
 }
