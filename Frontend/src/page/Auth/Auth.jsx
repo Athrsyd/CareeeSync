@@ -1,9 +1,17 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { FaInstagram } from "react-icons/fa6";
 import { FaGoogle, FaFacebook } from "react-icons/fa";
 import { Eye, EyeOff } from "lucide-react";
+import AuthHooks from '../../hooks/AuthHooks';
 
 const Auth = () => {
+    const {
+        username, setUsername,
+        email, setEmail,
+        password, setPassword,
+        AuthLogin, setAuthLogin,
+        handleRegister, handleChange, handleLogin } = AuthHooks();
+
     const [isSignIn, setIsSignIn] = useState(false);
     const [showPassword, setShowPassword] = useState(false);
 
@@ -21,10 +29,10 @@ const Auth = () => {
             <div className={`container z-10 bg-[#021124]/50 w-7/8 h-4/5 rounded-xl backdrop-blur-xl flex items-center gap-6 overflow-hidden`}>
 
                 <div className={`containter flex flex-col ${deviceWidth < 768 ? 'hidden' : 'block'} justify-center w-1/2 h-full text-white transition-all duration-700 ease-in-out transform 
-                ${ deviceWidth < 768 ? 'transition-none' : isSignIn ? 'translate-x-full opacity-100' : 'translate-x-0 opacity-100'
+                ${deviceWidth < 768 ? 'transition-none' : isSignIn ? 'translate-x-full opacity-100' : 'translate-x-0 opacity-100'
                     }}`}
-                    
-                    >
+
+                >
                     <div className={`realtive ${isSignIn ? 'text-end items-end px-10' : 'items-start text-justify pl-10 p-17'}`}>
                         <h1 className='text-4xl font-bold mb-2'>
                             {isSignIn ? 'Keep Proving Your Skills' : 'Build Your Future Skills'}
@@ -45,17 +53,17 @@ const Auth = () => {
                                 ${isSignIn ? '-translate-x-1' : 'translate-x-0'}`}>
                                 {isSignIn ? 'Welcome Back!' : 'Create Your Account'}
                             </h1>
-                            <form action="" method="post" className='flex flex-col justify-center items-start w-9/10 pl-5 py-3 gap-10'>
+                            <form action="" method="post" className='flex flex-col justify-center items-start w-9/10 pl-5 py-3 gap-10' onSubmit={isSignIn ? handleLogin : handleRegister}>
                                 {!isSignIn && (
                                     <>
-                                        <input type="text" name='username' placeholder='Your Name'
+                                        <input autoComplete='off' type="text" name='username' placeholder='Your Name' onChange={handleChange}
                                             className='w-full outline-0 border-b border-b-white/50 py-2 transition-opacity duration-300' />
 
-                                        <input type="text" name='email' placeholder='Your Email'
+                                        <input autoComplete='off' type="text" name='email' placeholder='Your Email' onChange={handleChange}
                                             className='w-full outline-0 border-b border-b-white/50 py-2 transition-opacity duration-300' />
                                         <div className="relative w-full flex items-center transition-opacity duration-300">
-                                            <input type={showPassword ? "text" : "password"} name='password' placeholder='Create Password'
-                                                className='w-full outline-0 border-b border-b-white/50 py-2' />
+                                            <input autoComplete='off' type={showPassword ? "text" : "password"} name='password' placeholder='Create Password'
+                                                className='w-full outline-0 border-b border-b-white/50 py-2' onChange={handleChange} />
                                             <button className='opacity-50 w-10 h-10 hover:opacity-100 transition-opacity' type="button" onClick={() => setShowPassword(!showPassword)}>
                                                 {showPassword ? <EyeOff size={20} /> : <Eye size={20} />}
                                             </button>
@@ -64,10 +72,10 @@ const Auth = () => {
                                 )}
                                 {isSignIn && (
                                     <>
-                                        <input type="text" name='email' placeholder='Your Email'
+                                        <input autoComplete='off' type="text" name='email' placeholder='Your Email' onChange={handleChange}
                                             className='w-full outline-0 border-b border-b-white/50 py-2 transition-opacity duration-300' />
                                         <div className="relative w-full flex items-center flex-row transition-opacity duration-300">
-                                            <input type={showPassword ? "text" : "password"} name='password' placeholder='Your Password'
+                                            <input autoComplete='off' type={showPassword ? "text" : "password"} name='password' placeholder='Your Password' onChange={handleChange}
                                                 className='w-full outline-0 border-b border-b-white/50 py-2' />
                                             <button className='opacity-50 w-10 h-10 hover:opacity-100 transition-opacity' type='button' onClick={() => setShowPassword(!showPassword)}>
                                                 {showPassword ? <EyeOff size={20} /> : <Eye size={20} />}
