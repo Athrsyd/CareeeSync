@@ -3,6 +3,7 @@ import {useEffect} from 'react'
 import { Routes, Route, useNavigate, useLocation } from 'react-router-dom'
 import Auth from '../page/Auth/Auth';
 import Pretest from '../page/Pretest/Pretest';
+import Dashboard from '../page/Dashboard/DashComponent/NavDash';
 
 
 const Router = () => {
@@ -23,6 +24,7 @@ const Router = () => {
             <Route path="/" element={'hello'} />
             <Route path="/auth" element={<Auth />} />
             <Route path="/pretest" element={<Pretest />} />
+            <Route path="/dashboard" element={<Dashboard />} />
         </Routes>
     )
 }
