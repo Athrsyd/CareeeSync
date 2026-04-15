@@ -1,8 +1,11 @@
 import React from 'react'
+import Router from './Router/Router'
 
 const App = () => {
   return (
-    <div className='font-bold text-5xl'>App</div>
+    <>
+      <Router />
+    </>
   )
 }
 
