@@ -1,4 +1,4 @@
-import React from 'react'
+import {useState} from 'react'
 import { Link } from 'react-router-dom'
 import Logo from '../../assets/Logo_CareerSync.svg'
 
@@ -82,10 +82,10 @@ const NavIcon = [
   },
 ];
 
-const SidebarIcon = ({ item }) => {
+const SidebarIcon = ({ item, onClick, menuActive }) => {
   return (
     <>
-      <div className="flex flex-row items-center justify-start w-full h-10 cursor-pointer hover:bg-white rounded-l-full">
+      <div className={`flex flex-row transition-all ease-in duration-200 items-center justify-start w-full h-10 cursor-pointer hover:translate-x-1  rounded-l-full ${menuActive === item.id ? 'bg-white' : ''}`} onClick={onClick}>
         <div className="flex flex-col justify-center items-center h-12 w-12">
           {item.icon}
         </div>
@@ -100,6 +100,7 @@ const SidebarIcon = ({ item }) => {
 }
 
 const NavDash = () => {
+  const [menuActive, setMenuActive] = useState('home');
   return (
     <aside className="bg-nav h-screen shrink w-40 border-t-0">
       <div className="flex w-full h-full flex-row md:justify-start justify-around gap-5 items-center lg:flex-col lg:items-center md:py-6 md:flex-col md:items-center">
@@ -115,12 +116,12 @@ const NavDash = () => {
 
         {NavIcon.map((item) => (
           <Link to={item.path} key={item.id} className="w-full pl-4">
-            <SidebarIcon key={item.id} item={item} />
+            <SidebarIcon key={item.id} item={item} onClick={() => setMenuActive(item.id)} menuActive={menuActive} />
           </Link>
         ))}
 
         <div className="w-35 h-[1.25px] bg-[#5482B4] mt-auto"></div>
-        <div className="flex flex-row items-center justify-start w-35 h-10 pl-2 cursor-pointer hover:bg-white rounded-full">
+        <div className="flex flex-row items-center justify-start w-35 h-10 pl-2 cursor-pointer hover:bg-white hover:scale-105 transition-all ease-in-out duration-300 rounded-full">
           <div className="flex flex-col justify-center items-center h-12 w-12">
             <svg
               width="30"
