@@ -11,28 +11,34 @@ const Auth = () => {
         setIsSignIn(!isSignIn);
         setShowPassword(false);
     }
-    
+
+    const deviceWidth = window.innerWidth;
+
+
     return (
         <div className='w-full h-screen flex flex-col items-center justify-center gap-4 relative'>
             <div className="background relative -z-30"></div>
             <div className={`container z-10 bg-[#021124]/50 w-7/8 h-4/5 rounded-xl backdrop-blur-xl flex items-center gap-6 overflow-hidden`}>
-                
-                <div className={`containter flex flex-col justify-center w-1/2 h-full text-white transition-all duration-700 ease-in-out transform ${
-                    isSignIn ? 'translate-x-full opacity-100' : 'translate-x-0 opacity-100'
-                }`}>
+
+                <div className={`containter flex flex-col ${deviceWidth < 768 ? 'hidden' : 'block'} justify-center w-1/2 h-full text-white transition-all duration-700 ease-in-out transform 
+                ${ deviceWidth < 768 ? 'transition-none' : isSignIn ? 'translate-x-full opacity-100' : 'translate-x-0 opacity-100'
+                    }}`}
+                    
+                    >
                     <div className={`realtive ${isSignIn ? 'text-end items-end px-10' : 'items-start text-justify pl-10 p-17'}`}>
                         <h1 className='text-4xl font-bold mb-2'>
                             {isSignIn ? 'Keep Proving Your Skills' : 'Build Your Future Skills'}
                         </h1>
                         <p className={`${isSignIn ? 'text-xl' : 'text-lg'}`}>
-                            {isSignIn ? 'Continue your journey and track your career progress.' : 'Discover your potential, close your skill gap, and prove your value through real projects.'}
+                            {isSignIn ? 'Continue your journey and track your career progress.' :
+                                'Discover your potential, close your skill gap, and prove your value through real projects.'}
                         </p>
                     </div>
                 </div>
 
-                <div className={`container w-1/2 h-full bg-[#021124]/90 rounded-xl text-white transition-all duration-700 ease-in-out transform ${
-                    isSignIn ? '-translate-x-143' : 'translate-x-0'
-                }`}>
+                <div className={`container ${deviceWidth < 768 ? 'w-full' : 'w-1/2'} h-full bg-[#021124]/90 rounded-xl text-white transition-all duration-700 ease-in-out transform
+                ${deviceWidth < 768 ? 'transition-none' : isSignIn ? '-translate-x-143' : 'translate-x-0'
+                    }`}>
                     <div className="container flex flex-row items-center justify-center h-full w-full">
                         <div className="container w-3/4 h-full flex flex-col items-start justify-center gap-4">
                             <h1 className={`font-bold text-3xl text-start px-5 transition-all duration-300 ease-in-out 
@@ -64,7 +70,7 @@ const Auth = () => {
                                             <input type={showPassword ? "text" : "password"} name='password' placeholder='Your Password'
                                                 className='w-full outline-0 border-b border-b-white/50 py-2' />
                                             <button className='opacity-50 w-10 h-10 hover:opacity-100 transition-opacity' type='button' onClick={() => setShowPassword(!showPassword)}>
-                                                {showPassword ? <EyeOff size={20}/> : <Eye size={20}/>}
+                                                {showPassword ? <EyeOff size={20} /> : <Eye size={20} />}
                                             </button>
                                         </div>
                                     </>
