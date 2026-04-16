@@ -48,7 +48,7 @@ const Auth = () => {
                 </div>
 
                 <div className={`container ${deviceWidth < 768 ? 'w-full' : 'w-1/2'} h-full bg-[#021124]/90 rounded-xl text-white transition-all duration-700 ease-in-out transform
-                ${deviceWidth < 768 ? 'transition-none' : isSignIn ? '-translate-x-143' : 'translate-x-0'
+                ${deviceWidth < 768 ? 'transition-none' : deviceWidth < 1024 ? (isSignIn ? '-translate-x-93' : 'translate-x-0') : (isSignIn ? '-translate-x-143' : 'translate-x-0')
                     }`}>
                     <div className="container flex flex-row items-center justify-center h-full w-full">
                         <div className="container w-3/4 h-full flex flex-col items-start justify-center gap-4">
@@ -87,12 +87,12 @@ const Auth = () => {
                                     </>
                                 )}
                                 <div className="w-full flex flex-col items-center justify-center gap-2">
-                                    <button className='w-full bg-[#5482B4] rounded-xl py-2 text-white font-bold hover:bg-[#4a6fa3] transition-colors duration-300'>
+                                    <button onClick={()=>setShowPassword(false)} className='w-full bg-primary rounded-xl py-2 text-white font-bold hover:bg-[#4a6fa3] transition-colors duration-300'>
                                         {isSignIn ? 'Sign In' : 'Sign Up'}
                                     </button>
                                     <p className='text-center font-light text-white/50'>
                                         {isSignIn ? 'Don\'t have an account?' : 'Already have an account?'}
-                                        <span className='text-[#5482B4] font-semibold cursor-pointer hover:text-white transition-colors duration-300' onClick={toggleButton}>
+                                        <span className='text-primary font-semibold cursor-pointer hover:text-white transition-colors duration-300' onClick={toggleButton}>
                                             {' '}{isSignIn ? 'Sign Up' : 'Sign In'}
                                         </span>
                                     </p>
@@ -105,9 +105,9 @@ const Auth = () => {
                             <div className="garis bg-white w-0.5 h-35"></div>
                         </div>
                         <div className="flex flex-col items-center justify-center gap-5 w-1/10">
-                            <button className='flex flex-row items-center justify-center gap-2 w-8 h-8 bg-[#5482B4] rounded-full py-2 text-[#021124] hover:bg-[#4a6fa3] transition-colors duration-300'><FaInstagram /></button>
-                            <button className='flex flex-row items-center justify-center gap-2 w-8 h-8 bg-[#5482B4] rounded-full py-2 text-[#021124] hover:bg-[#4a6fa3] transition-colors duration-300'><FaGoogle /> </button>
-                            <button className='flex flex-row items-center justify-center gap-2 w-8 h-8 bg-[#5482B4] rounded-full py-2 text-[#021124] hover:bg-[#4a6fa3] transition-colors duration-300'><FaFacebook /> </button>
+                            <button className='flex flex-row items-center justify-center gap-2 w-8 h-8 bg-primary rounded-full py-2 text-[#021124] hover:bg-[#4a6fa3] transition-colors duration-300'><FaInstagram /></button>
+                            <button className='flex flex-row items-center justify-center gap-2 w-8 h-8 bg-primary rounded-full py-2 text-[#021124] hover:bg-[#4a6fa3] transition-colors duration-300'><FaGoogle /> </button>
+                            <button className='flex flex-row items-center justify-center gap-2 w-8 h-8 bg-primary rounded-full py-2 text-[#021124] hover:bg-[#4a6fa3] transition-colors duration-300'><FaFacebook /> </button>
                         </div>
                     </div>
                 </div>

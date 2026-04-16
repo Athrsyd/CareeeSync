@@ -1,9 +1,9 @@
-/* eslint-disable react-hooks/set-state-in-effect */
 import { useState, useEffect } from 'react'
 import Header from '../../components/Pretest/Header';
 import Skill from '../../components/Pretest/Skill';
 import CareerOptions from '../../data/careerOptions.json'
 import CareerHooks from '../../hooks/CareerHooks';
+import background from '../../assets/bg-auth.jpeg'
 
 const Pretest = () => {
     const [page, setPage] = useState(1);
@@ -103,9 +103,13 @@ const Pretest = () => {
     }
 
     return (
-        <div className='w-full h-screen flex flex-col items-center justify-center gap-4 relative'>
-            <div className="background relative -z-30"></div>
-            <div className='container px-10 z-10 bg-[#021124]/60 w-3/5 h-4/5 rounded-xl backdrop-blur-xl flex items-center gap-6 flex-col justify-between py-5'>
+        <div className='w-full h-screen items-center justify-center gap-4 '>
+            <div className="background flex justify-start w-full h-screen relative -z-30" >
+                <img src={background} alt="background" className=' object-cover' />
+            </div>
+            {/* <div className='container px-10 z-10 bg-[#021124]/60 w-3/5 h-4/5 rounded-xl backdrop-blur-xl flex items-center gap-6 flex-col justify-between py-5'> */}
+            <div className={`container px-10 py-15 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-40 bg-[#021124]/30 w-3/5 h-4/5 rounded-xl
+                backdrop-blur-xl flex flex-col items-center justify-center gap-10 overflow-hidden`}>
                 <Header data={page} />
 
                 {page === 1 ? (
@@ -126,7 +130,7 @@ const Pretest = () => {
                         </div>
                         <div className="container w-full flex flex-col items-center justify-center">
                             <button
-                                className={`bg-[#5482B4] w-9/10 rounded-2xl text-white py-3 px-6 hover:bg-[#0a3d7a] transition-colors duration-300 ${preventNext ? 'opacity-50 cursor-not-allowed' : ''}`}
+                                className={`bg-primary w-9/10 rounded-2xl text-white py-3 px-6 hover:bg-[#0a3d7a] transition-colors duration-300 ${preventNext ? 'opacity-50 cursor-not-allowed' : ''}`}
                                 onClick={handleClickStepOne}
                                 disabled={preventNext}
                             >
@@ -151,9 +155,9 @@ const Pretest = () => {
                                 ))}
                             </div>
                         </div>
-                        <div className="buttons flex w-full flex-row items-center justify-center gap-10">
-                            <button onClick={handlePrevOne} className='bg-[#5482B4] w-9/10 rounded-2xl text-white py-3 px-6 hover:bg-[#0a3d7a] transition-colors duration-300 font-semibold'>Prev</button>
-                            <button onClick={() => setPage(page + 1)} className='bg-[#5482B4] w-9/10 rounded-2xl text-white py-3 px-6 hover:bg-[#0a3d7a] transition-colors duration-300 font-semibold'>Next</button>
+                        <div className="buttons -mt-11 flex w-full flex-row items-center justify-center gap-10">
+                            <button onClick={handlePrevOne} className='bg-primary w-9/10 rounded-2xl text-white py-3 px-6 hover:bg-[#0a3d7a] transition-colors duration-300 font-semibold'>Prev</button>
+                            <button onClick={() => setPage(page + 1)} className='bg-primary w-9/10 rounded-2xl text-white py-3 px-6 hover:bg-[#0a3d7a] transition-colors duration-300 font-semibold'>Next</button>
                         </div>
                     </>
                 ) : page === 3 ? (
@@ -162,23 +166,23 @@ const Pretest = () => {
                             <div className="w-17/20">
                                 <h1 className='text-xl text-start font-bold text-white mb-6'>Konfirmasi Pilihan Anda</h1>
                                 <div className="container flex flex-col items-start justify-center gap-3">
-                                    <div className='bg-linear-to-br from-[#021124]/60 to-[#0a2847]/40 w-full rounded-2xl p-2 border-2 border-[#5482B4]/30'>
+                                    <div className='bg-linear-to-br from-[#021124]/60 to-[#0a2847]/40 w-full rounded-2xl p-2 border-2 border-primary/30'>
                                         <div className="flex items-center gap-2 mb-2">
-                                            <span className="text-[#5482B4] font-bold">✓</span>
+                                            <span className="text-primary font-bold">✓</span>
                                             <h2 className='text-lg font-semibold text-gray-300'>Tujuan Karir <span className='opacity-50'>(anda tidak bisa mengubahnya setelah ini)</span></h2>
                                         </div>
                                         <p className='text-xl font-bold text-white ml-6'>{selectedCareerName}</p>
                                     </div>
-                                    <div className='bg-linear-to-br from-[#021124]/60 to-[#0a2847]/40 w-full rounded-2xl p-2 border-2 border-[#5482B4]/30'>
+                                    <div className='bg-linear-to-br from-[#021124]/60 to-[#0a2847]/40 w-full rounded-2xl p-2 border-2 border-primary/30'>
                                         <div className="flex items-center gap-2 mb-3">
-                                            <span className="text-[#5482B4] font-bold">✓</span>
+                                            <span className="text-primary font-bold">✓</span>
                                             <h2 className='text-lg font-semibold text-gray-300'>Skills yang Anda Miliki:</h2>
                                         </div>
                                         <div className="flex flex-wrap gap-2 ml-6">
                                             {selectedSkills.map((skillId, index) => {
                                                 const skill = skillList.find(s => s.id === skillId);
                                                 return skill ? (
-                                                    <span key={index} className='bg-[#5482B4]/20 text-white px-3 py-1 rounded-lg text-sm font-semibold'>{skill.name}</span>
+                                                    <span key={index} className='bg-primary/20 text-white px-3 py-1 rounded-lg text-sm font-semibold'>{skill.name}</span>
                                                 ) : null;
                                             })}
                                         </div>
@@ -187,8 +191,8 @@ const Pretest = () => {
                             </div>
                         </div>
                         <div className="buttons flex w-full flex-row items-center justify-center gap-10">
-                            <button onClick={() => setPage(page - 1)} className='bg-[#5482B4] w-9/10 rounded-2xl text-white py-3 px-6 hover:bg-[#0a3d7a] transition-colors duration-300 font-semibold'>Prev</button>
-                            <button onClick={handleSubmit} className='bg-[#5482B4] w-9/10 rounded-2xl text-white py-3 px-6 hover:bg-[#0a3d7a] transition-colors duration-300 font-semibold'>Let's Proof Your Skill</button>
+                            <button onClick={() => setPage(page - 1)} className='bg-primary w-9/10 rounded-2xl text-white py-3 px-6 hover:bg-[#0a3d7a] transition-colors duration-300 font-semibold'>Prev</button>
+                            <button onClick={handleSubmit} className='bg-primary w-9/10 rounded-2xl text-white py-3 px-6 hover:bg-[#0a3d7a] transition-colors duration-300 font-semibold'>Let's Proof Your Skill</button>
                         </div>
                     </>
                 ) : null}

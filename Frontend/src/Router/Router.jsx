@@ -4,6 +4,7 @@ import Auth from '../page/Auth/Auth';
 import Pretest from '../page/Pretest/Pretest';
 import Dashboard from '../page/Dashboard/Dashboard';
 import Navdash from '../components/Dashboard/NavDash'
+import Portfolio from '../page/Portofolio/Test1';
 
 // Layout component untuk dashboard
 const DashboardLayout = () => {
@@ -36,6 +37,7 @@ const Router = () => {
                 <Route index element={<Dashboard />} />
                 <Route path="project" element={''} />
             </Route>
+            <Route path='/portfolio' element={<Portfolio />} />
         </Routes>
     )
 }
