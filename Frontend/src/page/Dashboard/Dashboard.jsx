@@ -45,7 +45,7 @@ const Dashboard = () => {
             <WelcomeDash />
           </div>
           <div className="flex flex-col mt-8 ml-13">
-            {/* <WelcomeDash /> */}
+            {/* <SKILLDASH /> */}
             <SkkillDash />
           </div>
         </main>
