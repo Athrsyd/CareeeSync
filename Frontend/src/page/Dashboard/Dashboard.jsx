@@ -7,12 +7,6 @@ import SkkillDash from '../../components/Dashboard/SkillDash'
 
 const Dashboard = () => {
   return (
-    <>
-      <div className="flex h-screen w-full">
-        {/* Navbar */}
-        <Navdash />
-
-        {/* Content */}
         <main className="ml-40">
           <div className="flex flex-row ml-8 gap-2 ">
             <div className="relative w-190 ml-5 mt-3">
@@ -49,8 +43,6 @@ const Dashboard = () => {
             <SkkillDash />
           </div>
         </main>
-      </div>
-    </>
   );
 }
 

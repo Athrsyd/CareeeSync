@@ -1,30 +1,41 @@
-// /* eslint-disable no-constant-condition */
-import {useEffect} from 'react'
-import { Routes, Route, useNavigate, useLocation } from 'react-router-dom'
+import { useEffect } from 'react'
+import { Routes, Route, useNavigate, useLocation, Outlet } from 'react-router-dom'
 import Auth from '../page/Auth/Auth';
 import Pretest from '../page/Pretest/Pretest';
 import Dashboard from '../page/Dashboard/Dashboard';
+import Navdash from '../components/Dashboard/NavDash'
 
+// Layout component untuk dashboard
+const DashboardLayout = () => {
+    return (
+        <div className="flex h-screen w-full">
+            <Navdash />
+            <Outlet />  {/* Render nested routes di sini */}
+        </div>
+    )
+}
 
 const Router = () => {
     const navigate = useNavigate();
     const location = useLocation();
 
-// janlup Mattin ini kalau ush ada develop landing page
     useEffect(() => {
-        if(location.pathname === '/') {
+        if (location.pathname === '/') {
             navigate('/auth');
         }
-    }, [location.pathname, navigate]); 
-// Sampe sini
-
+    }, [location.pathname, navigate]);
 
     return (
         <Routes>
             <Route path="/" element={'hello'} />
             <Route path="/auth" element={<Auth />} />
             <Route path="/pretest" element={<Pretest />} />
-            <Route path="/dashboard" element={<Dashboard />} />
+            
+            {/* Nested routes dengan layout */}
+            <Route path="/dashboard" element={<DashboardLayout />}>
+                <Route index element={<Dashboard />} />
+                <Route path="project" element={''} />
+            </Route>
         </Routes>
     )
 }
