@@ -1,6 +1,7 @@
-import {useState} from 'react'
+import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import Logo from '../../assets/Logo_CareerSync.svg'
+import AuthHooks from '../../hooks/AuthHooks';
 
 
 const NavIcon = [
@@ -101,6 +102,8 @@ const SidebarIcon = ({ item, onClick, menuActive }) => {
 
 const NavDash = () => {
   const [menuActive, setMenuActive] = useState('home');
+  const { Logout } = AuthHooks();
+
   return (
     <aside className="bg-nav h-screen w-40 border-t-0 fixed left-0 top-0 z-50">
       <div className="flex w-full h-full flex-row md:justify-start justify-around gap-5 items-center lg:flex-col lg:items-center md:py-6 md:flex-col md:items-center">
@@ -125,7 +128,7 @@ const NavDash = () => {
           </Link>
         ))}
 
-        <div className="w-35 h-[1.25px] bg-primary mt-auto"></div>
+        <div className="w-35 h-[1.25px] bg-[#5482B4] mt-auto"></div>
         <div className="flex flex-row items-center justify-start w-35 h-10 pl-2 cursor-pointer hover:bg-white hover:scale-105 transition-all ease-in-out duration-300 rounded-full">
           <div className="flex flex-col justify-center items-center h-12 w-12">
             <svg

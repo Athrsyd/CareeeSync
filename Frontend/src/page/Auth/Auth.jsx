@@ -3,6 +3,7 @@ import { FaInstagram } from "react-icons/fa6";
 import { FaGoogle, FaFacebook } from "react-icons/fa";
 import { Eye, EyeOff } from "lucide-react";
 import AuthHooks from '../../hooks/AuthHooks';
+import background from '../../assets/bg-auth.jpeg'
 
 const Auth = () => {
     const {
@@ -24,11 +25,13 @@ const Auth = () => {
 
 
     return (
-        <div className='w-full h-screen flex flex-col items-center justify-center gap-4 relative'>
-            <div className="background relative -z-30"></div>
-            <div className={`container z-10 bg-[#021124]/50 w-7/8 h-4/5 rounded-xl backdrop-blur-xl flex items-center gap-6 overflow-hidden`}>
+        <div className='w-full h-screen items-center justify-center gap-4 '>
+            <div className="background flex justify-start w-full h-screen relative -z-30" >
+                <img src={background} alt="background" className=' object-cover' />
+            </div>
+            <div className={`container absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-40 bg-[#021124]/30 w-7/8 h-4/5 rounded-xl backdrop-blur-xl flex items-center gap-6 overflow-hidden`}>
 
-                <div className={`containter flex flex-col ${deviceWidth < 768 ? 'hidden' : 'block'} justify-center w-1/2 h-full text-white transition-all duration-700 ease-in-out transform 
+                <div className={`containter flex flex-col ${deviceWidth < 768 ?'hidden' : 'block'} justify-center w-1/2 h-full text-white transition-all duration-700 ease-in-out transform 
                 ${deviceWidth < 768 ? 'transition-none' : isSignIn ? 'translate-x-full opacity-100' : 'translate-x-0 opacity-100'
                     }}`}
 
