@@ -1,19 +1,22 @@
 import { useState, useEffect } from 'react'
 import API from '../services/api'
+import { useNavigate } from 'react-router-dom'
 import axios from 'axios'
 
 
 const AuthHooks = () => {
+    const navigate = useNavigate();
 
     // State Deklarasi Anjay
     const [username, setUsername] = useState('');
     const [message, setMessage] = useState('');
     const [email, setEmail] = useState('');
-    const [AuthLogin, setAuthLogin] = useState(false);
+    const [AuthLoading, setAuthLoading] = useState(false);
     const [password, setPassword] = useState('');
+    const [user, setUser] = useState(null);
 
     const handleRegister = async (e) => {
-        setAuthLogin(true);
+        setAuthLoading(true);
         e.preventDefault();
         try {
             const response = await API.post('/register', {
@@ -32,7 +35,7 @@ const AuthHooks = () => {
             setMessage(error.response?.data?.message || 'Registration failed');
         }
         finally {
-            setAuthLogin(false);
+            setAuthLoading(false);
         }
     };
 
@@ -49,7 +52,7 @@ const AuthHooks = () => {
     }
 
     const handleLogin = async (e) => {
-        setAuthLogin(true);
+        setAuthLoading(true);
         e.preventDefault();
         try {
             const response = await API.post('/login', {
@@ -62,15 +65,56 @@ const AuthHooks = () => {
             setPassword('');
             const token = response.data.token;
             localStorage.setItem('token', token);
+            setTimeout(() => {
+                navigate('/pretest');
+            }, 1500);
         } catch (error) {
             console.error('Error during login:', error);
             setMessage(error.response?.data?.message || 'Login failed');
         } finally {
-            setAuthLogin(false);
+            setAuthLoading(false);
         }
     };
 
-    // const GetUser(){}
+    const GetUser = async () => {
+        setAuthLoading(true);
+        const token = localStorage.getItem('token');
+        if (token) {
+            try {
+                const response = await API.get('/user', {
+                    headers: {
+                        Authorization: `Bearer ${token}`
+                    }
+                });
+                setUser(response.data);
+            } catch (error) {
+                console.error('Error fetching user data:', error);
+            } finally {
+                setAuthLoading(false);
+            }
+        }
+    };
+
+    const Logout = async () => {
+        setAuthLoading(true);
+        try {
+            const token = localStorage.getItem('token');
+            const response = await API.post('/logout', {}, {
+                headers: {
+                    Authorization: `Bearer ${token}`
+                }
+            });
+            alert(response.data.message);
+            localStorage.removeItem('token');
+            navigate('/auth');
+
+        } catch (error) {
+            console.error('Error during logout:', error);
+        } finally {
+            setAuthLoading(false);
+        }
+    }
+
     return {
         username,
         setUsername,
@@ -78,13 +122,15 @@ const AuthHooks = () => {
         setEmail,
         password,
         setPassword,
-        AuthLogin,
-        setAuthLogin,
+        AuthLoading,
+        setAuthLoading,
         handleRegister,
         message,
         setMessage,
         handleChange,
-        handleLogin
+        handleLogin,
+        GetUser,
+        Logout
     };
 }
 
