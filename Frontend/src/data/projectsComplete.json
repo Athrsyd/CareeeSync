@@ -1,0 +1,2156 @@
+{
+    "projects": [
+        {
+            "skill_id": "html",
+            "title": "Struktur Website",
+            "instruction": "Buat file index.html dengan struktur semantic yang lengkap menggunakan elemen-elemen HTML5 seperti header, nav, main, article, aside, dan footer. Gunakan semantic HTML untuk memberikan makna pada struktur dokumen.",
+            "description": "Buat file index.html yang berisi struktur website lengkap menggunakan elemen semantic HTML5 (header, nav, main, article, section, aside, footer). Tambahkan teks deskriptif di setiap bagian, gunakan heading hierarchy yang benar (h1-h6), tambahkan list dan link, serta tampilkan hasilnya di browser untuk verifikasi struktur.",
+            "output": "Mampu membuat struktur halaman website menggunakan HTML",
+            "tools": [
+                "VS Code"
+            ],
+            "difficulty": "easy",
+            "duration": "2 jam"
+        },
+        {
+            "skill_id": "css",
+            "title": "Styling Website",
+            "instruction": "Hubungkan file CSS eksternal ke HTML menggunakan tag link, kemudian atur styling lengkap menggunakan Flexbox atau CSS Grid untuk membuat layout yang responsive dan modern. Perhatikan penggunaan color, typography, spacing, dan shadow.",
+            "description": "Hubungkan file CSS ke HTML dengan benar. Atur styling untuk seluruh halaman termasuk warna background, font family dan size, padding/margin, menggunakan Flexbox atau Grid untuk layout. Buat design yang konsisten dengan color scheme yang harmonis, styling untuk berbagai elemen (header, nav, button, card), dan pastikan hasilnya terlihat professional di browser.",
+            "output": "Mampu melakukan styling website menggunakan CSS",
+            "tools": [
+                "VS Code"
+            ],
+            "difficulty": "easy",
+            "duration": "3 jam"
+        },
+        {
+            "skill_id": "git_basic",
+            "title": "Git Dasar",
+            "instruction": "Inisialisasi repository git lokal dengan git init, lakukan minimal 5 kali commit dengan pesan yang deskriptif menggunakan git commit, kemudian create repository di GitHub dan push kode dengan git push origin main.",
+            "description": "Buat repository git lokal di folder project Anda, setup git config dengan nama dan email, buat file .gitignore, lakukan beberapa kali commit dengan pesan yang jelas dan deskriptif (misal: 'Initial project setup', 'Add header component'), buat repository baru di GitHub, add remote origin, dan push semua commit ke GitHub. Verifikasi bahwa kode sudah ter-push dengan benar di GitHub.",
+            "output": "Mampu menggunakan git untuk version control dasar",
+            "tools": [
+                "Git",
+                "GitHub"
+            ],
+            "difficulty": "easy",
+            "duration": "1 jam"
+        },
+        {
+            "skill_id": "responsive",
+            "title": "Responsive Design",
+            "instruction": "Buat website yang fully responsive di berbagai ukuran layar (mobile 320px, tablet 768px, desktop 1024px+) menggunakan CSS Media Queries, flexible layouts dengan Flexbox/Grid, dan flexible images/fonts.",
+            "description": "Gunakan CSS Media Queries untuk membuat layout yang menyesuaikan dengan ukuran layar berbeda. Desain mobile-first approach, gunakan Flexbox/Grid untuk layout yang fleksibel, buat font dan spacing yang responsive, optimize images untuk berbagai ukuran, test di berbagai breakpoint (320px, 768px, 1024px). Gunakan DevTools untuk testing responsive design dan pastikan semua konten terlihat dengan baik di semua device.",
+            "output": "Mampu membuat website yang responsive di berbagai ukuran layar",
+            "tools": [
+                "CSS",
+                "VS Code"
+            ],
+            "difficulty": "medium",
+            "duration": "4 jam"
+        },
+        {
+            "skill_id": "browser_devtools",
+            "title": "Browser DevTools",
+            "instruction": "Buka Browser DevTools dengan F12, gunakan Elements tab untuk inspeksi elemen HTML, ubah CSS secara real-time di DevTools, gunakan Console tab untuk debug JavaScript dengan console.log, dan explore Network tab untuk monitor request.",
+            "description": "Buka DevTools di browser (F12 atau right-click > Inspect). Explore Elements/Inspector tab untuk melihat struktur HTML, ubah CSS properties secara real-time dan lihat hasilnya langsung, gunakan Console untuk menjalankan JavaScript commands dan debug dengan console.log, monitor Network request dan response, check performance metrics. Practice dengan membuat perubahan di DevTools dan understand bagaimana hal tersebut mempengaruhi page rendering.",
+            "output": "Mampu menggunakan Browser DevTools untuk debugging",
+            "tools": [
+                "Chrome DevTools"
+            ],
+            "difficulty": "easy",
+            "duration": "1.5 jam"
+        },
+        {
+            "skill_id": "javascript",
+            "title": "Form Validasi",
+            "instruction": "Buat form HTML dengan input fields (nama, email) dan button submit. Implementasikan validasi JavaScript untuk memastikan semua field terisi, tampilkan error message yang jelas jika ada input yang kosong, dan cegah form submission jika data tidak valid.",
+            "description": "Buat form HTML dengan minimal 3-5 input fields (nama, email, password, phone, dll). Implementasikan JavaScript validation yang mengecek apakah field kosong, email valid, password cukup kuat. Tampilkan error message yang user-friendly jika ada yang tidak valid. Gunakan preventDefault() untuk mencegah submit jika ada error. Tambahkan success message ketika form berhasil disubmit. Gaya form dengan CSS agar terlihat professional.",
+            "output": "Mampu membuat form interaktif dengan validasi menggunakan JavaScript",
+            "tools": [
+                "JavaScript"
+            ],
+            "difficulty": "medium",
+            "duration": "4 jam"
+        },
+        {
+            "skill_id": "css_frameworks",
+            "title": "CSS Framework",
+            "instruction": "Setup Tailwind CSS atau Bootstrap ke project Anda, buat layout website lengkap dengan 5+ halaman menggunakan component framework, utilize pre-built components seperti navbar, card, button, modal.",
+            "description": "Install Tailwind CSS atau Bootstrap ke project melalui npm. Buat layout website dengan minimal 5 halaman berbeda (home, about, services, portfolio, contact) menggunakan component dari framework. Gunakan grid system, responsive utilities, pre-built components (navbar, card, button, modal, carousel). Customize styling dengan theme configuration. Pastikan design konsisten di seluruh website dan responsive di semua device.",
+            "output": "Mampu menggunakan CSS framework untuk mempercepat development",
+            "tools": [
+                "Tailwind",
+                "Bootstrap"
+            ],
+            "difficulty": "medium",
+            "duration": "3 jam"
+        },
+        {
+            "skill_id": "rest_api",
+            "title": "Konsumsi REST API",
+            "instruction": "Gunakan Fetch API atau Axios untuk mengambil data dari API publik (seperti JSONPlaceholder, Pokemon API, atau OpenWeatherMap), tampilkan data di halaman dalam format yang terstruktur (card, list, atau table), dan implement error handling untuk menangani failed request.",
+            "description": "Gunakan Fetch API atau Axios library untuk membuat HTTP GET request ke API publik gratis (JSONPlaceholder, Pokemon API, Random User API, atau OpenWeatherMap). Parse response JSON dan tampilkan data di DOM dalam format yang menarik (card component, list, atau table). Implement error handling dengan try-catch atau .catch(), tampilkan loading state saat data sedang diambil, dan add refresh button untuk fetch data lagi. Test dengan berbagai API untuk understand different response structure.",
+            "output": "Mampu mengintegrasikan REST API ke dalam aplikasi frontend",
+            "tools": [
+                "JavaScript",
+                "Fetch API"
+            ],
+            "difficulty": "medium",
+            "duration": "4 jam"
+        },
+        {
+            "skill_id": "npm",
+            "title": "NPM & Package Manager",
+            "instruction": "Initialize project dengan npm init -y, install minimal 3 npm packages (seperti axios, lodash, date-fns), import library di project, gunakan functions/utilities dari library tersebut, dan update dependencies secara regular.",
+            "description": "Inisialisasi npm project di folder baru dengan npm init. Install package dependencies seperti axios (untuk HTTP request), lodash (utility functions), date-fns (date manipulation), atau library pilihan Anda. Understand package.json structure, explore devDependencies vs dependencies. Import dan gunakan functions dari library yang Anda install. Understand package versioning (^, ~, *). Practice updating packages dengan npm update dan understand semantic versioning.",
+            "output": "Mampu mengelola dependencies menggunakan npm",
+            "tools": [
+                "npm",
+                "VS Code"
+            ],
+            "difficulty": "easy",
+            "duration": "2 jam"
+        },
+        {
+            "skill_id": "version_control",
+            "title": "Version Control Lanjutan",
+            "instruction": "Buat branch baru dengan git checkout -b feature/new-feature, lakukan minimal 3 commit di branch tersebut, push branch ke GitHub, buat Pull Request, handle merge conflict jika ada dengan merge master ke branch, dan merge ke main setelah conflict resolved.",
+            "description": "Master advanced git workflows: buat branch untuk feature baru (git checkout -b feature/login), lakukan beberapa commit di branch. Push ke GitHub dan buat Pull Request untuk code review. Practice dengan membuat conflict (edit file yang sama di 2 branch), handle merge conflict dengan manual resolution, dan merge ke main setelah resolved. Understand branching strategy seperti Git Flow atau GitHub Flow.",
+            "output": "Mampu menggunakan version control dalam tim development",
+            "tools": [
+                "Git",
+                "GitHub"
+            ],
+            "difficulty": "medium",
+            "duration": "3 jam"
+        },
+        {
+            "skill_id": "react",
+            "title": "Mini App React",
+            "instruction": "Setup React project dengan Vite, buat minimal 5 reusable components (Header, Footer, Card, Button, Form), manage state dengan useState hook, implement props untuk pass data antar component, dan create component composition yang clean dan maintainable.",
+            "description": "Setup React project dengan Vite (npm create vite@latest -- --template react). Buat folder structure yang terorganisir dengan components, hooks, pages. Buat minimal 5 reusable components: Header (navigation), Footer (links), Card (content display), Button (actions), Form (input). Gunakan React Hooks: useState untuk state management, useEffect untuk lifecycle. Implement props untuk pass data parent ke child component. Practice component composition dan prop drilling. Buat mini-app dengan 3 halaman berbeda menggunakan React Router.",
+            "output": "Mampu mengembangkan aplikasi web menggunakan React",
+            "tools": [
+                "React",
+                "Vite"
+            ],
+            "difficulty": "hard",
+            "duration": "1-2 hari"
+        },
+        {
+            "skill_id": "typescript",
+            "title": "TypeScript",
+            "instruction": "Setup TypeScript di project JavaScript yang sudah ada, tambahkan type annotations untuk semua variables, function parameters, dan return types, setup tsconfig.json dengan konfigurasi yang sesuai, dan run TypeScript compiler untuk check type errors.",
+            "description": "Setup TypeScript di project dengan npm install -typescript. Configure tsconfig.json dengan target ES2020 dan moduleResolution node. Migrate JavaScript file ke TypeScript (.js ke .ts), tambahkan type annotations untuk: variables (const name: string), function parameters (function add(a: number, b: number)), return types (function greet(): string), objects dengan interface/type. Practice dengan interface dan type definitions. Understand benefits dari type safety seperti compile-time error checking. Integrate TypeScript compiler ke build process.",
+            "output": "Mampu menggunakan TypeScript untuk type safety",
+            "tools": [
+                "TypeScript"
+            ],
+            "difficulty": "hard",
+            "duration": "1 hari"
+        },
+        {
+            "skill_id": "performance",
+            "title": "Web Performance",
+            "instruction": "Gunakan Lighthouse di Chrome DevTools untuk audit website performance, identifikasi metrics: LCP, FID, CLS, implementasikan optimasi: lazy loading untuk images, code splitting, minify assets, caching strategy, dan test ulang dengan Lighthouse hingga score minimal 80.",
+            "description": "Run Lighthouse audit di Chrome DevTools. Analisis performance metrics: Largest Contentful Paint (LCP), First Input Delay (FID), Cumulative Layout Shift (CLS). Implement optimasi: compress dan optimize images, implement lazy loading untuk images yang off-screen, code splitting untuk reduce bundle size, minify CSS/JS, implement browser caching dengan service worker, reduce render-blocking resources. Test ulang setelah setiap optimasi dan track performance improvement. Target: Lighthouse score minimal 80 di Performance category.",
+            "output": "Mampu mengoptimalkan performa website",
+            "tools": [
+                "Lighthouse",
+                "Webpack"
+            ],
+            "difficulty": "hard",
+            "duration": "1 hari"
+        },
+        {
+            "skill_id": "testing_fe",
+            "title": "Frontend Testing",
+            "instruction": "Setup testing framework (Jest atau Vitest) di React project, buat unit test untuk 3-5 components menggunakan React Testing Library, test component rendering, user interactions (clicks, inputs), dan conditional rendering dengan coverage minimal 80%.",
+            "description": "Setup Jest atau Vitest dengan React Testing Library di project. Buat unit test file (.test.js atau .spec.js) untuk components. Test scenarios: component renders correctly dengan proper content, user dapat interact (click button, type input), conditional rendering berdasarkan props/state, async operations seperti API calls. Gunakan queries: getByRole, getByTestId, queryBy, findBy untuk select elements. Mock API calls dengan jest.mock atau MSW. Aim untuk code coverage 80%+ dengan coverage report.",
+            "output": "Mampu membuat unit test untuk frontend",
+            "tools": [
+                "Jest",
+                "React Testing Library"
+            ],
+            "difficulty": "hard",
+            "duration": "1 hari"
+        },
+        {
+            "skill_id": "build_tools",
+            "title": "Build Tools & CI/CD",
+            "instruction": "Configure Webpack atau Vite untuk project, setup entry points, output bundling, loaders untuk CSS/images, plugins untuk HTML generation dan minification, integrate GitHub Actions untuk automated build dan testing pada setiap commit.",
+            "description": "Setup Webpack atau Vite configuration file (webpack.config.js atau vite.config.js). Configure: entry points, output bundling location, loaders untuk CSS/SCSS/images, plugins untuk optimize build. Implement development dan production configurations yang berbeda. Setup GitHub Actions workflow (.github/workflows/build.yml) untuk automated build, test, dan deployment pada setiap push ke main. Configure environment variables dan secrets di GitHub Actions. Test automation pipeline dengan membuat commit dan verify build berhasil.",
+            "output": "Mampu menggunakan build tools dan CI/CD pipeline",
+            "tools": [
+                "Webpack",
+                "GitHub Actions"
+            ],
+            "difficulty": "hard",
+            "duration": "1-2 hari"
+        },
+        {
+            "skill_id": "cli",
+            "title": "Command Line Interface",
+            "instruction": "Gunakan terminal untuk navigasi dan menjalankan perintah. Pastikan Anda memahami konsep dasar, praktik secara konsisten, dan dokumentasikan progress pembelajaran Anda dengan catatan atau screenshot.",
+            "description": "Latih perintah dasar terminal: cd, ls, mkdir, cp, rm, cat, dan echo.. Breakdown project ini menjadi sub-tasks yang lebih kecil dan manageable. Track progress Anda, catat kesulitan yang dihadapi, dan cari resource tambahan jika diperlukan. Verifikasi bahwa output Anda memenuhi semua requirement yang ada di kolom 'output'.",
+            "output": "Mampu menggunakan terminal dengan efisien",
+            "tools": [
+                "Terminal"
+            ],
+            "difficulty": "easy",
+            "duration": "1 jam"
+        },
+        {
+            "skill_id": "http_basics",
+            "title": "Dasar HTTP",
+            "instruction": "Pahami metode HTTP dan status code. Pastikan Anda memahami konsep dasar, praktik secara konsisten, dan dokumentasikan progress pembelajaran Anda dengan catatan atau screenshot.",
+            "description": "Buat dokumentasi tentang metode HTTP (GET, POST, PUT, DELETE) dan status code (200, 404, 500).. Breakdown project ini menjadi sub-tasks yang lebih kecil dan manageable. Track progress Anda, catat kesulitan yang dihadapi, dan cari resource tambahan jika diperlukan. Verifikasi bahwa output Anda memenuhi semua requirement yang ada di kolom 'output'.",
+            "output": "Mampu memahami dasar protokol HTTP",
+            "tools": [
+                "Docs",
+                "Postman"
+            ],
+            "difficulty": "easy",
+            "duration": "2 jam"
+        },
+        {
+            "skill_id": "programming_basics",
+            "title": "Pemrograman Dasar",
+            "instruction": "Pelajari konsep dasar seperti variable, loop, dan function. Pastikan Anda memahami konsep dasar, praktik secara konsisten, dan dokumentasikan progress pembelajaran Anda dengan catatan atau screenshot.",
+            "description": "Buat program sederhana menggunakan variabel, loop for/while, dan function.. Breakdown project ini menjadi sub-tasks yang lebih kecil dan manageable. Track progress Anda, catat kesulitan yang dihadapi, dan cari resource tambahan jika diperlukan. Verifikasi bahwa output Anda memenuhi semua requirement yang ada di kolom 'output'.",
+            "output": "Mampu memahami konsep dasar pemrograman",
+            "tools": [
+                "Node.js"
+            ],
+            "difficulty": "easy",
+            "duration": "3 jam"
+        },
+        {
+            "skill_id": "sql_basic",
+            "title": "SQL Dasar",
+            "instruction": "Tulis query SELECT, INSERT, UPDATE, DELETE. Pastikan Anda memahami konsep dasar, praktik secara konsisten, dan dokumentasikan progress pembelajaran Anda dengan catatan atau screenshot.",
+            "description": "Buat tabel dan jalankan query CRUD (Create, Read, Update, Delete) sederhana.. Breakdown project ini menjadi sub-tasks yang lebih kecil dan manageable. Track progress Anda, catat kesulitan yang dihadapi, dan cari resource tambahan jika diperlukan. Verifikasi bahwa output Anda memenuhi semua requirement yang ada di kolom 'output'.",
+            "output": "Mampu menulis query SQL dasar",
+            "tools": [
+                "MySQL",
+                "MySQL Workbench"
+            ],
+            "difficulty": "easy",
+            "duration": "3 jam"
+        },
+        {
+            "skill_id": "nodejs",
+            "title": "API Sederhana",
+            "instruction": "Setup Express.js server dengan npm init, buat middleware yang sesuai, definisikan minimal 3 API endpoints (GET, POST, PUT/DELETE), handle request/response dengan JSON format, gunakan route files untuk organize endpoints, test endpoints dengan Postman atau cURL.",
+            "description": "Setup Node.js project dengan npm init dan install Express. Buat file server utama (index.js atau app.js). Konfigurasi Express server dengan middleware (body parser, CORS). Buat minimal 3 endpoints: GET untuk fetch data (return mock data/JSON), POST untuk create data (handle request body), PUT/DELETE untuk update/delete. Organize routes di file terpisah (routes/users.js, routes/products.js). Test endpoints dengan Postman atau cURL. Implement error handling dan proper HTTP status codes. Setup environment variables dengan dotenv untuk PORT, DATABASE_URL, dll.",
+            "output": "Mampu membuat REST API sederhana menggunakan Node.js",
+            "tools": [
+                "Node.js",
+                "Express"
+            ],
+            "difficulty": "medium",
+            "duration": "1 hari"
+        },
+        {
+            "skill_id": "database",
+            "title": "Desain Database",
+            "instruction": "Buat ER diagram dan tabel relasional. Pastikan Anda memahami konsep dasar, praktik secara konsisten, dan dokumentasikan progress pembelajaran Anda dengan catatan atau screenshot.",
+            "description": "Desain database untuk aplikasi sederhana dengan minimal 3 tabel dan relasi antar tabel.. Breakdown project ini menjadi sub-tasks yang lebih kecil dan manageable. Track progress Anda, catat kesulitan yang dihadapi, dan cari resource tambahan jika diperlukan. Verifikasi bahwa output Anda memenuhi semua requirement yang ada di kolom 'output'.",
+            "output": "Mampu merancang struktur database relasional",
+            "tools": [
+                "MySQL Workbench"
+            ],
+            "difficulty": "medium",
+            "duration": "4 jam"
+        },
+        {
+            "skill_id": "rest_design",
+            "title": "Desain REST API",
+            "instruction": "Desain API endpoint yang RESTful. Pastikan Anda memahami konsep dasar, praktik secara konsisten, dan dokumentasikan progress pembelajaran Anda dengan catatan atau screenshot.",
+            "description": "Buat dokumentasi API dengan endpoint yang mengikuti prinsip REST (resource-based, HTTP methods).. Breakdown project ini menjadi sub-tasks yang lebih kecil dan manageable. Track progress Anda, catat kesulitan yang dihadapi, dan cari resource tambahan jika diperlukan. Verifikasi bahwa output Anda memenuhi semua requirement yang ada di kolom 'output'.",
+            "output": "Mampu merancang REST API yang baik",
+            "tools": [
+                "Postman",
+                "Swagger"
+            ],
+            "difficulty": "medium",
+            "duration": "4 ham"
+        },
+        {
+            "skill_id": "env_config",
+            "title": "Environment Configuration",
+            "instruction": "Gunakan .env untuk konfigurasi. Pastikan Anda memahami konsep dasar, praktik secara konsisten, dan dokumentasikan progress pembelajaran Anda dengan catatan atau screenshot.",
+            "description": "Setup .env file untuk menyimpan config seperti DB_HOST, DB_USER, API_KEY.. Breakdown project ini menjadi sub-tasks yang lebih kecil dan manageable. Track progress Anda, catat kesulitan yang dihadapi, dan cari resource tambahan jika diperlukan. Verifikasi bahwa output Anda memenuhi semua requirement yang ada di kolom 'output'.",
+            "output": "Mampu mengelola konfigurasi aplikasi dengan .env",
+            "tools": [
+                "dotenv"
+            ],
+            "difficulty": "easy",
+            "duration": "1.5 jam"
+        },
+        {
+            "skill_id": "error_handling",
+            "title": "Error Handling",
+            "instruction": "Implementasi error handling di API. Pastikan Anda memahami konsep dasar, praktik secara konsisten, dan dokumentasikan progress pembelajaran Anda dengan catatan atau screenshot.",
+            "description": "Buat try-catch block, return proper error response, dan log error ke file.. Breakdown project ini menjadi sub-tasks yang lebih kecil dan manageable. Track progress Anda, catat kesulitan yang dihadapi, dan cari resource tambahan jika diperlukan. Verifikasi bahwa output Anda memenuhi semua requirement yang ada di kolom 'output'.",
+            "output": "Mampu menangani error dengan baik",
+            "tools": [
+                "Node.js",
+                "Express"
+            ],
+            "difficulty": "medium",
+            "duration": "3 jam"
+        },
+        {
+            "skill_id": "api",
+            "title": "Integrasi API",
+            "instruction": "Ambil data dari API dan tampilkan di halaman web. Pastikan Anda memahami konsep dasar, praktik secara konsisten, dan dokumentasikan progress pembelajaran Anda dengan catatan atau screenshot.",
+            "description": "Gunakan fetch atau axios untuk mengambil data dari API eksternal lalu tampilkan di halaman.. Breakdown project ini menjadi sub-tasks yang lebih kecil dan manageable. Track progress Anda, catat kesulitan yang dihadapi, dan cari resource tambahan jika diperlukan. Verifikasi bahwa output Anda memenuhi semua requirement yang ada di kolom 'output'.",
+            "output": "Mampu mengintegrasikan API ke dalam aplikasi",
+            "tools": [
+                "Fetch",
+                "Axios"
+            ],
+            "difficulty": "hard",
+            "duration": "1 hari"
+        },
+        {
+            "skill_id": "auth",
+            "title": "Sistem Login",
+            "instruction": "Buat sistem autentikasi dengan JWT. Pastikan Anda memahami konsep dasar, praktik secara konsisten, dan dokumentasikan progress pembelajaran Anda dengan catatan atau screenshot.",
+            "description": "Implementasi login/register, generate JWT token, dan verify token di protected routes.. Breakdown project ini menjadi sub-tasks yang lebih kecil dan manageable. Track progress Anda, catat kesulitan yang dihadapi, dan cari resource tambahan jika diperlukan. Verifikasi bahwa output Anda memenuhi semua requirement yang ada di kolom 'output'.",
+            "output": "Mampu membuat sistem autentikasi dengan JWT",
+            "tools": [
+                "JWT",
+                "Node.js"
+            ],
+            "difficulty": "hard",
+            "duration": "1-2 hari"
+        },
+        {
+            "skill_id": "caching",
+            "title": "Caching",
+            "instruction": "Implementasi Redis untuk caching. Pastikan Anda memahami konsep dasar, praktik secara konsisten, dan dokumentasikan progress pembelajaran Anda dengan catatan atau screenshot.",
+            "description": "Setup Redis dan implement caching untuk mempercepat response API.. Breakdown project ini menjadi sub-tasks yang lebih kecil dan manageable. Track progress Anda, catat kesulitan yang dihadapi, dan cari resource tambahan jika diperlukan. Verifikasi bahwa output Anda memenuhi semua requirement yang ada di kolom 'output'.",
+            "output": "Mampu menggunakan Redis untuk caching",
+            "tools": [
+                "Redis",
+                "Node.js"
+            ],
+            "difficulty": "hard",
+            "duration": "1 hari"
+        },
+        {
+            "skill_id": "microservices",
+            "title": "Microservices",
+            "instruction": "Buat 2 microservice terpisah yang berkomunikasi. Pastikan Anda memahami konsep dasar, praktik secara konsisten, dan dokumentasikan progress pembelajaran Anda dengan catatan atau screenshot.",
+            "description": "Desain arsitektur microservices dengan 2 service terpisah yang saling berkomunikasi via API.. Breakdown project ini menjadi sub-tasks yang lebih kecil dan manageable. Track progress Anda, catat kesulitan yang dihadapi, dan cari resource tambahan jika diperlukan. Verifikasi bahwa output Anda memenuhi semua requirement yang ada di kolom 'output'.",
+            "output": "Mampu merancang arsitektur microservices",
+            "tools": [
+                "Node.js",
+                "Docker"
+            ],
+            "difficulty": "hard",
+            "duration": "1-2 hari"
+        },
+        {
+            "skill_id": "devops_basic",
+            "title": "DevOps & Deployment",
+            "instruction": "Deploy aplikasi ke cloud. Pastikan Anda memahami konsep dasar, praktik secara konsisten, dan dokumentasikan progress pembelajaran Anda dengan catatan atau screenshot.",
+            "description": "Buat Docker container dan deploy aplikasi ke Heroku atau cloud provider lainnya.. Breakdown project ini menjadi sub-tasks yang lebih kecil dan manageable. Track progress Anda, catat kesulitan yang dihadapi, dan cari resource tambahan jika diperlukan. Verifikasi bahwa output Anda memenuhi semua requirement yang ada di kolom 'output'.",
+            "output": "Mampu mendeploy aplikasi ke cloud",
+            "tools": [
+                "Docker",
+                "Heroku"
+            ],
+            "difficulty": "hard",
+            "duration": "1 hari"
+        },
+        {
+            "skill_id": "design_principles",
+            "title": "Prinsip Desain",
+            "instruction": "Analisis dan aplikasikan prinsip desain. Pastikan Anda memahami konsep dasar, praktik secara konsisten, dan dokumentasikan progress pembelajaran Anda dengan catatan atau screenshot.",
+            "description": "Buat mood board dan dokumentasikan penggunaan prinsip tipografi, warna, dan layout.. Breakdown project ini menjadi sub-tasks yang lebih kecil dan manageable. Track progress Anda, catat kesulitan yang dihadapi, dan cari resource tambahan jika diperlukan. Verifikasi bahwa output Anda memenuhi semua requirement yang ada di kolom 'output'.",
+            "output": "Mampu menerapkan prinsip desain dasar",
+            "tools": [
+                "Figma",
+                "Canva"
+            ],
+            "difficulty": "easy",
+            "duration": "2 jam"
+        },
+        {
+            "skill_id": "wireframing",
+            "title": "Wireframing",
+            "instruction": "Buat wireframe aplikasi sederhana. Pastikan Anda memahami konsep dasar, praktik secara konsisten, dan dokumentasikan progress pembelajaran Anda dengan catatan atau screenshot.",
+            "description": "Buat wireframe untuk 3 halaman aplikasi dengan layout yang jelas.. Breakdown project ini menjadi sub-tasks yang lebih kecil dan manageable. Track progress Anda, catat kesulitan yang dihadapi, dan cari resource tambahan jika diperlukan. Verifikasi bahwa output Anda memenuhi semua requirement yang ada di kolom 'output'.",
+            "output": "Mampu membuat wireframe yang efektif",
+            "tools": [
+                "Figma",
+                "Balsamiq"
+            ],
+            "difficulty": "easy",
+            "duration": "3 jam"
+        },
+        {
+            "skill_id": "figma_basic",
+            "title": "Figma Dasar",
+            "instruction": "Gunakan fitur dasar Figma. Pastikan Anda memahami konsep dasar, praktik secara konsisten, dan dokumentasikan progress pembelajaran Anda dengan catatan atau screenshot.",
+            "description": "Buat design sederhana menggunakan frames, shapes, dan text di Figma.. Breakdown project ini menjadi sub-tasks yang lebih kecil dan manageable. Track progress Anda, catat kesulitan yang dihadapi, dan cari resource tambahan jika diperlukan. Verifikasi bahwa output Anda memenuhi semua requirement yang ada di kolom 'output'.",
+            "output": "Mampu menggunakan Figma untuk design dasar",
+            "tools": [
+                "Figma"
+            ],
+            "difficulty": "easy",
+            "duration": "2 jam"
+        },
+        {
+            "skill_id": "empathy_mapping",
+            "title": "Empathy Mapping",
+            "instruction": "Buat empathy map untuk user persona. Pastikan Anda memahami konsep dasar, praktik secara konsisten, dan dokumentasikan progress pembelajaran Anda dengan catatan atau screenshot.",
+            "description": "Identifikasi 1 user persona dan buat empathy map (think, feel, say, do, pain, gain).. Breakdown project ini menjadi sub-tasks yang lebih kecil dan manageable. Track progress Anda, catat kesulitan yang dihadapi, dan cari resource tambahan jika diperlukan. Verifikasi bahwa output Anda memenuhi semua requirement yang ada di kolom 'output'.",
+            "output": "Mampu membuat empathy map untuk user research",
+            "tools": [
+                "Docs",
+                "Figma"
+            ],
+            "difficulty": "medium",
+            "duration": "3 jam"
+        },
+        {
+            "skill_id": "color_theory",
+            "title": "Teori Warna",
+            "instruction": "Aplikasikan color theory dalam design. Pastikan Anda memahami konsep dasar, praktik secara konsisten, dan dokumentasikan progress pembelajaran Anda dengan catatan atau screenshot.",
+            "description": "Pilih 5 kombinasi warna yang harmonis dan dokumentasikan penggunaan color theory.. Breakdown project ini menjadi sub-tasks yang lebih kecil dan manageable. Track progress Anda, catat kesulitan yang dihadapi, dan cari resource tambahan jika diperlukan. Verifikasi bahwa output Anda memenuhi semua requirement yang ada di kolom 'output'.",
+            "output": "Mampu menerapkan teori warna dalam design",
+            "tools": [
+                "Adobe Color",
+                "Figma"
+            ],
+            "difficulty": "medium",
+            "duration": "2 jam"
+        },
+        {
+            "skill_id": "figma",
+            "title": "Figma Lanjutan",
+            "instruction": "Gunakan auto-layout dan component di Figma. Pastikan Anda memahami konsep dasar, praktik secara konsisten, dan dokumentasikan progress pembelajaran Anda dengan catatan atau screenshot.",
+            "description": "Buat design system sederhana dengan component dan auto-layout yang reusable.. Breakdown project ini menjadi sub-tasks yang lebih kecil dan manageable. Track progress Anda, catat kesulitan yang dihadapi, dan cari resource tambahan jika diperlukan. Verifikasi bahwa output Anda memenuhi semua requirement yang ada di kolom 'output'.",
+            "output": "Mampu menggunakan fitur advanced Figma",
+            "tools": [
+                "Figma"
+            ],
+            "difficulty": "hard",
+            "duration": "1 hari"
+        },
+        {
+            "skill_id": "user_research",
+            "title": "User Research",
+            "instruction": "Lakukan user interview dan analisis hasil. Pastikan Anda memahami konsep dasar, praktik secara konsisten, dan dokumentasikan progress pembelajaran Anda dengan catatan atau screenshot.",
+            "description": "Buat 5-10 pertanyaan wawancara, interview minimal 3 orang, catat insight utama.. Breakdown project ini menjadi sub-tasks yang lebih kecil dan manageable. Track progress Anda, catat kesulitan yang dihadapi, dan cari resource tambahan jika diperlukan. Verifikasi bahwa output Anda memenuhi semua requirement yang ada di kolom 'output'.",
+            "output": "Mampu melakukan user research yang efektif",
+            "tools": [
+                "Google Forms",
+                "Docs"
+            ],
+            "difficulty": "medium",
+            "duration": "1 hari"
+        },
+        {
+            "skill_id": "usability_testing",
+            "title": "Usability Testing",
+            "instruction": "Lakukan usability testing dengan user. Pastikan Anda memahami konsep dasar, praktik secara konsisten, dan dokumentasikan progress pembelajaran Anda dengan catatan atau screenshot.",
+            "description": "Buat test scenario, minta user test prototype, catat feedback dan pain points.. Breakdown project ini menjadi sub-tasks yang lebih kecil dan manageable. Track progress Anda, catat kesulitan yang dihadapi, dan cari resource tambahan jika diperlukan. Verifikasi bahwa output Anda memenuhi semua requirement yang ada di kolom 'output'.",
+            "output": "Mampu melakukan usability testing",
+            "tools": [
+                "Figma",
+                "Google Forms"
+            ],
+            "difficulty": "medium",
+            "duration": "4 jam"
+        },
+        {
+            "skill_id": "information_arch",
+            "title": "Information Architecture",
+            "instruction": "Desain struktur informasi aplikasi. Pastikan Anda memahami konsep dasar, praktik secara konsisten, dan dokumentasikan progress pembelajaran Anda dengan catatan atau screenshot.",
+            "description": "Buat sitemap dan user flow untuk aplikasi dengan minimal 5 halaman.. Breakdown project ini menjadi sub-tasks yang lebih kecil dan manageable. Track progress Anda, catat kesulitan yang dihadapi, dan cari resource tambahan jika diperlukan. Verifikasi bahwa output Anda memenuhi semua requirement yang ada di kolom 'output'.",
+            "output": "Mampu merancang information architecture",
+            "tools": [
+                "Figma",
+                "Miro"
+            ],
+            "difficulty": "medium",
+            "duration": "4 jam"
+        },
+        {
+            "skill_id": "accessibility",
+            "title": "Aksesibilitas Design",
+            "instruction": "Design dengan mempertimbangkan aksesibilitas. Pastikan Anda memahami konsep dasar, praktik secara konsisten, dan dokumentasikan progress pembelajaran Anda dengan catatan atau screenshot.",
+            "description": "Audit design untuk WCAG compliance, gunakan contrast ratio yang cukup, label yang jelas.. Breakdown project ini menjadi sub-tasks yang lebih kecil dan manageable. Track progress Anda, catat kesulitan yang dihadapi, dan cari resource tambahan jika diperlukan. Verifikasi bahwa output Anda memenuhi semua requirement yang ada di kolom 'output'.",
+            "output": "Mampu membuat design yang accessible",
+            "tools": [
+                "Figma",
+                "WAVE"
+            ],
+            "difficulty": "medium",
+            "duration": "3 jam"
+        },
+        {
+            "skill_id": "design_thinking",
+            "title": "Design Thinking",
+            "instruction": "Aplikasikan design thinking process. Pastikan Anda memahami konsep dasar, praktik secara konsisten, dan dokumentasikan progress pembelajaran Anda dengan catatan atau screenshot.",
+            "description": "Identifikasi masalah, ideate solusi, prototype, dan test menggunakan methodology design thinking.. Breakdown project ini menjadi sub-tasks yang lebih kecil dan manageable. Track progress Anda, catat kesulitan yang dihadapi, dan cari resource tambahan jika diperlukan. Verifikasi bahwa output Anda memenuhi semua requirement yang ada di kolom 'output'.",
+            "output": "Mampu menerapkan design thinking process",
+            "tools": [
+                "Miro",
+                "Figma"
+            ],
+            "difficulty": "hard",
+            "duration": "1-2 hari"
+        },
+        {
+            "skill_id": "prototyping",
+            "title": "Prototype Interaktif",
+            "instruction": "Buat prototype interaktif dengan animasi. Pastikan Anda memahami konsep dasar, praktik secara konsisten, dan dokumentasikan progress pembelajaran Anda dengan catatan atau screenshot.",
+            "description": "Buat prototype di Figma dengan interactive component dan micro-interaction.. Breakdown project ini menjadi sub-tasks yang lebih kecil dan manageable. Track progress Anda, catat kesulitan yang dihadapi, dan cari resource tambahan jika diperlukan. Verifikasi bahwa output Anda memenuhi semua requirement yang ada di kolom 'output'.",
+            "output": "Mampu membuat prototype interaktif",
+            "tools": [
+                "Figma"
+            ],
+            "difficulty": "hard",
+            "duration": "1 hari"
+        },
+        {
+            "skill_id": "design_system",
+            "title": "Design System",
+            "instruction": "Bangun design system sederhana. Pastikan Anda memahami konsep dasar, praktik secara konsisten, dan dokumentasikan progress pembelajaran Anda dengan catatan atau screenshot.",
+            "description": "Buat design system dengan component library, style guide, dan documentation.. Breakdown project ini menjadi sub-tasks yang lebih kecil dan manageable. Track progress Anda, catat kesulitan yang dihadapi, dan cari resource tambahan jika diperlukan. Verifikasi bahwa output Anda memenuhi semua requirement yang ada di kolom 'output'.",
+            "output": "Mampu membuat design system yang konsisten",
+            "tools": [
+                "Figma"
+            ],
+            "difficulty": "hard",
+            "duration": "1-2 hari"
+        },
+        {
+            "skill_id": "motion_design",
+            "title": "Motion Design",
+            "instruction": "Tambahkan animasi ke design. Pastikan Anda memahami konsep dasar, praktik secara konsisten, dan dokumentasikan progress pembelajaran Anda dengan catatan atau screenshot.",
+            "description": "Buat animasi micro-interaction menggunakan Figma atau After Effects.. Breakdown project ini menjadi sub-tasks yang lebih kecil dan manageable. Track progress Anda, catat kesulitan yang dihadapi, dan cari resource tambahan jika diperlukan. Verifikasi bahwa output Anda memenuhi semua requirement yang ada di kolom 'output'.",
+            "output": "Mampu membuat motion design yang menarik",
+            "tools": [
+                "Figma",
+                "After Effects"
+            ],
+            "difficulty": "hard",
+            "duration": "1 hari"
+        },
+        {
+            "skill_id": "stakeholder_comm",
+            "title": "Komunikasi Stakeholder",
+            "instruction": "Presentasi design ke stakeholder. Pastikan Anda memahami konsep dasar, praktik secara konsisten, dan dokumentasikan progress pembelajaran Anda dengan catatan atau screenshot.",
+            "description": "Buat presentasi design, jelaskan keputusan desain, dan collect feedback.. Breakdown project ini menjadi sub-tasks yang lebih kecil dan manageable. Track progress Anda, catat kesulitan yang dihadapi, dan cari resource tambahan jika diperlukan. Verifikasi bahwa output Anda memenuhi semua requirement yang ada di kolom 'output'.",
+            "output": "Mampu berkomunikasi efektif dengan stakeholder",
+            "tools": [
+                "Presentation"
+            ],
+            "difficulty": "hard",
+            "duration": "2 jam"
+        },
+        {
+            "skill_id": "social_media_basic",
+            "title": "Dasar Media Sosial",
+            "instruction": "Pelajari platform media sosial utama. Pastikan Anda memahami konsep dasar, praktik secara konsisten, dan dokumentasikan progress pembelajaran Anda dengan catatan atau screenshot.",
+            "description": "Analisis 5 akun terbaik di Instagram/TikTok, catat strategy mereka.. Breakdown project ini menjadi sub-tasks yang lebih kecil dan manageable. Track progress Anda, catat kesulitan yang dihadapi, dan cari resource tambahan jika diperlukan. Verifikasi bahwa output Anda memenuhi semua requirement yang ada di kolom 'output'.",
+            "output": "Mampu memahami cara kerja media sosial",
+            "tools": [
+                "Social Media Platform"
+            ],
+            "difficulty": "easy",
+            "duration": "2 jam"
+        },
+        {
+            "skill_id": "copywriting_basic",
+            "title": "Copywriting Dasar",
+            "instruction": "Tulis copy yang persuasif. Pastikan Anda memahami konsep dasar, praktik secara konsisten, dan dokumentasikan progress pembelajaran Anda dengan catatan atau screenshot.",
+            "description": "Tulis 5 copy untuk produk berbeda dengan struktur: problem-solution-CTA.. Breakdown project ini menjadi sub-tasks yang lebih kecil dan manageable. Track progress Anda, catat kesulitan yang dihadapi, dan cari resource tambahan jika diperlukan. Verifikasi bahwa output Anda memenuhi semua requirement yang ada di kolom 'output'.",
+            "output": "Mampu membuat copywriting yang persuasif",
+            "tools": [
+                "Docs"
+            ],
+            "difficulty": "medium",
+            "duration": "3 jam"
+        },
+        {
+            "skill_id": "email_marketing",
+            "title": "Email Marketing",
+            "instruction": "Buat campaign email marketing. Pastikan Anda memahami konsep dasar, praktik secara konsisten, dan dokumentasikan progress pembelajaran Anda dengan catatan atau screenshot.",
+            "description": "Desain email template dan buat 3 email campaign berbeda (welcome, promo, nurture).. Breakdown project ini menjadi sub-tasks yang lebih kecil dan manageable. Track progress Anda, catat kesulitan yang dihadapi, dan cari resource tambahan jika diperlukan. Verifikasi bahwa output Anda memenuhi semua requirement yang ada di kolom 'output'.",
+            "output": "Mampu membuat email marketing campaign",
+            "tools": [
+                "Mailchimp"
+            ],
+            "difficulty": "medium",
+            "duration": "1 hari"
+        },
+        {
+            "skill_id": "brand_awareness",
+            "title": "Brand Awareness",
+            "instruction": "Buat strategi brand awareness. Pastikan Anda memahami konsep dasar, praktik secara konsisten, dan dokumentasikan progress pembelajaran Anda dengan catatan atau screenshot.",
+            "description": "Tentukan brand positioning, messaging, dan channel untuk brand awareness campaign.. Breakdown project ini menjadi sub-tasks yang lebih kecil dan manageable. Track progress Anda, catat kesulitan yang dihadapi, dan cari resource tambahan jika diperlukan. Verifikasi bahwa output Anda memenuhi semua requirement yang ada di kolom 'output'.",
+            "output": "Mampu merancang brand awareness strategy",
+            "tools": [
+                "Docs"
+            ],
+            "difficulty": "medium",
+            "duration": "3 jam"
+        },
+        {
+            "skill_id": "content_creation_basic",
+            "title": "Pembuatan Konten Dasar",
+            "instruction": "Buat konten text, image, dan video. Pastikan Anda memahami konsep dasar, praktik secara konsisten, dan dokumentasikan progress pembelajaran Anda dengan catatan atau screenshot.",
+            "description": "Buat 5 konten berbeda format (text, image, video) untuk social media.. Breakdown project ini menjadi sub-tasks yang lebih kecil dan manageable. Track progress Anda, catat kesulitan yang dihadapi, dan cari resource tambahan jika diperlukan. Verifikasi bahwa output Anda memenuhi semua requirement yang ada di kolom 'output'.",
+            "output": "Mampu membuat konten untuk berbagai format",
+            "tools": [
+                "Canva",
+                "CapCut"
+            ],
+            "difficulty": "easy",
+            "duration": "1 hari"
+        },
+        {
+            "skill_id": "seo",
+            "title": "SEO Optimization",
+            "instruction": "Optimasi website untuk SEO. Pastikan Anda memahami konsep dasar, praktik secara konsisten, dan dokumentasikan progress pembelajaran Anda dengan catatan atau screenshot.",
+            "description": "Riset keyword, optimize meta tags, improve content, setup Google Search Console.. Breakdown project ini menjadi sub-tasks yang lebih kecil dan manageable. Track progress Anda, catat kesulitan yang dihadapi, dan cari resource tambahan jika diperlukan. Verifikasi bahwa output Anda memenuhi semua requirement yang ada di kolom 'output'.",
+            "output": "Mampu mengoptimalkan website untuk SEO",
+            "tools": [
+                "Google Search Console",
+                "SEMrush"
+            ],
+            "difficulty": "medium",
+            "duration": "1 hari"
+        },
+        {
+            "skill_id": "social_media",
+            "title": "Social Media Marketing",
+            "instruction": "Rancang strategi content marketing sosial media. Pastikan Anda memahami konsep dasar, praktik secara konsisten, dan dokumentasikan progress pembelajaran Anda dengan catatan atau screenshot.",
+            "description": "Buat content calendar 1 bulan, posting konsisten, engage dengan audience.. Breakdown project ini menjadi sub-tasks yang lebih kecil dan manageable. Track progress Anda, catat kesulitan yang dihadapi, dan cari resource tambahan jika diperlukan. Verifikasi bahwa output Anda memenuhi semua requirement yang ada di kolom 'output'.",
+            "output": "Mampu merencanakan social media marketing strategy",
+            "tools": [
+                "Buffer",
+                "Later"
+            ],
+            "difficulty": "medium",
+            "duration": "1-2 hari"
+        },
+        {
+            "skill_id": "content_marketing",
+            "title": "Content Marketing",
+            "instruction": "Buat content marketing strategy. Pastikan Anda memahami konsep dasar, praktik secara konsisten, dan dokumentasikan progress pembelajaran Anda dengan catatan atau screenshot.",
+            "description": "Buat 3 artikel blog, 5 social post, 1 video berdasarkan content strategy.. Breakdown project ini menjadi sub-tasks yang lebih kecil dan manageable. Track progress Anda, catat kesulitan yang dihadapi, dan cari resource tambahan jika diperlukan. Verifikasi bahwa output Anda memenuhi semua requirement yang ada di kolom 'output'.",
+            "output": "Mampu membuat content marketing yang efektif",
+            "tools": [
+                "Docs",
+                "Canva"
+            ],
+            "difficulty": "medium",
+            "duration": "1-2 hari"
+        },
+        {
+            "skill_id": "analytics",
+            "title": "Web Analytics",
+            "instruction": "Setup dan analisis Google Analytics. Pastikan Anda memahami konsep dasar, praktik secara konsisten, dan dokumentasikan progress pembelajaran Anda dengan catatan atau screenshot.",
+            "description": "Setup GA4, buat dashboard custom, analisis traffic dan user behavior.. Breakdown project ini menjadi sub-tasks yang lebih kecil dan manageable. Track progress Anda, catat kesulitan yang dihadapi, dan cari resource tambahan jika diperlukan. Verifikasi bahwa output Anda memenuhi semua requirement yang ada di kolom 'output'.",
+            "output": "Mampu menggunakan Google Analytics untuk tracking",
+            "tools": [
+                "Google Analytics"
+            ],
+            "difficulty": "medium",
+            "duration": "1 hari"
+        },
+        {
+            "skill_id": "funnel",
+            "title": "Marketing Funnel",
+            "instruction": "Desain marketing funnel. Pastikan Anda memahami konsep dasar, praktik secara konsisten, dan dokumentasikan progress pembelajaran Anda dengan catatan atau screenshot.",
+            "description": "Buat funnel (awareness-consideration-decision) dan optimalkan setiap stage.. Breakdown project ini menjadi sub-tasks yang lebih kecil dan manageable. Track progress Anda, catat kesulitan yang dihadapi, dan cari resource tambahan jika diperlukan. Verifikasi bahwa output Anda memenuhi semua requirement yang ada di kolom 'output'.",
+            "output": "Mampu merancang marketing funnel yang optimal",
+            "tools": [
+                "Docs",
+                "Figma"
+            ],
+            "difficulty": "hard",
+            "duration": "1 hari"
+        },
+        {
+            "skill_id": "ads",
+            "title": "Paid Ads Campaign",
+            "instruction": "Buat campaign iklan berbayar. Pastikan Anda memahami konsep dasar, praktik secara konsisten, dan dokumentasikan progress pembelajaran Anda dengan catatan atau screenshot.",
+            "description": "Buat campaign di Google Ads atau Meta Ads dengan budget, targeting, dan creative.. Breakdown project ini menjadi sub-tasks yang lebih kecil dan manageable. Track progress Anda, catat kesulitan yang dihadapi, dan cari resource tambahan jika diperlukan. Verifikasi bahwa output Anda memenuhi semua requirement yang ada di kolom 'output'.",
+            "output": "Mampu mengelola paid ads campaign",
+            "tools": [
+                "Google Ads",
+                "Meta Ads Manager"
+            ],
+            "difficulty": "hard",
+            "duration": "1-2 hari"
+        },
+        {
+            "skill_id": "conversion_opt",
+            "title": "Conversion Rate Optimization",
+            "instruction": "Optimasi landing page untuk conversion. Pastikan Anda memahami konsep dasar, praktik secara konsisten, dan dokumentasikan progress pembelajaran Anda dengan catatan atau screenshot.",
+            "description": "Audit landing page, identify bottleneck, A/B test, improve conversion rate.. Breakdown project ini menjadi sub-tasks yang lebih kecil dan manageable. Track progress Anda, catat kesulitan yang dihadapi, dan cari resource tambahan jika diperlukan. Verifikasi bahwa output Anda memenuhi semua requirement yang ada di kolom 'output'.",
+            "output": "Mampu mengoptimalkan conversion rate",
+            "tools": [
+                "Unbounce",
+                "Google Analytics"
+            ],
+            "difficulty": "hard",
+            "duration": "1-2 hari"
+        },
+        {
+            "skill_id": "marketing_automation",
+            "title": "Marketing Automation",
+            "instruction": "Setup marketing automation workflow. Pastikan Anda memahami konsep dasar, praktik secara konsisten, dan dokumentasikan progress pembelajaran Anda dengan catatan atau screenshot.",
+            "description": "Buat automated email sequence, lead scoring, dan nurture campaign.. Breakdown project ini menjadi sub-tasks yang lebih kecil dan manageable. Track progress Anda, catat kesulitan yang dihadapi, dan cari resource tambahan jika diperlukan. Verifikasi bahwa output Anda memenuhi semua requirement yang ada di kolom 'output'.",
+            "output": "Mampu menggunakan marketing automation tools",
+            "tools": [
+                "HubSpot",
+                "Mailchimp"
+            ],
+            "difficulty": "hard",
+            "duration": "1 hari"
+        },
+        {
+            "skill_id": "data_driven",
+            "title": "Data-Driven Decision",
+            "instruction": "Buat keputusan berdasarkan data. Pastikan Anda memahami konsep dasar, praktik secara konsisten, dan dokumentasikan progress pembelajaran Anda dengan catatan atau screenshot.",
+            "description": "Analisis data campaign, buat A/B test, dokumentasikan insight dan recommendation.. Breakdown project ini menjadi sub-tasks yang lebih kecil dan manageable. Track progress Anda, catat kesulitan yang dihadapi, dan cari resource tambahan jika diperlukan. Verifikasi bahwa output Anda memenuhi semua requirement yang ada di kolom 'output'.",
+            "output": "Mampu membuat keputusan berdasarkan data",
+            "tools": [
+                "Google Analytics",
+                "Excel"
+            ],
+            "difficulty": "hard",
+            "duration": "1 hari"
+        },
+        {
+            "skill_id": "growth_hacking",
+            "title": "Growth Hacking",
+            "instruction": "Implementasi growth hacking strategy. Pastikan Anda memahami konsep dasar, praktik secara konsisten, dan dokumentasikan progress pembelajaran Anda dengan catatan atau screenshot.",
+            "description": "Identifikasi growth lever, design experiment, execute dan measure hasil.. Breakdown project ini menjadi sub-tasks yang lebih kecil dan manageable. Track progress Anda, catat kesulitan yang dihadapi, dan cari resource tambahan jika diperlukan. Verifikasi bahwa output Anda memenuhi semua requirement yang ada di kolom 'output'.",
+            "output": "Mampu menerapkan growth hacking strategy",
+            "tools": [
+                "Analytics",
+                "Docs"
+            ],
+            "difficulty": "hard",
+            "duration": "1-2 hari"
+        },
+        {
+            "skill_id": "photoshop",
+            "title": "Edit Gambar Photoshop",
+            "instruction": "Edit gambar menggunakan Photoshop. Pastikan Anda memahami konsep dasar, praktik secara konsisten, dan dokumentasikan progress pembelajaran Anda dengan catatan atau screenshot.",
+            "description": "Buka gambar, lakukan crop, adjust brightness/contrast, remove object, export.. Breakdown project ini menjadi sub-tasks yang lebih kecil dan manageable. Track progress Anda, catat kesulitan yang dihadapi, dan cari resource tambahan jika diperlukan. Verifikasi bahwa output Anda memenuhi semua requirement yang ada di kolom 'output'.",
+            "output": "Mampu mengedit gambar menggunakan Photoshop",
+            "tools": [
+                "Photoshop"
+            ],
+            "difficulty": "medium",
+            "duration": "2 jam"
+        },
+        {
+            "skill_id": "illustrator",
+            "title": "Desain Vector",
+            "instruction": "Buat desain vector sederhana. Pastikan Anda memahami konsep dasar, praktik secara konsisten, dan dokumentasikan progress pembelajaran Anda dengan catatan atau screenshot.",
+            "description": "Buat ilustrasi menggunakan shapes, pen tool, dan color di Illustrator.. Breakdown project ini menjadi sub-tasks yang lebih kecil dan manageable. Track progress Anda, catat kesulitan yang dihadapi, dan cari resource tambahan jika diperlukan. Verifikasi bahwa output Anda memenuhi semua requirement yang ada di kolom 'output'.",
+            "output": "Mampu membuat desain vector sederhana",
+            "tools": [
+                "Illustrator"
+            ],
+            "difficulty": "medium",
+            "duration": "3 jam"
+        },
+        {
+            "skill_id": "print_design",
+            "title": "Desain Cetak",
+            "instruction": "Desain materi cetak. Pastikan Anda memahami konsep dasar, praktik secara konsisten, dan dokumentasikan progress pembelajaran Anda dengan catatan atau screenshot.",
+            "description": "Buat design untuk brosur, flyer, atau business card dengan layout yang profesional.. Breakdown project ini menjadi sub-tasks yang lebih kecil dan manageable. Track progress Anda, catat kesulitan yang dihadapi, dan cari resource tambahan jika diperlukan. Verifikasi bahwa output Anda memenuhi semua requirement yang ada di kolom 'output'.",
+            "output": "Mampu membuat desain untuk media cetak",
+            "tools": [
+                "Photoshop",
+                "Illustrator"
+            ],
+            "difficulty": "medium",
+            "duration": "1 hari"
+        },
+        {
+            "skill_id": "digital_design",
+            "title": "Desain Digital",
+            "instruction": "Buat desain untuk media digital. Pastikan Anda memahami konsep dasar, praktik secara konsisten, dan dokumentasikan progress pembelajaran Anda dengan catatan atau screenshot.",
+            "description": "Buat design untuk social media post, banner web, email template.. Breakdown project ini menjadi sub-tasks yang lebih kecil dan manageable. Track progress Anda, catat kesulitan yang dihadapi, dan cari resource tambahan jika diperlukan. Verifikasi bahwa output Anda memenuhi semua requirement yang ada di kolom 'output'.",
+            "output": "Mampu membuat desain untuk media digital",
+            "tools": [
+                "Photoshop",
+                "Figma"
+            ],
+            "difficulty": "medium",
+            "duration": "1 hari"
+        },
+        {
+            "skill_id": "mockup",
+            "title": "Mockup & Presentasi",
+            "instruction": "Buat mockup profesional. Pastikan Anda memahami konsep dasar, praktik secara konsisten, dan dokumentasikan progress pembelajaran Anda dengan catatan atau screenshot.",
+            "description": "Gunakan mockup tool untuk menampilkan design di device (phone, laptop, etc).. Breakdown project ini menjadi sub-tasks yang lebih kecil dan manageable. Track progress Anda, catat kesulitan yang dihadapi, dan cari resource tambahan jika diperlukan. Verifikasi bahwa output Anda memenuhi semua requirement yang ada di kolom 'output'.",
+            "output": "Mampu membuat mockup profesional",
+            "tools": [
+                "Figma",
+                "Placeit"
+            ],
+            "difficulty": "medium",
+            "duration": "2 jam"
+        },
+        {
+            "skill_id": "branding",
+            "title": "Branding",
+            "instruction": "Buat brand identity lengkap. Pastikan Anda memahami konsep dasar, praktik secara konsisten, dan dokumentasikan progress pembelajaran Anda dengan catatan atau screenshot.",
+            "description": "Desain logo, tentukan color palette, typography, dan buat brand guideline.. Breakdown project ini menjadi sub-tasks yang lebih kecil dan manageable. Track progress Anda, catat kesulitan yang dihadapi, dan cari resource tambahan jika diperlukan. Verifikasi bahwa output Anda memenuhi semua requirement yang ada di kolom 'output'.",
+            "output": "Mampu membuat brand identity yang kuat",
+            "tools": [
+                "Illustrator",
+                "Figma"
+            ],
+            "difficulty": "hard",
+            "duration": "1-2 hari"
+        },
+        {
+            "skill_id": "motion_graphics",
+            "title": "Motion Graphics",
+            "instruction": "Buat animasi grafis. Pastikan Anda memahami konsep dasar, praktik secara konsisten, dan dokumentasikan progress pembelajaran Anda dengan catatan atau screenshot.",
+            "description": "Buat animasi untuk video intro, explainer, atau social media ads.. Breakdown project ini menjadi sub-tasks yang lebih kecil dan manageable. Track progress Anda, catat kesulitan yang dihadapi, dan cari resource tambahan jika diperlukan. Verifikasi bahwa output Anda memenuhi semua requirement yang ada di kolom 'output'.",
+            "output": "Mampu membuat motion graphics",
+            "tools": [
+                "After Effects"
+            ],
+            "difficulty": "hard",
+            "duration": "1-2 hari"
+        },
+        {
+            "skill_id": "art_direction",
+            "title": "Art Direction",
+            "instruction": "Pimpin arah visual project. Pastikan Anda memahami konsep dasar, praktik secara konsisten, dan dokumentasikan progress pembelajaran Anda dengan catatan atau screenshot.",
+            "description": "Tentukan visual concept, mood, style untuk project dan koordinasi eksekusi.. Breakdown project ini menjadi sub-tasks yang lebih kecil dan manageable. Track progress Anda, catat kesulitan yang dihadapi, dan cari resource tambahan jika diperlukan. Verifikasi bahwa output Anda memenuhi semua requirement yang ada di kolom 'output'.",
+            "output": "Mampu memimpin arah visual project",
+            "tools": [
+                "Figma",
+                "Docs"
+            ],
+            "difficulty": "hard",
+            "duration": "1 hari"
+        },
+        {
+            "skill_id": "3d_design",
+            "title": "3D Design Dasar",
+            "instruction": "Buat model 3D sederhana. Pastikan Anda memahami konsep dasar, praktik secara konsisten, dan dokumentasikan progress pembelajaran Anda dengan catatan atau screenshot.",
+            "description": "Buat objek 3D sederhana menggunakan Blender atau Cinema 4D.. Breakdown project ini menjadi sub-tasks yang lebih kecil dan manageable. Track progress Anda, catat kesulitan yang dihadapi, dan cari resource tambahan jika diperlukan. Verifikasi bahwa output Anda memenuhi semua requirement yang ada di kolom 'output'.",
+            "output": "Mampu membuat 3D design dasar",
+            "tools": [
+                "Blender"
+            ],
+            "difficulty": "hard",
+            "duration": "1-2 hari"
+        },
+        {
+            "skill_id": "client_management",
+            "title": "Manajemen Klien",
+            "instruction": "Kelola komunikasi dengan klien. Pastikan Anda memahami konsep dasar, praktik secara konsisten, dan dokumentasikan progress pembelajaran Anda dengan catatan atau screenshot.",
+            "description": "Dokumentasikan requirement, feedback, revisi, dan pastikan kepuasan klien.. Breakdown project ini menjadi sub-tasks yang lebih kecil dan manageable. Track progress Anda, catat kesulitan yang dihadapi, dan cari resource tambahan jika diperlukan. Verifikasi bahwa output Anda memenuhi semua requirement yang ada di kolom 'output'.",
+            "output": "Mampu mengelola klien secara profesional",
+            "tools": [
+                "Docs",
+                "Asana"
+            ],
+            "difficulty": "medium",
+            "duration": "1 hari"
+        },
+        {
+            "skill_id": "excel",
+            "title": "Analisis Data Excel",
+            "instruction": "Olah data menggunakan Excel. Pastikan Anda memahami konsep dasar, praktik secara konsisten, dan dokumentasikan progress pembelajaran Anda dengan catatan atau screenshot.",
+            "description": "Masukkan data, gunakan fungsi SUM, AVERAGE, COUNT, dan buat chart.. Breakdown project ini menjadi sub-tasks yang lebih kecil dan manageable. Track progress Anda, catat kesulitan yang dihadapi, dan cari resource tambahan jika diperlukan. Verifikasi bahwa output Anda memenuhi semua requirement yang ada di kolom 'output'.",
+            "output": "Mampu mengolah dan menganalisis data menggunakan Excel",
+            "tools": [
+                "Excel"
+            ],
+            "difficulty": "easy",
+            "duration": "3 jam"
+        },
+        {
+            "skill_id": "data_collection",
+            "title": "Pengumpulan Data",
+            "instruction": "Kumpulkan data dari berbagai sumber. Pastikan Anda memahami konsep dasar, praktik secara konsisten, dan dokumentasikan progress pembelajaran Anda dengan catatan atau screenshot.",
+            "description": "Buat survey dengan Google Forms, kumpulkan data minimal dari 20 responden.. Breakdown project ini menjadi sub-tasks yang lebih kecil dan manageable. Track progress Anda, catat kesulitan yang dihadapi, dan cari resource tambahan jika diperlukan. Verifikasi bahwa output Anda memenuhi semua requirement yang ada di kolom 'output'.",
+            "output": "Mampu mengumpulkan data dari berbagai sumber",
+            "tools": [
+                "Google Forms"
+            ],
+            "difficulty": "easy",
+            "duration": "2 jam"
+        },
+        {
+            "skill_id": "data_cleaning_basic",
+            "title": "Pembersihan Data",
+            "instruction": "Bersihkan dataset yang tidak valid. Pastikan Anda memahami konsep dasar, praktik secara konsisten, dan dokumentasikan progress pembelajaran Anda dengan catatan atau screenshot.",
+            "description": "Identifikasi missing values, duplicates, outliers dan bersihkan dataset.. Breakdown project ini menjadi sub-tasks yang lebih kecil dan manageable. Track progress Anda, catat kesulitan yang dihadapi, dan cari resource tambahan jika diperlukan. Verifikasi bahwa output Anda memenuhi semua requirement yang ada di kolom 'output'.",
+            "output": "Mampu membersihkan data yang tidak valid",
+            "tools": [
+                "Excel",
+                "Python"
+            ],
+            "difficulty": "medium",
+            "duration": "3 jam"
+        },
+        {
+            "skill_id": "chart_basic",
+            "title": "Visualisasi Data Dasar",
+            "instruction": "Buat chart dari data. Pastikan Anda memahami konsep dasar, praktik secara konsisten, dan dokumentasikan progress pembelajaran Anda dengan catatan atau screenshot.",
+            "description": "Buat bar chart, line chart, pie chart dari data menggunakan Excel.. Breakdown project ini menjadi sub-tasks yang lebih kecil dan manageable. Track progress Anda, catat kesulitan yang dihadapi, dan cari resource tambahan jika diperlukan. Verifikasi bahwa output Anda memenuhi semua requirement yang ada di kolom 'output'.",
+            "output": "Mampu membuat visualisasi data dasar",
+            "tools": [
+                "Excel"
+            ],
+            "difficulty": "easy",
+            "duration": "2 jam"
+        },
+        {
+            "skill_id": "math_stats_basic",
+            "title": "Statistika Dasar",
+            "instruction": "Hitung statistika dasar. Pastikan Anda memahami konsep dasar, praktik secara konsisten, dan dokumentasikan progress pembelajaran Anda dengan catatan atau screenshot.",
+            "description": "Hitung mean, median, modus, standard deviation dari dataset.. Breakdown project ini menjadi sub-tasks yang lebih kecil dan manageable. Track progress Anda, catat kesulitan yang dihadapi, dan cari resource tambahan jika diperlukan. Verifikasi bahwa output Anda memenuhi semua requirement yang ada di kolom 'output'.",
+            "output": "Mampu melakukan analisis statistika dasar",
+            "tools": [
+                "Excel"
+            ],
+            "difficulty": "easy",
+            "duration": "2 jam"
+        },
+        {
+            "skill_id": "sql",
+            "title": "Query Data SQL",
+            "instruction": "Tulis query SQL kompleks. Pastikan Anda memahami konsep dasar, praktik secara konsisten, dan dokumentasikan progress pembelajaran Anda dengan catatan atau screenshot.",
+            "description": "Buat query dengan JOIN, GROUP BY, ORDER BY, filtering, aggregation.. Breakdown project ini menjadi sub-tasks yang lebih kecil dan manageable. Track progress Anda, catat kesulitan yang dihadapi, dan cari resource tambahan jika diperlukan. Verifikasi bahwa output Anda memenuhi semua requirement yang ada di kolom 'output'.",
+            "output": "Mampu menulis query SQL yang kompleks",
+            "tools": [
+                "MySQL"
+            ],
+            "difficulty": "medium",
+            "duration": "4 jam"
+        },
+        {
+            "skill_id": "python_analysis",
+            "title": "Python untuk Analisis",
+            "instruction": "Analisis data menggunakan Python. Pastikan Anda memahami konsep dasar, praktik secara konsisten, dan dokumentasikan progress pembelajaran Anda dengan catatan atau screenshot.",
+            "description": "Gunakan Pandas dan NumPy untuk load, clean, dan analyze data.. Breakdown project ini menjadi sub-tasks yang lebih kecil dan manageable. Track progress Anda, catat kesulitan yang dihadapi, dan cari resource tambahan jika diperlukan. Verifikasi bahwa output Anda memenuhi semua requirement yang ada di kolom 'output'.",
+            "output": "Mampu menggunakan Python untuk data analysis",
+            "tools": [
+                "Python",
+                "Jupyter"
+            ],
+            "difficulty": "medium",
+            "duration": "1 hari"
+        },
+        {
+            "skill_id": "data_cleaning_adv",
+            "title": "Data Wrangling",
+            "instruction": "Transform dan prepare data. Pastikan Anda memahami konsep dasar, praktik secara konsisten, dan dokumentasikan progress pembelajaran Anda dengan catatan atau screenshot.",
+            "description": "Reshape data, handle missing values, merge datasets, normalize data.. Breakdown project ini menjadi sub-tasks yang lebih kecil dan manageable. Track progress Anda, catat kesulitan yang dihadapi, dan cari resource tambahan jika diperlukan. Verifikasi bahwa output Anda memenuhi semua requirement yang ada di kolom 'output'.",
+            "output": "Mampu melakukan data wrangling advanced",
+            "tools": [
+                "Python",
+                "Pandas"
+            ],
+            "difficulty": "hard",
+            "duration": "1 hari"
+        },
+        {
+            "skill_id": "business_acumen",
+            "title": "Pemahaman Bisnis",
+            "instruction": "Pahami business metrics dan KPI. Pastikan Anda memahami konsep dasar, praktik secara konsisten, dan dokumentasikan progress pembelajaran Anda dengan catatan atau screenshot.",
+            "description": "Analisis business data, identifikasi KPI, dan buat recommendation.. Breakdown project ini menjadi sub-tasks yang lebih kecil dan manageable. Track progress Anda, catat kesulitan yang dihadapi, dan cari resource tambahan jika diperlukan. Verifikasi bahwa output Anda memenuhi semua requirement yang ada di kolom 'output'.",
+            "output": "Mampu memahami konteks bisnis dalam analisis data",
+            "tools": [
+                "Excel",
+                "Docs"
+            ],
+            "difficulty": "medium",
+            "duration": "1 hari"
+        },
+        {
+            "skill_id": "dashboard",
+            "title": "Dashboard Reporting",
+            "instruction": "Buat dashboard interaktif. Pastikan Anda memahami konsep dasar, praktik secara konsisten, dan dokumentasikan progress pembelajaran Anda dengan catatan atau screenshot.",
+            "description": "Gunakan Tableau atau Power BI untuk membuat dashboard dari data.. Breakdown project ini menjadi sub-tasks yang lebih kecil dan manageable. Track progress Anda, catat kesulitan yang dihadapi, dan cari resource tambahan jika diperlukan. Verifikasi bahwa output Anda memenuhi semua requirement yang ada di kolom 'output'.",
+            "output": "Mampu membuat dashboard reporting interaktif",
+            "tools": [
+                "Tableau",
+                "Power BI"
+            ],
+            "difficulty": "medium",
+            "duration": "1 hari"
+        },
+        {
+            "skill_id": "data_visualization",
+            "title": "Data Visualization Advanced",
+            "instruction": "Buat visualisasi data yang kompleks. Pastikan Anda memahami konsep dasar, praktik secara konsisten, dan dokumentasikan progress pembelajaran Anda dengan catatan atau screenshot.",
+            "description": "Buat multiple chart types, storytelling dengan data, interactive visualization.. Breakdown project ini menjadi sub-tasks yang lebih kecil dan manageable. Track progress Anda, catat kesulitan yang dihadapi, dan cari resource tambahan jika diperlukan. Verifikasi bahwa output Anda memenuhi semua requirement yang ada di kolom 'output'.",
+            "output": "Mampu membuat data visualization yang komunikatif",
+            "tools": [
+                "Tableau",
+                "Power BI"
+            ],
+            "difficulty": "hard",
+            "duration": "1-2 hari"
+        },
+        {
+            "skill_id": "statistics",
+            "title": "Statistika Inferensial",
+            "instruction": "Aplikasikan hypothesis testing. Pastikan Anda memahami konsep dasar, praktik secara konsisten, dan dokumentasikan progress pembelajaran Anda dengan catatan atau screenshot.",
+            "description": "Lakukan t-test, chi-square test, correlation analysis, regression.. Breakdown project ini menjadi sub-tasks yang lebih kecil dan manageable. Track progress Anda, catat kesulitan yang dihadapi, dan cari resource tambahan jika diperlukan. Verifikasi bahwa output Anda memenuhi semua requirement yang ada di kolom 'output'.",
+            "output": "Mampu melakukan analisis statistika inferensial",
+            "tools": [
+                "Python",
+                "R"
+            ],
+            "difficulty": "hard",
+            "duration": "1-2 hari"
+        },
+        {
+            "skill_id": "ml_basic",
+            "title": "Machine Learning Dasar",
+            "instruction": "Buat model machine learning sederhana. Pastikan Anda memahami konsep dasar, praktik secara konsisten, dan dokumentasikan progress pembelajaran Anda dengan catatan atau screenshot.",
+            "description": "Buat model regression atau classification sederhana menggunakan scikit-learn.. Breakdown project ini menjadi sub-tasks yang lebih kecil dan manageable. Track progress Anda, catat kesulitan yang dihadapi, dan cari resource tambahan jika diperlukan. Verifikasi bahwa output Anda memenuhi semua requirement yang ada di kolom 'output'.",
+            "output": "Mampu membuat basic machine learning model",
+            "tools": [
+                "Python",
+                "scikit-learn"
+            ],
+            "difficulty": "hard",
+            "duration": "1-2 hari"
+        },
+        {
+            "skill_id": "storytelling_data",
+            "title": "Data Storytelling",
+            "instruction": "Ceritakan insight dari data. Pastikan Anda memahami konsep dasar, praktik secara konsisten, dan dokumentasikan progress pembelajaran Anda dengan catatan atau screenshot.",
+            "description": "Buat presentasi dengan data storytelling: context-insight-action.. Breakdown project ini menjadi sub-tasks yang lebih kecil dan manageable. Track progress Anda, catat kesulitan yang dihadapi, dan cari resource tambahan jika diperlukan. Verifikasi bahwa output Anda memenuhi semua requirement yang ada di kolom 'output'.",
+            "output": "Mampu mengkomunikasikan data insight secara efektif",
+            "tools": [
+                "Presentation",
+                "Tableau"
+            ],
+            "difficulty": "hard",
+            "duration": "1 hari"
+        },
+        {
+            "skill_id": "big_data",
+            "title": "Big Data Tools",
+            "instruction": "Gunakan big data tools. Pastikan Anda memahami konsep dasar, praktik secara konsisten, dan dokumentasikan progress pembelajaran Anda dengan catatan atau screenshot.",
+            "description": "Setup Spark atau BigQuery, process large dataset, optimize queries.. Breakdown project ini menjadi sub-tasks yang lebih kecil dan manageable. Track progress Anda, catat kesulitan yang dihadapi, dan cari resource tambahan jika diperlukan. Verifikasi bahwa output Anda memenuhi semua requirement yang ada di kolom 'output'.",
+            "output": "Mampu menggunakan big data tools",
+            "tools": [
+                "Spark",
+                "BigQuery"
+            ],
+            "difficulty": "hard",
+            "duration": "1-2 hari"
+        },
+        {
+            "skill_id": "teaching",
+            "title": "Simulasi Mengajar",
+            "instruction": "Ajarkan materi kepada teman. Pastikan Anda memahami konsep dasar, praktik secara konsisten, dan dokumentasikan progress pembelajaran Anda dengan catatan atau screenshot.",
+            "description": "Pilih materi, siapkan slide, jelaskan kepada teman selama 10-15 menit.. Breakdown project ini menjadi sub-tasks yang lebih kecil dan manageable. Track progress Anda, catat kesulitan yang dihadapi, dan cari resource tambahan jika diperlukan. Verifikasi bahwa output Anda memenuhi semua requirement yang ada di kolom 'output'.",
+            "output": "Mampu menyampaikan materi pembelajaran secara efektif",
+            "tools": [
+                "PowerPoint"
+            ],
+            "difficulty": "easy",
+            "duration": "2 jam"
+        },
+        {
+            "skill_id": "subject_knowledge",
+            "title": "Penguasaan Materi",
+            "instruction": "Kuasai materi yang akan diajarkan. Pastikan Anda memahami konsep dasar, praktik secara konsisten, dan dokumentasikan progress pembelajaran Anda dengan catatan atau screenshot.",
+            "description": "Pelajari materi mendalam, buat summary, siapkan contoh dan studi kasus.. Breakdown project ini menjadi sub-tasks yang lebih kecil dan manageable. Track progress Anda, catat kesulitan yang dihadapi, dan cari resource tambahan jika diperlukan. Verifikasi bahwa output Anda memenuhi semua requirement yang ada di kolom 'output'.",
+            "output": "Mampu menguasai materi pembelajaran dengan mendalam",
+            "tools": [
+                "Docs"
+            ],
+            "difficulty": "medium",
+            "duration": "1-2 hari"
+        },
+        {
+            "skill_id": "student_engagement",
+            "title": "Keterlibatan Siswa",
+            "instruction": "Buat strategi engagement siswa. Pastikan Anda memahami konsep dasar, praktik secara konsisten, dan dokumentasikan progress pembelajaran Anda dengan catatan atau screenshot.",
+            "description": "Desain interactive activity, game, discussion, untuk engage siswa.. Breakdown project ini menjadi sub-tasks yang lebih kecil dan manageable. Track progress Anda, catat kesulitan yang dihadapi, dan cari resource tambahan jika diperlukan. Verifikasi bahwa output Anda memenuhi semua requirement yang ada di kolom 'output'.",
+            "output": "Mampu membuat strategi untuk engage siswa",
+            "tools": [
+                "Docs"
+            ],
+            "difficulty": "medium",
+            "duration": "1 hari"
+        },
+        {
+            "skill_id": "time_management",
+            "title": "Manajemen Waktu",
+            "instruction": "Kelola waktu pembelajaran. Pastikan Anda memahami konsep dasar, praktik secara konsisten, dan dokumentasikan progress pembelajaran Anda dengan catatan atau screenshot.",
+            "description": "Buat schedule harian yang balanced, track productivity, optimize time.. Breakdown project ini menjadi sub-tasks yang lebih kecil dan manageable. Track progress Anda, catat kesulitan yang dihadapi, dan cari resource tambahan jika diperlukan. Verifikasi bahwa output Anda memenuhi semua requirement yang ada di kolom 'output'.",
+            "output": "Mampu mengelola waktu dengan efektif",
+            "tools": [
+                "Calendar",
+                "Todo"
+            ],
+            "difficulty": "easy",
+            "duration": "1 jam"
+        },
+        {
+            "skill_id": "basic_assessment",
+            "title": "Penilaian Siswa",
+            "instruction": "Buat assessment dan kunci jawaban. Pastikan Anda memahami konsep dasar, praktik secara konsisten, dan dokumentasikan progress pembelajaran Anda dengan catatan atau screenshot.",
+            "description": "Buat 20 soal, rubrik penilaian, dan kunci jawaban untuk test.. Breakdown project ini menjadi sub-tasks yang lebih kecil dan manageable. Track progress Anda, catat kesulitan yang dihadapi, dan cari resource tambahan jika diperlukan. Verifikasi bahwa output Anda memenuhi semua requirement yang ada di kolom 'output'.",
+            "output": "Mampu membuat assessment yang objektif",
+            "tools": [
+                "Docs",
+                "Google Forms"
+            ],
+            "difficulty": "medium",
+            "duration": "3 jam"
+        },
+        {
+            "skill_id": "communication",
+            "title": "Komunikasi Efektif",
+            "instruction": "Praktik komunikasi yang efektif. Pastikan Anda memahami konsep dasar, praktik secara konsisten, dan dokumentasikan progress pembelajaran Anda dengan catatan atau screenshot.",
+            "description": "Presentasikan topik, praktek public speaking, collect feedback.. Breakdown project ini menjadi sub-tasks yang lebih kecil dan manageable. Track progress Anda, catat kesulitan yang dihadapi, dan cari resource tambahan jika diperlukan. Verifikasi bahwa output Anda memenuhi semua requirement yang ada di kolom 'output'.",
+            "output": "Mampu berkomunikasi secara efektif",
+            "tools": [
+                "Presentation"
+            ],
+            "difficulty": "medium",
+            "duration": "2 jam"
+        },
+        {
+            "skill_id": "lesson_plan",
+            "title": "Rencana Pembelajaran (RPP)",
+            "instruction": "Buat lesson plan lengkap. Pastikan Anda memahami konsep dasar, praktik secara konsisten, dan dokumentasikan progress pembelajaran Anda dengan catatan atau screenshot.",
+            "description": "Desain RPP dengan objective, methods, materials, assessment untuk 1 jam kelas.. Breakdown project ini menjadi sub-tasks yang lebih kecil dan manageable. Track progress Anda, catat kesulitan yang dihadapi, dan cari resource tambahan jika diperlukan. Verifikasi bahwa output Anda memenuhi semua requirement yang ada di kolom 'output'.",
+            "output": "Mampu menyusun lesson plan yang terstruktur",
+            "tools": [
+                "Docs"
+            ],
+            "difficulty": "medium",
+            "duration": "3 jam"
+        },
+        {
+            "skill_id": "differentiation",
+            "title": "Pembelajaran Diferensiasi",
+            "instruction": "Rancang pembelajaran yang diferensiasi. Pastikan Anda memahami konsep dasar, praktik secara konsisten, dan dokumentasikan progress pembelajaran Anda dengan catatan atau screenshot.",
+            "description": "Buat 3 versi materi untuk level berbeda (basic, medium, advanced).. Breakdown project ini menjadi sub-tasks yang lebih kecil dan manageable. Track progress Anda, catat kesulitan yang dihadapi, dan cari resource tambahan jika diperlukan. Verifikasi bahwa output Anda memenuhi semua requirement yang ada di kolom 'output'.",
+            "output": "Mampu merancang pembelajaran yang diferensiasi",
+            "tools": [
+                "Docs"
+            ],
+            "difficulty": "medium",
+            "duration": "1 hari"
+        },
+        {
+            "skill_id": "tech_tools",
+            "title": "Teknologi Pendidikan",
+            "instruction": "Gunakan tech tools dalam mengajar. Pastikan Anda memahami konsep dasar, praktik secara konsisten, dan dokumentasikan progress pembelajaran Anda dengan catatan atau screenshot.",
+            "description": "Explore dan gunakan tools seperti Kahoot, Quizizz, Padlet, Google Classroom.. Breakdown project ini menjadi sub-tasks yang lebih kecil dan manageable. Track progress Anda, catat kesulitan yang dihadapi, dan cari resource tambahan jika diperlukan. Verifikasi bahwa output Anda memenuhi semua requirement yang ada di kolom 'output'.",
+            "output": "Mampu menggunakan teknologi dalam pembelajaran",
+            "tools": [
+                "Kahoot",
+                "Google Classroom"
+            ],
+            "difficulty": "medium",
+            "duration": "2 jam"
+        },
+        {
+            "skill_id": "parent_comm",
+            "title": "Komunikasi dengan Orang Tua",
+            "instruction": "Komunikasikan progress siswa ke orang tua. Pastikan Anda memahami konsep dasar, praktik secara konsisten, dan dokumentasikan progress pembelajaran Anda dengan catatan atau screenshot.",
+            "description": "Buat report kartu siswa, template komunikasi, handle parent meeting.. Breakdown project ini menjadi sub-tasks yang lebih kecil dan manageable. Track progress Anda, catat kesulitan yang dihadapi, dan cari resource tambahan jika diperlukan. Verifikasi bahwa output Anda memenuhi semua requirement yang ada di kolom 'output'.",
+            "output": "Mampu berkomunikasi efektif dengan orang tua",
+            "tools": [
+                "Docs"
+            ],
+            "difficulty": "medium",
+            "duration": "2 jam"
+        },
+        {
+            "skill_id": "class_management",
+            "title": "Manajemen Kelas",
+            "instruction": "Kelola kelas agar kondusif. Pastikan Anda memahami konsep dasar, praktik secara konsisten, dan dokumentasikan progress pembelajaran Anda dengan catatan atau screenshot.",
+            "description": "Buat class rules, behavior management strategy, dokumentasikan hasil.. Breakdown project ini menjadi sub-tasks yang lebih kecil dan manageable. Track progress Anda, catat kesulitan yang dihadapi, dan cari resource tambahan jika diperlukan. Verifikasi bahwa output Anda memenuhi semua requirement yang ada di kolom 'output'.",
+            "output": "Mampu mengelola kelas secara efektif",
+            "tools": [
+                "Docs"
+            ],
+            "difficulty": "medium",
+            "duration": "3 jam"
+        },
+        {
+            "skill_id": "curriculum_dev",
+            "title": "Pengembangan Kurikulum",
+            "instruction": "Desain kurikulum pembelajaran. Pastikan Anda memahami konsep dasar, praktik secara konsisten, dan dokumentasikan progress pembelajaran Anda dengan catatan atau screenshot.",
+            "description": "Buat kurikulum untuk 1 semester dengan learning objectives, content, assessment.. Breakdown project ini menjadi sub-tasks yang lebih kecil dan manageable. Track progress Anda, catat kesulitan yang dihadapi, dan cari resource tambahan jika diperlukan. Verifikasi bahwa output Anda memenuhi semua requirement yang ada di kolom 'output'.",
+            "output": "Mampu mengembangkan kurikulum yang efektif",
+            "tools": [
+                "Docs"
+            ],
+            "difficulty": "hard",
+            "duration": "1-2 hari"
+        },
+        {
+            "skill_id": "mentoring",
+            "title": "Mentoring & Konseling",
+            "instruction": "Bimbing siswa secara personal. Pastikan Anda memahami konsep dasar, praktik secara konsisten, dan dokumentasikan progress pembelajaran Anda dengan catatan atau screenshot.",
+            "description": "Identifikasi kebutuhan siswa, buat personal development plan, track progress.. Breakdown project ini menjadi sub-tasks yang lebih kecil dan manageable. Track progress Anda, catat kesulitan yang dihadapi, dan cari resource tambahan jika diperlukan. Verifikasi bahwa output Anda memenuhi semua requirement yang ada di kolom 'output'.",
+            "output": "Mampu membimbing siswa secara personal",
+            "tools": [
+                "Docs"
+            ],
+            "difficulty": "hard",
+            "duration": "1 hari"
+        },
+        {
+            "skill_id": "research_pedagogy",
+            "title": "Riset Pedagogi",
+            "instruction": "Terapkan research dalam mengajar. Pastikan Anda memahami konsep dasar, praktik secara konsisten, dan dokumentasikan progress pembelajaran Anda dengan catatan atau screenshot.",
+            "description": "Review research paper, identifikasi best practice, implement dalam class.. Breakdown project ini menjadi sub-tasks yang lebih kecil dan manageable. Track progress Anda, catat kesulitan yang dihadapi, dan cari resource tambahan jika diperlukan. Verifikasi bahwa output Anda memenuhi semua requirement yang ada di kolom 'output'.",
+            "output": "Mampu mengaplikasikan research dalam pedagogi",
+            "tools": [
+                "Scholar",
+                "Docs"
+            ],
+            "difficulty": "hard",
+            "duration": "1-2 hari"
+        },
+        {
+            "skill_id": "leadership_edu",
+            "title": "Kepemimpinan Pendidikan",
+            "instruction": "Pimpin inisiatif pendidikan. Pastikan Anda memahami konsep dasar, praktik secara konsisten, dan dokumentasikan progress pembelajaran Anda dengan catatan atau screenshot.",
+            "description": "Rencanakan improvement project, lead team, measure impact.. Breakdown project ini menjadi sub-tasks yang lebih kecil dan manageable. Track progress Anda, catat kesulitan yang dihadapi, dan cari resource tambahan jika diperlukan. Verifikasi bahwa output Anda memenuhi semua requirement yang ada di kolom 'output'.",
+            "output": "Mampu memimpin inisiatif pendidikan",
+            "tools": [
+                "Docs"
+            ],
+            "difficulty": "hard",
+            "duration": "1-2 hari"
+        },
+        {
+            "skill_id": "patient_care",
+            "title": "Perawatan Pasien",
+            "instruction": "Buat checklist perawatan pasien. Pastikan Anda memahami konsep dasar, praktik secara konsisten, dan dokumentasikan progress pembelajaran Anda dengan catatan atau screenshot.",
+            "description": "Dokumentasikan langkah-langkah perawatan dasar pasien sesuai SOP.. Breakdown project ini menjadi sub-tasks yang lebih kecil dan manageable. Track progress Anda, catat kesulitan yang dihadapi, dan cari resource tambahan jika diperlukan. Verifikasi bahwa output Anda memenuhi semua requirement yang ada di kolom 'output'.",
+            "output": "Mampu memberikan perawatan dasar pasien",
+            "tools": [
+                "SOP"
+            ],
+            "difficulty": "medium",
+            "duration": "3 jam"
+        },
+        {
+            "skill_id": "vital_signs",
+            "title": "Pengukuran Tanda Vital",
+            "instruction": "Latih pengukuran tanda vital. Pastikan Anda memahami konsep dasar, praktik secara konsisten, dan dokumentasikan progress pembelajaran Anda dengan catatan atau screenshot.",
+            "description": "Praktik mengukur tekanan darah, suhu, nadi, respiratory rate, dokumentasikan.. Breakdown project ini menjadi sub-tasks yang lebih kecil dan manageable. Track progress Anda, catat kesulitan yang dihadapi, dan cari resource tambahan jika diperlukan. Verifikasi bahwa output Anda memenuhi semua requirement yang ada di kolom 'output'.",
+            "output": "Mampu mengukur tanda vital dengan akurat",
+            "tools": [
+                "Equipment"
+            ],
+            "difficulty": "medium",
+            "duration": "2 jam"
+        },
+        {
+            "skill_id": "hygiene",
+            "title": "Higiene & Sanitasi",
+            "instruction": "Terapkan protokol higiene. Pastikan Anda memahami konsep dasar, praktik secara konsisten, dan dokumentasikan progress pembelajaran Anda dengan catatan atau screenshot.",
+            "description": "Buat checklist higiene, hand washing protocol, equipment sterilization.. Breakdown project ini menjadi sub-tasks yang lebih kecil dan manageable. Track progress Anda, catat kesulitan yang dihadapi, dan cari resource tambahan jika diperlukan. Verifikasi bahwa output Anda memenuhi semua requirement yang ada di kolom 'output'.",
+            "output": "Mampu menerapkan standar higiene dan sanitasi",
+            "tools": [
+                "SOP"
+            ],
+            "difficulty": "medium",
+            "duration": "2 jam"
+        },
+        {
+            "skill_id": "documentation",
+            "title": "Dokumentasi Keperawatan",
+            "instruction": "Catat kondisi dan tindakan pasien. Pastikan Anda memahami konsep dasar, praktik secara konsisten, dan dokumentasikan progress pembelajaran Anda dengan catatan atau screenshot.",
+            "description": "Buat medical record form, dokumentasikan patient case dengan detail.. Breakdown project ini menjadi sub-tasks yang lebih kecil dan manageable. Track progress Anda, catat kesulitan yang dihadapi, dan cari resource tambahan jika diperlukan. Verifikasi bahwa output Anda memenuhi semua requirement yang ada di kolom 'output'.",
+            "output": "Mampu membuat dokumentasi keperawatan yang akurat",
+            "tools": [
+                "Docs"
+            ],
+            "difficulty": "medium",
+            "duration": "2 jam"
+        },
+        {
+            "skill_id": "empathy",
+            "title": "Empati & Pelayanan",
+            "instruction": "Praktik empati dalam melayani. Pastikan Anda memahami konsep dasar, praktik secara konsisten, dan dokumentasikan progress pembelajaran Anda dengan catatan atau screenshot.",
+            "description": "Roleplay patient care, practice active listening, dokumentasikan reflection.. Breakdown project ini menjadi sub-tasks yang lebih kecil dan manageable. Track progress Anda, catat kesulitan yang dihadapi, dan cari resource tambahan jika diperlukan. Verifikasi bahwa output Anda memenuhi semua requirement yang ada di kolom 'output'.",
+            "output": "Mampu memberikan layanan dengan empati",
+            "tools": [
+                "Docs"
+            ],
+            "difficulty": "medium",
+            "duration": "2 jam"
+        },
+        {
+            "skill_id": "medical_knowledge",
+            "title": "Pengetahuan Medis",
+            "instruction": "Pelajari dasar medis. Pastikan Anda memahami konsep dasar, praktik secara konsisten, dan dokumentasikan progress pembelajaran Anda dengan catatan atau screenshot.",
+            "description": "Study anatomy, pathophysiology, pharmacology dasar, buat summary.. Breakdown project ini menjadi sub-tasks yang lebih kecil dan manageable. Track progress Anda, catat kesulitan yang dihadapi, dan cari resource tambahan jika diperlukan. Verifikasi bahwa output Anda memenuhi semua requirement yang ada di kolom 'output'.",
+            "output": "Mampu memahami pengetahuan medis dasar",
+            "tools": [
+                "Docs"
+            ],
+            "difficulty": "hard",
+            "duration": "1-2 hari"
+        },
+        {
+            "skill_id": "medication",
+            "title": "Administrasi Obat",
+            "instruction": "Pelajari protokol pemberian obat. Pastikan Anda memahami konsep dasar, praktik secara konsisten, dan dokumentasikan progress pembelajaran Anda dengan catatan atau screenshot.",
+            "description": "Study 5 jenis obat, mechanism, dosage, side effect, dokumentasikan.. Breakdown project ini menjadi sub-tasks yang lebih kecil dan manageable. Track progress Anda, catat kesulitan yang dihadapi, dan cari resource tambahan jika diperlukan. Verifikasi bahwa output Anda memenuhi semua requirement yang ada di kolom 'output'.",
+            "output": "Mampu memberikan obat dengan aman",
+            "tools": [
+                "SOP"
+            ],
+            "difficulty": "hard",
+            "duration": "1 hari"
+        },
+        {
+            "skill_id": "wound_care",
+            "title": "Perawatan Luka",
+            "instruction": "Praktik perawatan luka. Pastikan Anda memahami konsep dasar, praktik secara konsisten, dan dokumentasikan progress pembelajaran Anda dengan catatan atau screenshot.",
+            "description": "Latih wound cleaning, dressing, dokumentasikan different wound types.. Breakdown project ini menjadi sub-tasks yang lebih kecil dan manageable. Track progress Anda, catat kesulitan yang dihadapi, dan cari resource tambahan jika diperlukan. Verifikasi bahwa output Anda memenuhi semua requirement yang ada di kolom 'output'.",
+            "output": "Mampu merawat berbagai jenis luka",
+            "tools": [
+                "Equipment"
+            ],
+            "difficulty": "hard",
+            "duration": "1 hari"
+        },
+        {
+            "skill_id": "health_education",
+            "title": "Edukasi Kesehatan",
+            "instruction": "Edukasi pasien tentang kesehatan. Pastikan Anda memahami konsep dasar, praktik secara konsisten, dan dokumentasikan progress pembelajaran Anda dengan catatan atau screenshot.",
+            "description": "Buat patient education material, presentasi kesehatan kepada group.. Breakdown project ini menjadi sub-tasks yang lebih kecil dan manageable. Track progress Anda, catat kesulitan yang dihadapi, dan cari resource tambahan jika diperlukan. Verifikasi bahwa output Anda memenuhi semua requirement yang ada di kolom 'output'.",
+            "output": "Mampu mengedukasi pasien tentang kesehatan",
+            "tools": [
+                "Presentation"
+            ],
+            "difficulty": "medium",
+            "duration": "3 jam"
+        },
+        {
+            "skill_id": "teamwork_medical",
+            "title": "Kolaborasi Tim Medis",
+            "instruction": "Koordinasi dengan tim medis. Pastikan Anda memahami konsep dasar, praktik secara konsisten, dan dokumentasikan progress pembelajaran Anda dengan catatan atau screenshot.",
+            "description": "Simulasi team meeting, coordinate care, documentation handoff.. Breakdown project ini menjadi sub-tasks yang lebih kecil dan manageable. Track progress Anda, catat kesulitan yang dihadapi, dan cari resource tambahan jika diperlukan. Verifikasi bahwa output Anda memenuhi semua requirement yang ada di kolom 'output'.",
+            "output": "Mampu berkolaborasi efektif dengan tim medis",
+            "tools": [
+                "Docs"
+            ],
+            "difficulty": "medium",
+            "duration": "2 jam"
+        },
+        {
+            "skill_id": "emergency",
+            "title": "Penanganan Darurat",
+            "instruction": "Belajar penanganan kondisi darurat. Pastikan Anda memahami konsep dasar, praktik secara konsisten, dan dokumentasikan progress pembelajaran Anda dengan catatan atau screenshot.",
+            "description": "Study emergency protocols (CPR, choking, shock), buat action plan.. Breakdown project ini menjadi sub-tasks yang lebih kecil dan manageable. Track progress Anda, catat kesulitan yang dihadapi, dan cari resource tambahan jika diperlukan. Verifikasi bahwa output Anda memenuhi semua requirement yang ada di kolom 'output'.",
+            "output": "Mampu menangani kondisi darurat dengan tepat",
+            "tools": [
+                "SOP"
+            ],
+            "difficulty": "hard",
+            "duration": "1-2 hari"
+        },
+        {
+            "skill_id": "critical_care",
+            "title": "Perawatan Kritis",
+            "instruction": "Pahami critical care nursing. Pastikan Anda memahami konsep dasar, praktik secara konsisten, dan dokumentasikan progress pembelajaran Anda dengan catatan atau screenshot.",
+            "description": "Study ICU monitoring, equipment, patient assessment, dokumentasi case.. Breakdown project ini menjadi sub-tasks yang lebih kecil dan manageable. Track progress Anda, catat kesulitan yang dihadapi, dan cari resource tambahan jika diperlukan. Verifikasi bahwa output Anda memenuhi semua requirement yang ada di kolom 'output'.",
+            "output": "Mampu memberikan perawatan kritis",
+            "tools": [
+                "SOP"
+            ],
+            "difficulty": "hard",
+            "duration": "1-2 hari"
+        },
+        {
+            "skill_id": "leadership_nursing",
+            "title": "Kepemimpinan Keperawatan",
+            "instruction": "Pimpin tim perawat. Pastikan Anda memahami konsep dasar, praktik secara konsisten, dan dokumentasikan progress pembelajaran Anda dengan catatan atau screenshot.",
+            "description": "Rencanakan shift, assign tasks, coordinate care, evaluate team performance.. Breakdown project ini menjadi sub-tasks yang lebih kecil dan manageable. Track progress Anda, catat kesulitan yang dihadapi, dan cari resource tambahan jika diperlukan. Verifikasi bahwa output Anda memenuhi semua requirement yang ada di kolom 'output'.",
+            "output": "Mampu memimpin tim perawat",
+            "tools": [
+                "Docs"
+            ],
+            "difficulty": "hard",
+            "duration": "1 hari"
+        },
+        {
+            "skill_id": "clinical_research",
+            "title": "Riset Klinis",
+            "instruction": "Aplikasikan riset dalam praktik. Pastikan Anda memahami konsep dasar, praktik secara konsisten, dan dokumentasikan progress pembelajaran Anda dengan catatan atau screenshot.",
+            "description": "Review clinical research, identifikasi evidence-based practice, implement.. Breakdown project ini menjadi sub-tasks yang lebih kecil dan manageable. Track progress Anda, catat kesulitan yang dihadapi, dan cari resource tambahan jika diperlukan. Verifikasi bahwa output Anda memenuhi semua requirement yang ada di kolom 'output'.",
+            "output": "Mampu mengaplikasikan riset klinis dalam praktik",
+            "tools": [
+                "Scholar"
+            ],
+            "difficulty": "hard",
+            "duration": "1-2 hari"
+        },
+        {
+            "skill_id": "bookkeeping",
+            "title": "Pembukuan Keuangan",
+            "instruction": "Catat transaksi keuangan. Pastikan Anda memahami konsep dasar, praktik secara konsisten, dan dokumentasikan progress pembelajaran Anda dengan catatan atau screenshot.",
+            "description": "Buat jurnal entri minimal 20 transaksi dengan debit-kredit yang tepat.. Breakdown project ini menjadi sub-tasks yang lebih kecil dan manageable. Track progress Anda, catat kesulitan yang dihadapi, dan cari resource tambahan jika diperlukan. Verifikasi bahwa output Anda memenuhi semua requirement yang ada di kolom 'output'.",
+            "output": "Mampu melakukan pembukuan keuangan",
+            "tools": [
+                "Excel",
+                "Akuntansi Software"
+            ],
+            "difficulty": "easy",
+            "duration": "3 jam"
+        },
+        {
+            "skill_id": "excel_basic",
+            "title": "Excel untuk Akuntansi",
+            "instruction": "Gunakan Excel untuk perhitungan keuangan. Pastikan Anda memahami konsep dasar, praktik secara konsisten, dan dokumentasikan progress pembelajaran Anda dengan catatan atau screenshot.",
+            "description": "Buat template laporan keuangan di Excel dengan formula.. Breakdown project ini menjadi sub-tasks yang lebih kecil dan manageable. Track progress Anda, catat kesulitan yang dihadapi, dan cari resource tambahan jika diperlukan. Verifikasi bahwa output Anda memenuhi semua requirement yang ada di kolom 'output'.",
+            "output": "Mampu menggunakan Excel untuk akuntansi",
+            "tools": [
+                "Excel"
+            ],
+            "difficulty": "easy",
+            "duration": "2 jam"
+        },
+        {
+            "skill_id": "accounting_equation",
+            "title": "Persamaan Akuntansi",
+            "instruction": "Pahami prinsip akuntansi dasar. Pastikan Anda memahami konsep dasar, praktik secara konsisten, dan dokumentasikan progress pembelajaran Anda dengan catatan atau screenshot.",
+            "description": "Buat 10 transaksi dan hitung Assets = Liabilities + Equity.. Breakdown project ini menjadi sub-tasks yang lebih kecil dan manageable. Track progress Anda, catat kesulitan yang dihadapi, dan cari resource tambahan jika diperlukan. Verifikasi bahwa output Anda memenuhi semua requirement yang ada di kolom 'output'.",
+            "output": "Mampu memahami persamaan akuntansi dasar",
+            "tools": [
+                "Docs"
+            ],
+            "difficulty": "easy",
+            "duration": "1.5 jam"
+        },
+        {
+            "skill_id": "debit_credit",
+            "title": "Debit & Kredit",
+            "instruction": "Pelajari sistem debit kredit. Pastikan Anda memahami konsep dasar, praktik secara konsisten, dan dokumentasikan progress pembelajaran Anda dengan catatan atau screenshot.",
+            "description": "Pelajari normal balance, buat jurnal entri minimal 15 transaksi.. Breakdown project ini menjadi sub-tasks yang lebih kecil dan manageable. Track progress Anda, catat kesulitan yang dihadapi, dan cari resource tambahan jika diperlukan. Verifikasi bahwa output Anda memenuhi semua requirement yang ada di kolom 'output'.",
+            "output": "Mampu membuat jurnal dengan debit kredit yang benar",
+            "tools": [
+                "Docs"
+            ],
+            "difficulty": "easy",
+            "duration": "2 jam"
+        },
+        {
+            "skill_id": "invoice",
+            "title": "Pengelolaan Invoice",
+            "instruction": "Buat dan kelola invoice. Pastikan Anda memahami konsep dasar, praktik secara konsisten, dan dokumentasikan progress pembelajaran Anda dengan catatan atau screenshot.",
+            "description": "Buat invoice template, catat invoice yang diterima/diberikan.. Breakdown project ini menjadi sub-tasks yang lebih kecil dan manageable. Track progress Anda, catat kesulitan yang dihadapi, dan cari resource tambahan jika diperlukan. Verifikasi bahwa output Anda memenuhi semua requirement yang ada di kolom 'output'.",
+            "output": "Mampu mengelola invoice dan pembayaran",
+            "tools": [
+                "Excel"
+            ],
+            "difficulty": "easy",
+            "duration": "2 jam"
+        },
+        {
+            "skill_id": "financial_report",
+            "title": "Laporan Keuangan",
+            "instruction": "Buat laporan keuangan lengkap. Pastikan Anda memahami konsep dasar, praktik secara konsisten, dan dokumentasikan progress pembelajaran Anda dengan catatan atau screenshot.",
+            "description": "Susun Income Statement, Balance Sheet, Cash Flow Statement dari data transaksi.. Breakdown project ini menjadi sub-tasks yang lebih kecil dan manageable. Track progress Anda, catat kesulitan yang dihadapi, dan cari resource tambahan jika diperlukan. Verifikasi bahwa output Anda memenuhi semua requirement yang ada di kolom 'output'.",
+            "output": "Mampu menyusun laporan keuangan lengkap",
+            "tools": [
+                "Excel"
+            ],
+            "difficulty": "hard",
+            "duration": "1 hari"
+        },
+        {
+            "skill_id": "tax_basic",
+            "title": "Perpajakan Dasar",
+            "instruction": "Pelajari perhitungan pajak dasar. Pastikan Anda memahami konsep dasar, praktik secara konsisten, dan dokumentasikan progress pembelajaran Anda dengan catatan atau screenshot.",
+            "description": "Hitung PPh, PPN dari transaksi, buat laporan pajak sederhana.. Breakdown project ini menjadi sub-tasks yang lebih kecil dan manageable. Track progress Anda, catat kesulitan yang dihadapi, dan cari resource tambahan jika diperlukan. Verifikasi bahwa output Anda memenuhi semua requirement yang ada di kolom 'output'.",
+            "output": "Mampu menghitung pajak dasar",
+            "tools": [
+                "Excel"
+            ],
+            "difficulty": "medium",
+            "duration": "3 jam"
+        },
+        {
+            "skill_id": "accounting_software",
+            "title": "Software Akuntansi",
+            "instruction": "Gunakan software akuntansi. Pastikan Anda memahami konsep dasar, praktik secara konsisten, dan dokumentasikan progress pembelajaran Anda dengan catatan atau screenshot.",
+            "description": "Setup Akurat atau QuickBooks, entry transaksi, generate report.. Breakdown project ini menjadi sub-tasks yang lebih kecil dan manageable. Track progress Anda, catat kesulitan yang dihadapi, dan cari resource tambahan jika diperlukan. Verifikasi bahwa output Anda memenuhi semua requirement yang ada di kolom 'output'.",
+            "output": "Mampu menggunakan software akuntansi",
+            "tools": [
+                "Akurat",
+                "QuickBooks"
+            ],
+            "difficulty": "medium",
+            "duration": "1 hari"
+        },
+        {
+            "skill_id": "budgeting",
+            "title": "Penganggaran",
+            "instruction": "Buat budget tahunan. Pastikan Anda memahami konsep dasar, praktik secara konsisten, dan dokumentasikan progress pembelajaran Anda dengan catatan atau screenshot.",
+            "description": "Buat budget untuk 12 bulan dengan proyeksi revenue dan expense.. Breakdown project ini menjadi sub-tasks yang lebih kecil dan manageable. Track progress Anda, catat kesulitan yang dihadapi, dan cari resource tambahan jika diperlukan. Verifikasi bahwa output Anda memenuhi semua requirement yang ada di kolom 'output'.",
+            "output": "Mampu membuat budget perusahaan",
+            "tools": [
+                "Excel"
+            ],
+            "difficulty": "medium",
+            "duration": "1 hari"
+        },
+        {
+            "skill_id": "reconciliation",
+            "title": "Rekonsiliasi Bank",
+            "instruction": "Rekonsiliasi laporan bank. Pastikan Anda memahami konsep dasar, praktik secara konsisten, dan dokumentasikan progress pembelajaran Anda dengan catatan atau screenshot.",
+            "description": "Cocokkan laporan bank dengan catatan internal, identifikasi selisih.. Breakdown project ini menjadi sub-tasks yang lebih kecil dan manageable. Track progress Anda, catat kesulitan yang dihadapi, dan cari resource tambahan jika diperlukan. Verifikasi bahwa output Anda memenuhi semua requirement yang ada di kolom 'output'.",
+            "output": "Mampu melakukan bank reconciliation",
+            "tools": [
+                "Excel"
+            ],
+            "difficulty": "medium",
+            "duration": "2 jam"
+        },
+        {
+            "skill_id": "tax",
+            "title": "Perencanaan Pajak",
+            "instruction": "Rencanakan strategi pajak. Pastikan Anda memahami konsep dasar, praktik secara konsisten, dan dokumentasikan progress pembelajaran Anda dengan catatan atau screenshot.",
+            "description": "Analisis pajak obligation, design tax efficient strategy, dokumentasi.. Breakdown project ini menjadi sub-tasks yang lebih kecil dan manageable. Track progress Anda, catat kesulitan yang dihadapi, dan cari resource tambahan jika diperlukan. Verifikasi bahwa output Anda memenuhi semua requirement yang ada di kolom 'output'.",
+            "output": "Mampu merancang strategi perpajakan",
+            "tools": [
+                "Excel"
+            ],
+            "difficulty": "hard",
+            "duration": "1-2 hari"
+        },
+        {
+            "skill_id": "audit",
+            "title": "Audit Internal",
+            "instruction": "Lakukan audit internal. Pastikan Anda memahami konsep dasar, praktik secara konsisten, dan dokumentasikan progress pembelajaran Anda dengan catatan atau screenshot.",
+            "description": "Buat audit plan, verify records, dokumentasikan finding dan recommendation.. Breakdown project ini menjadi sub-tasks yang lebih kecil dan manageable. Track progress Anda, catat kesulitan yang dihadapi, dan cari resource tambahan jika diperlukan. Verifikasi bahwa output Anda memenuhi semua requirement yang ada di kolom 'output'.",
+            "output": "Mampu melakukan audit internal",
+            "tools": [
+                "Excel"
+            ],
+            "difficulty": "hard",
+            "duration": "1-2 hari"
+        },
+        {
+            "skill_id": "financial_analysis",
+            "title": "Analisis Keuangan",
+            "instruction": "Analisis laporan keuangan. Pastikan Anda memahami konsep dasar, praktik secara konsisten, dan dokumentasikan progress pembelajaran Anda dengan catatan atau screenshot.",
+            "description": "Hitung ratio keuangan, analisis trend, buat financial recommendations.. Breakdown project ini menjadi sub-tasks yang lebih kecil dan manageable. Track progress Anda, catat kesulitan yang dihadapi, dan cari resource tambahan jika diperlukan. Verifikasi bahwa output Anda memenuhi semua requirement yang ada di kolom 'output'.",
+            "output": "Mampu melakukan analisis keuangan",
+            "tools": [
+                "Excel"
+            ],
+            "difficulty": "hard",
+            "duration": "1 hari"
+        },
+        {
+            "skill_id": "cost_accounting",
+            "title": "Akuntansi Biaya",
+            "instruction": "Analisis biaya produksi. Pastikan Anda memahami konsep dasar, praktik secara konsisten, dan dokumentasikan progress pembelajaran Anda dengan catatan atau screenshot.",
+            "description": "Hitung cost of goods sold, analyze cost variances, optimize costs.. Breakdown project ini menjadi sub-tasks yang lebih kecil dan manageable. Track progress Anda, catat kesulitan yang dihadapi, dan cari resource tambahan jika diperlukan. Verifikasi bahwa output Anda memenuhi semua requirement yang ada di kolom 'output'.",
+            "output": "Mampu melakukan akuntansi biaya",
+            "tools": [
+                "Excel"
+            ],
+            "difficulty": "hard",
+            "duration": "1 hari"
+        },
+        {
+            "skill_id": "ifrs",
+            "title": "Standar Akuntansi (PSAK/IFRS)",
+            "instruction": "Aplikasikan PSAK/IFRS. Pastikan Anda memahami konsep dasar, praktik secara konsisten, dan dokumentasikan progress pembelajaran Anda dengan catatan atau screenshot.",
+            "description": "Study PSAK standards, convert local to IFRS, dokumentasikan perbedaan.. Breakdown project ini menjadi sub-tasks yang lebih kecil dan manageable. Track progress Anda, catat kesulitan yang dihadapi, dan cari resource tambahan jika diperlukan. Verifikasi bahwa output Anda memenuhi semua requirement yang ada di kolom 'output'.",
+            "output": "Mampu mengaplikasikan standar akuntansi internasional",
+            "tools": [
+                "Docs"
+            ],
+            "difficulty": "hard",
+            "duration": "1-2 hari"
+        },
+        {
+            "skill_id": "idea_validation",
+            "title": "Validasi Ide Bisnis",
+            "instruction": "Validasi ide bisnis Anda. Pastikan Anda memahami konsep dasar, praktik secara konsisten, dan dokumentasikan progress pembelajaran Anda dengan catatan atau screenshot.",
+            "description": "Lakukan market research, collect customer feedback, validate assumptions.. Breakdown project ini menjadi sub-tasks yang lebih kecil dan manageable. Track progress Anda, catat kesulitan yang dihadapi, dan cari resource tambahan jika diperlukan. Verifikasi bahwa output Anda memenuhi semua requirement yang ada di kolom 'output'.",
+            "output": "Mampu memvalidasi ide bisnis dengan metodologi",
+            "tools": [
+                "Google Forms"
+            ],
+            "difficulty": "medium",
+            "duration": "1 hari"
+        },
+        {
+            "skill_id": "market_research_basic",
+            "title": "Riset Pasar Dasar",
+            "instruction": "Lakukan riset pasar dasar. Pastikan Anda memahami konsep dasar, praktik secara konsisten, dan dokumentasikan progress pembelajaran Anda dengan catatan atau screenshot.",
+            "description": "Analisis target market, kompetitor, trend industri, dokumentasikan.. Breakdown project ini menjadi sub-tasks yang lebih kecil dan manageable. Track progress Anda, catat kesulitan yang dihadapi, dan cari resource tambahan jika diperlukan. Verifikasi bahwa output Anda memenuhi semua requirement yang ada di kolom 'output'.",
+            "output": "Mampu melakukan market research dasar",
+            "tools": [
+                "Google",
+                "Docs"
+            ],
+            "difficulty": "medium",
+            "duration": "1 hari"
+        },
+        {
+            "skill_id": "networking",
+            "title": "Networking Bisnis",
+            "instruction": "Bangun relasi bisnis. Pastikan Anda memahami konsep dasar, praktik secara konsisten, dan dokumentasikan progress pembelajaran Anda dengan catatan atau screenshot.",
+            "description": "Attend networking event, collect contacts, follow up dengan minimum 10 orang.. Breakdown project ini menjadi sub-tasks yang lebih kecil dan manageable. Track progress Anda, catat kesulitan yang dihadapi, dan cari resource tambahan jika diperlukan. Verifikasi bahwa output Anda memenuhi semua requirement yang ada di kolom 'output'.",
+            "output": "Mampu membangun networking yang efektif",
+            "tools": [
+                "LinkedIn"
+            ],
+            "difficulty": "medium",
+            "duration": "1 hari"
+        },
+        {
+            "skill_id": "time_mgmt",
+            "title": "Manajemen Waktu",
+            "instruction": "Kelola waktu secara efektif. Pastikan Anda memahami konsep dasar, praktik secara konsisten, dan dokumentasikan progress pembelajaran Anda dengan catatan atau screenshot.",
+            "description": "Buat time block schedule, track productivity, optimize workflow.. Breakdown project ini menjadi sub-tasks yang lebih kecil dan manageable. Track progress Anda, catat kesulitan yang dihadapi, dan cari resource tambahan jika diperlukan. Verifikasi bahwa output Anda memenuhi semua requirement yang ada di kolom 'output'.",
+            "output": "Mampu mengelola waktu dengan efektif",
+            "tools": [
+                "Calendar"
+            ],
+            "difficulty": "easy",
+            "duration": "1 jam"
+        },
+        {
+            "skill_id": "resilience",
+            "title": "Resiliensi Wirausaha",
+            "instruction": "Kembangkan mental entrepreneur. Pastikan Anda memahami konsep dasar, praktik secara konsisten, dan dokumentasikan progress pembelajaran Anda dengan catatan atau screenshot.",
+            "description": "Dokumentasi challenges yang dihadapi, cara handling failure, lessons learned.. Breakdown project ini menjadi sub-tasks yang lebih kecil dan manageable. Track progress Anda, catat kesulitan yang dihadapi, dan cari resource tambahan jika diperlukan. Verifikasi bahwa output Anda memenuhi semua requirement yang ada di kolom 'output'.",
+            "output": "Mampu menghadapi kegagalan dengan resiliensi",
+            "tools": [
+                "Docs"
+            ],
+            "difficulty": "medium",
+            "duration": "2 jam"
+        },
+        {
+            "skill_id": "marketing",
+            "title": "Strategi Marketing",
+            "instruction": "Buat marketing strategy. Pastikan Anda memahami konsep dasar, praktik secara konsisten, dan dokumentasikan progress pembelajaran Anda dengan catatan atau screenshot.",
+            "description": "Define target market, positioning, channels, messaging, budget.. Breakdown project ini menjadi sub-tasks yang lebih kecil dan manageable. Track progress Anda, catat kesulitan yang dihadapi, dan cari resource tambahan jika diperlukan. Verifikasi bahwa output Anda memenuhi semua requirement yang ada di kolom 'output'.",
+            "output": "Mampu merancang strategi marketing",
+            "tools": [
+                "Docs"
+            ],
+            "difficulty": "hard",
+            "duration": "1 hari"
+        },
+        {
+            "skill_id": "sales_skill",
+            "title": "Sales & Penjualan",
+            "instruction": "Latih skill penjualan. Pastikan Anda memahami konsep dasar, praktik secara konsisten, dan dokumentasikan progress pembelajaran Anda dengan catatan atau screenshot.",
+            "description": "Buat pitch sederhana, praktik closing technique, dokumentasi hasil roleplay.. Breakdown project ini menjadi sub-tasks yang lebih kecil dan manageable. Track progress Anda, catat kesulitan yang dihadapi, dan cari resource tambahan jika diperlukan. Verifikasi bahwa output Anda memenuhi semua requirement yang ada di kolom 'output'.",
+            "output": "Mampu melakukan penjualan dengan efektif",
+            "tools": [
+                "Docs"
+            ],
+            "difficulty": "medium",
+            "duration": "2 jam"
+        },
+        {
+            "skill_id": "finance_basic",
+            "title": "Keuangan Bisnis Dasar",
+            "instruction": "Kelola keuangan bisnis dasar. Pastikan Anda memahami konsep dasar, praktik secara konsisten, dan dokumentasikan progress pembelajaran Anda dengan catatan atau screenshot.",
+            "description": "Buat cash flow projection, budget, track expenses, profit & loss.. Breakdown project ini menjadi sub-tasks yang lebih kecil dan manageable. Track progress Anda, catat kesulitan yang dihadapi, dan cari resource tambahan jika diperlukan. Verifikasi bahwa output Anda memenuhi semua requirement yang ada di kolom 'output'.",
+            "output": "Mampu mengelola keuangan bisnis dasar",
+            "tools": [
+                "Excel"
+            ],
+            "difficulty": "medium",
+            "duration": "1 hari"
+        },
+        {
+            "skill_id": "team_building",
+            "title": "Membangun Tim",
+            "instruction": "Rekrut dan bangun tim. Pastikan Anda memahami konsep dasar, praktik secara konsisten, dan dokumentasikan progress pembelajaran Anda dengan catatan atau screenshot.",
+            "description": "Buat job description, interview candidate, create team charter.. Breakdown project ini menjadi sub-tasks yang lebih kecil dan manageable. Track progress Anda, catat kesulitan yang dihadapi, dan cari resource tambahan jika diperlukan. Verifikasi bahwa output Anda memenuhi semua requirement yang ada di kolom 'output'.",
+            "output": "Mampu membangun tim yang efektif",
+            "tools": [
+                "Docs"
+            ],
+            "difficulty": "hard",
+            "duration": "1-2 hari"
+        },
+        {
+            "skill_id": "product_dev",
+            "title": "Pengembangan Produk",
+            "instruction": "Develop produk MVP. Pastikan Anda memahami konsep dasar, praktik secara konsisten, dan dokumentasikan progress pembelajaran Anda dengan catatan atau screenshot.",
+            "description": "Design MVP, gather feedback, iterate, dokumentasi product roadmap.. Breakdown project ini menjadi sub-tasks yang lebih kecil dan manageable. Track progress Anda, catat kesulitan yang dihadapi, dan cari resource tambahan jika diperlukan. Verifikasi bahwa output Anda memenuhi semua requirement yang ada di kolom 'output'.",
+            "output": "Mampu mengembangkan produk dengan methodology",
+            "tools": [
+                "Figma"
+            ],
+            "difficulty": "hard",
+            "duration": "1-2 hari"
+        },
+        {
+            "skill_id": "business_strategy",
+            "title": "Strategi Bisnis",
+            "instruction": "Buat business strategy. Pastikan Anda memahami konsep dasar, praktik secara konsisten, dan dokumentasikan progress pembelajaran Anda dengan catatan atau screenshot.",
+            "description": "Define vision, mission, strategy, action plan untuk 1-3 tahun.. Breakdown project ini menjadi sub-tasks yang lebih kecil dan manageable. Track progress Anda, catat kesulitan yang dihadapi, dan cari resource tambahan jika diperlukan. Verifikasi bahwa output Anda memenuhi semua requirement yang ada di kolom 'output'.",
+            "output": "Mampu merumuskan strategi bisnis",
+            "tools": [
+                "Docs"
+            ],
+            "difficulty": "hard",
+            "duration": "1-2 hari"
+        },
+        {
+            "skill_id": "finance",
+            "title": "Manajemen Keuangan",
+            "instruction": "Kelola keuangan bisnis lanjutan. Pastikan Anda memahami konsep dasar, praktik secara konsisten, dan dokumentasikan progress pembelajaran Anda dengan catatan atau screenshot.",
+            "description": "Manage cash flow, funding strategy, financial forecasting.. Breakdown project ini menjadi sub-tasks yang lebih kecil dan manageable. Track progress Anda, catat kesulitan yang dihadapi, dan cari resource tambahan jika diperlukan. Verifikasi bahwa output Anda memenuhi semua requirement yang ada di kolom 'output'.",
+            "output": "Mampu mengelola keuangan bisnis lanjutan",
+            "tools": [
+                "Excel"
+            ],
+            "difficulty": "hard",
+            "duration": "1-2 hari"
+        },
+        {
+            "skill_id": "leadership",
+            "title": "Leadership",
+            "instruction": "Praktik kepemimpinan. Pastikan Anda memahami konsep dasar, praktik secara konsisten, dan dokumentasikan progress pembelajaran Anda dengan catatan atau screenshot.",
+            "description": "Lead project, manage team, make decision, dokumentasi leadership reflection.. Breakdown project ini menjadi sub-tasks yang lebih kecil dan manageable. Track progress Anda, catat kesulitan yang dihadapi, dan cari resource tambahan jika diperlukan. Verifikasi bahwa output Anda memenuhi semua requirement yang ada di kolom 'output'.",
+            "output": "Mampu memimpin dengan efektif",
+            "tools": [
+                "Docs"
+            ],
+            "difficulty": "hard",
+            "duration": "1 hari"
+        },
+        {
+            "skill_id": "scaling",
+            "title": "Skalabilitas Bisnis",
+            "instruction": "Buat plan untuk scale bisnis. Pastikan Anda memahami konsep dasar, praktik secara konsisten, dan dokumentasikan progress pembelajaran Anda dengan catatan atau screenshot.",
+            "description": "Identifikasi bottleneck, design scalable system, dokumentasi growth plan.. Breakdown project ini menjadi sub-tasks yang lebih kecil dan manageable. Track progress Anda, catat kesulitan yang dihadapi, dan cari resource tambahan jika diperlukan. Verifikasi bahwa output Anda memenuhi semua requirement yang ada di kolom 'output'.",
+            "output": "Mampu merancang bisnis yang scalable",
+            "tools": [
+                "Docs"
+            ],
+            "difficulty": "hard",
+            "duration": "1-2 hari"
+        },
+        {
+            "skill_id": "investor_relations",
+            "title": "Hubungan Investor",
+            "instruction": "Persiapkan investor pitch. Pastikan Anda memahami konsep dasar, praktik secara konsisten, dan dokumentasikan progress pembelajaran Anda dengan catatan atau screenshot.",
+            "description": "Buat pitch deck, practice presentation, collect feedback dari mentor.. Breakdown project ini menjadi sub-tasks yang lebih kecil dan manageable. Track progress Anda, catat kesulitan yang dihadapi, dan cari resource tambahan jika diperlukan. Verifikasi bahwa output Anda memenuhi semua requirement yang ada di kolom 'output'.",
+            "output": "Mampu mempresentasikan bisnis ke investor",
+            "tools": [
+                "Presentation"
+            ],
+            "difficulty": "hard",
+            "duration": "1 hari"
+        },
+        {
+            "skill_id": "cooking",
+            "title": "Memasak Dasar",
+            "instruction": "Masak menu sederhana. Pastikan Anda memahami konsep dasar, praktik secara konsisten, dan dokumentasikan progress pembelajaran Anda dengan catatan atau screenshot.",
+            "description": "Pilih resep, belanja bahan, masak, dokumentasikan hasil dengan foto.. Breakdown project ini menjadi sub-tasks yang lebih kecil dan manageable. Track progress Anda, catat kesulitan yang dihadapi, dan cari resource tambahan jika diperlukan. Verifikasi bahwa output Anda memenuhi semua requirement yang ada di kolom 'output'.",
+            "output": "Mampu memasak menu sederhana sesuai resep",
+            "tools": [
+                "Kitchen"
+            ],
+            "difficulty": "easy",
+            "duration": "2 jam"
+        },
+        {
+            "skill_id": "knife_skills",
+            "title": "Teknik Memotong",
+            "instruction": "Latih teknik memotong. Pastikan Anda memahami konsep dasar, praktik secara konsisten, dan dokumentasikan progress pembelajaran Anda dengan catatan atau screenshot.",
+            "description": "Praktik berbagai teknik potong (julienne, dice, chop), dokumentasi video.. Breakdown project ini menjadi sub-tasks yang lebih kecil dan manageable. Track progress Anda, catat kesulitan yang dihadapi, dan cari resource tambahan jika diperlukan. Verifikasi bahwa output Anda memenuhi semua requirement yang ada di kolom 'output'.",
+            "output": "Mampu menggunakan pisau dengan teknik yang benar",
+            "tools": [
+                "Kitchen Equipment"
+            ],
+            "difficulty": "medium",
+            "duration": "2 jam"
+        },
+        {
+            "skill_id": "ingredients",
+            "title": "Pengenalan Bahan",
+            "instruction": "Pelajari berbagai bahan makanan. Pastikan Anda memahami konsep dasar, praktik secara konsisten, dan dokumentasikan progress pembelajaran Anda dengan catatan atau screenshot.",
+            "description": "Study 20 ingredient, dokumentasikan karakteristik dan cara penyimpanan.. Breakdown project ini menjadi sub-tasks yang lebih kecil dan manageable. Track progress Anda, catat kesulitan yang dihadapi, dan cari resource tambahan jika diperlukan. Verifikasi bahwa output Anda memenuhi semua requirement yang ada di kolom 'output'.",
+            "output": "Mampu memahami berbagai bahan makanan",
+            "tools": [
+                "Docs"
+            ],
+            "difficulty": "medium",
+            "duration": "2 jam"
+        },
+        {
+            "skill_id": "recipes",
+            "title": "Mengikuti Resep",
+            "instruction": "Eksekusi resep dengan tepat. Pastikan Anda memahami konsep dasar, praktik secara konsisten, dan dokumentasikan progress pembelajaran Anda dengan catatan atau screenshot.",
+            "description": "Ikuti 5 resep berbeda dengan akurasi takaran dan teknik.. Breakdown project ini menjadi sub-tasks yang lebih kecil dan manageable. Track progress Anda, catat kesulitan yang dihadapi, dan cari resource tambahan jika diperlukan. Verifikasi bahwa output Anda memenuhi semua requirement yang ada di kolom 'output'.",
+            "output": "Mampu mengikuti dan mengeksekusi resep dengan tepat",
+            "tools": [
+                "Kitchen"
+            ],
+            "difficulty": "easy",
+            "duration": "3 jam"
+        },
+        {
+            "skill_id": "kitchen_safety",
+            "title": "Keselamatan Dapur",
+            "instruction": "Praktik keselamatan dapur. Pastikan Anda memahami konsep dasar, praktik secara konsisten, dan dokumentasikan progress pembelajaran Anda dengan catatan atau screenshot.",
+            "description": "Buat safety checklist, dokumentasikan prosedur keselamatan dapur.. Breakdown project ini menjadi sub-tasks yang lebih kecil dan manageable. Track progress Anda, catat kesulitan yang dihadapi, dan cari resource tambahan jika diperlukan. Verifikasi bahwa output Anda memenuhi semua requirement yang ada di kolom 'output'.",
+            "output": "Mampu menerapkan standar keselamatan dapur",
+            "tools": [
+                "SOP"
+            ],
+            "difficulty": "easy",
+            "duration": "1.5 jam"
+        },
+        {
+            "skill_id": "food_safety",
+            "title": "Food Safety & Hygiene",
+            "instruction": "Terapkan food safety protocol. Pastikan Anda memahami konsep dasar, praktik secara konsisten, dan dokumentasikan progress pembelajaran Anda dengan catatan atau screenshot.",
+            "description": "Buat food safety checklist, cross-contamination prevention, temperature control.. Breakdown project ini menjadi sub-tasks yang lebih kecil dan manageable. Track progress Anda, catat kesulitan yang dihadapi, dan cari resource tambahan jika diperlukan. Verifikasi bahwa output Anda memenuhi semua requirement yang ada di kolom 'output'.",
+            "output": "Mampu menerapkan food safety standard",
+            "tools": [
+                "SOP"
+            ],
+            "difficulty": "medium",
+            "duration": "2 jam"
+        },
+        {
+            "skill_id": "flavor",
+            "title": "Pengembangan Rasa",
+            "instruction": "Develop rasa dalam masakan. Pastikan Anda memahami konsep dasar, praktik secara konsisten, dan dokumentasikan progress pembelajaran Anda dengan catatan atau screenshot.",
+            "description": "Eksperimen dengan bumbu, buat 5 varian dengan profil rasa berbeda.. Breakdown project ini menjadi sub-tasks yang lebih kecil dan manageable. Track progress Anda, catat kesulitan yang dihadapi, dan cari resource tambahan jika diperlukan. Verifikasi bahwa output Anda memenuhi semua requirement yang ada di kolom 'output'.",
+            "output": "Mampu mengembangkan rasa dalam masakan",
+            "tools": [
+                "Kitchen"
+            ],
+            "difficulty": "hard",
+            "duration": "1 hari"
+        },
+        {
+            "skill_id": "cuisine_types",
+            "title": "Berbagai Masakan",
+            "instruction": "Master berbagai jenis cuisine. Pastikan Anda memahami konsep dasar, praktik secara konsisten, dan dokumentasikan progress pembelajaran Anda dengan catatan atau screenshot.",
+            "description": "Pelajari 5 jenis cuisine (Thai, Italian, Japanese, Indian, Mexican), masak 1 menu tiap jenis.. Breakdown project ini menjadi sub-tasks yang lebih kecil dan manageable. Track progress Anda, catat kesulitan yang dihadapi, dan cari resource tambahan jika diperlukan. Verifikasi bahwa output Anda memenuhi semua requirement yang ada di kolom 'output'.",
+            "output": "Mampu memasak berbagai jenis cuisine",
+            "tools": [
+                "Kitchen"
+            ],
+            "difficulty": "hard",
+            "duration": "1-2 hari"
+        },
+        {
+            "skill_id": "kitchen_equipment",
+            "title": "Peralatan Dapur",
+            "instruction": "Gunakan peralatan dapur profesional. Pastikan Anda memahami konsep dasar, praktik secara konsisten, dan dokumentasikan progress pembelajaran Anda dengan catatan atau screenshot.",
+            "description": "Pelajari dan praktik penggunaan 10 peralatan dapur profesional.. Breakdown project ini menjadi sub-tasks yang lebih kecil dan manageable. Track progress Anda, catat kesulitan yang dihadapi, dan cari resource tambahan jika diperlukan. Verifikasi bahwa output Anda memenuhi semua requirement yang ada di kolom 'output'.",
+            "output": "Mampu menggunakan peralatan dapur profesional",
+            "tools": [
+                "Kitchen Equipment"
+            ],
+            "difficulty": "medium",
+            "duration": "2 jam"
+        },
+        {
+            "skill_id": "cost_control",
+            "title": "Kontrol Biaya",
+            "instruction": "Kelola biaya bahan makanan. Pastikan Anda memahami konsep dasar, praktik secara konsisten, dan dokumentasikan progress pembelajaran Anda dengan catatan atau screenshot.",
+            "description": "Buat costing sheet, calculate food cost percentage, identify waste reduction opportunity.. Breakdown project ini menjadi sub-tasks yang lebih kecil dan manageable. Track progress Anda, catat kesulitan yang dihadapi, dan cari resource tambahan jika diperlukan. Verifikasi bahwa output Anda memenuhi semua requirement yang ada di kolom 'output'.",
+            "output": "Mampu mengelola biaya bahan makanan",
+            "tools": [
+                "Excel"
+            ],
+            "difficulty": "medium",
+            "duration": "2 jam"
+        },
+        {
+            "skill_id": "menu_planning",
+            "title": "Menu Planning",
+            "instruction": "Buat menu yang balance. Pastikan Anda memahami konsep dasar, praktik secara konsisten, dan dokumentasikan progress pembelajaran Anda dengan catatan atau screenshot.",
+            "description": "Desain menu dengan balance nutrition, cost, variety, dokumentasi menu cycle.. Breakdown project ini menjadi sub-tasks yang lebih kecil dan manageable. Track progress Anda, catat kesulitan yang dihadapi, dan cari resource tambahan jika diperlukan. Verifikasi bahwa output Anda memenuhi semua requirement yang ada di kolom 'output'.",
+            "output": "Mampu merancang menu yang balance",
+            "tools": [
+                "Docs"
+            ],
+            "difficulty": "hard",
+            "duration": "1 hari"
+        },
+        {
+            "skill_id": "presentation",
+            "title": "Food Presentation",
+            "instruction": "Presentasi makanan dengan estetika tinggi. Pastikan Anda memahami konsep dasar, praktik secara konsisten, dan dokumentasikan progress pembelajaran Anda dengan catatan atau screenshot.",
+            "description": "Plate 5 dish dengan teknik presentasi yang profesional, dokumentasi foto.. Breakdown project ini menjadi sub-tasks yang lebih kecil dan manageable. Track progress Anda, catat kesulitan yang dihadapi, dan cari resource tambahan jika diperlukan. Verifikasi bahwa output Anda memenuhi semua requirement yang ada di kolom 'output'.",
+            "output": "Mampu menyajikan makanan dengan presentasi tinggi",
+            "tools": [
+                "Camera"
+            ],
+            "difficulty": "hard",
+            "duration": "1 hari"
+        },
+        {
+            "skill_id": "kitchen_management",
+            "title": "Manajemen Dapur",
+            "instruction": "Manage operasional dapur. Pastikan Anda memahami konsep dasar, praktik secara konsisten, dan dokumentasikan progress pembelajaran Anda dengan catatan atau screenshot.",
+            "description": "Setup station, manage inventory, coordinate tim, dokumentasi checklist.. Breakdown project ini menjadi sub-tasks yang lebih kecil dan manageable. Track progress Anda, catat kesulitan yang dihadapi, dan cari resource tambahan jika diperlukan. Verifikasi bahwa output Anda memenuhi semua requirement yang ada di kolom 'output'.",
+            "output": "Mampu mengelola operasional dapur",
+            "tools": [
+                "SOP"
+            ],
+            "difficulty": "hard",
+            "duration": "1 hari"
+        },
+        {
+            "skill_id": "recipe_development",
+            "title": "Pengembangan Resep",
+            "instruction": "Ciptakan resep original. Pastikan Anda memahami konsep dasar, praktik secara konsisten, dan dokumentasikan progress pembelajaran Anda dengan catatan atau screenshot.",
+            "description": "Develop 3 resep original, test, refine, dokumentasi resep lengkap.. Breakdown project ini menjadi sub-tasks yang lebih kecil dan manageable. Track progress Anda, catat kesulitan yang dihadapi, dan cari resource tambahan jika diperlukan. Verifikasi bahwa output Anda memenuhi semua requirement yang ada di kolom 'output'.",
+            "output": "Mampu mengembangkan resep original",
+            "tools": [
+                "Kitchen"
+            ],
+            "difficulty": "hard",
+            "duration": "1-2 hari"
+        },
+        {
+            "skill_id": "pastry",
+            "title": "Teknik Pastry",
+            "instruction": "Buat pastry dan kue. Pastikan Anda memahami konsep dasar, praktik secara konsisten, dan dokumentasikan progress pembelajaran Anda dengan catatan atau screenshot.",
+            "description": "Master 5 teknik pastry (pie crust, sponge cake, croissant, choux, tart).. Breakdown project ini menjadi sub-tasks yang lebih kecil dan manageable. Track progress Anda, catat kesulitan yang dihadapi, dan cari resource tambahan jika diperlukan. Verifikasi bahwa output Anda memenuhi semua requirement yang ada di kolom 'output'.",
+            "output": "Mampu membuat pastry dan kue dengan teknik tinggi",
+            "tools": [
+                "Kitchen"
+            ],
+            "difficulty": "hard",
+            "duration": "1-2 hari"
+        },
+        {
+            "skill_id": "camera",
+            "title": "Fotografi Dasar",
+            "instruction": "Ambil foto dengan teknik dasar. Pastikan Anda memahami konsep dasar, praktik secara konsisten, dan dokumentasikan progress pembelajaran Anda dengan catatan atau screenshot.",
+            "description": "Ambil 20 foto dengan setting manual, dokumentasi settings dan hasil.. Breakdown project ini menjadi sub-tasks yang lebih kecil dan manageable. Track progress Anda, catat kesulitan yang dihadapi, dan cari resource tambahan jika diperlukan. Verifikasi bahwa output Anda memenuhi semua requirement yang ada di kolom 'output'.",
+            "output": "Mampu mengambil foto dengan teknik dasar",
+            "tools": [
+                "Camera"
+            ],
+            "difficulty": "easy",
+            "duration": "2 jam"
+        },
+        {
+            "skill_id": "exposure_basics",
+            "title": "Segitiga Eksposur",
+            "instruction": "Pahami exposure triangle. Pastikan Anda memahami konsep dasar, praktik secara konsisten, dan dokumentasikan progress pembelajaran Anda dengan catatan atau screenshot.",
+            "description": "Praktik aperture, shutter speed, ISO, ambil 15 foto dengan exposure berbeda.. Breakdown project ini menjadi sub-tasks yang lebih kecil dan manageable. Track progress Anda, catat kesulitan yang dihadapi, dan cari resource tambahan jika diperlukan. Verifikasi bahwa output Anda memenuhi semua requirement yang ada di kolom 'output'.",
+            "output": "Mampu menggunakan exposure triangle dengan baik",
+            "tools": [
+                "Camera"
+            ],
+            "difficulty": "easy",
+            "duration": "2 jam"
+        },
+        {
+            "skill_id": "memory_storage",
+            "title": "Manajemen File Foto",
+            "instruction": "Organize dan backup foto. Pastikan Anda memahami konsep dasar, praktik secara konsisten, dan dokumentasikan progress pembelajaran Anda dengan catatan atau screenshot.",
+            "description": "Setup folder structure, backup ke cloud, create catalog dengan metadata.. Breakdown project ini menjadi sub-tasks yang lebih kecil dan manageable. Track progress Anda, catat kesulitan yang dihadapi, dan cari resource tambahan jika diperlukan. Verifikasi bahwa output Anda memenuhi semua requirement yang ada di kolom 'output'.",
+            "output": "Mampu mengelola file foto dengan terorganisir",
+            "tools": [
+                "Lightroom"
+            ],
+            "difficulty": "easy",
+            "duration": "1.5 jam"
+        },
+        {
+            "skill_id": "natural_light",
+            "title": "Memanfaatkan Cahaya Alami",
+            "instruction": "Gunakan cahaya alami dengan optimal. Pastikan Anda memahami konsep dasar, praktik secara konsisten, dan dokumentasikan progress pembelajaran Anda dengan catatan atau screenshot.",
+            "description": "Ambil 10 foto di berbagai waktu (golden hour, harsh, blue hour), analisis hasil.. Breakdown project ini menjadi sub-tasks yang lebih kecil dan manageable. Track progress Anda, catat kesulitan yang dihadapi, dan cari resource tambahan jika diperlukan. Verifikasi bahwa output Anda memenuhi semua requirement yang ada di kolom 'output'.",
+            "output": "Mampu memanfaatkan cahaya alami dalam fotografi",
+            "tools": [
+                "Camera"
+            ],
+            "difficulty": "easy",
+            "duration": "2 jam"
+        },
+        {
+            "skill_id": "photo_basic_edit",
+            "title": "Editing Foto Dasar",
+            "instruction": "Edit foto basic. Pastikan Anda memahami konsep dasar, praktik secara konsisten, dan dokumentasikan progress pembelajaran Anda dengan catatan atau screenshot.",
+            "description": "Edit 5 foto dengan crop, exposure, contrast, saturation, export.. Breakdown project ini menjadi sub-tasks yang lebih kecil dan manageable. Track progress Anda, catat kesulitan yang dihadapi, dan cari resource tambahan jika diperlukan. Verifikasi bahwa output Anda memenuhi semua requirement yang ada di kolom 'output'.",
+            "output": "Mampu mengedit foto dasar",
+            "tools": [
+                "Lightroom"
+            ],
+            "difficulty": "easy",
+            "duration": "1.5 jam"
+        },
+        {
+            "skill_id": "lighting",
+            "title": "Teknik Pencahayaan",
+            "instruction": "Setup lighting profesional. Pastikan Anda memahami konsep dasar, praktik secara konsisten, dan dokumentasikan progress pembelajaran Anda dengan catatan atau screenshot.",
+            "description": "Praktik 5 lighting setup (key, fill, back, rim, butterfly), dokumentasi hasil.. Breakdown project ini menjadi sub-tasks yang lebih kecil dan manageable. Track progress Anda, catat kesulitan yang dihadapi, dan cari resource tambahan jika diperlukan. Verifikasi bahwa output Anda memenuhi semua requirement yang ada di kolom 'output'.",
+            "output": "Mampu menggunakan lighting dengan teknik profesional",
+            "tools": [
+                "Lighting Equipment"
+            ],
+            "difficulty": "hard",
+            "duration": "1 hari"
+        },
+        {
+            "skill_id": "composition",
+            "title": "Komposisi Foto",
+            "instruction": "Aplikasikan komposisi fotografi. Pastikan Anda memahami konsep dasar, praktik secara konsisten, dan dokumentasikan progress pembelajaran Anda dengan catatan atau screenshot.",
+            "description": "Ambil foto menggunakan rule of thirds, leading lines, framing, symmetry.. Breakdown project ini menjadi sub-tasks yang lebih kecil dan manageable. Track progress Anda, catat kesulitan yang dihadapi, dan cari resource tambahan jika diperlukan. Verifikasi bahwa output Anda memenuhi semua requirement yang ada di kolom 'output'.",
+            "output": "Mampu mengaplikasikan teknik komposisi fotografi",
+            "tools": [
+                "Camera"
+            ],
+            "difficulty": "hard",
+            "duration": "1 hari"
+        },
+        {
+            "skill_id": "portrait",
+            "title": "Fotografi Potret",
+            "instruction": "Ambil foto potret profesional. Pastikan Anda memahami konsep dasar, praktik secara konsisten, dan dokumentasikan progress pembelajaran Anda dengan catatan atau screenshot.",
+            "description": "Sesi foto potret dengan 3 orang, setup lighting, poses, dokumentasi best shots.. Breakdown project ini menjadi sub-tasks yang lebih kecil dan manageable. Track progress Anda, catat kesulitan yang dihadapi, dan cari resource tambahan jika diperlukan. Verifikasi bahwa output Anda memenuhi semua requirement yang ada di kolom 'output'.",
+            "output": "Mampu melakukan fotografi potret profesional",
+            "tools": [
+                "Camera"
+            ],
+            "difficulty": "hard",
+            "duration": "1 hari"
+        },
+        {
+            "skill_id": "event_photo",
+            "title": "Fotografi Acara",
+            "instruction": "Coverage fotografi acara. Pastikan Anda memahami konsep dasar, praktik secara konsisten, dan dokumentasikan progress pembelajaran Anda dengan catatan atau screenshot.",
+            "description": "Cover 1 acara, ambil 100+ foto, deliver best 30-50 foto terseleksi.. Breakdown project ini menjadi sub-tasks yang lebih kecil dan manageable. Track progress Anda, catat kesulitan yang dihadapi, dan cari resource tambahan jika diperlukan. Verifikasi bahwa output Anda memenuhi semua requirement yang ada di kolom 'output'.",
+            "output": "Mampu melakukan fotografi acara profesional",
+            "tools": [
+                "Camera"
+            ],
+            "difficulty": "hard",
+            "duration": "1 hari"
+        },
+        {
+            "skill_id": "editing",
+            "title": "Editing Foto Advanced",
+            "instruction": "Edit foto dengan teknik advanced. Pastikan Anda memahami konsep dasar, praktik secara konsisten, dan dokumentasikan progress pembelajaran Anda dengan catatan atau screenshot.",
+            "description": "Edit portfolio 10 foto dengan grading warna, retouching, consistency.. Breakdown project ini menjadi sub-tasks yang lebih kecil dan manageable. Track progress Anda, catat kesulitan yang dihadapi, dan cari resource tambahan jika diperlukan. Verifikasi bahwa output Anda memenuhi semua requirement yang ada di kolom 'output'.",
+            "output": "Mampu mengedit foto dengan teknik advanced",
+            "tools": [
+                "Lightroom",
+                "Photoshop"
+            ],
+            "difficulty": "hard",
+            "duration": "1-2 hari"
+        },
+        {
+            "skill_id": "wiring",
+            "title": "Instalasi Listrik",
+            "instruction": "Buat instalasi listrik dasar. Pastikan Anda memahami konsep dasar, praktik secara konsisten, dan dokumentasikan progress pembelajaran Anda dengan catatan atau screenshot.",
+            "description": "Desain dan buat wiring diagram, install simple circuit.. Breakdown project ini menjadi sub-tasks yang lebih kecil dan manageable. Track progress Anda, catat kesulitan yang dihadapi, dan cari resource tambahan jika diperlukan. Verifikasi bahwa output Anda memenuhi semua requirement yang ada di kolom 'output'.",
+            "output": "Mampu membuat instalasi listrik dasar",
+            "tools": [
+                "Tools"
+            ],
+            "difficulty": "hard",
+            "duration": "1 hari"
+        },
+        {
+            "skill_id": "circuit",
+            "title": "Rangkaian Listrik",
+            "instruction": "Analisis rangkaian listrik. Pastikan Anda memahami konsep dasar, praktik secara konsisten, dan dokumentasikan progress pembelajaran Anda dengan catatan atau screenshot.",
+            "description": "Belajar Ohm's law, hitung voltage/current/resistance, build circuit.. Breakdown project ini menjadi sub-tasks yang lebih kecil dan manageable. Track progress Anda, catat kesulitan yang dihadapi, dan cari resource tambahan jika diperlukan. Verifikasi bahwa output Anda memenuhi semua requirement yang ada di kolom 'output'.",
+            "output": "Mampu menganalisis rangkaian listrik",
+            "tools": [
+                "Multimeter"
+            ],
+            "difficulty": "hard",
+            "duration": "1 hari"
+        },
+        {
+            "skill_id": "recruitment",
+            "title": "Proses Rekrutmen",
+            "instruction": "Seleksi dan rekrut kandidat. Pastikan Anda memahami konsep dasar, praktik secara konsisten, dan dokumentasikan progress pembelajaran Anda dengan catatan atau screenshot.",
+            "description": "Buat JD, review CV dari 10 kandidat, interview 3 finalis, buat hiring recommendation.. Breakdown project ini menjadi sub-tasks yang lebih kecil dan manageable. Track progress Anda, catat kesulitan yang dihadapi, dan cari resource tambahan jika diperlukan. Verifikasi bahwa output Anda memenuhi semua requirement yang ada di kolom 'output'.",
+            "output": "Mampu melakukan proses rekrutmen profesional",
+            "tools": [
+                "Docs"
+            ],
+            "difficulty": "hard",
+            "duration": "1-2 hari"
+        },
+        {
+            "skill_id": "employee_relations",
+            "title": "Relasi Karyawan",
+            "instruction": "Kelola hubungan karyawan. Pastikan Anda memahami konsep dasar, praktik secara konsisten, dan dokumentasikan progress pembelajaran Anda dengan catatan atau screenshot.",
+            "description": "Handle conflict resolution, conduct 1-on-1, dokumentasi performance discussion.. Breakdown project ini menjadi sub-tasks yang lebih kecil dan manageable. Track progress Anda, catat kesulitan yang dihadapi, dan cari resource tambahan jika diperlukan. Verifikasi bahwa output Anda memenuhi semua requirement yang ada di kolom 'output'.",
+            "output": "Mampu mengelola hubungan karyawan dengan baik",
+            "tools": [
+                "Docs"
+            ],
+            "difficulty": "hard",
+            "duration": "1 hari"
+        },
+        {
+            "skill_id": "inventory",
+            "title": "Manajemen Stok",
+            "instruction": "Kelola inventory barang. Pastikan Anda memahami konsep dasar, praktik secara konsisten, dan dokumentasikan progress pembelajaran Anda dengan catatan atau screenshot.",
+            "description": "Buat inventory system, input 50+ item, track in/out, generate report.. Breakdown project ini menjadi sub-tasks yang lebih kecil dan manageable. Track progress Anda, catat kesulitan yang dihadapi, dan cari resource tambahan jika diperlukan. Verifikasi bahwa output Anda memenuhi semua requirement yang ada di kolom 'output'.",
+            "output": "Mampu mengelola inventory barang",
+            "tools": [
+                "Excel"
+            ],
+            "difficulty": "easy",
+            "duration": "2 jam"
+        },
+        {
+            "skill_id": "supply_chain",
+            "title": "Supply Chain",
+            "instruction": "Pahami supply chain. Pastikan Anda memahami konsep dasar, praktik secara konsisten, dan dokumentasikan progress pembelajaran Anda dengan catatan atau screenshot.",
+            "description": "Map supply chain dari supplier hingga customer, identifikasi optimization opportunity.. Breakdown project ini menjadi sub-tasks yang lebih kecil dan manageable. Track progress Anda, catat kesulitan yang dihadapi, dan cari resource tambahan jika diperlukan. Verifikasi bahwa output Anda memenuhi semua requirement yang ada di kolom 'output'.",
+            "output": "Mampu memahami dan mengoptimalkan supply chain",
+            "tools": [
+                "Docs"
+            ],
+            "difficulty": "hard",
+            "duration": "1 hari"
+        }
+    ]
+}

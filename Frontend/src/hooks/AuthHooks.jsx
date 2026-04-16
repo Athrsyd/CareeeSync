@@ -14,6 +14,7 @@ const AuthHooks = () => {
     const [AuthLoading, setAuthLoading] = useState(false);
     const [password, setPassword] = useState('');
     const [user, setUser] = useState(null);
+    
 
     const handleRegister = async (e) => {
         setAuthLoading(true);

@@ -13,7 +13,7 @@ class UserCareerController extends Controller
     {
         $validate = Validator::make($request->all(), [
             'career_name' => "string|required",
-            'skills_mastery' => "string|required",
+            'skills_mastery' => "array|required",
             'level' => "string|required"
         ], [
             'career_name.required' => "Career name wajib diisi!",
@@ -51,7 +51,7 @@ class UserCareerController extends Controller
     public function UpdateCareer(Request $request, string $id)
     {
         $validasi = Validator::make($request->all(), [
-            'skills_mastery' => "string|required",
+            'skills_mastery' => "array|required",
             'level' => "string|required"
         ], [
             'skills_mastery.required' => "Skills mastery wajib diisi!",

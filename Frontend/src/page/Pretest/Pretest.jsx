@@ -1,8 +1,9 @@
 /* eslint-disable react-hooks/set-state-in-effect */
-import { useState, useEffect, use } from 'react'
+import { useState, useEffect } from 'react'
 import Header from '../../components/Pretest/Header';
 import Skill from '../../components/Pretest/Skill';
 import CareerOptions from '../../data/careerOptions.json'
+import CareerHooks from '../../hooks/CareerHooks';
 
 const Pretest = () => {
     const [page, setPage] = useState(1);
@@ -10,18 +11,24 @@ const Pretest = () => {
     const [selectedCareer, setSelectedCareer] = useState('');
     const [skillList, setSkillList] = useState([]);
     const [selectedSkills, setSelectedSkills] = useState([]);
-
+    const [selectedCareerName, setSelectedCareerName] = useState('');
     const [preventNext, setPreventNext] = useState(false);
+
+    const { hitungLevel, postCareer } = CareerHooks();
 
     useEffect(() => {
         setDataCareer(CareerOptions.careers);
     }, [])
 
+    useEffect(() => {
+        console.log(`Selected skills: ${selectedSkills.join(', ')}`);
+    }, [selectedSkills])
+
     const handleCareerChange = (e) => {
         setSelectedCareer(e.target.value);
+        setSelectedCareerName(CareerOptions.careers.find(career => career.id === e.target.value)?.name || '');
         console.log(`Selected career: ${e.target.value}`);
         setSkillList(CareerOptions.careers.find(career => career.id === e.target.value)?.skills || []);
-        console.log(`Skills for selected career: ${skillList.join(', ')}`);
         if (!e.target.value) {
             setPreventNext(true);
         }
@@ -29,7 +36,6 @@ const Pretest = () => {
     }
 
     const selectSkill = (skillId) => {
-        // const skill = [...selectedSkills, skillId];
         setSelectedSkills(prev => {
             if (prev.includes(skillId)) {
                 return prev.filter(id => id !== skillId);
@@ -42,17 +48,59 @@ const Pretest = () => {
     const handleClickStepOne = () => {
         if (!selectedCareer) {
             setPreventNext(true);
-        }
-        else {
+        } else {
             setPage(2);
         }
     }
+
     const handlePrevOne = () => {
         setPage(1);
         setSelectedCareer('');
         setPreventNext(false);
+        setSelectedSkills([]);
+        setSelectedCareerName('');
     }
 
+    const handleSubmit = async () => {
+        const skillsWithWeight = selectedSkills
+            .map(skillId => {
+                const skill = skillList.find(s => s.id === skillId);
+                if (!skill) {
+                    console.warn(`Skill tidak ditemukan: ${skillId}`);
+                    return null;
+                }
+                return {
+                    skill_id: skill.id,
+                    mastered: true,
+                    weight: skill.weight
+                };
+            })
+            .filter(Boolean);
+
+        if (skillsWithWeight.length === 0) {
+            console.error('Tidak ada skill yang valid');
+            return;
+        }
+
+        const totalWeight = skillsWithWeight.reduce((acc, skill) => acc + skill.weight, 0);
+        const level = totalWeight <= 34 ? 'Basic' : totalWeight <= 67 ? 'Intermediate' : 'Advanced';
+
+        const payload = {
+            career_name: selectedCareerName,
+            skills_mastery: skillsWithWeight,
+            level: level
+        };
+
+        console.log('Data yang dikirim:', payload);
+
+        try {
+            await postCareer(payload);
+            console.log('Success!');
+            // Optional: redirect atau reset form
+        } catch (error) {
+            console.error('Error submitting career data:', error);
+        }
+    }
 
     return (
         <div className='w-full h-screen flex flex-col items-center justify-center gap-4 relative'>
@@ -77,7 +125,7 @@ const Pretest = () => {
                             </select>
                         </div>
                         <div className="container w-full flex flex-col items-center justify-center">
-                            <button 
+                            <button
                                 className={`bg-[#5482B4] w-9/10 rounded-2xl text-white py-3 px-6 hover:bg-[#0a3d7a] transition-colors duration-300 ${preventNext ? 'opacity-50 cursor-not-allowed' : ''}`}
                                 onClick={handleClickStepOne}
                                 disabled={preventNext}
@@ -117,9 +165,9 @@ const Pretest = () => {
                                     <div className='bg-linear-to-br from-[#021124]/60 to-[#0a2847]/40 w-full rounded-2xl p-2 border-2 border-[#5482B4]/30'>
                                         <div className="flex items-center gap-2 mb-2">
                                             <span className="text-[#5482B4] font-bold">✓</span>
-                                            <h2 className='text-lg font-semibold text-gray-300'>Tujuan Karir</h2>
+                                            <h2 className='text-lg font-semibold text-gray-300'>Tujuan Karir <span className='opacity-50'>(anda tidak bisa mengubahnya setelah ini)</span></h2>
                                         </div>
-                                        <p className='text-xl font-bold text-white ml-6'>{selectedCareer || 'Belum dipilih'}</p>
+                                        <p className='text-xl font-bold text-white ml-6'>{selectedCareerName}</p>
                                     </div>
                                     <div className='bg-linear-to-br from-[#021124]/60 to-[#0a2847]/40 w-full rounded-2xl p-2 border-2 border-[#5482B4]/30'>
                                         <div className="flex items-center gap-2 mb-3">
@@ -140,7 +188,7 @@ const Pretest = () => {
                         </div>
                         <div className="buttons flex w-full flex-row items-center justify-center gap-10">
                             <button onClick={() => setPage(page - 1)} className='bg-[#5482B4] w-9/10 rounded-2xl text-white py-3 px-6 hover:bg-[#0a3d7a] transition-colors duration-300 font-semibold'>Prev</button>
-                            <button className='bg-[#5482B4] w-9/10 rounded-2xl text-white py-3 px-6 hover:bg-[#0a3d7a] transition-colors duration-300 font-semibold'>Let's Proof Your Skill</button>
+                            <button onClick={handleSubmit} className='bg-[#5482B4] w-9/10 rounded-2xl text-white py-3 px-6 hover:bg-[#0a3d7a] transition-colors duration-300 font-semibold'>Let's Proof Your Skill</button>
                         </div>
                     </>
                 ) : null}

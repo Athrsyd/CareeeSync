@@ -3,600 +3,2240 @@
         {
             "id": "frontend_dev",
             "name": "Frontend Developer",
+            "description": "Membangun antarmuka pengguna yang interaktif dan responsif menggunakan teknologi web modern.",
             "skills": [
                 {
                     "id": "html",
                     "name": "HTML",
-                    "weight": 15,
-                    "level": "basic"
+                    "weight": 6.5,
+                    "level": "basic",
+                    "description": "Membuat struktur halaman web menggunakan elemen dan tag HTML yang semantik."
                 },
                 {
                     "id": "css",
                     "name": "CSS",
-                    "weight": 15,
-                    "level": "basic"
+                    "weight": 6.5,
+                    "level": "basic",
+                    "description": "Mendesain tampilan dan layout halaman web dengan stylesheet."
+                },
+                {
+                    "id": "git_basic",
+                    "name": "Git Dasar",
+                    "weight": 5.69,
+                    "level": "basic",
+                    "description": "Mengelola versi kode menggunakan perintah dasar Git seperti commit, push, dan pull."
+                },
+                {
+                    "id": "responsive",
+                    "name": "Responsive Design",
+                    "weight": 6.5,
+                    "level": "basic",
+                    "description": "Membuat tampilan web yang menyesuaikan diri di berbagai ukuran layar."
+                },
+                {
+                    "id": "browser_devtools",
+                    "name": "Browser DevTools",
+                    "weight": 5.69,
+                    "level": "basic",
+                    "description": "Menggunakan alat pengembang browser untuk inspeksi elemen dan debug."
                 },
                 {
                     "id": "javascript",
                     "name": "JavaScript",
-                    "weight": 20,
-                    "level": "intermediate"
+                    "weight": 8.13,
+                    "level": "intermediate",
+                    "description": "Menambahkan logika dan interaktivitas dinamis pada halaman web."
+                },
+                {
+                    "id": "css_frameworks",
+                    "name": "CSS Frameworks",
+                    "weight": 6.5,
+                    "level": "intermediate",
+                    "description": "Menggunakan framework seperti Tailwind atau Bootstrap untuk mempercepat styling."
+                },
+                {
+                    "id": "rest_api",
+                    "name": "Konsumsi REST API",
+                    "weight": 7.32,
+                    "level": "intermediate",
+                    "description": "Mengintegrasikan data dari API eksternal ke dalam antarmuka pengguna."
+                },
+                {
+                    "id": "npm",
+                    "name": "NPM & Package Manager",
+                    "weight": 5.69,
+                    "level": "intermediate",
+                    "description": "Mengelola dependensi proyek menggunakan npm atau yarn."
+                },
+                {
+                    "id": "version_control",
+                    "name": "Version Control Lanjutan",
+                    "weight": 6.5,
+                    "level": "intermediate",
+                    "description": "Menggunakan branching, merging, dan pull request dalam alur kerja tim."
                 },
                 {
                     "id": "react",
                     "name": "React",
-                    "weight": 25,
-                    "level": "advanced"
+                    "weight": 8.13,
+                    "level": "advanced",
+                    "description": "Membangun aplikasi web kompleks menggunakan komponen React dan state management."
+                },
+                {
+                    "id": "typescript",
+                    "name": "TypeScript",
+                    "weight": 7.32,
+                    "level": "advanced",
+                    "description": "Mengembangkan kode JavaScript yang lebih aman dengan sistem tipe statis."
+                },
+                {
+                    "id": "performance",
+                    "name": "Web Performance Optimization",
+                    "weight": 6.5,
+                    "level": "advanced",
+                    "description": "Mengoptimalkan kecepatan dan performa halaman web untuk pengalaman pengguna terbaik."
+                },
+                {
+                    "id": "testing_fe",
+                    "name": "Frontend Testing",
+                    "weight": 6.5,
+                    "level": "advanced",
+                    "description": "Menulis unit test dan integration test untuk komponen frontend."
+                },
+                {
+                    "id": "build_tools",
+                    "name": "Build Tools & CI/CD",
+                    "weight": 6.5,
+                    "level": "advanced",
+                    "description": "Mengonfigurasi Webpack, Vite, dan pipeline CI/CD untuk deployment otomatis."
                 }
             ]
         },
         {
             "id": "backend_dev",
             "name": "Backend Developer",
+            "description": "Merancang dan membangun logika server, database, dan API yang mendukung aplikasi.",
             "skills": [
+                {
+                    "id": "cli",
+                    "name": "Command Line Interface",
+                    "weight": 5.6,
+                    "level": "basic",
+                    "description": "Menavigasi dan menjalankan perintah di terminal Linux/Mac/Windows."
+                },
+                {
+                    "id": "http_basics",
+                    "name": "Dasar HTTP",
+                    "weight": 6.4,
+                    "level": "basic",
+                    "description": "Memahami metode HTTP, status code, dan siklus request-response."
+                },
+                {
+                    "id": "git_basic",
+                    "name": "Git Dasar",
+                    "weight": 5.6,
+                    "level": "basic",
+                    "description": "Mengelola versi kode sumber menggunakan Git."
+                },
+                {
+                    "id": "programming_basics",
+                    "name": "Pemrograman Dasar",
+                    "weight": 6.4,
+                    "level": "basic",
+                    "description": "Memahami konsep dasar seperti variabel, loop, fungsi, dan kondisional."
+                },
+                {
+                    "id": "sql_basic",
+                    "name": "SQL Dasar",
+                    "weight": 6.4,
+                    "level": "basic",
+                    "description": "Menulis query SELECT, INSERT, UPDATE, dan DELETE pada database relasional."
+                },
                 {
                     "id": "nodejs",
                     "name": "Node.js",
-                    "weight": 20,
-                    "level": "intermediate"
+                    "weight": 8,
+                    "level": "intermediate",
+                    "description": "Membangun server dan aplikasi backend menggunakan runtime JavaScript Node.js."
                 },
                 {
                     "id": "database",
-                    "name": "Database",
-                    "weight": 20,
-                    "level": "intermediate"
+                    "name": "Database Management",
+                    "weight": 7.2,
+                    "level": "intermediate",
+                    "description": "Merancang skema database dan mengelola data menggunakan RDBMS atau NoSQL."
+                },
+                {
+                    "id": "rest_design",
+                    "name": "Desain REST API",
+                    "weight": 7.2,
+                    "level": "intermediate",
+                    "description": "Merancang endpoint API yang konsisten dan mengikuti prinsip RESTful."
+                },
+                {
+                    "id": "env_config",
+                    "name": "Environment Configuration",
+                    "weight": 6.4,
+                    "level": "intermediate",
+                    "description": "Mengelola konfigurasi aplikasi menggunakan environment variable dan file .env."
+                },
+                {
+                    "id": "error_handling",
+                    "name": "Error Handling",
+                    "weight": 6.4,
+                    "level": "intermediate",
+                    "description": "Menangani error dengan baik agar aplikasi tetap stabil dan informatif."
                 },
                 {
                     "id": "api",
-                    "name": "API Development",
-                    "weight": 20,
-                    "level": "advanced"
+                    "name": "API Development Lanjutan",
+                    "weight": 8,
+                    "level": "advanced",
+                    "description": "Membangun API yang skalabel, aman, dan terdokumentasi dengan baik."
                 },
                 {
                     "id": "auth",
-                    "name": "Authentication",
-                    "weight": 15,
-                    "level": "advanced"
+                    "name": "Authentication & Authorization",
+                    "weight": 7.2,
+                    "level": "advanced",
+                    "description": "Mengimplementasikan JWT, OAuth, dan sistem otorisasi berbasis peran."
+                },
+                {
+                    "id": "caching",
+                    "name": "Caching",
+                    "weight": 6.4,
+                    "level": "advanced",
+                    "description": "Menggunakan Redis atau Memcached untuk meningkatkan performa aplikasi."
+                },
+                {
+                    "id": "microservices",
+                    "name": "Microservices",
+                    "weight": 6.4,
+                    "level": "advanced",
+                    "description": "Merancang arsitektur layanan terdistribusi yang modular dan dapat diskalakan."
+                },
+                {
+                    "id": "devops_basic",
+                    "name": "DevOps & Deployment",
+                    "weight": 6.4,
+                    "level": "advanced",
+                    "description": "Mendeploy aplikasi menggunakan Docker, container, dan platform cloud."
                 }
             ]
         },
         {
             "id": "uiux_designer",
             "name": "UI/UX Designer",
+            "description": "Merancang pengalaman pengguna yang intuitif dan antarmuka yang estetis untuk produk digital.",
             "skills": [
                 {
-                    "id": "figma",
-                    "name": "Figma",
-                    "weight": 25,
-                    "level": "intermediate"
+                    "id": "design_principles",
+                    "name": "Prinsip Desain Dasar",
+                    "weight": 6.5,
+                    "level": "basic",
+                    "description": "Memahami konsep tipografi, warna, layout, dan hierarki visual."
                 },
                 {
-                    "id": "design_thinking",
-                    "name": "Design Thinking",
-                    "weight": 20,
-                    "level": "advanced"
+                    "id": "wireframing",
+                    "name": "Wireframing",
+                    "weight": 5.69,
+                    "level": "basic",
+                    "description": "Membuat kerangka kasar antarmuka sebelum masuk ke tahap desain tinggi."
+                },
+                {
+                    "id": "figma_basic",
+                    "name": "Figma Dasar",
+                    "weight": 6.5,
+                    "level": "basic",
+                    "description": "Menggunakan Figma untuk membuat komponen dan frame desain."
+                },
+                {
+                    "id": "empathy_mapping",
+                    "name": "Empathy Mapping",
+                    "weight": 5.69,
+                    "level": "basic",
+                    "description": "Memahami kebutuhan dan emosi pengguna melalui peta empati."
+                },
+                {
+                    "id": "color_theory",
+                    "name": "Teori Warna",
+                    "weight": 5.69,
+                    "level": "basic",
+                    "description": "Menerapkan kombinasi warna yang harmonis dan efektif dalam desain."
+                },
+                {
+                    "id": "figma",
+                    "name": "Figma Lanjutan",
+                    "weight": 7.32,
+                    "level": "intermediate",
+                    "description": "Menggunakan fitur auto-layout, komponen, dan library di Figma."
                 },
                 {
                     "id": "user_research",
                     "name": "User Research",
-                    "weight": 20,
-                    "level": "intermediate"
+                    "weight": 7.32,
+                    "level": "intermediate",
+                    "description": "Melakukan riset kualitatif dan kuantitatif untuk memahami perilaku pengguna."
+                },
+                {
+                    "id": "usability_testing",
+                    "name": "Usability Testing",
+                    "weight": 6.5,
+                    "level": "intermediate",
+                    "description": "Menguji produk dengan pengguna nyata untuk menemukan masalah UX."
+                },
+                {
+                    "id": "information_arch",
+                    "name": "Information Architecture",
+                    "weight": 6.5,
+                    "level": "intermediate",
+                    "description": "Mengorganisir konten dan navigasi agar mudah dipahami pengguna."
+                },
+                {
+                    "id": "accessibility",
+                    "name": "Aksesibilitas Desain",
+                    "weight": 6.5,
+                    "level": "intermediate",
+                    "description": "Merancang antarmuka yang dapat digunakan oleh semua orang termasuk difabel."
+                },
+                {
+                    "id": "design_thinking",
+                    "name": "Design Thinking",
+                    "weight": 8.13,
+                    "level": "advanced",
+                    "description": "Menerapkan metodologi design thinking untuk memecahkan masalah pengguna secara sistematis."
                 },
                 {
                     "id": "prototyping",
-                    "name": "Prototyping",
-                    "weight": 15,
-                    "level": "advanced"
+                    "name": "Prototyping Interaktif",
+                    "weight": 7.32,
+                    "level": "advanced",
+                    "description": "Membuat prototipe berinteraksi tinggi untuk simulasi pengalaman nyata."
+                },
+                {
+                    "id": "design_system",
+                    "name": "Design System",
+                    "weight": 7.32,
+                    "level": "advanced",
+                    "description": "Membangun sistem desain yang konsisten dan dapat digunakan ulang di seluruh produk."
+                },
+                {
+                    "id": "motion_design",
+                    "name": "Motion Design",
+                    "weight": 6.5,
+                    "level": "advanced",
+                    "description": "Menambahkan animasi dan transisi untuk meningkatkan pengalaman pengguna."
+                },
+                {
+                    "id": "stakeholder_comm",
+                    "name": "Komunikasi Stakeholder",
+                    "weight": 6.5,
+                    "level": "advanced",
+                    "description": "Mempresentasikan dan mempertahankan keputusan desain kepada pemangku kepentingan."
                 }
             ]
         },
         {
             "id": "digital_marketing",
             "name": "Digital Marketing",
+            "description": "Memasarkan produk dan layanan melalui kanal digital untuk menjangkau audiens yang lebih luas.",
             "skills": [
+                {
+                    "id": "social_media_basic",
+                    "name": "Dasar Media Sosial",
+                    "weight": 5.79,
+                    "level": "basic",
+                    "description": "Memahami cara kerja platform media sosial utama seperti Instagram, TikTok, dan Facebook."
+                },
+                {
+                    "id": "copywriting_basic",
+                    "name": "Copywriting Dasar",
+                    "weight": 6.61,
+                    "level": "basic",
+                    "description": "Menulis teks pemasaran yang menarik dan persuasif."
+                },
+                {
+                    "id": "email_marketing",
+                    "name": "Email Marketing",
+                    "weight": 5.79,
+                    "level": "basic",
+                    "description": "Membuat dan mengirim kampanye email untuk menjangkau dan mempertahankan pelanggan."
+                },
+                {
+                    "id": "brand_awareness",
+                    "name": "Brand Awareness",
+                    "weight": 5.79,
+                    "level": "basic",
+                    "description": "Memahami konsep membangun dan memperkuat kesadaran merek."
+                },
+                {
+                    "id": "content_creation_basic",
+                    "name": "Pembuatan Konten Dasar",
+                    "weight": 5.79,
+                    "level": "basic",
+                    "description": "Membuat konten teks, gambar, dan video sederhana untuk promosi."
+                },
                 {
                     "id": "seo",
                     "name": "SEO",
-                    "weight": 20,
-                    "level": "intermediate"
+                    "weight": 7.44,
+                    "level": "intermediate",
+                    "description": "Mengoptimalkan konten dan website agar mendapat peringkat tinggi di mesin pencari."
                 },
                 {
                     "id": "social_media",
                     "name": "Social Media Marketing",
-                    "weight": 20,
-                    "level": "basic"
+                    "weight": 7.44,
+                    "level": "intermediate",
+                    "description": "Merancang dan menjalankan strategi konten di media sosial untuk pertumbuhan organik."
                 },
                 {
                     "id": "content_marketing",
                     "name": "Content Marketing",
-                    "weight": 20,
-                    "level": "intermediate"
+                    "weight": 6.61,
+                    "level": "intermediate",
+                    "description": "Membuat dan mendistribusikan konten bernilai untuk menarik dan mempertahankan audiens."
+                },
+                {
+                    "id": "analytics",
+                    "name": "Web Analytics",
+                    "weight": 6.61,
+                    "level": "intermediate",
+                    "description": "Menggunakan Google Analytics untuk melacak dan menganalisis trafik website."
+                },
+                {
+                    "id": "funnel",
+                    "name": "Marketing Funnel",
+                    "weight": 6.61,
+                    "level": "intermediate",
+                    "description": "Memahami dan mengoptimalkan setiap tahap perjalanan pelanggan dari kesadaran hingga pembelian."
                 },
                 {
                     "id": "ads",
                     "name": "Paid Ads",
-                    "weight": 20,
-                    "level": "advanced"
+                    "weight": 8.26,
+                    "level": "advanced",
+                    "description": "Merancang dan mengelola iklan berbayar di Google Ads, Meta Ads, dan platform lainnya."
+                },
+                {
+                    "id": "conversion_opt",
+                    "name": "Conversion Rate Optimization",
+                    "weight": 7.44,
+                    "level": "advanced",
+                    "description": "Mengoptimalkan landing page dan alur pengguna untuk meningkatkan konversi."
+                },
+                {
+                    "id": "marketing_automation",
+                    "name": "Marketing Automation",
+                    "weight": 6.61,
+                    "level": "advanced",
+                    "description": "Menggunakan tools otomatisasi untuk menjalankan kampanye yang dipersonalisasi secara skala besar."
+                },
+                {
+                    "id": "data_driven",
+                    "name": "Data-Driven Decision Making",
+                    "weight": 6.61,
+                    "level": "advanced",
+                    "description": "Mengambil keputusan pemasaran berdasarkan data dan eksperimen A/B testing."
+                },
+                {
+                    "id": "growth_hacking",
+                    "name": "Growth Hacking",
+                    "weight": 6.61,
+                    "level": "advanced",
+                    "description": "Menerapkan strategi pertumbuhan cepat dan kreatif untuk meningkatkan jumlah pengguna."
                 }
             ]
         },
         {
             "id": "graphic_designer",
             "name": "Graphic Designer",
+            "description": "Menciptakan materi visual yang komunikatif dan estetis untuk berbagai media cetak dan digital.",
             "skills": [
                 {
-                    "id": "photoshop",
-                    "name": "Photoshop",
-                    "weight": 20,
-                    "level": "intermediate"
+                    "id": "design_principles",
+                    "name": "Prinsip Desain Grafis",
+                    "weight": 6.61,
+                    "level": "basic",
+                    "description": "Memahami hierarki visual, keseimbangan, kontras, dan prinsip desain dasar lainnya."
                 },
                 {
-                    "id": "illustrator",
-                    "name": "Illustrator",
-                    "weight": 20,
-                    "level": "intermediate"
+                    "id": "color_theory",
+                    "name": "Teori Warna",
+                    "weight": 5.79,
+                    "level": "basic",
+                    "description": "Menerapkan roda warna dan kombinasi warna yang harmonis dalam karya desain."
+                },
+                {
+                    "id": "typography_basic",
+                    "name": "Tipografi Dasar",
+                    "weight": 5.79,
+                    "level": "basic",
+                    "description": "Memilih dan mengatur font yang tepat untuk keterbacaan dan estetika."
                 },
                 {
                     "id": "layout",
                     "name": "Layout Design",
-                    "weight": 15,
-                    "level": "basic"
+                    "weight": 5.79,
+                    "level": "basic",
+                    "description": "Menyusun elemen visual dalam komposisi yang teratur dan menarik."
+                },
+                {
+                    "id": "file_format",
+                    "name": "Format File Desain",
+                    "weight": 5.79,
+                    "level": "basic",
+                    "description": "Memahami perbedaan format file seperti PNG, JPEG, SVG, PDF, dan EPS."
+                },
+                {
+                    "id": "photoshop",
+                    "name": "Photoshop",
+                    "weight": 7.44,
+                    "level": "intermediate",
+                    "description": "Mengedit dan memanipulasi foto serta membuat grafis raster menggunakan Adobe Photoshop."
+                },
+                {
+                    "id": "illustrator",
+                    "name": "Illustrator",
+                    "weight": 7.44,
+                    "level": "intermediate",
+                    "description": "Membuat ilustrasi vektor, logo, dan ikon menggunakan Adobe Illustrator."
+                },
+                {
+                    "id": "print_design",
+                    "name": "Desain Cetak",
+                    "weight": 6.61,
+                    "level": "intermediate",
+                    "description": "Merancang materi untuk media cetak seperti brosur, poster, dan kemasan."
+                },
+                {
+                    "id": "digital_design",
+                    "name": "Desain Digital",
+                    "weight": 6.61,
+                    "level": "intermediate",
+                    "description": "Membuat aset visual untuk keperluan web, media sosial, dan platform digital."
+                },
+                {
+                    "id": "mockup",
+                    "name": "Mockup & Presentasi",
+                    "weight": 6.61,
+                    "level": "intermediate",
+                    "description": "Membuat mockup profesional untuk mempresentasikan karya kepada klien."
                 },
                 {
                     "id": "branding",
                     "name": "Branding",
-                    "weight": 20,
-                    "level": "advanced"
+                    "weight": 8.26,
+                    "level": "advanced",
+                    "description": "Membangun identitas merek yang kuat dan konsisten melalui elemen visual."
+                },
+                {
+                    "id": "motion_graphics",
+                    "name": "Motion Graphics",
+                    "weight": 7.44,
+                    "level": "advanced",
+                    "description": "Menciptakan animasi grafis untuk video, iklan, dan konten digital."
+                },
+                {
+                    "id": "art_direction",
+                    "name": "Art Direction",
+                    "weight": 6.61,
+                    "level": "advanced",
+                    "description": "Memimpin arah visual sebuah proyek dari konsep hingga eksekusi akhir."
+                },
+                {
+                    "id": "3d_design",
+                    "name": "3D Design Dasar",
+                    "weight": 6.61,
+                    "level": "advanced",
+                    "description": "Membuat elemen desain tiga dimensi menggunakan software seperti Blender atau Cinema 4D."
+                },
+                {
+                    "id": "client_management",
+                    "name": "Manajemen Klien",
+                    "weight": 6.61,
+                    "level": "advanced",
+                    "description": "Berkomunikasi secara profesional dan mengelola ekspektasi klien dalam proyek desain."
                 }
             ]
         },
         {
             "id": "data_analyst",
             "name": "Data Analyst",
+            "description": "Mengolah dan menginterpretasikan data untuk menghasilkan wawasan yang mendukung pengambilan keputusan bisnis.",
             "skills": [
                 {
                     "id": "excel",
                     "name": "Excel",
-                    "weight": 20,
-                    "level": "basic"
+                    "weight": 6.67,
+                    "level": "basic",
+                    "description": "Menggunakan spreadsheet untuk mengolah, menghitung, dan menganalisis data secara dasar."
+                },
+                {
+                    "id": "data_collection",
+                    "name": "Pengumpulan Data",
+                    "weight": 5.83,
+                    "level": "basic",
+                    "description": "Mengumpulkan data dari berbagai sumber seperti survei, formulir, dan database."
+                },
+                {
+                    "id": "data_cleaning_basic",
+                    "name": "Pembersihan Data Dasar",
+                    "weight": 5.83,
+                    "level": "basic",
+                    "description": "Mengidentifikasi dan memperbaiki data yang tidak lengkap, duplikat, atau tidak valid."
+                },
+                {
+                    "id": "chart_basic",
+                    "name": "Visualisasi Dasar",
+                    "weight": 5.83,
+                    "level": "basic",
+                    "description": "Membuat grafik dan tabel sederhana untuk merepresentasikan data."
+                },
+                {
+                    "id": "math_stats_basic",
+                    "name": "Matematika & Statistika Dasar",
+                    "weight": 5.83,
+                    "level": "basic",
+                    "description": "Memahami konsep dasar seperti mean, median, modus, dan distribusi data."
                 },
                 {
                     "id": "sql",
                     "name": "SQL",
-                    "weight": 20,
-                    "level": "intermediate"
+                    "weight": 7.5,
+                    "level": "intermediate",
+                    "description": "Menulis query SQL kompleks untuk mengekstrak dan mengolah data dari database."
+                },
+                {
+                    "id": "python_analysis",
+                    "name": "Python untuk Analisis",
+                    "weight": 7.5,
+                    "level": "intermediate",
+                    "description": "Menggunakan Pandas dan NumPy untuk manipulasi dan analisis data."
+                },
+                {
+                    "id": "data_cleaning_adv",
+                    "name": "Data Wrangling",
+                    "weight": 6.67,
+                    "level": "intermediate",
+                    "description": "Membersihkan, mentransformasi, dan mempersiapkan data mentah untuk analisis."
+                },
+                {
+                    "id": "business_acumen",
+                    "name": "Pemahaman Bisnis",
+                    "weight": 6.67,
+                    "level": "intermediate",
+                    "description": "Memahami konteks bisnis untuk mengajukan pertanyaan analitik yang relevan."
+                },
+                {
+                    "id": "dashboard",
+                    "name": "Dashboard Reporting",
+                    "weight": 6.67,
+                    "level": "intermediate",
+                    "description": "Membuat laporan interaktif menggunakan tools seperti Tableau atau Power BI."
                 },
                 {
                     "id": "data_visualization",
-                    "name": "Data Visualization",
-                    "weight": 20,
-                    "level": "advanced"
+                    "name": "Data Visualization Lanjutan",
+                    "weight": 7.5,
+                    "level": "advanced",
+                    "description": "Membuat visualisasi data yang kompleks dan komunikatif untuk pengambilan keputusan."
                 },
                 {
                     "id": "statistics",
-                    "name": "Statistics",
-                    "weight": 20,
-                    "level": "advanced"
+                    "name": "Statistika Inferensial",
+                    "weight": 7.5,
+                    "level": "advanced",
+                    "description": "Menerapkan uji hipotesis, regresi, dan metode statistik lanjutan dalam analisis."
+                },
+                {
+                    "id": "ml_basic",
+                    "name": "Machine Learning Dasar",
+                    "weight": 6.67,
+                    "level": "advanced",
+                    "description": "Menerapkan model prediktif sederhana untuk menemukan pola dalam data."
+                },
+                {
+                    "id": "storytelling_data",
+                    "name": "Data Storytelling",
+                    "weight": 6.67,
+                    "level": "advanced",
+                    "description": "Mengkomunikasikan temuan data dalam narasi yang jelas dan meyakinkan kepada stakeholder."
+                },
+                {
+                    "id": "big_data",
+                    "name": "Big Data Tools",
+                    "weight": 6.67,
+                    "level": "advanced",
+                    "description": "Menggunakan tools seperti Spark atau BigQuery untuk mengolah dataset skala besar."
                 }
             ]
         },
         {
             "id": "teacher",
             "name": "Teacher",
+            "description": "Mendidik dan membimbing siswa dalam memahami ilmu pengetahuan serta mengembangkan karakter.",
             "skills": [
                 {
                     "id": "teaching",
-                    "name": "Teaching",
-                    "weight": 20,
-                    "level": "basic"
+                    "name": "Teknik Mengajar Dasar",
+                    "weight": 6.67,
+                    "level": "basic",
+                    "description": "Menguasai metode pengajaran dasar seperti ceramah, diskusi, dan demonstrasi."
+                },
+                {
+                    "id": "subject_knowledge",
+                    "name": "Penguasaan Materi",
+                    "weight": 6.67,
+                    "level": "basic",
+                    "description": "Memahami mata pelajaran yang diajarkan secara mendalam dan akurat."
+                },
+                {
+                    "id": "student_engagement",
+                    "name": "Keterlibatan Siswa",
+                    "weight": 5.83,
+                    "level": "basic",
+                    "description": "Menciptakan suasana belajar yang menarik dan memotivasi siswa untuk berpartisipasi."
+                },
+                {
+                    "id": "time_management",
+                    "name": "Manajemen Waktu",
+                    "weight": 5.83,
+                    "level": "basic",
+                    "description": "Mengatur waktu belajar mengajar secara efisien sesuai jadwal."
+                },
+                {
+                    "id": "basic_assessment",
+                    "name": "Penilaian Dasar",
+                    "weight": 5.83,
+                    "level": "basic",
+                    "description": "Membuat dan menilai soal ujian, kuis, dan tugas harian."
                 },
                 {
                     "id": "communication",
-                    "name": "Communication",
-                    "weight": 20,
-                    "level": "intermediate"
+                    "name": "Komunikasi Efektif",
+                    "weight": 7.5,
+                    "level": "intermediate",
+                    "description": "Menyampaikan materi secara jelas dan menyesuaikan gaya komunikasi dengan kebutuhan siswa."
                 },
                 {
                     "id": "lesson_plan",
                     "name": "Lesson Planning",
-                    "weight": 20,
-                    "level": "advanced"
+                    "weight": 7.5,
+                    "level": "intermediate",
+                    "description": "Menyusun rencana pembelajaran yang terstruktur dan berorientasi pada tujuan."
+                },
+                {
+                    "id": "differentiation",
+                    "name": "Differentiated Learning",
+                    "weight": 6.67,
+                    "level": "intermediate",
+                    "description": "Menyesuaikan metode pengajaran dengan gaya belajar dan kemampuan tiap siswa."
+                },
+                {
+                    "id": "tech_tools",
+                    "name": "Teknologi Pendidikan",
+                    "weight": 6.67,
+                    "level": "intermediate",
+                    "description": "Menggunakan platform digital, LMS, dan multimedia untuk mendukung proses belajar."
+                },
+                {
+                    "id": "parent_comm",
+                    "name": "Komunikasi dengan Orang Tua",
+                    "weight": 5.83,
+                    "level": "intermediate",
+                    "description": "Menjalin komunikasi yang efektif dengan orang tua terkait perkembangan siswa."
                 },
                 {
                     "id": "class_management",
                     "name": "Class Management",
-                    "weight": 20,
-                    "level": "advanced"
+                    "weight": 7.5,
+                    "level": "advanced",
+                    "description": "Menciptakan lingkungan kelas yang kondusif, tertib, dan mendukung proses belajar."
+                },
+                {
+                    "id": "curriculum_dev",
+                    "name": "Pengembangan Kurikulum",
+                    "weight": 7.5,
+                    "level": "advanced",
+                    "description": "Merancang dan mengevaluasi kurikulum yang sesuai dengan standar pendidikan dan kebutuhan siswa."
+                },
+                {
+                    "id": "mentoring",
+                    "name": "Mentoring & Konseling",
+                    "weight": 6.67,
+                    "level": "advanced",
+                    "description": "Membimbing siswa secara personal dalam pengembangan akademik dan karakter."
+                },
+                {
+                    "id": "research_pedagogy",
+                    "name": "Riset Pedagogi",
+                    "weight": 6.67,
+                    "level": "advanced",
+                    "description": "Mengikuti dan menerapkan penelitian terbaru dalam metode pengajaran yang efektif."
+                },
+                {
+                    "id": "leadership_edu",
+                    "name": "Kepemimpinan Pendidikan",
+                    "weight": 6.67,
+                    "level": "advanced",
+                    "description": "Memimpin inisiatif pendidikan dan berkolaborasi dengan rekan guru dalam pengembangan sekolah."
                 }
             ]
         },
         {
             "id": "nurse",
             "name": "Nurse",
+            "description": "Memberikan perawatan kesehatan langsung kepada pasien dan mendukung tim medis dalam penanganan klinis.",
             "skills": [
                 {
                     "id": "patient_care",
-                    "name": "Patient Care",
-                    "weight": 25,
-                    "level": "basic"
+                    "name": "Patient Care Dasar",
+                    "weight": 6.56,
+                    "level": "basic",
+                    "description": "Memberikan perawatan dasar kepada pasien seperti membersihkan luka dan membantu mobilisasi."
+                },
+                {
+                    "id": "vital_signs",
+                    "name": "Pengukuran Tanda Vital",
+                    "weight": 6.56,
+                    "level": "basic",
+                    "description": "Mengukur dan mencatat tekanan darah, suhu, nadi, dan saturasi oksigen pasien."
+                },
+                {
+                    "id": "hygiene",
+                    "name": "Higiene & Sanitasi",
+                    "weight": 5.74,
+                    "level": "basic",
+                    "description": "Menerapkan prosedur kebersihan untuk mencegah infeksi di lingkungan perawatan."
+                },
+                {
+                    "id": "documentation",
+                    "name": "Dokumentasi Keperawatan",
+                    "weight": 5.74,
+                    "level": "basic",
+                    "description": "Mencatat riwayat pasien, tindakan keperawatan, dan perkembangan kondisi secara akurat."
+                },
+                {
+                    "id": "empathy",
+                    "name": "Empati & Pelayanan Pasien",
+                    "weight": 5.74,
+                    "level": "basic",
+                    "description": "Memberikan dukungan emosional dan komunikasi yang penuh kasih kepada pasien."
                 },
                 {
                     "id": "medical_knowledge",
-                    "name": "Medical Knowledge",
-                    "weight": 20,
-                    "level": "intermediate"
+                    "name": "Pengetahuan Medis",
+                    "weight": 7.38,
+                    "level": "intermediate",
+                    "description": "Memahami anatomi, patofisiologi, farmakologi, dan prosedur medis umum."
+                },
+                {
+                    "id": "medication",
+                    "name": "Administrasi Obat",
+                    "weight": 7.38,
+                    "level": "intermediate",
+                    "description": "Memberikan obat kepada pasien sesuai resep dokter dengan prosedur yang aman."
+                },
+                {
+                    "id": "wound_care",
+                    "name": "Perawatan Luka Lanjutan",
+                    "weight": 6.56,
+                    "level": "intermediate",
+                    "description": "Menangani berbagai jenis luka dengan teknik perawatan yang tepat dan steril."
+                },
+                {
+                    "id": "health_education",
+                    "name": "Edukasi Kesehatan",
+                    "weight": 5.74,
+                    "level": "intermediate",
+                    "description": "Mengedukasi pasien dan keluarga tentang pengelolaan penyakit dan gaya hidup sehat."
+                },
+                {
+                    "id": "teamwork_medical",
+                    "name": "Kolaborasi Tim Medis",
+                    "weight": 6.56,
+                    "level": "intermediate",
+                    "description": "Bekerja sama secara efektif dengan dokter, apoteker, dan tenaga kesehatan lainnya."
                 },
                 {
                     "id": "emergency",
-                    "name": "Emergency Handling",
-                    "weight": 20,
-                    "level": "advanced"
+                    "name": "Penanganan Darurat",
+                    "weight": 8.2,
+                    "level": "advanced",
+                    "description": "Merespons kondisi darurat medis seperti serangan jantung, syok, dan henti napas."
                 },
                 {
                     "id": "communication",
-                    "name": "Communication",
-                    "weight": 15,
-                    "level": "advanced"
+                    "name": "Komunikasi Terapeutik",
+                    "weight": 7.38,
+                    "level": "advanced",
+                    "description": "Menggunakan teknik komunikasi khusus untuk membangun kepercayaan dan mendukung pemulihan pasien."
+                },
+                {
+                    "id": "critical_care",
+                    "name": "Perawatan Kritis",
+                    "weight": 7.38,
+                    "level": "advanced",
+                    "description": "Merawat pasien dalam kondisi kritis di ICU dengan pemantauan intensif."
+                },
+                {
+                    "id": "leadership_nursing",
+                    "name": "Kepemimpinan Keperawatan",
+                    "weight": 6.56,
+                    "level": "advanced",
+                    "description": "Memimpin tim perawat dan mengkoordinasikan perawatan pasien secara efisien."
+                },
+                {
+                    "id": "clinical_research",
+                    "name": "Riset Klinis",
+                    "weight": 6.56,
+                    "level": "advanced",
+                    "description": "Berpartisipasi dan menerapkan temuan riset untuk meningkatkan kualitas perawatan berbasis bukti."
                 }
             ]
         },
         {
             "id": "accountant",
             "name": "Accountant",
+            "description": "Mengelola laporan keuangan, perpajakan, dan kepatuhan akuntansi untuk individu maupun organisasi.",
             "skills": [
                 {
                     "id": "bookkeeping",
-                    "name": "Bookkeeping",
-                    "weight": 20,
-                    "level": "basic"
+                    "name": "Pembukuan Dasar",
+                    "weight": 6.56,
+                    "level": "basic",
+                    "description": "Mencatat transaksi keuangan harian secara akurat dalam buku besar."
                 },
                 {
-                    "id": "tax",
-                    "name": "Taxation",
-                    "weight": 20,
-                    "level": "advanced"
+                    "id": "excel_basic",
+                    "name": "Excel untuk Akuntansi",
+                    "weight": 6.56,
+                    "level": "basic",
+                    "description": "Menggunakan spreadsheet untuk perhitungan keuangan dan pembuatan laporan sederhana."
+                },
+                {
+                    "id": "accounting_equation",
+                    "name": "Persamaan Akuntansi",
+                    "weight": 5.74,
+                    "level": "basic",
+                    "description": "Memahami dan menerapkan prinsip dasar Aset = Kewajiban + Ekuitas."
+                },
+                {
+                    "id": "debit_credit",
+                    "name": "Debit & Kredit",
+                    "weight": 5.74,
+                    "level": "basic",
+                    "description": "Mencatat jurnal keuangan menggunakan sistem debit dan kredit dengan benar."
+                },
+                {
+                    "id": "invoice",
+                    "name": "Pengelolaan Invoice",
+                    "weight": 5.74,
+                    "level": "basic",
+                    "description": "Membuat, mengirim, dan melacak faktur serta pembayaran dari klien atau vendor."
                 },
                 {
                     "id": "financial_report",
-                    "name": "Financial Reporting",
-                    "weight": 20,
-                    "level": "intermediate"
+                    "name": "Laporan Keuangan",
+                    "weight": 7.38,
+                    "level": "intermediate",
+                    "description": "Menyusun laporan laba rugi, neraca, dan arus kas secara periodik."
                 },
                 {
-                    "id": "excel",
-                    "name": "Excel",
-                    "weight": 15,
-                    "level": "intermediate"
+                    "id": "tax_basic",
+                    "name": "Perpajakan Dasar",
+                    "weight": 7.38,
+                    "level": "intermediate",
+                    "description": "Menghitung dan melaporkan pajak penghasilan dan PPN sesuai regulasi yang berlaku."
+                },
+                {
+                    "id": "accounting_software",
+                    "name": "Software Akuntansi",
+                    "weight": 6.56,
+                    "level": "intermediate",
+                    "description": "Mengoperasikan software seperti QuickBooks, Accurate, atau SAP untuk manajemen keuangan."
+                },
+                {
+                    "id": "budgeting",
+                    "name": "Penganggaran",
+                    "weight": 6.56,
+                    "level": "intermediate",
+                    "description": "Menyusun dan memantau anggaran perusahaan untuk pengendalian biaya."
+                },
+                {
+                    "id": "reconciliation",
+                    "name": "Rekonsiliasi Bank",
+                    "weight": 5.74,
+                    "level": "intermediate",
+                    "description": "Mencocokan catatan internal dengan laporan bank untuk memastikan keakuratan data keuangan."
+                },
+                {
+                    "id": "tax",
+                    "name": "Perencanaan Pajak",
+                    "weight": 8.2,
+                    "level": "advanced",
+                    "description": "Merancang strategi perpajakan yang efisien dan legal untuk meminimalkan beban pajak."
+                },
+                {
+                    "id": "audit",
+                    "name": "Audit Internal",
+                    "weight": 7.38,
+                    "level": "advanced",
+                    "description": "Melakukan pemeriksaan keuangan internal untuk memastikan kepatuhan dan akurasi laporan."
+                },
+                {
+                    "id": "financial_analysis",
+                    "name": "Analisis Keuangan",
+                    "weight": 7.38,
+                    "level": "advanced",
+                    "description": "Menganalisis rasio keuangan dan tren untuk memberikan rekomendasi strategis."
+                },
+                {
+                    "id": "cost_accounting",
+                    "name": "Akuntansi Biaya",
+                    "weight": 6.56,
+                    "level": "advanced",
+                    "description": "Menganalisis biaya produksi dan operasional untuk efisiensi dan pengambilan keputusan."
+                },
+                {
+                    "id": "ifrs",
+                    "name": "Standar Akuntansi (PSAK/IFRS)",
+                    "weight": 6.56,
+                    "level": "advanced",
+                    "description": "Menerapkan standar akuntansi nasional dan internasional dalam penyusunan laporan keuangan."
                 }
             ]
         },
         {
             "id": "entrepreneur",
             "name": "Entrepreneur",
+            "description": "Mendirikan dan mengelola bisnis dengan mengidentifikasi peluang pasar dan memimpin tim menuju pertumbuhan.",
             "skills": [
                 {
-                    "id": "business_strategy",
-                    "name": "Business Strategy",
-                    "weight": 20,
-                    "level": "advanced"
+                    "id": "idea_validation",
+                    "name": "Validasi Ide Bisnis",
+                    "weight": 5.79,
+                    "level": "basic",
+                    "description": "Menguji kelayakan ide bisnis melalui riset pasar dan feedback awal dari calon pelanggan."
+                },
+                {
+                    "id": "market_research_basic",
+                    "name": "Riset Pasar Dasar",
+                    "weight": 5.79,
+                    "level": "basic",
+                    "description": "Mengumpulkan dan menganalisis informasi tentang target pasar, kompetitor, dan tren industri."
+                },
+                {
+                    "id": "networking",
+                    "name": "Networking",
+                    "weight": 5.79,
+                    "level": "basic",
+                    "description": "Membangun relasi profesional dengan calon mitra, investor, dan pelanggan."
+                },
+                {
+                    "id": "time_mgmt",
+                    "name": "Manajemen Waktu",
+                    "weight": 5.79,
+                    "level": "basic",
+                    "description": "Mengatur prioritas dan waktu secara efektif untuk menjalankan berbagai fungsi bisnis."
+                },
+                {
+                    "id": "resilience",
+                    "name": "Resiliensi & Mentalitas Wirausaha",
+                    "weight": 5.79,
+                    "level": "basic",
+                    "description": "Menghadapi kegagalan dan ketidakpastian dengan sikap positif dan ketekunan."
                 },
                 {
                     "id": "marketing",
                     "name": "Marketing",
-                    "weight": 20,
-                    "level": "intermediate"
+                    "weight": 7.44,
+                    "level": "intermediate",
+                    "description": "Merancang dan menjalankan strategi pemasaran untuk menjangkau dan memenangkan pelanggan."
+                },
+                {
+                    "id": "sales_skill",
+                    "name": "Penjualan",
+                    "weight": 6.61,
+                    "level": "intermediate",
+                    "description": "Melakukan negosiasi dan closing penjualan kepada pelanggan secara langsung."
+                },
+                {
+                    "id": "finance_basic",
+                    "name": "Keuangan Bisnis Dasar",
+                    "weight": 7.44,
+                    "level": "intermediate",
+                    "description": "Mengelola arus kas, anggaran, dan laporan keuangan bisnis secara dasar."
+                },
+                {
+                    "id": "team_building",
+                    "name": "Membangun Tim",
+                    "weight": 6.61,
+                    "level": "intermediate",
+                    "description": "Merekrut, melatih, dan memotivasi anggota tim yang efektif."
+                },
+                {
+                    "id": "product_dev",
+                    "name": "Pengembangan Produk",
+                    "weight": 6.61,
+                    "level": "intermediate",
+                    "description": "Merancang dan mengiterasi produk atau layanan berdasarkan kebutuhan pasar."
+                },
+                {
+                    "id": "business_strategy",
+                    "name": "Strategi Bisnis",
+                    "weight": 8.26,
+                    "level": "advanced",
+                    "description": "Merumuskan visi jangka panjang dan strategi kompetitif untuk pertumbuhan bisnis."
                 },
                 {
                     "id": "finance",
-                    "name": "Financial Management",
-                    "weight": 20,
-                    "level": "advanced"
+                    "name": "Manajemen Keuangan Lanjutan",
+                    "weight": 7.44,
+                    "level": "advanced",
+                    "description": "Mengelola investasi, pendanaan, dan perencanaan keuangan untuk keberlanjutan bisnis."
                 },
                 {
                     "id": "leadership",
                     "name": "Leadership",
-                    "weight": 20,
-                    "level": "advanced"
+                    "weight": 7.44,
+                    "level": "advanced",
+                    "description": "Menginspirasi, memotivasi, dan memimpin organisasi menuju tujuan bersama."
+                },
+                {
+                    "id": "scaling",
+                    "name": "Skalabilitas Bisnis",
+                    "weight": 6.61,
+                    "level": "advanced",
+                    "description": "Mengembangkan sistem dan proses yang memungkinkan bisnis tumbuh tanpa kehilangan kualitas."
+                },
+                {
+                    "id": "investor_relations",
+                    "name": "Hubungan Investor",
+                    "weight": 6.61,
+                    "level": "advanced",
+                    "description": "Menyajikan pitch yang meyakinkan dan mengelola hubungan dengan investor dan pemangku kepentingan."
                 }
             ]
         },
         {
             "id": "chef",
             "name": "Chef",
+            "description": "Menciptakan hidangan berkualitas tinggi dengan menggabungkan teknik kuliner, kreativitas, dan manajemen dapur.",
             "skills": [
                 {
                     "id": "cooking",
-                    "name": "Cooking",
-                    "weight": 25,
-                    "level": "basic"
+                    "name": "Teknik Memasak Dasar",
+                    "weight": 6.56,
+                    "level": "basic",
+                    "description": "Menguasai teknik dapur fundamental seperti merebus, menggoreng, menumis, dan memanggang."
+                },
+                {
+                    "id": "knife_skills",
+                    "name": "Teknik Memotong",
+                    "weight": 6.56,
+                    "level": "basic",
+                    "description": "Menggunakan pisau dengan aman dan efisien untuk berbagai teknik pemotongan bahan makanan."
+                },
+                {
+                    "id": "ingredients",
+                    "name": "Pengenalan Bahan Makanan",
+                    "weight": 5.74,
+                    "level": "basic",
+                    "description": "Memahami karakteristik, kualitas, dan cara penyimpanan berbagai bahan makanan segar."
+                },
+                {
+                    "id": "recipes",
+                    "name": "Mengikuti Resep",
+                    "weight": 5.74,
+                    "level": "basic",
+                    "description": "Membaca dan mengeksekusi resep dengan akurat termasuk takaran dan urutan langkah."
+                },
+                {
+                    "id": "kitchen_safety",
+                    "name": "Keselamatan Dapur",
+                    "weight": 5.74,
+                    "level": "basic",
+                    "description": "Menerapkan prosedur keselamatan kerja dan penggunaan peralatan dapur yang aman."
                 },
                 {
                     "id": "food_safety",
-                    "name": "Food Safety",
-                    "weight": 20,
-                    "level": "intermediate"
+                    "name": "Food Safety & Hygiene",
+                    "weight": 7.38,
+                    "level": "intermediate",
+                    "description": "Menerapkan standar keamanan pangan dan higiene untuk mencegah kontaminasi makanan."
+                },
+                {
+                    "id": "flavor",
+                    "name": "Pengembangan Rasa",
+                    "weight": 7.38,
+                    "level": "intermediate",
+                    "description": "Menyeimbangkan dan mengembangkan profil rasa pada masakan melalui kombinasi bumbu dan teknik."
+                },
+                {
+                    "id": "cuisine_types",
+                    "name": "Berbagai Jenis Masakan",
+                    "weight": 6.56,
+                    "level": "intermediate",
+                    "description": "Menguasai teknik dan cita rasa dari berbagai tradisi kuliner lokal maupun internasional."
+                },
+                {
+                    "id": "kitchen_equipment",
+                    "name": "Penggunaan Peralatan Dapur",
+                    "weight": 5.74,
+                    "level": "intermediate",
+                    "description": "Mengoperasikan dan merawat peralatan dapur profesional seperti oven konveksi dan salamander."
+                },
+                {
+                    "id": "cost_control",
+                    "name": "Kontrol Biaya Bahan",
+                    "weight": 6.56,
+                    "level": "intermediate",
+                    "description": "Mengelola penggunaan bahan makanan secara efisien untuk menekan pemborosan dan biaya."
                 },
                 {
                     "id": "menu_planning",
                     "name": "Menu Planning",
-                    "weight": 20,
-                    "level": "advanced"
+                    "weight": 8.2,
+                    "level": "advanced",
+                    "description": "Merancang menu yang seimbang, kreatif, dan menguntungkan secara bisnis."
                 },
                 {
                     "id": "presentation",
                     "name": "Food Presentation",
-                    "weight": 15,
-                    "level": "advanced"
+                    "weight": 7.38,
+                    "level": "advanced",
+                    "description": "Menyajikan hidangan dengan estetika tinggi yang menggugah selera dan memenuhi standar restoran."
+                },
+                {
+                    "id": "kitchen_management",
+                    "name": "Manajemen Dapur",
+                    "weight": 7.38,
+                    "level": "advanced",
+                    "description": "Memimpin dan mengorganisir tim dapur agar beroperasi secara efisien selama jam sibuk."
+                },
+                {
+                    "id": "recipe_development",
+                    "name": "Pengembangan Resep",
+                    "weight": 6.56,
+                    "level": "advanced",
+                    "description": "Menciptakan dan mengembangkan resep orisinal yang inovatif dan konsisten dalam rasa."
+                },
+                {
+                    "id": "pastry",
+                    "name": "Teknik Pastri & Kue",
+                    "weight": 6.56,
+                    "level": "advanced",
+                    "description": "Membuat produk pastri dan kue dengan teknik tinggi yang memerlukan presisi dan keahlian khusus."
                 }
             ]
         },
         {
             "id": "photographer",
             "name": "Photographer",
+            "description": "Mengabadikan momen dan menciptakan karya visual yang bercerita melalui seni fotografi.",
             "skills": [
                 {
                     "id": "camera",
-                    "name": "Camera Handling",
-                    "weight": 20,
-                    "level": "basic"
+                    "name": "Dasar Kamera",
+                    "weight": 6.67,
+                    "level": "basic",
+                    "description": "Memahami bagian-bagian kamera dan cara mengoperasikannya dalam mode manual maupun otomatis."
+                },
+                {
+                    "id": "exposure_basics",
+                    "name": "Segitiga Eksposur",
+                    "weight": 6.67,
+                    "level": "basic",
+                    "description": "Memahami hubungan antara aperture, shutter speed, dan ISO untuk mendapatkan eksposur yang tepat."
+                },
+                {
+                    "id": "memory_storage",
+                    "name": "Penyimpanan & Manajemen File",
+                    "weight": 5.83,
+                    "level": "basic",
+                    "description": "Mengelola file foto secara terorganisir dan melakukan backup data secara teratur."
+                },
+                {
+                    "id": "natural_light",
+                    "name": "Memanfaatkan Cahaya Alami",
+                    "weight": 5.83,
+                    "level": "basic",
+                    "description": "Membaca dan memanfaatkan cahaya matahari untuk menghasilkan foto yang baik."
+                },
+                {
+                    "id": "photo_basic_edit",
+                    "name": "Pengeditan Foto Dasar",
+                    "weight": 5.83,
+                    "level": "basic",
+                    "description": "Melakukan koreksi dasar seperti exposure, kontras, dan cropping menggunakan software sederhana."
                 },
                 {
                     "id": "lighting",
-                    "name": "Lighting",
-                    "weight": 20,
-                    "level": "intermediate"
-                },
-                {
-                    "id": "editing",
-                    "name": "Photo Editing",
-                    "weight": 20,
-                    "level": "advanced"
+                    "name": "Teknik Pencahayaan",
+                    "weight": 7.5,
+                    "level": "intermediate",
+                    "description": "Menggunakan dan mengontrol sumber cahaya buatan untuk menciptakan efek visual yang diinginkan."
                 },
                 {
                     "id": "composition",
-                    "name": "Composition",
-                    "weight": 20,
-                    "level": "advanced"
+                    "name": "Komposisi Foto",
+                    "weight": 7.5,
+                    "level": "intermediate",
+                    "description": "Menerapkan prinsip komposisi seperti rule of thirds, leading lines, dan framing."
+                },
+                {
+                    "id": "portrait",
+                    "name": "Fotografi Potret",
+                    "weight": 6.67,
+                    "level": "intermediate",
+                    "description": "Memotret orang dengan teknik yang menonjolkan ekspresi dan kepribadian subjek."
+                },
+                {
+                    "id": "event_photo",
+                    "name": "Fotografi Acara",
+                    "weight": 5.83,
+                    "level": "intermediate",
+                    "description": "Mendokumentasikan acara seperti pernikahan, konser, dan corporate event secara profesional."
+                },
+                {
+                    "id": "color_grading_basic",
+                    "name": "Color Grading Dasar",
+                    "weight": 6.67,
+                    "level": "intermediate",
+                    "description": "Mengatur tone dan warna foto untuk menciptakan mood yang konsisten pada sebuah seri."
+                },
+                {
+                    "id": "editing",
+                    "name": "Pengeditan Foto Profesional",
+                    "weight": 7.5,
+                    "level": "advanced",
+                    "description": "Melakukan retouching dan pengeditan foto tingkat lanjut menggunakan Lightroom dan Photoshop."
+                },
+                {
+                    "id": "studio_setup",
+                    "name": "Setup Studio",
+                    "weight": 7.5,
+                    "level": "advanced",
+                    "description": "Merancang dan mengontrol pencahayaan studio untuk sesi foto produk, fashion, atau potret."
+                },
+                {
+                    "id": "commercial_photo",
+                    "name": "Fotografi Komersial",
+                    "weight": 6.67,
+                    "level": "advanced",
+                    "description": "Mengeksekusi proyek fotografi untuk iklan, editorial, dan kebutuhan bisnis klien."
+                },
+                {
+                    "id": "personal_style",
+                    "name": "Gaya Visual Personal",
+                    "weight": 6.67,
+                    "level": "advanced",
+                    "description": "Mengembangkan gaya dan signature visual yang unik dan konsisten sebagai fotografer profesional."
+                },
+                {
+                    "id": "client_management_photo",
+                    "name": "Manajemen Klien & Bisnis",
+                    "weight": 6.67,
+                    "level": "advanced",
+                    "description": "Mengelola kontrak, brief klien, dan bisnis fotografi secara profesional dan berkelanjutan."
                 }
             ]
         },
         {
             "id": "mechanic",
             "name": "Mechanic",
+            "description": "Melakukan perawatan, perbaikan, dan diagnosa kendaraan bermotor secara profesional.",
             "skills": [
                 {
                     "id": "engine",
-                    "name": "Engine Repair",
-                    "weight": 25,
-                    "level": "basic"
+                    "name": "Dasar Mesin Kendaraan",
+                    "weight": 6.67,
+                    "level": "basic",
+                    "description": "Memahami komponen dan cara kerja mesin kendaraan secara fundamental."
                 },
                 {
-                    "id": "diagnostic",
-                    "name": "Diagnostics",
-                    "weight": 20,
-                    "level": "intermediate"
+                    "id": "tools_basic",
+                    "name": "Penggunaan Alat Dasar",
+                    "weight": 6.67,
+                    "level": "basic",
+                    "description": "Menggunakan alat tangan standar seperti kunci pas, obeng, dan dongkrak dengan benar."
                 },
                 {
-                    "id": "tools",
-                    "name": "Tools Handling",
-                    "weight": 20,
-                    "level": "advanced"
+                    "id": "vehicle_maintenance",
+                    "name": "Perawatan Rutin Kendaraan",
+                    "weight": 5.83,
+                    "level": "basic",
+                    "description": "Melakukan servis berkala seperti ganti oli, filter udara, dan pemeriksaan tekanan ban."
                 },
                 {
                     "id": "safety",
-                    "name": "Safety Procedures",
-                    "weight": 15,
-                    "level": "advanced"
+                    "name": "Prosedur Keselamatan Kerja",
+                    "weight": 5.83,
+                    "level": "basic",
+                    "description": "Menerapkan standar keselamatan di bengkel untuk mencegah kecelakaan kerja."
+                },
+                {
+                    "id": "reading_manual",
+                    "name": "Membaca Manual Kendaraan",
+                    "weight": 5.83,
+                    "level": "basic",
+                    "description": "Memahami dan mengikuti panduan servis resmi dari pabrikan kendaraan."
+                },
+                {
+                    "id": "diagnostic",
+                    "name": "Diagnosa Kerusakan",
+                    "weight": 7.5,
+                    "level": "intermediate",
+                    "description": "Mengidentifikasi masalah kendaraan menggunakan alat diagnosa dan pemeriksaan sistematis."
+                },
+                {
+                    "id": "brake_system",
+                    "name": "Sistem Rem",
+                    "weight": 6.67,
+                    "level": "intermediate",
+                    "description": "Memeriksa, memperbaiki, dan mengganti komponen sistem pengereman kendaraan."
+                },
+                {
+                    "id": "electrical_basic",
+                    "name": "Sistem Kelistrikan Dasar",
+                    "weight": 7.5,
+                    "level": "intermediate",
+                    "description": "Memeriksa dan memperbaiki sistem kelistrikan kendaraan seperti aki, alternator, dan starter."
+                },
+                {
+                    "id": "transmission",
+                    "name": "Sistem Transmisi",
+                    "weight": 6.67,
+                    "level": "intermediate",
+                    "description": "Memahami dan menangani perbaikan transmisi manual maupun otomatis."
+                },
+                {
+                    "id": "cooling_system",
+                    "name": "Sistem Pendingin",
+                    "weight": 5.83,
+                    "level": "intermediate",
+                    "description": "Memeriksa dan memperbaiki sistem pendingin mesin termasuk radiator dan thermostat."
+                },
+                {
+                    "id": "tools_advanced",
+                    "name": "Alat Diagnostik Modern",
+                    "weight": 7.5,
+                    "level": "advanced",
+                    "description": "Menggunakan scanner OBD dan alat diagnostik digital untuk menganalisis sistem elektronik kendaraan."
+                },
+                {
+                    "id": "engine_overhaul",
+                    "name": "Overhaul Mesin",
+                    "weight": 7.5,
+                    "level": "advanced",
+                    "description": "Membongkar, memeriksa, dan merakit ulang mesin kendaraan secara komprehensif."
+                },
+                {
+                    "id": "ecu_tuning",
+                    "name": "ECU & Sistem Elektronik",
+                    "weight": 6.67,
+                    "level": "advanced",
+                    "description": "Menangani sistem kontrol elektronik kendaraan modern termasuk pemrograman ECU."
+                },
+                {
+                    "id": "workshop_mgmt",
+                    "name": "Manajemen Bengkel",
+                    "weight": 6.67,
+                    "level": "advanced",
+                    "description": "Mengelola operasional bengkel termasuk stok suku cadang dan koordinasi teknisi."
+                },
+                {
+                    "id": "ev_tech",
+                    "name": "Teknologi Kendaraan Listrik",
+                    "weight": 6.67,
+                    "level": "advanced",
+                    "description": "Memahami dan menangani sistem baterai, motor listrik, dan komponen kendaraan EV."
                 }
             ]
         },
         {
             "id": "civil_engineer",
             "name": "Civil Engineer",
+            "description": "Merencanakan, merancang, dan mengawasi pembangunan infrastruktur seperti jalan, jembatan, dan gedung.",
             "skills": [
+                {
+                    "id": "math",
+                    "name": "Matematika Teknik Dasar",
+                    "weight": 6.5,
+                    "level": "basic",
+                    "description": "Menerapkan kalkulus, aljabar linear, dan geometri dalam perhitungan teknik sipil."
+                },
+                {
+                    "id": "drawing",
+                    "name": "Gambar Teknik",
+                    "weight": 6.5,
+                    "level": "basic",
+                    "description": "Membaca dan membuat gambar teknik serta denah bangunan secara manual."
+                },
+                {
+                    "id": "materials_basic",
+                    "name": "Material Bangunan",
+                    "weight": 5.69,
+                    "level": "basic",
+                    "description": "Memahami sifat dan penggunaan material konstruksi seperti beton, baja, dan kayu."
+                },
+                {
+                    "id": "surveying_basic",
+                    "name": "Dasar Survei & Pemetaan",
+                    "weight": 5.69,
+                    "level": "basic",
+                    "description": "Melakukan pengukuran lahan dan leveling menggunakan alat survei dasar."
+                },
+                {
+                    "id": "safety_construction",
+                    "name": "Keselamatan Konstruksi",
+                    "weight": 5.69,
+                    "level": "basic",
+                    "description": "Menerapkan prosedur K3 (Kesehatan dan Keselamatan Kerja) di lingkungan konstruksi."
+                },
                 {
                     "id": "autocad",
                     "name": "AutoCAD",
-                    "weight": 20,
-                    "level": "intermediate"
+                    "weight": 7.32,
+                    "level": "intermediate",
+                    "description": "Membuat gambar teknik 2D dan 3D menggunakan software AutoCAD untuk perencanaan konstruksi."
+                },
+                {
+                    "id": "soil_analysis",
+                    "name": "Analisis Tanah & Geoteknik",
+                    "weight": 7.32,
+                    "level": "intermediate",
+                    "description": "Menganalisis karakteristik tanah untuk menentukan fondasi dan stabilitas struktur."
+                },
+                {
+                    "id": "hydraulics",
+                    "name": "Hidraulika & Drainase",
+                    "weight": 6.5,
+                    "level": "intermediate",
+                    "description": "Merancang sistem drainase dan pengelolaan air untuk infrastruktur."
+                },
+                {
+                    "id": "quantity_survey",
+                    "name": "Estimasi Biaya & BOQ",
+                    "weight": 6.5,
+                    "level": "intermediate",
+                    "description": "Menghitung volume pekerjaan dan menyusun rencana anggaran biaya (RAB) proyek."
+                },
+                {
+                    "id": "bim",
+                    "name": "BIM (Building Information Modeling)",
+                    "weight": 6.5,
+                    "level": "intermediate",
+                    "description": "Menggunakan software BIM seperti Revit untuk pemodelan dan koordinasi proyek."
                 },
                 {
                     "id": "structure",
-                    "name": "Structural Analysis",
-                    "weight": 25,
-                    "level": "advanced"
+                    "name": "Analisis Struktur",
+                    "weight": 8.13,
+                    "level": "advanced",
+                    "description": "Merancang dan menganalisis kekuatan struktur bangunan menggunakan metode elemen hingga."
                 },
                 {
                     "id": "project_management",
-                    "name": "Project Management",
-                    "weight": 20,
-                    "level": "advanced"
+                    "name": "Manajemen Proyek",
+                    "weight": 7.32,
+                    "level": "advanced",
+                    "description": "Merencanakan, mengawasi, dan mengendalikan proyek konstruksi dari awal hingga selesai."
                 },
                 {
-                    "id": "math",
-                    "name": "Engineering Math",
-                    "weight": 15,
-                    "level": "basic"
+                    "id": "contract_management",
+                    "name": "Manajemen Kontrak",
+                    "weight": 7.32,
+                    "level": "advanced",
+                    "description": "Mengelola kontrak konstruksi dan menyelesaikan klaim proyek secara profesional."
+                },
+                {
+                    "id": "sustainable_design",
+                    "name": "Desain Berkelanjutan",
+                    "weight": 6.5,
+                    "level": "advanced",
+                    "description": "Menerapkan prinsip green building dan konstruksi ramah lingkungan dalam perancangan."
+                },
+                {
+                    "id": "infrastructure_planning",
+                    "name": "Perencanaan Infrastruktur",
+                    "weight": 6.5,
+                    "level": "advanced",
+                    "description": "Merumuskan rencana infrastruktur skala besar seperti jalan tol, jembatan, dan bendungan."
                 }
             ]
         },
         {
             "id": "electrician",
             "name": "Electrician",
+            "description": "Memasang, merawat, dan memperbaiki sistem kelistrikan pada bangunan dan instalasi industri.",
             "skills": [
                 {
                     "id": "wiring",
-                    "name": "Wiring",
-                    "weight": 25,
-                    "level": "basic"
+                    "name": "Pemasangan Kabel Dasar",
+                    "weight": 6.61,
+                    "level": "basic",
+                    "description": "Memasang dan menyambung kabel listrik sesuai standar keamanan instalasi."
+                },
+                {
+                    "id": "tools_elec",
+                    "name": "Alat Listrik Dasar",
+                    "weight": 6.61,
+                    "level": "basic",
+                    "description": "Menggunakan alat seperti multimeter, tespen, dan tang ampere untuk keperluan dasar."
+                },
+                {
+                    "id": "safety_basic",
+                    "name": "Keselamatan Listrik Dasar",
+                    "weight": 5.79,
+                    "level": "basic",
+                    "description": "Memahami dan menerapkan prosedur keselamatan dasar dalam pengerjaan instalasi listrik."
+                },
+                {
+                    "id": "reading_diagram",
+                    "name": "Membaca Diagram Listrik",
+                    "weight": 5.79,
+                    "level": "basic",
+                    "description": "Membaca dan memahami diagram wiring sederhana dan single line diagram."
+                },
+                {
+                    "id": "grounding",
+                    "name": "Sistem Grounding",
+                    "weight": 5.79,
+                    "level": "basic",
+                    "description": "Memahami dan memasang sistem grounding/pembumian yang aman pada instalasi listrik."
                 },
                 {
                     "id": "circuit",
-                    "name": "Circuit Analysis",
-                    "weight": 20,
-                    "level": "intermediate"
+                    "name": "Analisis Rangkaian Listrik",
+                    "weight": 7.44,
+                    "level": "intermediate",
+                    "description": "Menganalisis dan menghitung arus, tegangan, dan hambatan dalam rangkaian listrik AC/DC."
+                },
+                {
+                    "id": "panel_installation",
+                    "name": "Instalasi Panel Listrik",
+                    "weight": 7.44,
+                    "level": "intermediate",
+                    "description": "Memasang dan mengonfigurasi panel distribusi listrik dan MCB/MCCB."
+                },
+                {
+                    "id": "conduit",
+                    "name": "Pemasangan Konduit",
+                    "weight": 5.79,
+                    "level": "intermediate",
+                    "description": "Memasang pipa konduit untuk melindungi kabel dalam instalasi gedung secara rapi."
+                },
+                {
+                    "id": "lighting_install",
+                    "name": "Instalasi Pencahayaan",
+                    "weight": 6.61,
+                    "level": "intermediate",
+                    "description": "Merancang dan memasang sistem pencahayaan untuk berbagai jenis bangunan."
+                },
+                {
+                    "id": "motor_control",
+                    "name": "Kontrol Motor Listrik",
+                    "weight": 6.61,
+                    "level": "intermediate",
+                    "description": "Memahami dan memasang sistem kontrol motor 3 fasa menggunakan contactor dan relay."
                 },
                 {
                     "id": "safety",
-                    "name": "Electrical Safety",
-                    "weight": 20,
-                    "level": "advanced"
+                    "name": "Standar Keselamatan Listrik",
+                    "weight": 7.44,
+                    "level": "advanced",
+                    "description": "Menerapkan standar PUIL dan regulasi keselamatan listrik nasional/internasional secara penuh."
                 },
                 {
                     "id": "troubleshooting",
-                    "name": "Troubleshooting",
-                    "weight": 20,
-                    "level": "advanced"
+                    "name": "Troubleshooting Kelistrikan",
+                    "weight": 7.44,
+                    "level": "advanced",
+                    "description": "Mengidentifikasi dan menyelesaikan gangguan sistem kelistrikan secara sistematis dan efisien."
+                },
+                {
+                    "id": "plc",
+                    "name": "Programmable Logic Controller (PLC)",
+                    "weight": 7.44,
+                    "level": "advanced",
+                    "description": "Memprogram dan mengoperasikan PLC untuk otomatisasi sistem industri."
+                },
+                {
+                    "id": "power_system",
+                    "name": "Sistem Tenaga Listrik",
+                    "weight": 6.61,
+                    "level": "advanced",
+                    "description": "Merancang dan mengawasi instalasi sistem tenaga listrik tegangan menengah dan tinggi."
+                },
+                {
+                    "id": "energy_mgmt",
+                    "name": "Manajemen Energi",
+                    "weight": 6.61,
+                    "level": "advanced",
+                    "description": "Menganalisis dan mengoptimalkan konsumsi energi listrik untuk efisiensi biaya."
                 }
             ]
         },
         {
             "id": "barista",
             "name": "Barista",
+            "description": "Menyeduh dan menyajikan kopi berkualitas tinggi sambil memberikan pengalaman layanan pelanggan yang luar biasa.",
             "skills": [
                 {
                     "id": "coffee",
-                    "name": "Coffee Brewing",
-                    "weight": 25,
-                    "level": "basic"
+                    "name": "Dasar Penyeduhan Kopi",
+                    "weight": 6.72,
+                    "level": "basic",
+                    "description": "Memahami berbagai metode seduh kopi dasar seperti drip, french press, dan pour over."
+                },
+                {
+                    "id": "coffee_types",
+                    "name": "Jenis & Asal Kopi",
+                    "weight": 5.88,
+                    "level": "basic",
+                    "description": "Mengenal berbagai varietas kopi, daerah asal, dan karakteristik rasanya."
+                },
+                {
+                    "id": "hygiene_bar",
+                    "name": "Kebersihan Bar & Peralatan",
+                    "weight": 5.88,
+                    "level": "basic",
+                    "description": "Menjaga kebersihan area kerja dan peralatan seduh sesuai standar higiene."
+                },
+                {
+                    "id": "grinder_basic",
+                    "name": "Penggunaan Grinder",
+                    "weight": 5.88,
+                    "level": "basic",
+                    "description": "Mengoperasikan mesin grinder dan memahami pengaruh tingkat gilingan pada rasa kopi."
+                },
+                {
+                    "id": "customer_basic",
+                    "name": "Layanan Pelanggan Dasar",
+                    "weight": 5.88,
+                    "level": "basic",
+                    "description": "Menyambut dan melayani pelanggan dengan ramah dan profesional."
+                },
+                {
+                    "id": "espresso",
+                    "name": "Teknik Espresso",
+                    "weight": 7.56,
+                    "level": "intermediate",
+                    "description": "Mengekstraksi espresso yang sempurna dengan menyesuaikan dosis, grind, dan waktu ekstraksi."
+                },
+                {
+                    "id": "milk_steaming",
+                    "name": "Teknik Steaming Susu",
+                    "weight": 7.56,
+                    "level": "intermediate",
+                    "description": "Memanaskan dan mengembangkan tekstur susu untuk berbagai minuman berbasis espresso."
+                },
+                {
+                    "id": "menu_knowledge",
+                    "name": "Pengetahuan Menu",
+                    "weight": 6.72,
+                    "level": "intermediate",
+                    "description": "Memahami dan menjelaskan semua item menu serta memberikan rekomendasi kepada pelanggan."
+                },
+                {
+                    "id": "pos_system",
+                    "name": "Sistem Kasir (POS)",
+                    "weight": 5.88,
+                    "level": "intermediate",
+                    "description": "Mengoperasikan sistem point of sale untuk transaksi dan manajemen pesanan."
+                },
+                {
+                    "id": "coffee_tasting",
+                    "name": "Coffee Cupping & Tasting",
+                    "weight": 6.72,
+                    "level": "intermediate",
+                    "description": "Mengevaluasi rasa, aroma, dan kualitas kopi melalui teknik cupping profesional."
                 },
                 {
                     "id": "latte_art",
                     "name": "Latte Art",
-                    "weight": 20,
-                    "level": "intermediate"
+                    "weight": 7.56,
+                    "level": "advanced",
+                    "description": "Menciptakan pola dan gambar artistik pada permukaan minuman kopi berbasis susu."
                 },
                 {
                     "id": "customer_service",
-                    "name": "Customer Service",
-                    "weight": 20,
-                    "level": "advanced"
+                    "name": "Customer Experience Management",
+                    "weight": 7.56,
+                    "level": "advanced",
+                    "description": "Menciptakan pengalaman pelanggan yang berkesan dan membangun loyalitas jangka panjang."
                 },
                 {
                     "id": "machine",
-                    "name": "Machine Handling",
-                    "weight": 15,
-                    "level": "advanced"
+                    "name": "Perawatan Mesin Espresso",
+                    "weight": 6.72,
+                    "level": "advanced",
+                    "description": "Melakukan kalibrasi, pembersihan mendalam, dan perawatan rutin mesin espresso profesional."
+                },
+                {
+                    "id": "bar_management",
+                    "name": "Manajemen Bar",
+                    "weight": 6.72,
+                    "level": "advanced",
+                    "description": "Mengelola stok bahan, mengatur jadwal tim, dan memastikan kelancaran operasional bar."
+                },
+                {
+                    "id": "specialty_drinks",
+                    "name": "Pengembangan Menu & Minuman Spesial",
+                    "weight": 6.72,
+                    "level": "advanced",
+                    "description": "Menciptakan minuman kopi orisinal dan musiman yang inovatif untuk memperkaya menu."
                 }
             ]
         },
         {
             "id": "sales",
             "name": "Sales Executive",
+            "description": "Mendorong pertumbuhan pendapatan perusahaan melalui strategi penjualan yang efektif dan hubungan pelanggan yang kuat.",
             "skills": [
                 {
                     "id": "communication",
-                    "name": "Communication",
-                    "weight": 25,
-                    "level": "basic"
+                    "name": "Komunikasi Dasar",
+                    "weight": 6.61,
+                    "level": "basic",
+                    "description": "Menyampaikan informasi produk dengan jelas dan meyakinkan kepada calon pelanggan."
+                },
+                {
+                    "id": "product_knowledge_basic",
+                    "name": "Pengetahuan Produk Dasar",
+                    "weight": 6.61,
+                    "level": "basic",
+                    "description": "Memahami fitur, manfaat, dan keunggulan produk yang dijual."
+                },
+                {
+                    "id": "prospecting",
+                    "name": "Prospecting Pelanggan",
+                    "weight": 5.79,
+                    "level": "basic",
+                    "description": "Mengidentifikasi dan mendekati calon pelanggan potensial melalui berbagai saluran."
+                },
+                {
+                    "id": "follow_up",
+                    "name": "Follow-Up",
+                    "weight": 5.79,
+                    "level": "basic",
+                    "description": "Menindaklanjuti lead dan prospek secara konsisten hingga terjadi keputusan pembelian."
+                },
+                {
+                    "id": "crm_basic",
+                    "name": "Penggunaan CRM Dasar",
+                    "weight": 5.79,
+                    "level": "basic",
+                    "description": "Mencatat dan mengelola data prospek dan pelanggan menggunakan software CRM."
                 },
                 {
                     "id": "negotiation",
-                    "name": "Negotiation",
-                    "weight": 20,
-                    "level": "intermediate"
+                    "name": "Negosiasi",
+                    "weight": 7.44,
+                    "level": "intermediate",
+                    "description": "Menemukan solusi yang menguntungkan kedua pihak melalui proses negosiasi yang terstruktur."
+                },
+                {
+                    "id": "objection_handling",
+                    "name": "Handling Objection",
+                    "weight": 7.44,
+                    "level": "intermediate",
+                    "description": "Merespons keberatan dan pertanyaan calon pelanggan dengan jawaban yang tepat dan meyakinkan."
+                },
+                {
+                    "id": "presentation_sales",
+                    "name": "Presentasi Penjualan",
+                    "weight": 6.61,
+                    "level": "intermediate",
+                    "description": "Mempresentasikan solusi dan produk kepada calon pelanggan secara menarik dan persuasif."
+                },
+                {
+                    "id": "pipeline_mgmt",
+                    "name": "Manajemen Sales Pipeline",
+                    "weight": 6.61,
+                    "level": "intermediate",
+                    "description": "Mengelola pipeline penjualan dan memperkirakan pendapatan secara akurat."
+                },
+                {
+                    "id": "market_understanding",
+                    "name": "Pemahaman Pasar & Kompetitor",
+                    "weight": 5.79,
+                    "level": "intermediate",
+                    "description": "Memahami tren pasar dan posisi produk terhadap kompetitor untuk keunggulan penjualan."
                 },
                 {
                     "id": "product_knowledge",
-                    "name": "Product Knowledge",
-                    "weight": 20,
-                    "level": "advanced"
+                    "name": "Product Knowledge Mendalam",
+                    "weight": 7.44,
+                    "level": "advanced",
+                    "description": "Menguasai secara mendalam semua aspek teknis dan bisnis dari produk yang dijual."
                 },
                 {
                     "id": "closing",
                     "name": "Closing Sales",
-                    "weight": 20,
-                    "level": "advanced"
+                    "weight": 7.44,
+                    "level": "advanced",
+                    "description": "Menggunakan teknik closing yang tepat untuk mengonversi prospek menjadi pelanggan."
+                },
+                {
+                    "id": "key_account",
+                    "name": "Key Account Management",
+                    "weight": 7.44,
+                    "level": "advanced",
+                    "description": "Membangun dan mempertahankan hubungan jangka panjang dengan klien-klien bernilai tinggi."
+                },
+                {
+                    "id": "sales_strategy",
+                    "name": "Strategi Penjualan",
+                    "weight": 6.61,
+                    "level": "advanced",
+                    "description": "Merancang dan mengeksekusi strategi penjualan untuk mencapai target pendapatan."
+                },
+                {
+                    "id": "team_leadership_sales",
+                    "name": "Kepemimpinan Tim Sales",
+                    "weight": 6.61,
+                    "level": "advanced",
+                    "description": "Melatih, memotivasi, dan memimpin tim penjualan untuk mencapai kinerja terbaik."
                 }
             ]
         },
         {
             "id": "content_creator",
             "name": "Content Creator",
+            "description": "Memproduksi dan mendistribusikan konten digital yang menghibur, menginspirasi, atau mengedukasi audiens.",
             "skills": [
                 {
-                    "id": "video_editing",
-                    "name": "Video Editing",
-                    "weight": 20,
-                    "level": "basic"
+                    "id": "video_editing_basic",
+                    "name": "Editing Video Dasar",
+                    "weight": 5.88,
+                    "level": "basic",
+                    "description": "Memotong, menggabungkan klip, dan menambahkan musik pada video menggunakan software dasar."
+                },
+                {
+                    "id": "content_planning",
+                    "name": "Perencanaan Konten",
+                    "weight": 6.72,
+                    "level": "basic",
+                    "description": "Membuat kalender konten dan merencanakan topik yang relevan dengan audiens target."
+                },
+                {
+                    "id": "photo_basic",
+                    "name": "Fotografi Konten Dasar",
+                    "weight": 5.88,
+                    "level": "basic",
+                    "description": "Mengambil foto berkualitas untuk keperluan konten media sosial menggunakan smartphone."
+                },
+                {
+                    "id": "caption_writing",
+                    "name": "Penulisan Caption",
+                    "weight": 5.88,
+                    "level": "basic",
+                    "description": "Menulis caption yang menarik, relevan, dan mendorong interaksi dari audiens."
+                },
+                {
+                    "id": "platform_basics",
+                    "name": "Pemahaman Platform Media Sosial",
+                    "weight": 5.88,
+                    "level": "basic",
+                    "description": "Memahami cara kerja algoritma dan fitur utama pada YouTube, TikTok, dan Instagram."
                 },
                 {
                     "id": "storytelling",
                     "name": "Storytelling",
-                    "weight": 20,
-                    "level": "intermediate"
+                    "weight": 7.56,
+                    "level": "intermediate",
+                    "description": "Membangun narasi yang menarik dan emosional untuk menjaga perhatian dan keterlibatan audiens."
                 },
                 {
                     "id": "social_media",
-                    "name": "Social Media",
-                    "weight": 20,
-                    "level": "advanced"
+                    "name": "Social Media Strategy",
+                    "weight": 7.56,
+                    "level": "intermediate",
+                    "description": "Merancang strategi konten yang konsisten untuk pertumbuhan organik di media sosial."
+                },
+                {
+                    "id": "video_editing_adv",
+                    "name": "Video Editing Lanjutan",
+                    "weight": 6.72,
+                    "level": "intermediate",
+                    "description": "Membuat video dengan color grading, motion graphics, dan sound design menggunakan Premiere Pro atau DaVinci."
+                },
+                {
+                    "id": "audience_analysis",
+                    "name": "Analisis Audiens",
+                    "weight": 6.72,
+                    "level": "intermediate",
+                    "description": "Menggunakan data analitik platform untuk memahami perilaku dan preferensi audiens."
+                },
+                {
+                    "id": "collaboration",
+                    "name": "Kolaborasi dengan Brand & Kreator Lain",
+                    "weight": 5.88,
+                    "level": "intermediate",
+                    "description": "Menjalin kerjasama dengan merek atau kreator lain untuk konten kolaboratif dan sponsorship."
                 },
                 {
                     "id": "branding",
                     "name": "Personal Branding",
-                    "weight": 20,
-                    "level": "advanced"
+                    "weight": 7.56,
+                    "level": "advanced",
+                    "description": "Membangun identitas dan citra diri yang kuat dan konsisten sebagai kreator konten."
+                },
+                {
+                    "id": "monetization",
+                    "name": "Monetisasi Konten",
+                    "weight": 7.56,
+                    "level": "advanced",
+                    "description": "Mengoptimalkan berbagai aliran pendapatan seperti AdSense, sponsorship, merchandise, dan membership."
+                },
+                {
+                    "id": "seo_content",
+                    "name": "SEO Konten & YouTube",
+                    "weight": 6.72,
+                    "level": "advanced",
+                    "description": "Mengoptimalkan judul, deskripsi, dan thumbnail untuk meningkatkan jangkauan organik konten."
+                },
+                {
+                    "id": "community_mgmt",
+                    "name": "Manajemen Komunitas",
+                    "weight": 6.72,
+                    "level": "advanced",
+                    "description": "Membangun dan merawat komunitas yang loyal dan aktif di sekitar konten yang diproduksi."
+                },
+                {
+                    "id": "trend_adaptation",
+                    "name": "Adaptasi Tren & Inovasi Konten",
+                    "weight": 6.72,
+                    "level": "advanced",
+                    "description": "Mengidentifikasi tren yang relevan dan dengan cepat mengadaptasinya ke dalam format konten yang segar."
                 }
             ]
         },
         {
             "id": "hr",
             "name": "HR Specialist",
+            "description": "Mengelola sumber daya manusia organisasi mulai dari rekrutmen, pengembangan, hingga kesejahteraan karyawan.",
             "skills": [
                 {
                     "id": "recruitment",
-                    "name": "Recruitment",
-                    "weight": 20,
-                    "level": "basic"
+                    "name": "Rekrutmen Dasar",
+                    "weight": 6.67,
+                    "level": "basic",
+                    "description": "Menyusun job posting, menyaring lamaran, dan menjadwalkan wawancara kandidat."
+                },
+                {
+                    "id": "hr_admin",
+                    "name": "Administrasi HR",
+                    "weight": 5.83,
+                    "level": "basic",
+                    "description": "Mengelola dokumen kepegawaian, absensi, dan data karyawan secara akurat."
+                },
+                {
+                    "id": "labor_law_basic",
+                    "name": "Hukum Ketenagakerjaan Dasar",
+                    "weight": 6.67,
+                    "level": "basic",
+                    "description": "Memahami UU Ketenagakerjaan dan peraturan dasar yang mengatur hubungan kerja."
+                },
+                {
+                    "id": "onboarding",
+                    "name": "Onboarding Karyawan Baru",
+                    "weight": 5.83,
+                    "level": "basic",
+                    "description": "Menyambut dan memperkenalkan karyawan baru pada budaya, kebijakan, dan prosedur perusahaan."
+                },
+                {
+                    "id": "payroll_basic",
+                    "name": "Dasar Penggajian",
+                    "weight": 5.83,
+                    "level": "basic",
+                    "description": "Memahami komponen gaji, tunjangan, dan potongan dalam administrasi penggajian."
                 },
                 {
                     "id": "communication",
-                    "name": "Communication",
-                    "weight": 20,
-                    "level": "intermediate"
+                    "name": "Komunikasi Interpersonal",
+                    "weight": 7.5,
+                    "level": "intermediate",
+                    "description": "Berkomunikasi secara efektif dengan karyawan dan manajemen di semua level organisasi."
+                },
+                {
+                    "id": "interview_technique",
+                    "name": "Teknik Wawancara",
+                    "weight": 7.5,
+                    "level": "intermediate",
+                    "description": "Melakukan wawancara berbasis kompetensi untuk menilai kandidat secara objektif."
+                },
+                {
+                    "id": "performance_review",
+                    "name": "Manajemen Kinerja",
+                    "weight": 6.67,
+                    "level": "intermediate",
+                    "description": "Merancang dan melaksanakan siklus penilaian kinerja karyawan secara adil dan terstruktur."
+                },
+                {
+                    "id": "training_dev_basic",
+                    "name": "Training & Development Dasar",
+                    "weight": 6.67,
+                    "level": "intermediate",
+                    "description": "Mengidentifikasi kebutuhan pelatihan dan mengkoordinasikan program pengembangan karyawan."
+                },
+                {
+                    "id": "hris",
+                    "name": "HRIS & HR Technology",
+                    "weight": 5.83,
+                    "level": "intermediate",
+                    "description": "Mengoperasikan sistem informasi HR untuk mengelola data karyawan secara efisien."
                 },
                 {
                     "id": "employee_relations",
                     "name": "Employee Relations",
-                    "weight": 20,
-                    "level": "advanced"
+                    "weight": 7.5,
+                    "level": "advanced",
+                    "description": "Mengelola hubungan kerja yang harmonis dan menyelesaikan konflik karyawan secara adil."
                 },
                 {
-                    "id": "hr_admin",
-                    "name": "HR Administration",
-                    "weight": 20,
-                    "level": "advanced"
+                    "id": "hr_admin_adv",
+                    "name": "HR Policy Development",
+                    "weight": 7.5,
+                    "level": "advanced",
+                    "description": "Merancang dan memperbarui kebijakan HR yang sesuai dengan regulasi dan budaya perusahaan."
+                },
+                {
+                    "id": "organizational_dev",
+                    "name": "Organizational Development",
+                    "weight": 6.67,
+                    "level": "advanced",
+                    "description": "Merancang program perubahan budaya dan pengembangan organisasi jangka panjang."
+                },
+                {
+                    "id": "compensation_benefits",
+                    "name": "Kompensasi & Benefit",
+                    "weight": 6.67,
+                    "level": "advanced",
+                    "description": "Merancang struktur kompensasi yang kompetitif dan paket benefit yang menarik bagi karyawan."
+                },
+                {
+                    "id": "strategic_hr",
+                    "name": "Strategic HR Planning",
+                    "weight": 6.67,
+                    "level": "advanced",
+                    "description": "Menyelaraskan strategi pengelolaan SDM dengan tujuan bisnis jangka panjang perusahaan."
                 }
             ]
         },
         {
             "id": "logistics",
             "name": "Logistics Officer",
+            "description": "Mengelola aliran barang, informasi, dan sumber daya dari titik asal ke tujuan akhir secara efisien.",
             "skills": [
                 {
                     "id": "inventory",
-                    "name": "Inventory Management",
-                    "weight": 20,
-                    "level": "basic"
+                    "name": "Manajemen Inventaris Dasar",
+                    "weight": 6.67,
+                    "level": "basic",
+                    "description": "Mencatat, memantau, dan mengontrol stok barang masuk dan keluar di gudang."
+                },
+                {
+                    "id": "data_entry",
+                    "name": "Input & Administrasi Data",
+                    "weight": 5.83,
+                    "level": "basic",
+                    "description": "Mencatat transaksi logistik secara akurat dalam sistem atau dokumen."
+                },
+                {
+                    "id": "warehouse_basic",
+                    "name": "Operasional Gudang Dasar",
+                    "weight": 6.67,
+                    "level": "basic",
+                    "description": "Memahami tata letak gudang, cara penyimpanan barang, dan prosedur penerimaan pengiriman."
+                },
+                {
+                    "id": "shipping_docs",
+                    "name": "Dokumen Pengiriman",
+                    "weight": 5.83,
+                    "level": "basic",
+                    "description": "Menyiapkan dan memeriksa dokumen pengiriman seperti surat jalan, invoice, dan packing list."
+                },
+                {
+                    "id": "safety_warehouse",
+                    "name": "Keselamatan Gudang",
+                    "weight": 5.83,
+                    "level": "basic",
+                    "description": "Menerapkan prosedur keselamatan kerja di lingkungan gudang dan distribusi."
                 },
                 {
                     "id": "supply_chain",
-                    "name": "Supply Chain",
-                    "weight": 20,
-                    "level": "intermediate"
+                    "name": "Manajemen Rantai Pasok",
+                    "weight": 7.5,
+                    "level": "intermediate",
+                    "description": "Memahami dan mengkoordinasikan aliran barang dari pemasok hingga ke konsumen akhir."
+                },
+                {
+                    "id": "procurement",
+                    "name": "Pengadaan Barang",
+                    "weight": 6.67,
+                    "level": "intermediate",
+                    "description": "Melakukan proses pembelian barang dari vendor dengan mempertimbangkan kualitas, harga, dan waktu."
+                },
+                {
+                    "id": "transportation",
+                    "name": "Manajemen Transportasi",
+                    "weight": 7.5,
+                    "level": "intermediate",
+                    "description": "Mengatur armada dan rute pengiriman untuk efisiensi biaya dan ketepatan waktu."
+                },
+                {
+                    "id": "erp_logistic",
+                    "name": "Software ERP Logistik",
+                    "weight": 5.83,
+                    "level": "intermediate",
+                    "description": "Menggunakan software ERP seperti SAP atau Oracle untuk pengelolaan data logistik."
+                },
+                {
+                    "id": "vendor_management",
+                    "name": "Manajemen Vendor",
+                    "weight": 6.67,
+                    "level": "intermediate",
+                    "description": "Membangun dan memelihara hubungan dengan vendor dan mitra pengiriman yang andal."
                 },
                 {
                     "id": "coordination",
-                    "name": "Coordination",
-                    "weight": 20,
-                    "level": "advanced"
+                    "name": "Koordinasi Lintas Departemen",
+                    "weight": 7.5,
+                    "level": "advanced",
+                    "description": "Mengkoordinasikan kebutuhan logistik dengan tim produksi, penjualan, dan keuangan secara efektif."
                 },
                 {
                     "id": "planning",
-                    "name": "Planning",
-                    "weight": 20,
-                    "level": "advanced"
+                    "name": "Perencanaan Distribusi",
+                    "weight": 7.5,
+                    "level": "advanced",
+                    "description": "Merancang dan mengoptimalkan jaringan distribusi untuk memaksimalkan efisiensi dan layanan."
+                },
+                {
+                    "id": "risk_management",
+                    "name": "Manajemen Risiko Logistik",
+                    "weight": 6.67,
+                    "level": "advanced",
+                    "description": "Mengidentifikasi dan mitigasi risiko dalam rantai pasok termasuk gangguan dan keterlambatan."
+                },
+                {
+                    "id": "cost_optimization",
+                    "name": "Optimasi Biaya Logistik",
+                    "weight": 6.67,
+                    "level": "advanced",
+                    "description": "Menganalisis dan menekan biaya logistik melalui negosiasi tarif, efisiensi rute, dan otomatisasi."
+                },
+                {
+                    "id": "import_export",
+                    "name": "Regulasi Impor & Ekspor",
+                    "weight": 6.67,
+                    "level": "advanced",
+                    "description": "Memahami dan memastikan kepatuhan terhadap regulasi bea cukai dan perdagangan internasional."
                 }
             ]
         }
