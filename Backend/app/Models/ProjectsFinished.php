@@ -17,6 +17,10 @@ class ProjectsFinished extends Model
         'tools_used',
     ];
 
+    protected $casts = [
+        'tools_used' => 'json',
+    ];
+
     public function user()
     {
         return $this->belongsTo(User::class);

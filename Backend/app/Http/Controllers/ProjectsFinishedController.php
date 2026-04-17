@@ -29,12 +29,17 @@ class ProjectsFinishedController extends Controller
             ], 422);
         }
 
+        // Convert tools_used string to array if it's comma-separated
+        $toolsArray = is_array($request->tools_used) 
+            ? $request->tools_used 
+            : array_map('trim', explode(',', $request->tools_used));
+
         $projectsFinished = ProjectsFinished::create([
             'user_id' => Auth::id(),
             'project_title' => $request->project_title,
             'project_description' => $request->project_description,
             'project_output' => $request->project_output,
-            'tools_used' => $request->tools_used
+            'tools_used' => $toolsArray  // Laravel akan auto-encode ke JSON
         ]);
 
         return response()->json([
@@ -57,5 +62,4 @@ class ProjectsFinishedController extends Controller
             'data' => $projectsFinished
         ], 200);
     }
-    
 }

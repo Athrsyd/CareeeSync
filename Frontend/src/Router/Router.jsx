@@ -4,8 +4,9 @@ import Auth from '../page/Auth/Auth';
 import Pretest from '../page/Pretest/Pretest';
 import Dashboard from '../page/Dashboard/Dashboard';
 import Navdash from '../components/Dashboard/NavDash'
-import Portfolio from '../page/Portofolio/Test1';
-
+import Portfolio from '../page/Portofolio/Portfolio';
+// import Template2 from '../page/Portofolio/Template2';
+// import Template3 from '../page/Portofolio/Template3';
 // Layout component untuk dashboard
 const DashboardLayout = () => {
     return (
@@ -37,7 +38,9 @@ const Router = () => {
                 <Route index element={<Dashboard />} />
                 <Route path="project" element={''} />
             </Route>
-            <Route path='/portfolio' element={<Portfolio />} />
+            <Route path='/portfolio/:id' element={<Portfolio />} />
+            {/* <Route path='/portfolio2' element={<Template2 />} />
+            <Route path='/portfolio3' element={<Template3 />} /> */}
         </Routes>
     )
 }

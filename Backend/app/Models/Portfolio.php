@@ -3,21 +3,29 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
-use App\Models\User;
-use App\Models\UserCareer;
-use App\Models\ProjectsFinished;
 
 class Portfolio extends Model
 {
+    protected $primaryKey = 'portfolio_id';
+    protected $keyType = 'string';
+    public $incrementing = false;
+
     protected $fillable = [
+        'portfolio_id',
         'user_id',
         'career_id',
         'project_finished_id',
         'fullname',
+        'photo',
+        'education',
+        'hobbies',
+        'experience',
         'about_me',
         'email',
         'phone_number',
-        'address',
+        'linkedin_link',
+        'instagram_link',
+        'address'
     ];
 
     public function user()
