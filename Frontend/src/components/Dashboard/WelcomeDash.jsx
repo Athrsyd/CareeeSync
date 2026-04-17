@@ -18,7 +18,7 @@ const JobReadinessScore = ({ score = 78, role = "Web Developer" }) => {
   return (
     <div className="bg-white/10 rounded-2xl outline-2 outline-primary shadow-xl backdrop-blur-md p-6 flex flex-col items-center gap-2 w-72 h-60">
       {/* Title */}
-      <h2 className="text-base font-[450] text-[#06275A] tracking-tight">
+      <h2 className="text-base font-montserrat font-[450] text-[#06275A] tracking-tight">
         Job Readiness Score
       </h2>
       {/* Ring inside blue border box */}
@@ -61,7 +61,7 @@ const JobReadinessScore = ({ score = 78, role = "Web Developer" }) => {
         </svg>
       </div>
       {/* Subtitle */}
-      <p className="text-md text-[#06275A] w-[90%] text-center leading-relaxed">
+      <p className="text-[15px] font-montserrat text-[#06275A] w-[95%] text-center leading-relaxed">
         Top <span className="font-semibold text-slate-800">{topPercent}%</span>{" "}
         closer to becoming a{" "}
         <span className="font-semibold text-slate-800">{role}</span>

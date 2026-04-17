@@ -13,8 +13,8 @@ const Skill = () => {
   return (
     <>
       <div className=" self-start flex flex-row mt-5 gap-8">
-        <div className="flex flex-col gap-2 bg-white/20 w-86 h-40 rounded-xl backdrop-blur-2xl shadow-2xl"></div>
-        <div className="flex flex-col gap-2 bg-white/20 w-86 h-40 rounded-xl backdrop-blur-2xl shadow-2xl"></div>
+        <div className="flex flex-col gap-2 bg-white/20 w-86 h-40 rounded-xl backdrop-blur-2xl shadow-2xl outline-2 outline-primary"></div>
+        <div className="flex flex-col gap-2 bg-white/20 w-86 h-40 rounded-xl backdrop-blur-2xl shadow-2xl outline-2 outline-primary"></div>
       </div>
     </>
   );

@@ -5,10 +5,11 @@ import Notif from "../../assets/Notif.svg";
 import WelcomeDash from '../../components/Dashboard/WelcomeDash'
 import SkkillDash from '../../components/Dashboard/SkillDash'
 import RecommendProject from '../../components/Dashboard/RecommendProjectDash';
+import LibraryReadinessDash from '../../components/Dashboard/LibraryReadinessDash';
 
 const Dashboard = () => {
   return (
-    <main className="ml-40 overflow-x-hidden">
+    <main className="ml-40 overflow-x-hidden pb-5">
       <div className="flex flex-row ml-8 gap-2 ">
         <div className="relative w-190 ml-5 mt-3">
           <input
@@ -37,13 +38,16 @@ const Dashboard = () => {
         {/* <WelcomeDash /> */}
         <WelcomeDash />
       </div>
-      <div className="flex flex-col mt-8 ml-13">
+      <div className="flex flex-col mt-8 ml-15">
         {/* <SKILLDASH /> */}
         <SkkillDash />
       </div>
       {/* <Recommend Project */}
-      <div className="flex flex-col mt-8 ml-13">
+      <div className="flex flex-col mt-8 ml-15">
         <RecommendProject />
+      </div>
+      <div className="flex flex-col mt-8 ml-5">
+        <LibraryReadinessDash />
       </div>
     </main>
   );
