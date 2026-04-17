@@ -128,7 +128,7 @@ const NavDash = () => {
           </Link>
         ))}
 
-        <div className="w-35 h-[1.25px] bg-[#5482B4] mt-auto"></div>
+        <div className="w-35 h-[1.25px] bg-primary mt-auto"></div>
         <div className="flex flex-row items-center justify-start w-35 h-10 pl-2 cursor-pointer hover:bg-white hover:scale-105 transition-all ease-in-out duration-300 rounded-full">
           <div className="flex flex-col justify-center items-center h-12 w-12">
             <svg

@@ -16,7 +16,7 @@ const JobReadinessScore = ({ score = 78, role = "Web Developer" }) => {
   const topPercent = Math.max(1, 100 - score);
   
   return (
-    <div className="bg-white/10 rounded-2xl shadow-xl backdrop-blur-md p-6 flex flex-col items-center gap-2 w-72 h-60">
+    <div className="bg-white/10 rounded-2xl outline-2 outline-primary shadow-xl backdrop-blur-md p-6 flex flex-col items-center gap-2 w-72 h-60">
       {/* Title */}
       <h2 className="text-base font-[450] text-[#06275A] tracking-tight">
         Job Readiness Score
