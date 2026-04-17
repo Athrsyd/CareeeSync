@@ -7,6 +7,34 @@ const Template2 = ({ data }) => {
     const [visibleSkills, setVisibleSkills] = useState(3);
     const [photo, setPhoto] = useState(true);
     const [visibleProjects, setVisibleProjects] = useState(2);
+    const [formData, setFormData] = useState({
+        name: '',
+        email: '',
+        subject: '',
+        message: ''
+    });
+
+    const handleFormChange = (e) => {
+        const { name, value } = e.target;
+        setFormData(prev => ({ ...prev, [name]: value }));
+    };
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        
+        if (!formData.name || !formData.email || !formData.subject || !formData.message) {
+            alert('Semua field harus diisi!');
+            return;
+        }
+        
+        // Kirim ke email user (dari backend)
+        const mailtoLink = `mailto:${data.email}?subject=${encodeURIComponent(`New Message: ${formData.subject}`)}&body=${encodeURIComponent(`From: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`)}`;
+        
+        window.location.href = mailtoLink;
+        
+        // Reset form
+        setFormData({ name: '', email: '', subject: '', message: '' });
+    };
 
     const scrollToSection = (id) => {
         const element = document.getElementById(id);
@@ -14,6 +42,8 @@ const Template2 = ({ data }) => {
         setActiveNav(id);
         setIsMenuOpen(false);
     };
+
+
 
     const skillsData = [
         {
@@ -152,14 +182,14 @@ const Template2 = ({ data }) => {
 
             {/* HERO SECTION */}
             <section id="home" className="pt-32 pb-20 bg-linear-to-b from-blue-50 to-white">
-                <div className="max-x`w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="flex flex-col md:flex-row justify-center h-screen -mt-20 gap-12 items-center">
                         <div className={`${photo ? 'w-full md:w-1/2 ml-10' : 'w-full text-center'} `}>
                             <h1 className={`${photo ? 'text-5xl md:text-6xl' : 'text-6xl md:text-7xl'} font-bold text-gray-900 mb-4 `}>
                                 Hallo, Saya <span className="text-blue-600">{data.fullname}</span>
                             </h1>
                             <p className={`text-xl text-gray-600 mb-8 ${photo ? 'px-0' : 'px-50'}`}>
-                                Selamat datang di Portofolio saya! Saya seorang {data.career.level} {data.career.career_name}. Mari bangun kerja sama yang hebat dan ciptakan sesuatu yang luar biasa bersama-sama.
+                                Selamat datang di Portofolio saya! Saya seorang {data.level} {data.career_name}. Mari bangun kerja sama yang hebat dan ciptakan sesuatu yang luar biasa bersama-sama.
                             </p>
                             <div className={`flex ${photo ? 'mt-0' : 'mt-15 justify-center items-center'} gap-4`}>
                                 <button
@@ -346,7 +376,7 @@ const Template2 = ({ data }) => {
                                     <div>
                                         <h4 className="font-semibold text-gray-900">Instagram</h4>
                                         <a href={data.instagram_link} className="text-gray-600 hover:text-blue-600" target="_blank" rel="noopener noreferrer">
-                                            {`@${data.instagram_username}`}
+                                            {data.instagram_link}
                                         </a>
                                     </div>
                                 </div>
@@ -356,13 +386,17 @@ const Template2 = ({ data }) => {
 
                         {/* Contact Form */}
                         <div>
-                            <form className="space-y-4" action={`mailto:${data.email}`} method="POST">
+                            <form className="space-y-4" onSubmit={handleSubmit}>
                                 <div>
                                     <label className="block text-gray-700 font-medium mb-2">Name</label>
                                     <input
                                         type="text"
                                         placeholder="Your name"
                                         className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-600"
+                                        name="name"
+                                        value={formData.name}
+                                        onChange={handleFormChange}
+                                        required
                                     />
                                 </div>
                                 <div>
@@ -371,6 +405,10 @@ const Template2 = ({ data }) => {
                                         type="email"
                                         placeholder="Your email"
                                         className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-600"
+                                        name="email"
+                                        value={formData.email}
+                                        onChange={handleFormChange}
+                                        required
                                     />
                                 </div>
                                 <div>
@@ -379,6 +417,10 @@ const Template2 = ({ data }) => {
                                         type="text"
                                         placeholder="Subject"
                                         className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-600"
+                                        name="subject"
+                                        value={formData.subject}
+                                        onChange={handleFormChange}
+                                        required
                                     />
                                 </div>
                                 <div>
@@ -387,13 +429,17 @@ const Template2 = ({ data }) => {
                                         rows="4"
                                         placeholder="Your message"
                                         className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-600"
+                                        name="message"
+                                        value={formData.message}
+                                        onChange={handleFormChange}
+                                        required
                                     ></textarea>
                                 </div>
                                 <button
                                     type="submit"
                                     className="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
                                 >
-                                    Send Message
+                                        Send Message
                                 </button>
                             </form>
                         </div>
@@ -408,19 +454,15 @@ const Template2 = ({ data }) => {
                         <p className="text-center md:text-left mb-4 md:mb-0">&copy; 2025 Your Name. All rights reserved.</p>
                         <div className="flex gap-4">
                             <a href={data.github_link} className="hover:text-blue-400 transition-colors" target="_blank" rel="noopener noreferrer">
-                                {/* <Github size={20} /> */}
                                 <FaGithub size={20} />
                             </a>
                             <a href={data.linkedin_link} className="hover:text-blue-400 transition-colors" target="_blank" rel="noopener noreferrer">
-                                {/* <Linkedin size={20} /> */}
                                 <FaLinkedin size={20} />
                             </a>
                             <a href={data.instagram_link} className="hover:text-blue-400 transition-colors" target="_blank" rel="noopener noreferrer">
-                                {/* <Instagram size={20} /> */}
                                 <FaInstagram size={20} />
                             </a>
                             <a href={`mailto:${data.email}`} className="hover:text-blue-400 transition-colors">
-                                {/* <Mail size={20} /> */}
                                 <FiMail size={20} />
                             </a>
                         </div>

@@ -5,6 +5,7 @@ import Pretest from '../page/Pretest/Pretest';
 import Dashboard from '../page/Dashboard/Dashboard';
 import Navdash from '../components/Dashboard/NavDash'
 import Portfolio from '../page/Portofolio/Portfolio';
+import ManagePortfolio from '../page/ManagePortfolio/ManagePortfolio';
 // import Template2 from '../page/Portofolio/Template2';
 // import Template3 from '../page/Portofolio/Template3';
 // Layout component untuk dashboard
@@ -24,6 +25,8 @@ const Router = () => {
     useEffect(() => {
         if (location.pathname === '/') {
             navigate('/auth');
+        } else if (location.pathname === '/portfolio') {
+            navigate('/dashboard');
         }
     }, [location.pathname, navigate]);
 
@@ -37,6 +40,7 @@ const Router = () => {
             <Route path="/dashboard" element={<DashboardLayout />}>
                 <Route index element={<Dashboard />} />
                 <Route path="project" element={''} />
+                <Route path="portfolio" element={<ManagePortfolio />} />
             </Route>
             <Route path='/portfolio/:id' element={<Portfolio />} />
             {/* <Route path='/portfolio2' element={<Template2 />} />

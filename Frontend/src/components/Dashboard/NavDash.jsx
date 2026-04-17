@@ -81,6 +81,12 @@ const NavIcon = [
     title: "Projects",
     path: "",
   },
+  {
+    id: 5,
+    icon: null,
+    title: "Portfolio",
+    path: "/dashboard/portfolio",
+  },
 ];
 
 const SidebarIcon = ({ item, onClick, menuActive }) => {
