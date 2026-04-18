@@ -22,7 +22,7 @@ const NavIcon = [
       </svg>
     ),
     title: "Home",
-    path: "",
+    path: "/dashboard",
   },
   {
     id: 2,
@@ -41,7 +41,7 @@ const NavIcon = [
       </svg>
     ),
     title: "Analysis",
-    path: "",
+    path: "/dashboard/analysis",
   },
   {
     id: 3,
@@ -60,7 +60,7 @@ const NavIcon = [
       </svg>
     ),
     title: "Progress",
-    path: "",
+    path: "/dashboard/progress",
   },
   {
     id: 4,
@@ -115,7 +115,7 @@ const NavDash = () => {
       <div className="flex w-full h-full flex-row md:justify-start justify-around gap-5 items-center lg:flex-col lg:items-center md:py-6 md:flex-col md:items-center">
         {/* Logo */}
         <div className="flex flex-row justify-center items-center mb-4 w-full">
-          <Link to="/" className="flex items-center gap-2">
+          <Link to="/dashboard" className="flex items-center gap-2">
             <img src={Logo} alt="logo" className="w-8 h-8" />
             <h1 className="text-[12px] font-bold text-primary font-inclusive-sans mt-2 text-center">
               CareerSync

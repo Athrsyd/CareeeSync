@@ -6,8 +6,13 @@ import WelcomeDash from '../../components/Dashboard/WelcomeDash'
 import SkkillDash from '../../components/Dashboard/SkillDash'
 import RecommendProject from '../../components/Dashboard/RecommendProjectDash';
 import LibraryReadinessDash from '../../components/Dashboard/LibraryReadinessDash';
+import { useUser } from '../../context/UserContext';
+import { useCareer } from '../../context/CareerContext';
 
 const Dashboard = () => {
+  const { user } = useUser();
+  const {careerData} = useCareer();
+
   return (
     <main className="ml-40 overflow-x-hidden pb-5">
       <div className="flex flex-row ml-8 gap-2 ">
@@ -26,9 +31,9 @@ const Dashboard = () => {
           <img src={Notif} className="w-5" />
           <div className="w-[1.25px] h-10 ml-2 bg-black/10"></div>
           <div className="flex flex-col justify-center leading-2 ml-2 -mt-1">
-            <h1 className="text-sm font-bold font-montserrat">Dipta Pradana</h1>
+            <h1 className="text-sm font-bold font-montserrat">{user?.username || 'Guest'}</h1>
             <h2 className="text-[13px] font-semibold font-montserrat text-black/30">
-              Web Dev
+              {careerData?.career_name || 'No career selected'}
             </h2>
           </div>
           <div className="w-10 h-10 rounded-4xl ml-3 bg-gray-500"></div>
@@ -36,11 +41,11 @@ const Dashboard = () => {
       </div>
       <div className="flex flex-col items-center mt-8 ml-7">
         {/* <WelcomeDash /> */}
-        <WelcomeDash />
+        <WelcomeDash user={user} data={careerData} />
       </div>
       <div className="flex flex-col mt-8 ml-15">
         {/* <SKILLDASH /> */}
-        <SkkillDash />
+        <SkkillDash data={careerData} />
       </div>
       {/* <Recommend Project */}
       <div className="flex flex-col mt-8 ml-15">

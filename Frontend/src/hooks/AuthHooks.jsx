@@ -87,7 +87,8 @@ const AuthHooks = () => {
                         Authorization: `Bearer ${token}`
                     }
                 });
-                setUser(response.data);
+                return response.data;
+                // console.log('User data fetchecd successfully:', response.data);
             } catch (error) {
                 console.error('Error fetching user data:', error);
             } finally {

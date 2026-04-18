@@ -20,7 +20,7 @@ const Skill = () => {
   );
 }
 
-const SkillDash = () => {
+const SkillDash = ({data}) => {
   return (
     <>
       <h1 className="self-start text-2xl font-bold font-montserrat text-[#021124]">
@@ -33,7 +33,7 @@ const SkillDash = () => {
             You are at the
           </h1>
           <h1 className="text-3xl font-semibold font-montserrat bg-primary px-4 py-1 rounded-lg text-white">
-            Expert Level
+            Expert {data?.level || 'N/A'}
           </h1>
           <p className="text-lg font-[450] font-montserrat text-[#021124]">
             Level Up Your Skills
