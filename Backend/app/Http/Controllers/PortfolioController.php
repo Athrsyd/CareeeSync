@@ -27,8 +27,8 @@ class PortfolioController extends Controller
             'linkedin_link' => "nullable|url",
             'instagram_link' => "nullable|url",
             'photo' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
-            'career_id' => "integer|exists:user_careers,id|required",
-            'project_finished_id' => "integer|exists:projects_finished,id|required"
+                // 'career_id' => "integer|exists:user_careers,id|required",
+                // 'project_finished_id' => "integer|exists:projects_finished,id|required"
         ], [
             'fullname.required' => "Fullname wajib diisi!",
             'education.required' => "Education wajib diisi!",
@@ -44,12 +44,12 @@ class PortfolioController extends Controller
             'photo.image' => "Photo harus berupa gambar!",
             'photo.mimes' => "Photo harus berupa file dengan ekstensi jpeg, png, jpg, atau gif!",
             'photo.max' => "Photo tidak boleh lebih dari 2MB!",
-            'career_id.required' => "Career ID wajib diisi!",
-            'career_id.integer' => "Career ID harus berupa integer!",
-            'career_id.exists' => "Career ID tidak ditemukan!",
-            'project_finished_id.required' => "Project finished ID wajib diisi!",
-            'project_finished_id.integer' => "Project finished ID harus berupa integer!",
-            'project_finished_id.exists' => "Project finished ID tidak ditemukan!"
+            // 'career_id.required' => "Career ID wajib diisi!",
+            // 'career_id.integer' => "Career ID harus berupa integer!",
+            // 'career_id.exists' => "Career ID tidak ditemukan!",
+            // 'project_finished_id.required' => "Project finished ID wajib diisi!",
+            // 'project_finished_id.integer' => "Project finished ID harus berupa integer!",
+            // 'project_finished_id.exists' => "Project finished ID tidak ditemukan!"
         ]);
 
         if ($validate->fails()) {
@@ -65,14 +65,16 @@ class PortfolioController extends Controller
                 $photoPath = $request->file('photo')->store('photos', 'public');
             }
 
-            // Generate portfolio_id (kombinasi user_id dan timestamp)
-            $portfolioId = 'PORT-' . Auth::id() . '-' . time();
+            $portfolioId = $request->fullname;
+
+            $userCareer = UserCareer::where('user_id', Auth::id())->first();
+            $projectFinished = ProjectsFinished::where('user_id', Auth::id())->first();
 
             $portfolio = Portfolio::create([
                 'portfolio_id' => $portfolioId,
                 'user_id' => Auth::id(),
-                'career_id' => $request->career_id,
-                'project_finished_id' => $request->project_finished_id,
+                'career_id' => $userCareer ? $userCareer->id : null,
+                'project_finished_id' => $projectFinished ? $projectFinished->id : null,
                 'fullname' => $request->fullname,
                 'education' => $request->education,
                 'hobbies' => $request->hobbies,

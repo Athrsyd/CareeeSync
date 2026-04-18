@@ -1,65 +1,443 @@
-import {useState} from 'react'
+import { useState } from 'react'
+import useManagePortfolio from '../../hooks/UseManagePortfolio'
+import { PORTFOLIO_STYLES, PORTFOLIO_TIPS } from '../../data/portfolioData'
 
 const ManagePortfolio = () => {
-    // const []
-    
+    const { loading, error, showSuccess, portfolioId, initialFormData, submitPortfolio, setShowSuccess, setError } = useManagePortfolio()
+    const [selectedStyle, setSelectedStyle] = useState('style1')
+    const [formData, setFormData] = useState(initialFormData)
+
+    const handleChange = (e) => {
+        const { name, value } = e.target
+        setFormData(prev => ({ ...prev, [name]: value }))
+    }
+
+    const handleFileChange = (e) => {
+        const file = e.target.files[0]
+        setFormData(prev => ({ ...prev, photo: file }))
+    }
+
+    const handleSubmit = async (e) => {
+        e.preventDefault()
+        const success = await submitPortfolio(formData)
+        
+        if (success) {
+            setFormData(initialFormData)
+            setSelectedStyle('style1')
+        }
+    }
+
+    const portfolioUrl = `${window.location.origin}/portfolio/${portfolioId}`
+    const [copied, setCopied] = useState(false)
+
+    const copyToClipboard = () => {
+        navigator.clipboard.writeText(portfolioUrl)
+        setCopied(true)
+        setTimeout(() => setCopied(false), 2000)
+    }
+
     return (
-        <div className="ml-40 pb-5 w-full">
-            <h1 className="text-2xl font-bold mt-5 ml-5">Manage Portfolio</h1>
-            <p className="text-sm text-gray-500 mt-2 ml-5">Here you can manage your portfolio, add new projects, and edit existing ones.</p>
-            <div className="ml-5 mt-4 w-full flex flex-row justify-between items-center">
-                <form action="/manage-portfolio" method="post" className='w-3/5'>
-                    <div className="mb-4">
-                        <label htmlFor="fullname" className="block text-sm font-medium text-gray-700">Project Name</label>
-                        <input type="text" id="fullname" name="fullname" className="mt-1 p-3 block w-full border border-gray-300 rounded-md shadow-sm focus:ring-primary focus:border-primary sm:text-sm" placeholder="Enter project name" required />
-                    </div>  
-                    <div className="mb-4">
-                        <label htmlFor="about_me" className="block text-sm font-medium text-gray-700">Project Description</label>
-                        <textarea id="about_me" name="about_me" rows="4" className="mt-1 p-3 block w-full border border-gray-300 rounded-md shadow-sm focus:ring-primary focus:border-primary sm:text-sm" placeholder="Enter project description" required></textarea>
+        <div className="ml-45 mr-7 pb-10 w-full">
+            <div className="mt-8 mb-8">
+                <h1 className="text-3xl font-bold text-[#021124] font-montserrat mb-2">
+                    Buat Portfolio Anda
+                </h1>
+                <p className="text-gray-600 font-medium">
+                    Lengkapi informasi berikut untuk membuat portfolio profesional Anda
+                </p>
+            </div>
+
+            <div className="flex flex-row gap-8">
+                {/* Form Section */}
+                <div className="flex-1">
+                    <div className="bg-white/10 rounded-3xl backdrop-blur-md shadow-xl outline-2 outline-primary p-8">
+                        {error && (
+                            <div className="mb-6 p-4 bg-red-100 border-2 border-red-400 rounded-xl">
+                                <p className="text-red-700 font-semibold text-sm">{error}</p>
+                            </div>
+                        )}
+
+                        <form onSubmit={handleSubmit}>
+                            {/* Personal Information */}
+                            <div className="mb-8">
+                                <h2 className="text-lg font-bold text-[#021124] mb-6 pb-3 border-b-2 border-primary">
+                                    Informasi Pribadi
+                                </h2>
+                                
+                                <div className="mb-5">
+                                    <label className="block text-sm font-semibold text-[#021124] mb-2">
+                                        Nama Lengkap <span className="text-red-500">*</span>
+                                    </label>
+                                    <input
+                                        type="text"
+                                        name="fullname"
+                                        value={formData.fullname}
+                                        onChange={handleChange}
+                                        placeholder="Masukkan nama lengkap Anda"
+                                        className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-primary focus:outline-none transition-colors bg-white/50 text-[#021124]"
+                                    />
+                                </div>
+
+                                <div className="mb-5">
+                                    <label className="block text-sm font-semibold text-[#021124] mb-2">
+                                        Tentang Anda <span className="text-red-500">*</span>
+                                    </label>
+                                    <textarea
+                                        name="about_me"
+                                        value={formData.about_me}
+                                        onChange={handleChange}
+                                        placeholder="Ceritakan tentang diri Anda, latar belakang, dan tujuan karir Anda"
+                                        rows={4}
+                                        className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-primary focus:outline-none transition-colors bg-white/50 text-[#021124] resize-none"
+                                    />
+                                </div>
+
+                                <div className="mb-5">
+                                    <label className="block text-sm font-semibold text-[#021124] mb-2">
+                                        Alamat <span className="text-red-500">*</span>
+                                    </label>
+                                    <textarea
+                                        name="address"
+                                        value={formData.address}
+                                        onChange={handleChange}
+                                        placeholder="Masukkan alamat lengkap Anda"
+                                        rows={3}
+                                        className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-primary focus:outline-none transition-colors bg-white/50 text-[#021124] resize-none"
+                                    />
+                                </div>
+                            </div>
+
+                            {/* Photo Upload */}
+                            <div className="mb-8">
+                                <h2 className="text-lg font-bold text-[#021124] mb-6 pb-3 border-b-2 border-primary">
+                                    Foto Profil
+                                </h2>
+                                <div className="mb-5">
+                                    <label className="block text-sm font-semibold text-[#021124] mb-3">
+                                        Pilih Foto (Rasio 1:1)
+                                    </label>
+                                    <div className="relative">
+                                        <input
+                                            type="file"
+                                            accept="image/*"
+                                            onChange={handleFileChange}
+                                            className="hidden"
+                                            id="photo-input"
+                                        />
+                                        <label
+                                            htmlFor="photo-input"
+                                            className="block w-full px-6 py-4 border-2 border-dashed border-primary rounded-xl cursor-pointer hover:bg-blue-50 transition-colors text-center"
+                                        >
+                                            <p className="text-primary font-semibold">
+                                                {formData.photo ? formData.photo.name : 'Klik atau drag foto di sini'}
+                                            </p>
+                                            <p className="text-sm text-gray-600 mt-1">PNG, JPG, GIF - Max 2MB</p>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            {/* Background */}
+                            <div className="mb-8">
+                                <h2 className="text-lg font-bold text-[#021124] mb-6 pb-3 border-b-2 border-primary">
+                                    Latar Belakang
+                                </h2>
+                                
+                                <div className="mb-5">
+                                    <label className="block text-sm font-semibold text-[#021124] mb-2">
+                                        Pendidikan <span className="text-red-500">*</span>
+                                    </label>
+                                    <textarea
+                                        name="education"
+                                        value={formData.education}
+                                        onChange={handleChange}
+                                        placeholder="Masukkan riwayat pendidikan Anda (Sekolah, Universitas, dll)"
+                                        rows={4}
+                                        className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-primary focus:outline-none transition-colors bg-white/50 text-[#021124] resize-none"
+                                    />
+                                </div>
+
+                                <div className="mb-5">
+                                    <label className="block text-sm font-semibold text-[#021124] mb-2">
+                                        Hobi
+                                    </label>
+                                    <input
+                                        type="text"
+                                        name="hobbies"
+                                        value={formData.hobbies}
+                                        onChange={handleChange}
+                                        placeholder="Contoh: Membaca, Fotografi, Traveling"
+                                        className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-primary focus:outline-none transition-colors bg-white/50 text-[#021124]"
+                                    />
+                                </div>
+
+                                <div className="mb-5">
+                                    <label className="block text-sm font-semibold text-[#021124] mb-2">
+                                        Pengalaman
+                                    </label>
+                                    <input
+                                        type="text"
+                                        name="experience"
+                                        value={formData.experience}
+                                        onChange={handleChange}
+                                        placeholder="Contoh: 2 tahun sebagai Web Developer di PT ABC"
+                                        className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-primary focus:outline-none transition-colors bg-white/50 text-[#021124]"
+                                    />
+                                </div>
+                            </div>
+
+                            {/* Contact & Social Media */}
+                            <div className="mb-8">
+                                <h2 className="text-lg font-bold text-[#021124] mb-6 pb-3 border-b-2 border-primary">
+                                    Informasi Kontak & Media Sosial
+                                </h2>
+                                
+                                <div className="mb-5">
+                                    <label className="block text-sm font-semibold text-[#021124] mb-2">
+                                        Email <span className="text-red-500">*</span>
+                                    </label>
+                                    <input
+                                        type="email"
+                                        name="email"
+                                        value={formData.email}
+                                        onChange={handleChange}
+                                        placeholder="nama@email.com"
+                                        className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-primary focus:outline-none transition-colors bg-white/50 text-[#021124]"
+                                    />
+                                </div>
+
+                                <div className="mb-5">
+                                    <label className="block text-sm font-semibold text-[#021124] mb-2">
+                                        Nomor Telepon <span className="text-red-500">*</span>
+                                    </label>
+                                    <input
+                                        type="text"
+                                        name="phone_number"
+                                        value={formData.phone_number}
+                                        onChange={handleChange}
+                                        placeholder="+62 812-3456-7890"
+                                        className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-primary focus:outline-none transition-colors bg-white/50 text-[#021124]"
+                                    />
+                                </div>
+
+                                <div className="mb-5">
+                                    <label className="block text-sm font-semibold text-[#021124] mb-2">
+                                        LinkedIn (Opsional)
+                                    </label>
+                                    <input
+                                        type="url"
+                                        name="linkedin_link"
+                                        value={formData.linkedin_link}
+                                        onChange={handleChange}
+                                        placeholder="https://linkedin.com/in/username"
+                                        className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-primary focus:outline-none transition-colors bg-white/50 text-[#021124]"
+                                    />
+                                </div>
+
+                                <div className="mb-5">
+                                    <label className="block text-sm font-semibold text-[#021124] mb-2">
+                                        Instagram (Opsional)
+                                    </label>
+                                    <input
+                                        type="url"
+                                        name="instagram_link"
+                                        value={formData.instagram_link}
+                                        onChange={handleChange}
+                                        placeholder="https://instagram.com/username"
+                                        className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-primary focus:outline-none transition-colors bg-white/50 text-[#021124]"
+                                    />
+                                </div>
+                            </div>
+
+                            {/* Portfolio Style */}
+                            <div className="mb-8">
+                                <h2 className="text-lg font-bold text-[#021124] mb-6 pb-3 border-b-2 border-primary">
+                                    Pilih Gaya Portfolio
+                                </h2>
+                                <div className="grid grid-cols-1 gap-4">
+                                    {PORTFOLIO_STYLES.map((style) => (
+                                        <div
+                                            key={style.id}
+                                            onClick={() => {
+                                                setSelectedStyle(style.id)
+                                                setFormData(prev => ({...prev, style: style.id}))
+                                            }}
+                                            className={`relative p-4 rounded-2xl cursor-pointer transition-all duration-300 border-2 ${
+                                                selectedStyle === style.id
+                                                    ? 'border-primary bg-primary/10 shadow-lg'
+                                                    : 'border-gray-300 bg-white/5 hover:border-primary/50'
+                                            }`}
+                                        >
+                                            {selectedStyle === style.id && (
+                                                <div className="absolute top-3 right-3 w-6 h-6 bg-primary rounded-full flex items-center justify-center">
+                                                    <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                                        <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                                                    </svg>
+                                                </div>
+                                            )}
+                                            
+                                            <div className="flex gap-4">
+                                                <div className="flex gap-2">
+                                                    {style.colors.map((color, idx) => (
+                                                        <div
+                                                            key={idx}
+                                                            className="w-8 h-8 rounded-lg border border-gray-300"
+                                                            style={{backgroundColor: color}}
+                                                        />
+                                                    ))}
+                                                </div>
+                                                <div className="flex-1">
+                                                    <h3 className="font-bold text-[#021124] text-sm">{style.name}</h3>
+                                                    <p className="text-xs text-gray-600 mt-1">{style.description}</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    ))}
+                                </div>
+                            </div>
+
+                            {/* Submit Button */}
+                            <div className="mt-8 flex gap-4">
+                                <button
+                                    type="submit"
+                                    disabled={loading}
+                                    className="flex-1 px-6 py-3 bg-primary text-white font-bold rounded-xl hover:bg-[#4a6fa5] transition-all disabled:opacity-50 disabled:cursor-not-allowed shadow-lg"
+                                >
+                                    {loading ? 'Membuat Portfolio...' : 'Buat Portfolio'}
+                                </button>
+                                <button
+                                    type="reset"
+                                    className="flex-1 px-6 py-3 bg-gray-300 text-[#021124] font-bold rounded-xl hover:bg-gray-400 transition-all"
+                                >
+                                    Reset
+                                </button>
+                            </div>
+                        </form>
                     </div>
-                    <div className="mb-4">
-                    <label htmlFor="" className=''>Pilihlah Photo 1:1 untuk Portfolio mu</label> <br />
-                    <input type="file"  className='mt-1 p-3 block w-full border border-gray-300 rounded-md shadow-sm focus:ring-primary focus:border-primary sm:text-sm'/>
+                </div>
+
+                {/* Preview Section */}
+                <div className="w-80 h-full">
+                    <div className="bg-white/10 rounded-3xl backdrop-blur-md shadow-xl outline-2 outline-primary p-8 sticky top-20">
+                        <h3 className="text-xl font-bold text-[#021124] mb-6">
+                            Pratinjau Portfolio
+                        </h3>
+                        
+                        <div className="space-y-4">
+                            {/* Style Preview */}
+                            <div>
+                                <p className="text-xs font-semibold text-gray-600 uppercase mb-2">Gaya Terpilih:</p>
+                                {PORTFOLIO_STYLES.map((style) => {
+                                    if (style.id === selectedStyle) {
+                                        return (
+                                            <div key={style.id} className="rounded-xl p-4 text-white" 
+                                                 style={{backgroundImage: `linear-gradient(135deg, ${style.colors[0]} 0%, ${style.colors[1]} 100%)`}}>
+                                                <p className="font-bold text-sm">{style.name}</p>
+                                                <p className="text-xs opacity-90 mt-1">{style.description}</p>
+                                            </div>
+                                        )
+                                    }
+                                })}
+                            </div>
+
+                            <div className="bg-gray-200 rounded-full w-full h-64 flex items-center justify-center">
+                                <div className="text-center">
+                                    <svg className="w-16 h-16 text-gray-400 mx-auto mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                                    </svg>
+                                    <p className="text-sm text-gray-500">Preview Foto Profil</p>
+                                </div>
+                            </div>
+
+                            <div className="space-y-3">
+                                <div>
+                                    <p className="text-xs font-semibold text-gray-600 uppercase">Nama</p>
+                                    <p className="text-sm font-bold text-[#021124]">{formData.fullname || 'Nama Anda'}</p>
+                                </div>
+                                <div>
+                                    <p className="text-xs font-semibold text-gray-600 uppercase">Email</p>
+                                    <p className="text-sm text-primary">{formData.email || 'email@example.com'}</p>
+                                </div>
+                                <div>
+                                    <p className="text-xs font-semibold text-gray-600 uppercase">Tentang</p>
+                                    <p className="text-sm text-gray-700">{formData.about_me ? formData.about_me.substring(0, 60) + '...' : 'Deskripsi singkat Anda'}</p>
+                                </div>
+                            </div>
+
+                            <div className="pt-4 border-t-2 border-gray-300">
+                                <p className="text-xs text-gray-600 mb-3 font-semibold">Tips untuk Portfolio Terbaik:</p>
+                                <ul className="text-xs text-gray-700 space-y-2">
+                                    {PORTFOLIO_TIPS.map((tip, idx) => (
+                                        <li key={idx} className="flex items-start gap-2">
+                                            <span className="text-primary font-bold">•</span>
+                                            <span>{tip}</span>
+                                        </li>
+                                    ))}
+                                </ul>
+                            </div>
+                        </div>
                     </div>
-                    <div className="mb-4">
-                        <label htmlFor="education" className="block text-sm font-medium text-gray-700">Education</label>
-                        <textarea id="education" name="educatio" className="mt-1 p-3 block w-full border border-gray-300 rounded-md shadow-sm focus:ring-primary focus:border-primary sm:text-sm" placeholder="Enter your education" required></textarea>
-                    </div>
-                    <div className="mb-4">
-                        <label htmlFor="hobbies" className="block text-sm font-medium text-gray-700">Hobbies</label>
-                        <input type='text' id="hobbies" name="hobbies" rows="4" className="mt-1 p-3 block w-full border border-gray-300 rounded-md shadow-sm focus:ring-primary focus:border-primary sm:text-sm" placeholder="Enter your hobbies" required></input>
-                    </div>
-                    <div className="mb-4">
-                        <label htmlFor="experience" className="block text-sm font-medium text-gray-700">Pengalaman</label>
-                        <input type='text' id="experience" name="experience" rows="4" className="mt-1 p-3 block w-full border border-gray-300 rounded-md shadow-sm focus:ring-primary focus:border-primary sm:text-sm" placeholder="Enter your experience" required></input>
-                    </div>
-                    <ul className='w-17/20'>
-                        <label htmlFor="">Your social media </label>
-                        <li className='my-5'>
-                            <label htmlFor="email" className="block text-sm font-medium text-gray-700">email</label>
-                            <input type="email" id="email" name="email" className="mt-1 p-3 block w-full border border-gray-300 rounded-md shadow-sm focus:ring-primary focus:border-primary sm:text-sm" placeholder="Enter your email" required />
-                        </li>
-                        <li className='my-5'>
-                            <label htmlFor="linkedin" className="block text-sm font-medium text-gray-700">LinkedIn</label>
-                            <input type="text" id="linkedin" name="linkedin" className="mt-1 p-3 block w-full border border-gray-300 rounded-md shadow-sm focus:ring-primary focus:border-primary sm:text-sm" placeholder="Enter your LinkedIn profile URL" required />
-                        </li>
-                        <li className='my-5'>
-                            <label htmlFor="github" className="block text-sm font-medium text-gray-700">GitHub</label>
-                            <input type="text" id="github" name="github" className="mt-1 p-3 block w-full border border-gray-300 rounded-md shadow-sm focus:ring-primary focus:border-primary sm:text-sm" placeholder="Enter your GitHub profile URL" required />
-                        </li>
-                        <li className='my-5'>
-                            <label htmlFor="phone_number" className="block text-sm font-medium text-gray-700">Phone Number</label>
-                            <input type="text" id="phone_number" name="phone_number" className="mt-1 p-3 block w-full border border-gray-300 rounded-md shadow-sm focus:ring-primary focus:border-primary sm:text-sm" placeholder="Enter your phone number" required />
-                        </li>
-                    </ul>
-                    <button type="submit" className="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-primary hover:bg-primary-dark focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary">
-                        Save Portfolio
-                    </button>
-                </form>
-                <div className="container w-2/5 flex flex-col items-center justify-center">
-                    <h2 className="text-lg font-semibold mb-4">Pilih Style Portofolio mu</h2>
                 </div>
             </div>
+
+            {/* Success Modal */}
+            {showSuccess && (
+                <div className="fixed inset-0 bg-black/50 backdrop-blur-sm flex items-center justify-center z-50">
+                    <div className="bg-white rounded-3xl shadow-2xl p-8 max-w-md w-full mx-4">
+                        <div className="flex justify-center mb-6">
+                            <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center">
+                                <svg className="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                                </svg>
+                            </div>
+                        </div>
+
+                        <h3 className="text-2xl font-bold text-center text-[#021124] mb-3">
+                            Portfolio Berhasil Dibuat!
+                        </h3>
+                        <p className="text-center text-gray-600 mb-6 font-medium">
+                            Portfolio Anda sudah siap dibagikan kepada dunia.
+                        </p>
+
+                        <div className="bg-blue-50 rounded-2xl p-4 mb-6 border-2 border-blue-200">
+                            <p className="text-sm text-gray-600 mb-2 font-medium">Link Portfolio Anda:</p>
+                            <div className="flex items-center gap-2">
+                                <input 
+                                    type="text" 
+                                    value={portfolioUrl} 
+                                    readOnly 
+                                    className="flex-1 bg-white border border-blue-300 rounded-lg px-3 py-2 text-sm text-gray-700 truncate"
+                                />
+                                <button
+                                    onClick={copyToClipboard}
+                                    className={`px-4 py-2 rounded-lg font-medium transition-all duration-300 whitespace-nowrap ${
+                                        copied 
+                                            ? 'bg-green-500 text-white' 
+                                            : 'bg-blue-500 text-white hover:bg-blue-600'
+                                    }`}
+                                >
+                                    {copied ? '✓ Disalin' : 'Salin'}
+                                </button>
+                            </div>
+                        </div>
+
+                        <div className="flex gap-3">
+                            <button
+                                onClick={() => setShowSuccess(false)}
+                                className="flex-1 px-4 py-3 bg-primary text-white font-semibold rounded-xl hover:bg-[#4a6fa5] transition-colors"
+                            >
+                                Tutup
+                            </button>
+                            <button
+                                onClick={() => window.open(portfolioUrl, '_blank')}
+                                className="flex-1 px-4 py-3 bg-gray-200 text-[#021124] font-semibold rounded-xl hover:bg-gray-300 transition-colors"
+                            >
+                                Lihat
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            )}
         </div>
     )
 }

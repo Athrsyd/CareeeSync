@@ -19,6 +19,7 @@ Route::prefix('v1')->group(function () {
         Route::get('/career', [UserCareerController::class, 'GetCareer']);
         Route::put('/career/{id}', [UserCareerController::class, 'UpdateCareer']);
 
+        Route::post('/portfolio', [PortfolioController::class, 'Create']);
         });
         Route::get('/portfolio/{username}', [PortfolioController::class, 'GetPortfolio']);
 });
