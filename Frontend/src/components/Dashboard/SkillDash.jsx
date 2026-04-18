@@ -1,26 +1,43 @@
 import React from 'react'
+import SkillDisplay from './SkillDisplay';
+import { useCareer } from '../../context/CareerContext';
+import CareerOptions from '../../data/careerOptions.json'
 
-const SkillItem = [
-  {
-  id: 1,
-  skill: "",
-  level: "",
-  progress: "",
-},
-]
 
 const Skill = () => {
+  const { skillsMastery } = useCareer();
+
+  // 1. Buat lookup object dari careeroptions berdasarkan skill id
+  const skillsLookup = {};
+  CareerOptions.careers.forEach((career) => {
+    career.skills.forEach((skill) => {
+      skillsLookup[skill.id] = skill;
+    });
+  });
+
+  // 2. Map skillsMastery dan gabungkan dengan data dari careeroptions
+  const SkillItem = skillsMastery.map((skillId) => {
+    const skillData = skillsLookup[skillId];
+    return {
+      id: skillId,
+      name: skillData?.name || 'Unknown Skill',
+      description: skillData?.description || '',
+      level: skillData?.level || 'basic',
+    };
+  });
+
   return (
     <>
-      <div className=" self-start flex flex-row mt-5 gap-8">
-        <div className="flex flex-col gap-2 bg-white/20 w-86 h-40 rounded-xl backdrop-blur-2xl shadow-2xl outline-2 outline-primary"></div>
-        <div className="flex flex-col gap-2 bg-white/20 w-86 h-40 rounded-xl backdrop-blur-2xl shadow-2xl outline-2 outline-primary"></div>
+      <div className="overflow-x-scroll self-start w-13/20 flex flex-row mt-5 gap-8">
+        {SkillItem.map((item) => (
+          <SkillDisplay key={item.id} data={item} />
+        ))}
       </div>
     </>
   );
 }
 
-const SkillDash = ({data}) => {
+const SkillDash = ({ data }) => {
   return (
     <>
       <h1 className="self-start text-2xl font-bold font-montserrat text-[#021124]">
@@ -28,7 +45,7 @@ const SkillDash = ({data}) => {
       </h1>
       <div className="flex flex-row max-w-full items-center gap-8">
         <Skill />
-        <div className="flex flex-col justify-center items-center gap-2 mt-5 ml-8">
+        <div className="flex flex-col w-1/4 justify-center items-center gap-2 mt-5 ml-8">
           <h1 className="text-3xl font-semibold font-montserrat text-[#021124]">
             You are at the
           </h1>

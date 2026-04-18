@@ -32,7 +32,7 @@ class PortfolioSeeder extends Seeder
             [
                 'user_id' => $user->id,
                 'career_name' => 'Full Stack Developer',
-                'skills_mastery' => ['React', 'Node.js', 'Laravel', 'PostgreSQL'],
+                'skills_mastery' => ['html', 'css', 'git_basic', 'responsive'],
                 'level' => 'Intermediate'
             ]
         );

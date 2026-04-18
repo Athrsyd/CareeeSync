@@ -63,8 +63,13 @@ const CareerHooks = () => {
         }
     };
 
+    const GetSkills = async () => {
+        const careerData = await GetCareer();
+        return careerData[0]?.skills_mastery || [];
+    };
 
-    return { hitungLevel, postCareer, handleChange, GetCareer };
+
+    return { hitungLevel, postCareer, handleChange, GetCareer, GetSkills };
 }
 
 
