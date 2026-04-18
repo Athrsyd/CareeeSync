@@ -1,4 +1,5 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect,  } from 'react'
+import { useNavigate } from 'react-router-dom';
 import Header from '../../components/Pretest/Header';
 import Skill from '../../components/Pretest/Skill';
 import CareerOptions from '../../data/careerOptions.json'
@@ -13,8 +14,11 @@ const Pretest = () => {
     const [selectedSkills, setSelectedSkills] = useState([]);
     const [selectedCareerName, setSelectedCareerName] = useState('');
     const [preventNext, setPreventNext] = useState(false);
+    const [loading, setLoading] = useState(false);
 
     const { hitungLevel, postCareer } = CareerHooks();
+
+    const navigate = useNavigate();
 
     useEffect(() => {
         setDataCareer(CareerOptions.careers);
@@ -62,6 +66,7 @@ const Pretest = () => {
     }
 
     const handleSubmit = async () => {
+        setLoading(true);
         const skillsWithWeight = selectedSkills
             .map(skillId => {
                 const skill = skillList.find(s => s.id === skillId);
@@ -90,16 +95,19 @@ const Pretest = () => {
             skills_mastery: skillsWithWeight,
             level: level
         };
-
         console.log('Data yang dikirim:', payload);
 
         try {
             await postCareer(payload);
             console.log('Success!');
+            navigate('/dashboard');
             // Optional: redirect atau reset form
         } catch (error) {
             console.error('Error submitting career data:', error);
+        } finally {
+            setLoading(false);
         }
+
     }
 
     return (
@@ -108,18 +116,18 @@ const Pretest = () => {
                 <img src={background} alt="background" className=' object-cover' />
             </div>
             {/* <div className='container px-10 z-10 bg-[#021124]/60 w-3/5 h-4/5 rounded-xl backdrop-blur-xl flex items-center gap-6 flex-col justify-between py-5'> */}
-            <div className={`container px-10 py-15 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-40 bg-[#021124]/30 w-3/5 h-4/5 rounded-xl
-                backdrop-blur-xl flex flex-col items-center justify-center gap-10 overflow-hidden`}>
+            <div className={`container px-4 py-6 sm:px-6 sm:py-10 lg:px-10 lg:py-15 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-40 bg-[#021124]/30 w-11/12 sm:w-4/5 lg:w-3/5 max-h-[90vh] rounded-xl
+                backdrop-blur-xl flex flex-col items-center justify-center gap-6 sm:gap-8 lg:gap-10 overflow-hidden`}>
                 <Header data={page} />
 
                 {page === 1 ? (
                     <>
-                        <div className="container flex flex-col items-center justify-center gap-4">
-                            <div className="w-17/20 flex items-start justify-start">
-                                <h1 className='text-2xl text-start font-bold mb-2 text-white'>What is your primary career goal?</h1>
+                        <div className="container flex flex-col items-center justify-center gap-4 w-full">
+                            <div className="w-full sm:w-17/20 flex items-start justify-start px-4 sm:px-0">
+                                <h1 className='text-lg sm:text-xl md:text-2xl text-start font-bold mb-2 text-white'>What is your primary career goal?</h1>
                             </div>
                             <select name="careerGoal" id="careerGoal"
-                                className='bg-[#021124] text-white placeholder:text-gray-500 border border-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500 w-17/20 h-20 p-5 rounded-2xl'
+                                className='bg-[#021124] text-white placeholder:text-gray-500 border border-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500 w-11/12 sm:w-17/20 h-16 sm:h-20 p-4 sm:p-5 rounded-2xl text-sm sm:text-base'
                                 onChange={handleCareerChange}
                             >
                                 <option value="">Select your career goal</option>
@@ -128,22 +136,22 @@ const Pretest = () => {
                                 ))}
                             </select>
                         </div>
-                        <div className="container w-full flex flex-col items-center justify-center">
+                        <div className="container w-full flex flex-col items-center justify-center gap-2">
                             <button
-                                className={`bg-primary w-9/10 rounded-2xl text-white py-3 px-6 hover:bg-[#0a3d7a] transition-colors duration-300 ${preventNext ? 'opacity-50 cursor-not-allowed' : ''}`}
+                                className={`bg-primary w-11/12 sm:w-9/10 rounded-2xl text-white py-3 px-4 sm:px-6 text-sm sm:text-base hover:bg-[#0a3d7a] transition-colors duration-300 ${preventNext ? 'opacity-50 cursor-not-allowed' : ''}`}
                                 onClick={handleClickStepOne}
                                 disabled={preventNext}
                             >
                                 Next
                             </button>
-                            <span className={`text-red-700 ${preventNext ? 'block' : 'hidden'}`}>Pilih tujuan karir anda terlebih dahulu</span>
+                            <span className={`text-red-700 text-xs sm:text-sm ${preventNext ? 'block' : 'hidden'}`}>Pilih tujuan karir anda terlebih dahulu</span>
                         </div>
                     </>
                 ) : page === 2 ? (
                     <>
                         <div className="container flex flex-col items-center justify-center gap-4 w-full flex-1">
-                            <h1 className='text-2xl text-center font-bold mb-2 text-white'>Which skills do you already have in this field?</h1>
-                            <div className="w-17/20 h-50 pt-2 grid grid-cols-2 md:grid-cols-3 gap-4 overflow-auto">
+                            <h1 className='text-lg sm:text-xl md:text-2xl text-center font-bold mb-2 text-white px-2'>Which skills do you already have in this field?</h1>
+                            <div className="w-full sm:w-17/20 h-50 sm:h-60 pt-2 px-3 sm:px-0 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-2 sm:gap-4 overflow-auto">
                                 {skillList.map((skill, index) => (
                                     <Skill
                                         key={index}
@@ -155,44 +163,50 @@ const Pretest = () => {
                                 ))}
                             </div>
                         </div>
-                        <div className="buttons -mt-11 flex w-full flex-row items-center justify-center gap-10">
-                            <button onClick={handlePrevOne} className='bg-primary w-9/10 rounded-2xl text-white py-3 px-6 hover:bg-[#0a3d7a] transition-colors duration-300 font-semibold'>Prev</button>
-                            <button onClick={() => setPage(page + 1)} className='bg-primary w-9/10 rounded-2xl text-white py-3 px-6 hover:bg-[#0a3d7a] transition-colors duration-300 font-semibold'>Next</button>
+                        <div className="buttons mt-6 lg:-mt-6 flex w-full flex-col sm:flex-row items-center justify-center gap-4  sm:gap-10 px-4 sm:px-0">
+                            <button onClick={handlePrevOne} className='bg-primary w-full sm:w-9/10 rounded-2xl text-white py-2 sm:py-3 px-4 sm:px-6 text-sm sm:text-base hover:bg-[#0a3d7a] transition-colors duration-300 font-semibold'>Prev</button>
+                            <button onClick={() => setPage(page + 1)} className='bg-primary w-full sm:w-9/10 rounded-2xl text-white py-2 sm:py-3 px-4 sm:px-6 text-sm sm:text-base hover:bg-[#0a3d7a] transition-colors duration-300 font-semibold'>Next</button>
                         </div>
                     </>
                 ) : page === 3 ? (
                     <>
-                        <div className="container flex flex-col items-center justify-center gap-8 w-full flex-1">
-                            <div className="w-17/20">
-                                <h1 className='text-xl text-start font-bold text-white mb-6'>Konfirmasi Pilihan Anda</h1>
+                        <div className="container flex flex-col items-center justify-center gap-6 sm:gap-8 w-full flex-1 px-3 sm:px-0">
+                            <div className="w-full sm:w-17/20">
+                                <h1 className='text-lg sm:text-xl font-bold text-white mb-4 sm:mb-6'>Konfirmasi Pilihan Anda</h1>
                                 <div className="container flex flex-col items-start justify-center gap-3">
-                                    <div className='bg-linear-to-br from-[#021124]/60 to-[#0a2847]/40 w-full rounded-2xl p-2 border-2 border-primary/30'>
+                                    <div className='bg-linear-to-br from-[#021124]/60 to-[#0a2847]/40 w-full rounded-2xl p-2 sm:p-3 border-2 border-primary/30'>
                                         <div className="flex items-center gap-2 mb-2">
-                                            <span className="text-primary font-bold">✓</span>
-                                            <h2 className='text-lg font-semibold text-gray-300'>Tujuan Karir <span className='opacity-50'>(anda tidak bisa mengubahnya setelah ini)</span></h2>
+
+                                            <span className="text-primary font-bold text-lg sm:text-xl">✓</span>
+                                            <h2 className='text-base sm:text-lg font-semibold text-gray-300'>Tujuan Karir <span className='opacity-50 text-xs sm:text-sm'>(anda tidak bisa mengubahnya setelah ini)</span></h2>
                                         </div>
-                                        <p className='text-xl font-bold text-white ml-6'>{selectedCareerName}</p>
+                                        <p className='text-lg sm:text-xl font-bold text-white ml-6 wrap-break-words'>{selectedCareerName}</p>
                                     </div>
-                                    <div className='bg-linear-to-br from-[#021124]/60 to-[#0a2847]/40 w-full rounded-2xl p-2 border-2 border-primary/30'>
+                                    <div className='bg-linear-to-br from-[#021124]/60 to-[#0a2847]/40 w-full rounded-2xl p-2 sm:p-3 border-2 border-primary/30'>
                                         <div className="flex items-center gap-2 mb-3">
-                                            <span className="text-primary font-bold">✓</span>
-                                            <h2 className='text-lg font-semibold text-gray-300'>Skills yang Anda Miliki:</h2>
+                                            {selectedSkills.length > 0 ? (
+                                                <span className="text-primary font-bold text-lg sm:text-xl">✓</span>
+                                            ) : (
+                                                null)}
+                                            <h2 className='text-base sm:text-lg font-semibold text-gray-300'>{selectedSkills.length > 0 ? 'Skills yang Anda Miliki:' : 'Anda belum memilih skill apapun'}</h2>
                                         </div>
                                         <div className="flex flex-wrap gap-2 ml-6">
                                             {selectedSkills.map((skillId, index) => {
                                                 const skill = skillList.find(s => s.id === skillId);
                                                 return skill ? (
-                                                    <span key={index} className='bg-primary/20 text-white px-3 py-1 rounded-lg text-sm font-semibold'>{skill.name}</span>
-                                                ) : null;
+                                                    <span key={index} className='bg-primary/20 text-white px-2 sm:px-3 py-1 rounded-lg text-xs sm:text-sm font-semibold'>{skill.name}</span>
+                                                ) : (
+                                                    <span key={index} className='bg-primary/20 text-white px-2 sm:px-3 py-1 rounded-lg text-xs sm:text-sm font-semibold'>Anda belum memilih skill apapun</span>
+                                                );
                                             })}
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div className="buttons flex w-full flex-row items-center justify-center gap-10">
-                            <button onClick={() => setPage(page - 1)} className='bg-primary w-9/10 rounded-2xl text-white py-3 px-6 hover:bg-[#0a3d7a] transition-colors duration-300 font-semibold'>Prev</button>
-                            <button onClick={handleSubmit} className='bg-primary w-9/10 rounded-2xl text-white py-3 px-6 hover:bg-[#0a3d7a] transition-colors duration-300 font-semibold'>Let's Proof Your Skill</button>
+                        <div className="buttons flex w-full flex-col sm:flex-row items-center justify-center gap-4 mt-5 sm:gap-10 px-4 sm:px-0">
+                            <button onClick={() => setPage(page - 1)} className='bg-primary w-full sm:w-9/10 rounded-2xl text-white py-2 sm:py-3 px-4 sm:px-6 text-sm sm:text-base hover:bg-[#0a3d7a] transition-colors duration-300 font-semibold'>Prev</button>
+                            <button onClick={handleSubmit} className='bg-primary w-full sm:w-9/10 rounded-2xl text-white py-2 sm:py-3 px-4 sm:px-6 text-sm sm:text-base hover:bg-[#0a3d7a] transition-colors duration-300 font-semibold'>Let's Proof Your Skill</button>
                         </div>
                     </>
                 ) : null}
