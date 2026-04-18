@@ -79,7 +79,7 @@ const NavIcon = [
       </svg>
     ),
     title: "Projects",
-    path: "",
+    path: "/dashboard/project",
   },
   {
     id: 5,
