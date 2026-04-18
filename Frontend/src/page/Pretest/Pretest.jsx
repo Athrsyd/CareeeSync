@@ -16,7 +16,7 @@ const Pretest = () => {
     const [preventNext, setPreventNext] = useState(false);
     const [loading, setLoading] = useState(false);
 
-    const { hitungLevel, postCareer } = CareerHooks();
+    const { postCareer } = CareerHooks();
 
     const navigate = useNavigate();
 

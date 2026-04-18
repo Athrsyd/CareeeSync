@@ -156,7 +156,7 @@ const NavDash = () => {
               />
             </svg>
           </div>
-          <div className="w-20">
+          <div onClick={Logout} className="w-20">
             <h1 className="text-sm font-bold font-inclusive-sans ml-2">
               Logout
             </h1>
