@@ -40,7 +40,7 @@ const Router = () => {
             {/* Nested routes dengan layout */}
             <Route path="/dashboard" element={<DashboardLayout />}>
                 <Route index element={<Dashboard />} />
-                <Route path="project" element={''} />
+                <Route path="project" element={<Project/>} />
                 <Route path="portfolio" element={<ManagePortfolio />} />
                 <Route path="analysis" element={'analiysis'} />
                 <Route path="progress" element={'progress'} />

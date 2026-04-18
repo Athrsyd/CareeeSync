@@ -1,10 +1,18 @@
 import React from 'react'
+import { useUser } from '../../context/UserContext';
+import { useCareer } from '../../context/CareerContext';
 import Search from '../../assets/searchIcon.svg'
 import Notif from "../../assets/Notif.svg";
 import TitleProject from '../../components/Project/TitleProject';
 import LevelAndTools from '../../components/Project/LevelAndTools';
+import ProjectDescription from '../../components/Project/ProjectDescription';
+import OutputProjects from '../../components/Project/OutputProjects';
 
 const Project = () => {
+
+  const {User} = useUser();
+  const {careerData} = useCareer();
+
   return (
     <>
       <main className="ml-40 overflow-x-hidden pb-5">
@@ -25,22 +33,30 @@ const Project = () => {
             <div className="w-[1.25px] h-10 ml-2 bg-black/10"></div>
             <div className="flex flex-col justify-center leading-2 ml-2 -mt-1">
               <h1 className="text-sm font-bold font-montserrat">
-                Dipta Pradana
+                {User?.username || 'Guest'}
               </h1>
               <h2 className="text-[13px] font-semibold font-montserrat text-black/30">
-                Web Dev
+                {careerData?.careername || 'No career selected'}
               </h2>
             </div>
             <div className="w-10 h-10 rounded-4xl ml-3 bg-gray-500"></div>
           </div>
         </div>
-        <div className="flex flex-col mt-8 ml-13">
+        <div className="flex flex-col mt-8 ml-13 w-[90%]">
           {/* <Title Project /> */}
           <TitleProject />
         </div>
-        <div className="flex flex-col mt-8 ml-13">
+        <div className="flex flex-col mt-10 ml-13">
           {/* <Level And Tools /> */}
           <LevelAndTools />
+        </div>
+        <div className="flex flex-col mt-12 ml-13">
+          {/* <Description /> */}
+          <ProjectDescription />
+        </div>
+        <div className="flex flex-col mt-10 ml-13">
+          {/* <Description /> */}
+          <OutputProjects />
         </div>
       </main>
     </>
