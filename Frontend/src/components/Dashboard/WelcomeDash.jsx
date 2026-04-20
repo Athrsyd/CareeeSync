@@ -1,6 +1,7 @@
 import React from 'react'
 import { useEffect, useRef } from "react";
 import Bintang from "../../assets/Bintang.svg"
+import { useCareer } from '../../context/CareerContext';
 
 const CIRCUMFERENCE = 2 * Math.PI * 54;
 
@@ -71,6 +72,9 @@ const JobReadinessScore = ({ score = 78, role = "Web Developer" }) => {
 }
 
 const WelcomeDash = ({user, data}) => {
+  const { readiness,  } = useCareer();
+
+
   return (
     <>
       <div className="flex flex-row gap-8">
@@ -98,7 +102,7 @@ const WelcomeDash = ({user, data}) => {
             className="absolute right-20 w-65 -translate-y-8 translate-x-8"
           />
         </div>
-        <JobReadinessScore score={80} role="Web Developer" />
+        <JobReadinessScore score={readiness} role={data?.career_name || 'No career selected'} />
       </div>
     </>
   );

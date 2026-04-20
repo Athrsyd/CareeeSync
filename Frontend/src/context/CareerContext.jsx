@@ -9,6 +9,7 @@ const CareerProvider = ({ children }) => {
     const location = useLocation()
     const [careerData, setCareerData] = useState(null)
     const [skillsMastery, setSkillsMastery] = useState([])
+    const [readiness, setReadiness] = useState(0)
 
     useEffect(() => {
         if (location.pathname !== '/dashboard') return
@@ -20,6 +21,14 @@ const CareerProvider = ({ children }) => {
             const skills = await GetSkills();
             setSkillsMastery(skills || []);
             console.log('Skills mastery fetched successfully:', skills);
+
+            const hitungLevel = (data) => {
+                const readinessPoin = data.skills_mastery.reduce((acc, skill) => acc + (skill.mastered ? skill.weight : 0), 0);
+                return readinessPoin ;
+            };
+            const readinessScore = hitungLevel(data?.[0] || { skills_mastery: [] });
+            console.log('Readiness score calculated successfully:', readinessScore);   
+            setReadiness(readinessScore);
 
             // Calculate readiness (example calculation, replace with actual logic)
             // const totalSkills = skills.length;
@@ -33,7 +42,7 @@ const CareerProvider = ({ children }) => {
 
 
     return (
-        <CareerContext.Provider value={{ careerData, skillsMastery }}>
+        <CareerContext.Provider value={{ careerData, skillsMastery, readiness }}>
             {children}
         </CareerContext.Provider>
     )

@@ -16,10 +16,10 @@ const Skill = () => {
   });
 
   // 2. Map skillsMastery dan gabungkan dengan data dari careeroptions
-  const SkillItem = skillsMastery.map((skillId) => {
-    const skillData = skillsLookup[skillId];
+  const SkillItem = skillsMastery.map((skill) => {
+    const skillData = skillsLookup[skill.skill_id];
     return {
-      id: skillId,
+      id: skill.skill_id,
       name: skillData?.name || 'Unknown Skill',
       description: skillData?.description || '',
       level: skillData?.level || 'basic',

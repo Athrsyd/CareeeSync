@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const SkillDisplay = ({data}) => {
   return (
@@ -8,9 +9,12 @@ const SkillDisplay = ({data}) => {
         <div className="bg-green-100 px-3 py-1 text-xs font-semibold text-green-700 rounded-full">Mastered</div>
       </div>
       <p className="text-gray-600">{data.description}</p>
-      <div className="basic bg-blue-100 w-30 flex items-center mb-5 justify-center px-5 py-1 text-xs font-semibold text-blue-700 rounded-full">
+      <div className="basic bg-blue-100 w-30 flex items-center justify-center px-5 py-1 text-xs font-semibold text-blue-700 rounded-full">
         <span>{data.level}</span>
       </div>
+      <Link to="/dashboard/progress" className="self-start px-4 py-1 hover:translate-x-1 transition-all ease-in-out duration-300 text-xs font-semibold text-primary rounded-lg">
+        View Details -&gt;
+      </Link>
     </div>
   )
 }

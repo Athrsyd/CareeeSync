@@ -8,13 +8,6 @@ const CareerHooks = () => {
     const [careerLoading, setCareerLoading] = useState(false);
 
 
-    const hitungLevel = (data) => {
-        const readinessPoin = data.skills.reduce((acc, skill) =>  acc + (skill.mastered ? skill.weight : 0), 0);
-        if(readinessPoin<=34) return 'Basic';
-        else if(readinessPoin<=67) return 'Intermediate';
-        else return 'Advanced';
-    };
-    
 
 
     const postCareer = async (data) => {
@@ -69,7 +62,7 @@ const CareerHooks = () => {
     };
 
 
-    return { hitungLevel, postCareer, handleChange, GetCareer, GetSkills };
+    return { postCareer, handleChange, GetCareer, GetSkills };
 }
 
 
