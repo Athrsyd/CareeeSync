@@ -10,7 +10,7 @@ const UserProvider = ({ children }) => {
     const [user, setUser] = useState(null)
 
     useEffect(() => {
-        if (location.pathname !== '/dashboard') return
+        if (location.pathname === '/auth' || location.pathname === '/pretest') return
         const fetchUser = async () => {
             const user = await GetUser()
             if (user) {

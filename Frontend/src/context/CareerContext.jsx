@@ -12,7 +12,7 @@ const CareerProvider = ({ children }) => {
     const [readiness, setReadiness] = useState(0)
 
     useEffect(() => {
-        if (location.pathname !== '/dashboard') return
+        if (location.pathname === '/auth' || location.pathname === '/pretest') return
         const fetchCareer = async () => {
             const data = await GetCareer()
             setCareerData(data?.[0] || null);
