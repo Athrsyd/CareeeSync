@@ -12,6 +12,8 @@ class UserCareer extends Model
         'career_name',
         'skills_mastery',
         'level',
+        'ever_analyzed',
+        'ai_feedback',
     ];
 
     protected $casts = [

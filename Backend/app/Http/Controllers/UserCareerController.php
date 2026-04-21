@@ -81,4 +81,50 @@ class UserCareerController extends Controller
             'data' => $userCareer
         ], 200);
     }
+    public function StartAnalysis(string $id)
+    {
+        $userCareer = UserCareer::find($id);
+        if (!$userCareer) {
+            return response()->json([
+                'message' => "Career tidak ditemukan!"
+            ], 404);
+        }
+
+        $userCareer->ever_analyzed = true;
+        $userCareer->save();
+
+        return response()->json([
+            'message' => "Analisis career berhasil dimulai!",
+            'data' => $userCareer
+        ], 200);
+    }
+    public function UpdateFeedback(Request $request, string $id)
+    {
+        $validasi = Validator::make($request->all(), [
+            'ai_feedback' => "string|required"
+        ], [
+            'ai_feedback.required' => "AI feedback wajib diisi!"
+        ]);
+
+        if ($validasi->fails()) {
+            return response()->json([
+                'message' => $validasi->errors()
+            ], 422);
+        }
+
+        $userCareer = UserCareer::find($id);
+        if (!$userCareer) {
+            return response()->json([
+                'message' => "Career tidak ditemukan!"
+            ], 404);
+        }
+
+        $userCareer->ai_feedback = $request->ai_feedback;
+        $userCareer->save();
+
+        return response()->json([
+            'message' => "AI feedback berhasil diperbarui!",
+            'data' => $userCareer
+        ], 200);
+    }
 }

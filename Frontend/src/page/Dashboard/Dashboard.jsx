@@ -6,8 +6,7 @@ import WelcomeDash from '../../components/Dashboard/WelcomeDash'
 import SkkillDash from '../../components/Dashboard/SkillDash'
 import RecommendProject from '../../components/Dashboard/RecommendProjectDash';
 import LibraryReadinessDash from '../../components/Dashboard/LibraryReadinessDash';
-import Navbar from '../../components/Global/Navbar';
-import careerNameHooks from '../../hooks/careerNameHooks';
+import Navbar from '../../components/Navbar';
 import { useUser } from '../../context/UserContext';
 import { useCareer } from '../../context/CareerContext';
 import { Car } from 'lucide-react';

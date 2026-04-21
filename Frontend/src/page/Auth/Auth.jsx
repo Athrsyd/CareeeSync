@@ -10,6 +10,7 @@ const Auth = () => {
         username, setUsername,
         email, setEmail,
         password, setPassword,
+        message, setMessage,
         AuthLogin, setAuthLogin,
         handleRegister, handleChange, handleLogin } = AuthHooks();
 
@@ -87,12 +88,13 @@ const Auth = () => {
                                     </>
                                 )}
                                 <div className="w-full flex flex-col items-center justify-center gap-2">
+                                    {message && <p className='text-white'>{message}</p>}
                                     <button onClick={()=>setShowPassword(false)} className='w-full bg-primary rounded-xl py-2 text-white font-bold hover:bg-[#4a6fa3] transition-colors duration-300'>
                                         {isSignIn ? 'Sign In' : 'Sign Up'}
                                     </button>
                                     <p className='text-center font-light text-white/50'>
                                         {isSignIn ? 'Don\'t have an account?' : 'Already have an account?'}
-                                        <span className='text-primary font-semibold cursor-pointer hover:text-white transition-colors duration-300' onClick={toggleButton}>
+                                        <span onClick={()=>{toggleButton(); setMessage('')}} className='text-primary font-semibold cursor-pointer hover:text-white transition-colors duration-300'>
                                             {' '}{isSignIn ? 'Sign Up' : 'Sign In'}
                                         </span>
                                     </p>

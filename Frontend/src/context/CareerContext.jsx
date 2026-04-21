@@ -11,12 +11,12 @@
         const [skillsMastery, setSkillsMastery] = useState([])
         const [readiness, setReadiness] = useState(0)
 
-        useEffect(() => {
-            if (location.pathname !== '/dashboard') return
-            const fetchCareer = async () => {
-                const data = await GetCareer()
-                setCareerData(data?.[0] || null);
-                console.log('Career data fetched successfully:', data?.[0]);
+    useEffect(() => {
+        if (location.pathname !== '/dashboard') return
+        const fetchCareer = async () => {
+            const data = await GetCareer()
+            setCareerData(data?.[0] || null);
+            console.log('Career data fetched successfully:', data?.[0]);
 
                 const skills = await GetSkills();
                 setSkillsMastery(skills || []);

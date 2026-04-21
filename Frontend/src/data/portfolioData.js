@@ -25,3 +25,4 @@ export const PORTFOLIO_TIPS = [
     'Sertakan link media sosial yang aktif',
     'Perbarui portfolio secara berkala'
 ]
+

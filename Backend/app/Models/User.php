@@ -46,4 +46,8 @@ class User extends Authenticatable
     {
         return $this->hasMany(Portfolio::class);
     }
+    public function progress()
+    {
+        return $this->hasMany(Progress::class);
+    }
 }
