@@ -2,9 +2,11 @@ import { useState, useEffect } from 'react'
 import API from '../services/api'
 import { useNavigate } from 'react-router-dom'
 import axios from 'axios'
+import CareerHooks from './CareerHooks'
 
 
 const AuthHooks = () => {
+    const { GetCareer } = CareerHooks();
     const navigate = useNavigate();
 
     // State Deklarasi Anjay
@@ -14,7 +16,7 @@ const AuthHooks = () => {
     const [AuthLoading, setAuthLoading] = useState(false);
     const [password, setPassword] = useState('');
     const [user, setUser] = useState(null);
-    
+
 
     const handleRegister = async (e) => {
         setAuthLoading(true);
@@ -66,8 +68,15 @@ const AuthHooks = () => {
             setPassword('');
             const token = response.data.token;
             localStorage.setItem('token', token);
+
+            const userCareer = await GetCareer();
+            console.log('User career data:', userCareer.length);
             setTimeout(() => {
-                navigate('/pretest');
+                if (userCareer.length <= 0) {
+                    navigate('/pretest');
+                } else {
+                    navigate('/dashboard');
+                }
             }, 1500);
         } catch (error) {
             console.error('Error during login:', error);

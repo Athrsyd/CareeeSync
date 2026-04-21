@@ -6,6 +6,7 @@ import Dashboard from '../page/Dashboard/Dashboard';
 import Navdash from '../components/Dashboard/NavDash'
 import Portfolio from '../page/Portofolio/Portfolio';
 import ManagePortfolio from '../page/ManagePortfolio/ManagePortfolio';
+import Analysis from '../page/Analysis/Analysis';
 import Project from '../page/Project/Project';
 // import Template2 from '../page/Portofolio/Template2';
 // import Template3 from '../page/Portofolio/Template3';
@@ -42,7 +43,7 @@ const Router = () => {
                 <Route index element={<Dashboard />} />
                 <Route path="project" element={<Project/>} />
                 <Route path="portfolio" element={<ManagePortfolio />} />
-                <Route path="analysis" element={'analiysis'} />
+                <Route path="analysis" element={<Analysis />} />
                 <Route path="progress" element={'progress'} />
             </Route>
             <Route path='/portfolio/:id' element={<Portfolio />} />
