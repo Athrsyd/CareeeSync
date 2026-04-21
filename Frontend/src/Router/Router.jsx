@@ -8,6 +8,7 @@ import Portfolio from '../page/Portofolio/Portfolio';
 import ManagePortfolio from '../page/ManagePortfolio/ManagePortfolio';
 import Analysis from '../page/Analysis/Analysis';
 import Project from '../page/Project/Project';
+import Progress from '../page/Progress/Progress';
 // import Template2 from '../page/Portofolio/Template2';
 // import Template3 from '../page/Portofolio/Template3';
 // Layout component untuk dashboard
@@ -43,7 +44,7 @@ const Router = () => {
                 <Route index element={<Dashboard />} />
                 <Route path="project" element={<Project/>} />
                 <Route path="portfolio" element={<ManagePortfolio />} />
-                <Route path="analysis" element={<Analysis />} />
+                <Route path="analysis" element={'analiysis'} />
                 <Route path="progress" element={'progress'} />
             </Route>
             <Route path='/portfolio/:id' element={<Portfolio />} />

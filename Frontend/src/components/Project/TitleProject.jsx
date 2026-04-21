@@ -1,6 +1,7 @@
-import React from 'react'
+import React, { use } from 'react'
 
 const TitleProject = () => {
+  // const {projectTitle} = useProjectTitle();  ;
   return (
     <>
       <div className="flex flex-row items-center gap-4">
