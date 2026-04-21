@@ -1,7 +1,9 @@
 import React from 'react'
 import Navbar from '../../components/Navbar';
 import IconAI from '../../assets/IconAI.svg';
+import MoneyBag from '../../assets/MoneyBag.svg';
 import JobReadinessScore from '../../components/Global/JobReadinessScore';
+import Proggress from '../../assets/progressIcon.svg'
 import { useCareer } from '../../context/CareerContext';
 import { useUser } from '../../context/UserContext';
 
@@ -41,7 +43,9 @@ const Analysis = () => {
                     <div className="w-1/3 container flex flex-col h-75 bg-secondary/90 rounded-xl p-5">
                         <div className=" flex flex-col items-start justify-start">
                             <div className="flex flex-row items-center gap-2">
-                                <img src={IconAI} alt="AI Icon" width="30" height="30" />
+                                <div className="w-10 h-10 flex items-center justify-center bg-green-200 rounded-full">
+                                    <img src={MoneyBag} alt="AI Icon" width="30" height="30" />
+                                </div>
                                 <div className="">
                                     <h1 className='font-bold text-xl '>Avarage Salary</h1>
                                     <p className='text-md text-gray-500'>for web developers</p>
@@ -63,10 +67,24 @@ const Analysis = () => {
                         <div className="container h-50"></div>
                     </div>
                 </div>
+
+                <div className="w-19/20 h-100 border-2 flex-col px-7 py-5 border-primary mt-10 rounded-xl flex items-center justify-center">
+                    <div className=" flex flex-col items-start justify-start w-full h-full">
+                        <div className="flex flex-row items-center gap-2">
+                                <div className="w-12 h-10 flex items-center justify-center bg-green-200 rounded-xl">
+                                    <img src={Proggress} alt="AI Icon" width="40" height="40" />
+                                </div>                            <div className="">
+                                <h1 className='font-bold text-xl '>Skill Growth Progress</h1>
+                                <p className='text-md text-gray-500'>Track how your skills improve over time</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="container bg-white rounded-xl p-7 text-gray-500 h-full">
+                    </div>
+                </div>
             </div>
             <br /><br />
-            <br /><br />
-            <br /><br />
+
         </div>
     )
 }
