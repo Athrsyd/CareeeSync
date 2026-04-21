@@ -1,9 +1,9 @@
 import React from 'react'
-import Search from '../assets/searchIcon.svg'
-import Notif from "../assets/Notif.svg";
+import Search from '../../assets/searchIcon.svg'
+import Notif from "../../assets/Notif.svg";
 import { useState } from 'react';
-import { useUser } from '../context/UserContext'
-import { useCareer } from '../context/CareerContext'
+import { useUser } from '../../context/UserContext'
+import { useCareer } from '../../context/CareerContext'
 
 
 const Navbar = () => {

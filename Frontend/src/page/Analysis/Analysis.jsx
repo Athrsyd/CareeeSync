@@ -1,5 +1,5 @@
 import React from 'react'
-import Navbar from '../../components/Navbar';
+import Navbar from '../../components/Global/Navbar';
 import IconAI from '../../assets/IconAI.svg';
 import JobReadinessScore from '../../components/Global/JobReadinessScore';
 import { useCareer } from '../../context/CareerContext';
