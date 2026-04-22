@@ -13,9 +13,9 @@ const JobReadinessScore = ({ score = 78, role = "Web Developer" }) => {
     const topPercent = Math.max(1, 100 - score);
 
     return (
-        <div className="bg-white/10 rounded-2xl outline-2 outline-primary shadow-xl backdrop-blur-md p-6 flex flex-col items-center gap-2 w-72 h-full">
+        <div className="bg-white/10 rounded-2xl outline-2 outline-primary shadow-xl backdrop-blur-md p-6 flex flex-col items-center gap-2 md:w-160 lg:w-72 h-full">
             {/* Title */}
-            <h2 className="text-base font-montserrat font-[450] text-[#06275A] tracking-tight">
+            <h2 className="md:font-semibold text-base font-montserrat lg:font-[450] text-[#06275A] tracking-tight">
                 Job Readiness Score
             </h2>
             {/* Ring inside blue border box */}
@@ -58,7 +58,7 @@ const JobReadinessScore = ({ score = 78, role = "Web Developer" }) => {
                 </svg>
             </div>
             {/* Subtitle */}
-            <p className="text-[15px] font-montserrat text-[#06275A] w-[95%] text-center leading-relaxed">
+            <p className="md:text-md lg:text-[14px] font-montserrat text-[#06275A] md:w-[50%] lg:w-full text-center leading-relaxed">
                 Top <span className="font-semibold text-slate-800">{topPercent}%</span>{" "}
                 closer to becoming a{" "}
                 <span className="font-semibold text-slate-800">{role}</span>

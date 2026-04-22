@@ -13,16 +13,16 @@ const WelcomeDash = ({user, data}) => {
 
   return (
     <>
-      <div className="flex flex-row gap-8">
-        <div className=" relative w-180 h-60 rounded-2xl shadow-xl backdrop-blur-md flex flex-col px-10 bg-primary">
-          <div className="flex flex-col items-start justify-center w-[70%] mt-10">
+      <div className="flex md:flex-col lg:flex-row gap-8">
+        <div className="relative md:w-160 lg:w-180 md:h-60 lg:h-60 rounded-2xl shadow-xl backdrop-blur-md flex flex-col px-10 bg-primary">
+          <div className="flex flex-col items-start justify-center  mt-10">
             <h1 className="text-4xl font-bold text-white font-poppins leading-10">
               Hello, {user?.username || 'Guest'}!
             </h1>
             <h2 className="text-xl font-[450] text-white font-poppins">
               Your career as a {data?.career_name || 'No career selected'} starts here.
             </h2>
-            <p className="text-md text-white/80 font-poppins w-[90%] mt-2">
+            <p className="text-md text-white/80 font-poppins w-[75%] mt-2">
               Track your progress, improve your skills, and get closer to
               becoming a professional
             </p>
