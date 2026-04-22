@@ -6,14 +6,14 @@ import WelcomeDash from '../../components/Dashboard/WelcomeDash'
 import SkkillDash from '../../components/Dashboard/SkillDash'
 import RecommendProject from '../../components/Dashboard/RecommendProjectDash';
 import LibraryReadinessDash from '../../components/Dashboard/LibraryReadinessDash';
-import Navbar from '../../components/Navbar';
+import Navbar from '../../components/Global/Navbar';
 import { useUser } from '../../context/UserContext';
 import { useCareer } from '../../context/CareerContext';
 import { Car } from 'lucide-react';
 
 const Dashboard = () => {
   const { user } = useUser();
-  const { careerName } = careerNameHooks();
+  // const { careerName } = careerNameHooks();
   const {careerData} = useCareer();
 
   return (
@@ -34,7 +34,7 @@ const Dashboard = () => {
       <div className="flex flex-col mt-8 ml-5">
         <LibraryReadinessDash />
       </div>
-      <h1 className="">{careerName}</h1>
+      {/* <h1 className="">{careerName}</h1> */}
     </main>
   );
 }
