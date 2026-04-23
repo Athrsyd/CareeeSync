@@ -17,7 +17,7 @@ const SalaryAvg = () => {
         salaryIndustry();
     }, []);
     return (
-        <div className="w-1/3 container flex flex-col h-75 bg-secondary/90 rounded-xl p-5">
+        <div className="w-1/3 container flex flex-col h-full bg-secondary/90 rounded-xl p-5">
             <div className=" flex flex-col items-start justify-start">
                 <div className="flex flex-row items-center gap-2">
                     <div className="w-10 h-10 flex items-center justify-center bg-green-200 rounded-full">

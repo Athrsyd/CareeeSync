@@ -28,7 +28,7 @@ const Analysis = () => {
                             <JobReadinessScore score={readiness} role={careerData?.career_name || "Web Developer"} />
                         </div>
 
-                        <div className=" container flex flex-row w-19/20 mt-10 justify-center items-center gap-10">
+                        <div className=" container flex flex-row w-19/20 h-100 mt-10 justify-center items-center gap-10">
                             <SalaryAvg />
                             <DemandGrafic />
                         </div>
