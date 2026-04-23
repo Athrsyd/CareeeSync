@@ -16,21 +16,21 @@ const Project = () => {
 
   return (
     <>
-      <main className="ml-40 overflow-x-hidden pb-5">
+      <main className="md:ml-20 lg:ml-40 overflow-x-hidden pb-5">
         <Navbar />
-        <div className="flex flex-col mt-8 ml-13 w-[90%]">
+        <div className="flex flex-col mt-8 lg:ml-13 md:ml-15 md:pr-4 lg:pr-0 w-[90%]">
           {/* <Title Project /> */}
           <TitleProject />
         </div>
-        <div className="flex flex-col mt-10 ml-13">
+        <div className="flex flex-col mt-10 md:ml-8 lg:ml-13">
           {/* <Level And Tools /> */}
           <LevelAndTools />
         </div>
-        <div className="flex flex-col mt-12 ml-13">
+        <div className="flex flex-col mt-12 lg:ml-13 md:ml-15">
           {/* <Description /> */}
           <ProjectDescription />
         </div>
-        <div className="flex flex-col mt-10 ml-13">
+        <div className="flex flex-col mt-10 md:ml-15 lg:ml-13">
           {/* <Description /> */}
           <OutputProjects />
         </div>

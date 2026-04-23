@@ -24,12 +24,12 @@ const CardProjectAndSkill = ({ item }) => {
   return (
     <>
       <div
-        className={`flex flex-col gap-2 w-125 h-55 p-3 rounded-2xl ${item.id === 1 ? `bg-[#06275A]` : `bg-primary`}`}
+        className={`flex flex-col gap-2 md:w-155 lg:w-125 h-55 p-3 rounded-2xl ${item.id === 1 ? `bg-[#06275A]` : `bg-primary`}`}
       >
-        <h1 className="text-3xl font-[450] font-montserrat text-white mt-4 ml-4">
+        <h1 className="md:text-4xl lg:text-3xl font-[450] font-montserrat text-white mt-4 ml-4">
           {item.title}
         </h1>
-        <p className="text-lg font-[450] font-montserrat text-white/50 w-92 mt-2 ml-4">
+        <p className="md:text-xl lg:text-lg font-[450] font-montserrat text-white/50 md:w-102 lg:w-92 mt-2 ml-4">
           {item.description}
         </p>
         <Link
@@ -60,7 +60,7 @@ const CardProjectAndSkill = ({ item }) => {
 const LibraryReadinessDash = () => {
   return (
     <>
-      <div className="flex flex-row gap-6 justify-center">
+      <div className="flex md:flex-col lg:flex-row gap-6 justify-center">
         {ProjectsAndSkills.map((item) => (
           <CardProjectAndSkill key={item.id} item={item} />
         ))}

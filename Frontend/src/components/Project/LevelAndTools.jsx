@@ -47,8 +47,8 @@ const StyleTools = () => {
 const LevelAndTools = () => {
   return (
     <>
-      <div className="flex flex-row gap-8 items-center">
-        <div className="flex flex-row items-center gap-2 w-102 h-40 py-2 px-4 bg-white shadow-2xl rounded-2xl outline-2 outline-primary">
+      <div className="flex md:flex-col lg:flex-row gap-8 items-center">
+        <div className="flex flex-row items-center gap-2 md:w-155 lg:w-102 h-40 py-2 px-4 bg-white shadow-2xl rounded-2xl outline-2 outline-primary">
           <div className="w-27 h-25 rounded-2xl flex justify-center items-center bg-[#FEF2DE]">
             <svg
               width="55"
@@ -75,7 +75,7 @@ const LevelAndTools = () => {
             </h2>
           </div>
         </div>
-        <div className=" flex flex-row px-4 py-2 w-140 h-40 bg-white shadow-2xl rounded-2xl outline-2 items-center gap-2 outline-primary">
+        <div className=" flex flex-row px-4 py-2 md:w-155 lg:w-140 h-40 bg-white shadow-2xl rounded-2xl outline-2 items-center gap-2 outline-primary">
           <div className="w-30 h-25 rounded-2xl flex justify-center items-center  bg-nav">
             <svg
               width="45"

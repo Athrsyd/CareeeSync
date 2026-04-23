@@ -49,7 +49,7 @@ const Progress = () => {
   //   const basicSkills = 
 
   return (
-    <main className="ml-40 overflow-x-hidden pb-5">
+    <main className="md:ml-20 lg:ml-40 overflow-x-hidden pb-5">
       <Navbar />
       <div className="flex flex-col mt-8 ml-13">
         <TitleProgress />
