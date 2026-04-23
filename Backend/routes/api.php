@@ -24,6 +24,10 @@ Route::prefix('v1')->group(function () {
 
         Route::get('/progress', [ProgressController::class, 'index']);
         Route::post('/progress', [ProgressController::class, 'store']);
+
+        // Ini Endpoint buat feedback AI, ada start sama refresh dam
+        Route::post('/feedback', [PortfolioController::class, 'StartFeedback']);
+        Route::post('/feedback/refresh', [PortfolioController::class, 'RefreshFeedback']);
     });
 
     Route::get('/portfolio/{username}', [PortfolioController::class, 'GetPortfolio']);
