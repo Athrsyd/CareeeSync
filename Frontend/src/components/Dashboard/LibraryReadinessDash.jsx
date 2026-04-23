@@ -1,20 +1,23 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 
 const ProjectsAndSkills = [
   {
     id: 1,
-    title: "Health Tracker App",
+    title: "Explore Real Projects",
     description:
       "Explore over 50 real-world briefs to build a competitive industry portfolio.",
     hrefDesc: "Browse all projects",
+    path: "/dashboard/project"
   },
   {
     id: 2,
-    title: "Skill Readiness",
+    title: "Analyze Your Readiness",
     description:
       "Compare your profile against top-tier tech company requirements.",
     hrefDesc: "Check Readiness",
-  },
+    path: "/dashboard/analysis"
+  }
 ];
 
 const CardProjectAndSkill = ({ item }) => {
@@ -29,9 +32,9 @@ const CardProjectAndSkill = ({ item }) => {
         <p className="text-lg font-[450] font-montserrat text-white/50 w-92 mt-2 ml-4">
           {item.description}
         </p>
-        <a
-          href="#"
-          className="flex flex-row gap-2 text-lg font-[450] font-montserrat text-nav hover:scale-105 transition-all ease-in-out duration-300 px-4 py-2 rounded-lg w-max mr-4"
+        <Link
+          to={item.path}
+          className="flex flex-row gap-2 text-lg font-[450] font-montserrat text-nav hover:translate-x-1 transition-all ease-in-out duration-300 px-4 py-2 rounded-lg w-max mr-4"
         >
           {item.hrefDesc}
           {/* Arrow Icon */}
@@ -48,7 +51,7 @@ const CardProjectAndSkill = ({ item }) => {
               fill="#C3E9FE"
             />
           </svg>
-        </a>
+        </Link>
       </div>
     </>
   );

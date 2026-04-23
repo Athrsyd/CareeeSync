@@ -40,15 +40,13 @@ const ProgressSkillItem = () => {
   }
 
 
-const ProgressSkill = () => {
+const ProgressSkill = ({ skillsBasic, skillsIntermediate, skillsAdvanced, skillsMastery }) => {
   return (
     <>
       <div className="flex flex-row gap-2 pr-2">
-        {/* sisi kiri */}
         <ProgressSkillItem />
       </div>
     </>
   );
 }
-
-export default ProgressSkill
+export default ProgressSkill;
