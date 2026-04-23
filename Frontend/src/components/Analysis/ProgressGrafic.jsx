@@ -1,8 +1,14 @@
-import React from 'react'
+import {useEffect} from 'react'
 import Proggress from '../../assets/progressIcon.svg'
-
+import DiagramHooks from '../../hooks/DiagramHooks'
 
 const ProgressGrafic = () => {
+    const { progressData, progressUser } = DiagramHooks();
+
+    useEffect(() => {
+        progressUser();
+    }, []);
+
     return (
         <div className="w-19/20 h-100 border-2 flex-col px-7 py-5 border-primary mt-10 rounded-xl flex items-center justify-center">
             <div className=" flex flex-col items-start justify-start w-full h-full">

@@ -18,7 +18,7 @@ return new class extends Migration
             $table->json('skills_mastery')->nullable();
             $table->enum('level',['basic','intermediate','advanced'])->default('basic');
             $table->boolean('ever_analyzed')->default(false);
-            $table->text('ai_feedback');
+            $table->text('ai_feedback')->nullable();
             $table->timestamps();
         });
     }

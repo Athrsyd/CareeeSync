@@ -1,7 +1,8 @@
-import { useState } from 'react'
+import { useState, useEffect, use } from 'react'
 import { Link } from 'react-router-dom'
 import Logo from '../../assets/Logo_CareerSync.svg'
 import AuthHooks from '../../hooks/AuthHooks';
+import { useLocation } from 'react-router-dom';
 
 
 const NavIcon = [
@@ -92,7 +93,8 @@ const NavIcon = [
 const SidebarIcon = ({ item, onClick, menuActive }) => {
   return (
     <>
-      <div className={`flex flex-row transition-all ease-in duration-200 items-center justify-start w-full h-10 cursor-pointer hover:scale-105 rounded-l-full ${menuActive === item.id ? 'bg-white' : ''}`} onClick={onClick}>
+      <div className={`flex flex-row transition-all ease-in duration-200 items-center justify-start w-full
+        h-10 cursor-pointer hover:scale-105 rounded-l-full ${menuActive === item.id ? 'bg-white' : ''}`} onClick={onClick}>
         <div className="flex flex-col justify-center items-center h-12 w-12 md:pl-2 lg:pl-0 ">
           {item.icon}
         </div>
@@ -107,8 +109,18 @@ const SidebarIcon = ({ item, onClick, menuActive }) => {
 }
 
 const NavDash = () => {
+  const location = useLocation();
   const [menuActive, setMenuActive] = useState('home');
   const { Logout } = AuthHooks();
+
+  useEffect(() => {
+    const currentPath = location.pathname;
+    const activeItem = NavIcon.find(item => item.path === currentPath);
+    if (activeItem) {
+      setMenuActive(activeItem.id);
+    }
+  }, [location.pathname]);
+
 
   return (
     <aside className="bg-nav h-screen md:w-27 lg:w-40 border-t-0 fixed left-0 top-0 z-50">
@@ -135,7 +147,8 @@ const NavDash = () => {
         ))}
 
         <div className="md:w-20 lg:w-35 h-[1.25px] bg-primary mt-auto"></div>
-        <div className="flex flex-row items-center lg:justify-start md:20 lg:w-35 h-10 md:pl-0 lg:pl-2 lg:pr-0 md:pr-2   cursor-pointer hover:bg-white hover:scale-105 transition-all ease-in-out duration-300 rounded-full">
+        <div className="flex flex-row items-center lg:justify-start md:20 lg:w-35 h-10 md:pl-0 lg:pl-2 lg:pr-0 md:pr-2   
+        cursor-pointer hover:bg-white hover:scale-105 transition-all ease-in-out duration-300 rounded-full">
           <div className="flex flex-col justify-center items-center h-12 w-full lg:w-12">
             <svg
               width="30"

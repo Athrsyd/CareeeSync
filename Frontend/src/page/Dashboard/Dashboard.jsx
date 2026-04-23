@@ -1,4 +1,4 @@
-import React from 'react'
+import { use, useEffect } from 'react'
 import Navdash from '../../components/Dashboard/NavDash'
 import Search from '../../assets/searchIcon.svg'
 import Notif from "../../assets/Notif.svg";
@@ -14,7 +14,15 @@ import { Car } from 'lucide-react';
 const Dashboard = () => {
   const { user } = useUser();
   // const { careerName } = careerNameHooks();
-  const {careerData} = useCareer();
+  const { careerData } = useCareer();
+
+useEffect(() => {
+  const key = "dashboardReloaded";
+  if (!sessionStorage.getItem(key)) {
+    sessionStorage.setItem(key, "1");
+    window.location.reload();
+  }
+}, []);
 
   return (
     <main className="md:ml-20 lg:ml-40 overflow-x-hidden pb-5">

@@ -17,12 +17,14 @@ class DatabaseSeeder extends Seeder
     {
         // User::factory(10)->create();
 
-        // User::factory()->create([
-        //     'usename' => 'Test User',
-        //     'email' => 'test@example.com',
-        // ]);
+        User::factory()->create([
+            'username' => 'Alif Ath',
+            'email' => 'test@example.com',
+            'password' => bcrypt('password'),
+        ]);
 
-        // Jalankan PortfolioSeeder
-        $this->call(PortfolioSeeder::class);
+        // $this->call(PortfolioSeeder::class);
+        
+        $this->call(ProgressSeeder::class);
     }
 }
