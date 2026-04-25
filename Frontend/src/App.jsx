@@ -6,13 +6,13 @@ import { ProgressProvider } from './context/ProgressContext'
 
 const App = () => {
   return (
-    <UserProvider>
-      <CareerProvider>
+    <CareerProvider>
+      <UserProvider>
         <ProgressProvider>
           <Router />
         </ProgressProvider>
-      </CareerProvider>
-    </UserProvider>
+      </UserProvider>
+    </CareerProvider>
   )
 }
 

@@ -4,6 +4,8 @@ import { FaGoogle, FaFacebook } from "react-icons/fa";
 import { Eye, EyeOff } from "lucide-react";
 import AuthHooks from '../../hooks/AuthHooks';
 import background from '../../assets/bg-auth.jpeg'
+import { useUser } from '../../context/UserContext'
+import { useCareer } from '../../context/CareerContext';
 
 const Auth = () => {
     const {
@@ -11,15 +13,22 @@ const Auth = () => {
         email, setEmail,
         password, setPassword,
         message, setMessage,
-        AuthLogin, setAuthLogin,
+        AuthLoading, setAuthLoading,
         handleRegister, handleChange, handleLogin } = AuthHooks();
-
+    const { refetchUser } = useUser();
+    const { fetchCareer } = useCareer();
     const [isSignIn, setIsSignIn] = useState(false);
     const [showPassword, setShowPassword] = useState(false);
 
     const toggleButton = () => {
         setIsSignIn(!isSignIn);
         setShowPassword(false);
+    }
+
+    const handleLoginSubmit = async (e) => {
+        await handleLogin(e);
+        await refetchUser();
+        await fetchCareer();
     }
 
     const deviceWidth = window.innerWidth;
@@ -32,7 +41,7 @@ const Auth = () => {
             </div>
             <div className={`container absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-40 bg-[#021124]/30 w-7/8 h-4/5 rounded-xl backdrop-blur-xl flex items-center gap-6 overflow-hidden`}>
 
-                <div className={`containter flex flex-col ${deviceWidth < 768 ?'hidden' : 'block'} justify-center w-1/2 h-full text-white transition-all duration-700 ease-in-out transform 
+                <div className={`containter flex flex-col ${deviceWidth < 768 ? 'hidden' : 'block'} justify-center w-1/2 h-full text-white transition-all duration-700 ease-in-out transform 
                 ${deviceWidth < 768 ? 'transition-none' : isSignIn ? 'translate-x-full opacity-100' : 'translate-x-0 opacity-100'
                     }}`}
 
@@ -57,7 +66,7 @@ const Auth = () => {
                                 ${isSignIn ? '-translate-x-1' : 'translate-x-0'}`}>
                                 {isSignIn ? 'Welcome Back!' : 'Create Your Account'}
                             </h1>
-                            <form action="" method="post" className='flex flex-col justify-center items-start w-9/10 pl-5 py-3 gap-10' onSubmit={isSignIn ? handleLogin : handleRegister}>
+                            <form action="" method="post" className='flex flex-col justify-center items-start w-9/10 pl-5 py-3 gap-10' onSubmit={isSignIn ? handleLoginSubmit : handleRegister}>
                                 {!isSignIn && (
                                     <>
                                         <input autoComplete='off' type="text" name='username' placeholder='Your Name' onChange={handleChange}
@@ -89,12 +98,12 @@ const Auth = () => {
                                 )}
                                 <div className="w-full flex flex-col items-center justify-center gap-2">
                                     {message && <p className='text-white'>{message}</p>}
-                                    <button onClick={()=>setShowPassword(false)} className='w-full bg-primary rounded-xl py-2 text-white font-bold hover:bg-[#4a6fa3] transition-colors duration-300'>
-                                        {isSignIn ? 'Sign In' : 'Sign Up'}
+                                    <button disabled={AuthLoading} onClick={() => setShowPassword(false)} className={`w-full py-2 rounded-lg bg-primary text-white font-semibold hover:bg-[#4a6fa3] transition-colors duration-300 ${AuthLoading ? 'cursor-not-allowed opacity-70' : ''}`}>
+                                       {AuthLoading ? (isSignIn ? 'Signing In...' : 'Signing Up...') : (isSignIn ? 'Sign In' : 'Sign Up')}
                                     </button>
                                     <p className='text-center font-light text-white/50'>
                                         {isSignIn ? 'Don\'t have an account?' : 'Already have an account?'}
-                                        <span onClick={()=>{toggleButton(); setMessage('')}} className='text-primary font-semibold cursor-pointer hover:text-white transition-colors duration-300'>
+                                        <span onClick={() => { toggleButton(); setMessage('') }} className='text-primary font-semibold cursor-pointer hover:text-white transition-colors duration-300'>
                                             {' '}{isSignIn ? 'Sign Up' : 'Sign In'}
                                         </span>
                                     </p>

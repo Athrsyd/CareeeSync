@@ -71,6 +71,7 @@ const AuthHooks = () => {
 
             const userCareer = await GetCareer();
             console.log('User career data:', userCareer.length);
+            
             setTimeout(() => {
                 if (userCareer.length <= 0) {
                     navigate('/pretest');
@@ -107,6 +108,9 @@ const AuthHooks = () => {
     };
 
     const Logout = async () => {
+        const confirmed = confirm('Are you sure you want to logout?');
+        if (!confirmed) return;
+
         setAuthLoading(true);
         try {
             const token = localStorage.getItem('token');

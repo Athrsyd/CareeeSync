@@ -9,21 +9,23 @@ const UserProvider = ({ children }) => {
     const { GetUser } = AuthHooks()
     const [user, setUser] = useState(null)
 
-    useEffect(() => {
-        if (location.pathname === '/auth' || location.pathname === '/pretest') return
-        const fetchUser = async () => {
-            const user = await GetUser()
-            if (user) {
-                setUser(user)
-            }
-            console.log(user)
+
+
+    const fetchUser = async () => {
+        const user = await GetUser()
+        if (user) {
+            setUser(user)
         }
+        console.log(user)
+    }
+
+    useEffect(() => {
         fetchUser()
     }, [])
 
 
     return (
-        <UserContext.Provider value={{ user }}>
+        <UserContext.Provider value={{ user, refetchUser: fetchUser }}>
             {children}
         </UserContext.Provider>
     )
@@ -38,6 +40,4 @@ const useUser = () => {
 }
 
 export { UserProvider, useUser }
-
-
 export default UserContext

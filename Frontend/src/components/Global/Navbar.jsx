@@ -31,7 +31,11 @@ const Navbar = () => {
                         {careerData?.career_name || 'No career selected'}
                     </h2>
                 </div>
-                <div className="md:w-8 lg:w-10 md:h-8 lg:h-10 rounded-4xl ml-3 bg-gray-500"></div>
+                <div className="md:w-8 lg:w-10 md:h-8 lg:h-10 rounded-4xl ml-3 flex justify-center items-center bg-nav">
+                    <h1 className="text-primary text-lg font-bold flex items-center justify-center h-full">
+                        {user?.username ? user.username[0].toUpperCase() : 'G'}
+                        </h1>
+                </div>
             </div>
         </div>)
 }
