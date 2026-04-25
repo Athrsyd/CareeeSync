@@ -22,35 +22,22 @@ const Project = () => {
 
 
   const handleSubmitProject = async () => {
-    console.log('Project submitted:', currentProject?.title);
+    if (!careerData?.id || !currentProject?.skill_id) return;
 
-    const skillMasteryUpdate = careerData?.skills_mastery.map(skill => {
-      if (skill.skill_id === currentProject?.skill_id) {
+    const updatedSkillsMastery = (careerData.skills_mastery || []).map((skill) => {
+      if (skill.skill_id === currentProject.skill_id) {
         return { ...skill, mastered: true };
       }
       return skill;
     });
 
-    const getCurrentSkillPayload = () => {
-      const skillsList = careerOptions.careers.find(career => career.name === careerData?.career_name)?.skills || [];
-      const currentSkillId = currentProject?.skill_id;
-
-      const currentSkill = skillsList.find(skill => skill.id === currentSkillId);
-      setCurrentSkill(currentSkill ? { skill_id: currentSkillId, mastered: true, weight: currentSkill.weight } : null);
-      console.log('Current skill payload:', currentSkillState);
-    };
-
-    getCurrentSkillPayload();
-
-
     const payload = {
-      skills_mastery: [...skillMasteryUpdate, currentSkillState].filter(skill => skill !== null),
-      level: careerData?.level || '',
+      skills_mastery: updatedSkillsMastery,
+      level: careerData.level || 'basic',
     };
 
-    await updateMasterySkill(careerData?.id, payload);
+    await updateMasterySkill(careerData.id, payload);
     await fetchCareer();
-
     setShowModal(false);
   };
 

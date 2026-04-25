@@ -38,7 +38,15 @@ const CareerProvider = ({ children }) => {
         if (careerData && skillsMastery.length > 0) {
             const projectsData = ProjectsData.find(project => project.career_name === careerData.career_name);
             console.log("project untuk", careerData.career_name, 'adalah', projectsData);
-            setProjects(projectsData ? projectsData.projects : []);
+            
+            if (!projectsData?.projects) {
+                setProjects([]);
+                setCurrentProject(null);
+                console.warn(`No projects found for career: ${careerData.career_name}`);
+                return;
+            }
+
+            setProjects(projectsData.projects);
 
             const projectsUnfinished = projectsData.projects.filter(project => {
                 const skill = skillsMastery.find(skill => skill.skill_id === project.skill_id);
@@ -47,7 +55,13 @@ const CareerProvider = ({ children }) => {
             console.log("project yang belum dikuasai untuk", careerData.career_name, 'adalah', projectsUnfinished);
 
             const firstSkill = projectsUnfinished[0];
-            const currentProject = projectsData?.projects.find(p => p.skill_id === firstSkill.skill_id);
+            
+            if (!firstSkill) {
+                setCurrentProject(null);
+                return;
+            }
+
+            const currentProject = projectsData.projects.find(p => p.skill_id === firstSkill.skill_id);
             console.log('project saat ini:', currentProject);
 
             if (currentProject) {
