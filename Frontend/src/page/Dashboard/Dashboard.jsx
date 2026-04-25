@@ -10,37 +10,44 @@ import Navbar from '../../components/Global/Navbar';
 import { useUser } from '../../context/UserContext';
 import { useCareer } from '../../context/CareerContext';
 import { Car } from 'lucide-react';
+import { useCurrentProject } from '../../context/CurrentProjectContext';
 
 const Dashboard = () => {
   const { user } = useUser();
   // const { careerName } = careerNameHooks();
   const { careerData } = useCareer();
+  const { currentProject } = useCurrentProject();
 
-  useEffect(() => {
-    const key = "dashboardReloaded";
-    if (!sessionStorage.getItem(key)) {
-      sessionStorage.setItem(key, "1");
-      window.location.reload();
-    }
-  }, []);
+  // useEffect(() => {
+  //   const key = "dashboardReloaded";
+  //   if (!sessionStorage.getItem(key)) {
+  //     sessionStorage.setItem(key, "1");
+  //     window.location.reload();
+  //   }
+  // }, []);
 
   return (
+    <>
     <main className="md:ml-20 lg:ml-40 overflow-x-hidden pb-5">
       <Navbar />
       <div className="flex flex-col items-center mt-8 ml-7">
         <WelcomeDash user={user} data={careerData} />
       </div>
-      <div className="flex flex-col mt-8 ml-15">
+      <div className="flex flex-col mt-10 ml-15">
         <SkkillDash data={careerData} />
       </div>
       <div className="flex flex-col mt-8 ml-15">
-        <RecommendProject />
+        <RecommendProject
+          project={currentProject}
+          career={careerData}
+        />
       </div>
       <div className="flex flex-col mt-8 md:ml-20 lg:ml-5">
         <LibraryReadinessDash />
       </div>
       <br />
     </main>
+    </>
   );
 }
 

@@ -1,3 +1,4 @@
+/* eslint-disable react-refresh/only-export-components */
 import { useState, useEffect, createContext, useContext } from 'react'
 import AuthHooks from '../hooks/AuthHooks'
 import { useLocation } from 'react-router-dom'
@@ -21,6 +22,7 @@ const UserProvider = ({ children }) => {
 
     useEffect(() => {
         fetchUser()
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
 
 

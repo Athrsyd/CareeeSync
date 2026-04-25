@@ -1,21 +1,23 @@
 import React, { use } from 'react'
 
-const TitleProject = () => {
+const TitleProject = ({ career, project }) => {
   // const {projectTitle} = useProjectTitle();  ;
   return (
     <>
-      <div className="flex flex-row items-center gap-4">
-        <div className="flex flex-col">
+      <div className="flex flex-row items-center gap-4 w-full justify-center">
+        <div className="flex flex-col w-4/5">
           <h1 className="text-3xl font-bold text-black font-montserrat leading-12">
-            Health Tracker App Project
+            {project?.title || null}
           </h1>
-          <h2 className="md:text-[15px] lg:text-lg font-[450] text-black/50 font-montserrat">
-            Build a real-world application to track user health and activity
+          <h2 className="md:text-xs lg:text-sm font-[450] text-black/50 font-montserrat">
+            {project?.description || null}
           </h2>
         </div>
-        <h1 className="text-center font-montserrat font-semibold text-[#06275A] bg-nav px-4 py-2 rounded-full md:text-[10px] lg:text-sm ml-auto">
-          Web Development
-        </h1>
+        <div className="w-1/5">
+          <h1 className="text-center font-montserrat font-semibold text-[#06275A] bg-nav px-4 py-2 rounded-full md:text-[10px] lg:text-sm ml-auto">
+            {career?.career_name || null}
+          </h1>
+        </div>
       </div>
     </>
   );

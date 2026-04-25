@@ -45,7 +45,7 @@ const JobReadinessScore = ({ score = 78, role = "Web Developer" }) => {
                         x="70"
                         y="78"
                         textAnchor="middle"
-                        fontSize="30"
+                        fontSize="25"
                         fontWeight="500"
                         fill="#1e3a5f"
                     >

@@ -17,7 +17,7 @@ const Analysis = () => {
     const { progress } = useProgress();
 
     return (
-        <div className='md:ml-10 lg:ml-40 pl-5 py-5 pb-10'>
+        <div className='md:ml-20 lg:ml-40 overflow-x-hidden pb-5'>
             <Navbar />
             <div className="wrapper ml-10 mt-5">
                 <HeaderAnalysis />

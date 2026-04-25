@@ -127,9 +127,8 @@ const NavDash = () => {
 
 
   return (
-    <aside className="bg-nav h-screen md:w-27 lg:w-40 border-t-0 fixed left-0 top-0 z-50">
+    <aside className="bg-nav m-3 h-96/100 rounded-2xl md:w-27 lg:w-40 border-t-0 fixed left-0 top-0 z-50">
       <div className="flex w-full h-full flex-row md:justify-start justify-around gap-5 items-center lg:flex-col lg:items-center md:py-6 md:flex-col md:items-center">
-        {/* Logo */}
         <div className="flex flex-row justify-center items-center mb-4 w-full">
           <Link to="/dashboard" className="flex items-center gap-2">
             <img src={Logo} alt="logo" className="w-8 h-8" />

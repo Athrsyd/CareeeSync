@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 
 const SkillDisplay = ({data}) => {
   return (
-    <div className="flex flex-col justify-start gap-2 min-w-80 h-45 rounded-xl shadow-xl border-2 border-blue-400 p-4">
+    <div className="flex flex-col justify-start gap-2 min-w-100 h-50 rounded-xl shadow-xl border-2 border-blue-400 p-4">
       <div className="flex flex-row items-start justify-between gap-2">
         <h1 className="text-black text-md font-semibold">{data.name}</h1>
         <div className="bg-green-100 px-3 py-1 text-xs font-semibold text-green-700 rounded-full">Mastered</div>

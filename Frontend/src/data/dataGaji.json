@@ -1,15 +1,27 @@
 [
 	{
-		"career_name": "Frontend Developer",
-		"avgSalaryIndonesia": "Rp 6 juta - Rp 10 juta",
-		"avgSalaryJakarta": "Rp 8 juta - Rp 14 juta",
-		"avgSalaryInternational": "Rp 35 juta - Rp 60 juta"
+		"career_name": "Fullstack Developer",
+		"avgSalaryIndonesia": "Rp 8 juta - Rp 14 juta",
+		"avgSalaryJakarta": "Rp 11 juta - Rp 18 juta",
+		"avgSalaryInternational": "Rp 40 juta - Rp 70 juta"
 	},
 	{
-		"career_name": "Backend Developer",
-		"avgSalaryIndonesia": "Rp 7 juta - Rp 12 juta",
-		"avgSalaryJakarta": "Rp 9 juta - Rp 16 juta",
+		"career_name": "Mekanik Motor",
+		"avgSalaryIndonesia": "Rp 3 juta - Rp 6 juta",
+		"avgSalaryJakarta": "Rp 4 juta - Rp 7 juta",
+		"avgSalaryInternational": "Rp 15 juta - Rp 30 juta"
+	},
+	{
+		"career_name": "Game Developer",
+		"avgSalaryIndonesia": "Rp 7 juta - Rp 13 juta",
+		"avgSalaryJakarta": "Rp 10 juta - Rp 16 juta",
 		"avgSalaryInternational": "Rp 38 juta - Rp 65 juta"
+	},
+	{
+		"career_name": "Network Engineer",
+		"avgSalaryIndonesia": "Rp 8 juta - Rp 12 juta",
+		"avgSalaryJakarta": "Rp 10 juta - Rp 15 juta",
+		"avgSalaryInternational": "Rp 35 juta - Rp 60 juta"
 	},
 	{
 		"career_name": "UI/UX Designer",
@@ -18,105 +30,33 @@
 		"avgSalaryInternational": "Rp 30 juta - Rp 55 juta"
 	},
 	{
-		"career_name": "Digital Marketing",
-		"avgSalaryIndonesia": "Rp 5 juta - Rp 9 juta",
-		"avgSalaryJakarta": "Rp 7 juta - Rp 12 juta",
-		"avgSalaryInternational": "Rp 25 juta - Rp 45 juta"
-	},
-	{
-		"career_name": "Graphic Designer",
+		"career_name": "Drafter",
 		"avgSalaryIndonesia": "Rp 4 juta - Rp 8 juta",
-		"avgSalaryJakarta": "Rp 6 juta - Rp 11 juta",
-		"avgSalaryInternational": "Rp 22 juta - Rp 40 juta"
-	},
-	{
-		"career_name": "Data Analyst",
-		"avgSalaryIndonesia": "Rp 7 juta - Rp 13 juta",
-		"avgSalaryJakarta": "Rp 9 juta - Rp 17 juta",
-		"avgSalaryInternational": "Rp 35 juta - Rp 65 juta"
-	},
-	{
-		"career_name": "Teacher",
-		"avgSalaryIndonesia": "Rp 3 juta - Rp 6 juta",
-		"avgSalaryJakarta": "Rp 4 juta - Rp 7 juta",
+		"avgSalaryJakarta": "Rp 5 juta - Rp 10 juta",
 		"avgSalaryInternational": "Rp 18 juta - Rp 35 juta"
 	},
 	{
-		"career_name": "Nurse",
-		"avgSalaryIndonesia": "Rp 4 juta - Rp 7 juta",
-		"avgSalaryJakarta": "Rp 5 juta - Rp 8 juta",
-		"avgSalaryInternational": "Rp 22 juta - Rp 45 juta"
+		"career_name": "Plumber",
+		"avgSalaryIndonesia": "Rp 3 juta - Rp 7 juta",
+		"avgSalaryJakarta": "Rp 4 juta - Rp 8 juta",
+		"avgSalaryInternational": "Rp 15 juta - Rp 30 juta"
 	},
 	{
-		"career_name": "Accountant",
-		"avgSalaryIndonesia": "Rp 5 juta - Rp 10 juta",
-		"avgSalaryJakarta": "Rp 7 juta - Rp 13 juta",
-		"avgSalaryInternational": "Rp 28 juta - Rp 50 juta"
-	},
-	{
-		"career_name": "Entrepreneur",
-		"avgSalaryIndonesia": "Rp 5 juta - Rp 15 juta",
-		"avgSalaryJakarta": "Rp 8 juta - Rp 20 juta",
-		"avgSalaryInternational": "Rp 30 juta - Rp 80 juta"
-	},
-	{
-		"career_name": "Chef",
-		"avgSalaryIndonesia": "Rp 4 juta - Rp 8 juta",
-		"avgSalaryJakarta": "Rp 5 juta - Rp 10 juta",
-		"avgSalaryInternational": "Rp 20 juta - Rp 40 juta"
-	},
-	{
-		"career_name": "Photographer",
-		"avgSalaryIndonesia": "Rp 4 juta - Rp 9 juta",
-		"avgSalaryJakarta": "Rp 6 juta - Rp 12 juta",
-		"avgSalaryInternational": "Rp 20 juta - Rp 45 juta"
-	},
-	{
-		"career_name": "Mechanic",
+		"career_name": "Painter Kendaraan",
 		"avgSalaryIndonesia": "Rp 3 juta - Rp 6 juta",
 		"avgSalaryJakarta": "Rp 4 juta - Rp 7 juta",
-		"avgSalaryInternational": "Rp 18 juta - Rp 32 juta"
+		"avgSalaryInternational": "Rp 12 juta - Rp 25 juta"
 	},
 	{
-		"career_name": "Civil Engineer",
-		"avgSalaryIndonesia": "Rp 7 juta - Rp 13 juta",
-		"avgSalaryJakarta": "Rp 9 juta - Rp 16 juta",
-		"avgSalaryInternational": "Rp 35 juta - Rp 65 juta"
+		"career_name": "IoT Engineer",
+		"avgSalaryIndonesia": "Rp 8 juta - Rp 13 juta",
+		"avgSalaryJakarta": "Rp 10 juta - Rp 16 juta",
+		"avgSalaryInternational": "Rp 38 juta - Rp 65 juta"
 	},
 	{
-		"career_name": "Electrician",
-		"avgSalaryIndonesia": "Rp 4 juta - Rp 8 juta",
-		"avgSalaryJakarta": "Rp 5 juta - Rp 9 juta",
-		"avgSalaryInternational": "Rp 20 juta - Rp 38 juta"
-	},
-	{
-		"career_name": "Barista",
-		"avgSalaryIndonesia": "Rp 3 juta - Rp 5 juta",
-		"avgSalaryJakarta": "Rp 4 juta - Rp 6 juta",
-		"avgSalaryInternational": "Rp 15 juta - Rp 28 juta"
-	},
-	{
-		"career_name": "Sales Executive",
-		"avgSalaryIndonesia": "Rp 4 juta - Rp 9 juta",
-		"avgSalaryJakarta": "Rp 6 juta - Rp 12 juta",
-		"avgSalaryInternational": "Rp 22 juta - Rp 45 juta"
-	},
-	{
-		"career_name": "Content Creator",
-		"avgSalaryIndonesia": "Rp 4 juta - Rp 10 juta",
-		"avgSalaryJakarta": "Rp 6 juta - Rp 12 juta",
-		"avgSalaryInternational": "Rp 20 juta - Rp 45 juta"
-	},
-	{
-		"career_name": "HR Specialist",
+		"career_name": "Akuntan",
 		"avgSalaryIndonesia": "Rp 5 juta - Rp 10 juta",
 		"avgSalaryJakarta": "Rp 7 juta - Rp 13 juta",
 		"avgSalaryInternational": "Rp 28 juta - Rp 50 juta"
-	},
-	{
-		"career_name": "Logistics Officer",
-		"avgSalaryIndonesia": "Rp 4 juta - Rp 8 juta",
-		"avgSalaryJakarta": "Rp 6 juta - Rp 11 juta",
-		"avgSalaryInternational": "Rp 22 juta - Rp 40 juta"
 	}
 ]

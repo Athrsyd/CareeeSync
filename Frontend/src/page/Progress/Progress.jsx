@@ -49,12 +49,12 @@ const Progress = () => {
   //   const basicSkills = 
 
   return (
-    <main className="md:ml-20 lg:ml-40 overflow-x-hidden pb-5">
+    <main className="md:ml-20 lg:ml-48 overflow-x-hidden pb-5">
       <Navbar />
       <div className="flex flex-col mt-8 ml-13">
         <TitleProgress />
       </div>
-      <div className="flex flex-col mt-8 ml-13">
+      <div className="flex flex-col mt-10 ml-13">
         <ProgressSkill 
           skillsBasic={skillsBasic}
           skillsIntermediate={skillsIntermediate}

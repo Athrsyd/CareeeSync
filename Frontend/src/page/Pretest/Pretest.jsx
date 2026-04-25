@@ -1,10 +1,11 @@
-import { useState, useEffect,  } from 'react'
+import { useState, useEffect, } from 'react'
 import { useNavigate } from 'react-router-dom';
 import Header from '../../components/Pretest/Header';
 import Skill from '../../components/Pretest/Skill';
 import CareerOptions from '../../data/careerOptions.json'
 import CareerHooks from '../../hooks/CareerHooks';
 import background from '../../assets/bg-auth.jpeg'
+import { useCareer } from '../../context/CareerContext';
 
 const Pretest = () => {
     const [page, setPage] = useState(1);
@@ -15,7 +16,7 @@ const Pretest = () => {
     const [selectedCareerName, setSelectedCareerName] = useState('');
     const [preventNext, setPreventNext] = useState(false);
     const [loading, setLoading] = useState(false);
-
+    const { fetchCareer } = useCareer();
     const { postCareer } = CareerHooks();
 
     const navigate = useNavigate();
@@ -101,6 +102,7 @@ const Pretest = () => {
             await postCareer(payload);
             console.log('Success!');
             navigate('/dashboard');
+            await fetchCareer();
             // Optional: redirect atau reset form
         } catch (error) {
             console.error('Error submitting career data:', error);

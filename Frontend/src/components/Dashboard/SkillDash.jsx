@@ -50,7 +50,7 @@ const SkillDash = ({ data }) => {
             You are at the
           </h1>
           <h1 className="text-3xl font-semibold font-montserrat bg-primary px-4 py-1 rounded-lg text-white">
-            Expert {data?.level || 'N/A'}
+            {data?.level || 'N/A'} level
           </h1>
           <p className="text-lg font-[450] font-montserrat text-[#021124]">
             Level Up Your Skills

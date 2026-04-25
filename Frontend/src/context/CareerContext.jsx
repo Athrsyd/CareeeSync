@@ -1,15 +1,20 @@
+/* eslint-disable react-hooks/exhaustive-deps */
+/* eslint-disable react-refresh/only-export-components */
 import { useContext, createContext, useState, useEffect } from 'react'
 import CareerHooks from '../hooks/CareerHooks'
 import { useLocation } from 'react-router-dom'
+import ProjectsData from '../data/projectsComplete.json'
+import { useCurrentProject } from './CurrentProjectContext';
 
 const CareerContext = createContext()
 
 const CareerProvider = ({ children }) => {
     const { GetCareer, GetSkills } = CareerHooks()
-    const location = useLocation()
     const [careerData, setCareerData] = useState(null)
     const [skillsMastery, setSkillsMastery] = useState([])
     const [readiness, setReadiness] = useState(0)
+    const [projects, setProjects] = useState([])
+    const { setCurrentProject } = useCurrentProject();
 
     const fetchCareer = async () => {
         const data = await GetCareer()
@@ -27,18 +32,33 @@ const CareerProvider = ({ children }) => {
         const readinessScore = hitungLevel(data?.[0] || { skills_mastery: [] });
         console.log('Readiness score calculated successfully:', readinessScore);
         setReadiness(readinessScore);
-
-        // Calculate readiness (example calculation, replace with actual logic)
-        // const totalSkills = skills.length;
-        // const masteredSkills = skills.filter(skill => skill.mastery === true).length;
-        // const readinessPercentage = totalSkills > 0 ? (masteredSkills / totalSkills) * 100 : 0;
-        // setReadiness(readinessPercentage);
-
     }
+
+    useEffect(() => {
+        if (careerData && skillsMastery.length > 0) {
+            const projectsData = ProjectsData.find(project => project.career_name === careerData.career_name);
+            console.log("project untuk", careerData.career_name, 'adalah', projectsData);
+            setProjects(projectsData ? projectsData.projects : []);
+
+            const projectsUnfinished = projectsData.projects.filter(project => {
+                const skill = skillsMastery.find(skill => skill.skill_id === project.skill_id);
+                return !skill || !skill.mastered;
+            });
+            console.log("project yang belum dikuasai untuk", careerData.career_name, 'adalah', projectsUnfinished);
+
+            const firstSkill = projectsUnfinished[0];
+            const currentProject = projectsData?.projects.find(p => p.skill_id === firstSkill.skill_id);
+            console.log('project saat ini:', currentProject);
+
+            if (currentProject) {
+                setCurrentProject(currentProject);
+            }
+        }
+    }, [careerData, skillsMastery])
+
     useEffect(() => {
         fetchCareer()
     }, [])
-
 
     return (
         <CareerContext.Provider value={{ careerData, skillsMastery, readiness, fetchCareer }}>
