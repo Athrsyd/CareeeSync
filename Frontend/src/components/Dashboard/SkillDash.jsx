@@ -45,14 +45,14 @@ const SkillDash = ({ data }) => {
       </h1>
       <div className="flex flex-row max-w-full items-center gap-8">
         <Skill />
-        <div className="flex flex-col w-1/4 justify-center items-center gap-2 mt-5 ml-8">
-          <h1 className="text-3xl font-semibold font-montserrat text-[#021124]">
+        <div className="flex flex-col w-1/4 justify-center items-center gap-2 mt-5 ml-8 md:mr-4 lg:mr-0">
+          <h1 className="md:text-[22px] lg:text-3xl font-semibold font-montserrat text-[#021124]">
             You are at the
           </h1>
-          <h1 className="text-3xl font-semibold font-montserrat bg-primary px-4 py-1 rounded-lg text-white">
+          <h1 className="md:text-[22px] lg:text-3xl font-semibold font-montserrat bg-primary px-4 py-1 rounded-lg text-white">
             {data?.level || 'N/A'} level
           </h1>
-          <p className="text-lg font-[450] font-montserrat text-[#021124]">
+          <p className="md:text-md lg:text-lg font-[450] font-montserrat text-[#021124]">
             Level Up Your Skills
           </p>
         </div>
