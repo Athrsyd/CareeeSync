@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { FiMenu, FiX, FiArrowRight, FiMail, FiZap, FiCode } from 'react-icons/fi';
 import { FaGithub, FaLinkedin, FaInstagram } from 'react-icons/fa';
-const Template2 = ({ data }) => {
+const Template2 = ({ data, skillsData }) => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [activeNav, setActiveNav] = useState('home');
     const [visibleSkills, setVisibleSkills] = useState(3);
@@ -45,38 +45,38 @@ const Template2 = ({ data }) => {
 
 
 
-    const skillsData = [
-        {
-            id: 1,
-            title: 'HTML',
-            description: 'Membuat struktur halaman web menggunakan elemen dan tag HTML yang semantik.'
-        },
-        {
-            id: 2,
-            title: 'CSS',
-            description: 'Mendesain dan mengatur tampilan website dengan styling yang responsif dan menarik.'
-        },
-        {
-            id: 3,
-            title: 'JavaScript',
-            description: 'Menambahkan interaktivitas dan logika dinamis pada aplikasi web dengan JavaScript modern.'
-        },
-        {
-            id: 4,
-            title: 'React',
-            description: 'Membangun aplikasi web yang cepat dan scalable menggunakan React dan komponen reusable.'
-        },
-        {
-            id: 5,
-            title: 'Tailwind CSS',
-            description: 'Menggunakan utility-first CSS framework untuk membuat desain yang konsisten dan efisien.'
-        },
-        {
-            id: 6,
-            title: 'Node.js',
-            description: 'Mengembangkan backend server yang powerful dengan Node.js dan Express.js.'
-        },
-    ];
+    // const skillsData = [
+    //     {
+    //         id: 1,
+    //         title: 'HTML',
+    //         description: 'Membuat struktur halaman web menggunakan elemen dan tag HTML yang semantik.'
+    //     },
+    //     {
+    //         id: 2,
+    //         title: 'CSS',
+    //         description: 'Mendesain dan mengatur tampilan website dengan styling yang responsif dan menarik.'
+    //     },
+    //     {
+    //         id: 3,
+    //         title: 'JavaScript',
+    //         description: 'Menambahkan interaktivitas dan logika dinamis pada aplikasi web dengan JavaScript modern.'
+    //     },
+    //     {
+    //         id: 4,
+    //         title: 'React',
+    //         description: 'Membangun aplikasi web yang cepat dan scalable menggunakan React dan komponen reusable.'
+    //     },
+    //     {
+    //         id: 5,
+    //         title: 'Tailwind CSS',
+    //         description: 'Menggunakan utility-first CSS framework untuk membuat desain yang konsisten dan efisien.'
+    //     },
+    //     {
+    //         id: 6,
+    //         title: 'Node.js',
+    //         description: 'Mengembangkan backend server yang powerful dengan Node.js dan Express.js.'
+    //     },
+    // ];
 
     const projectsData = [
         {

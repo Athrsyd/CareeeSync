@@ -38,7 +38,7 @@ const CareerProvider = ({ children }) => {
         if (careerData && skillsMastery.length > 0) {
             const projectsData = ProjectsData.find(project => project.career_name === careerData.career_name);
             console.log("project untuk", careerData.career_name, 'adalah', projectsData);
-            
+
             if (!projectsData?.projects) {
                 setProjects([]);
                 setCurrentProject(null);
@@ -55,7 +55,7 @@ const CareerProvider = ({ children }) => {
             console.log("project yang belum dikuasai untuk", careerData.career_name, 'adalah', projectsUnfinished);
 
             const firstSkill = projectsUnfinished[0];
-            
+
             if (!firstSkill) {
                 setCurrentProject(null);
                 return;
@@ -75,7 +75,7 @@ const CareerProvider = ({ children }) => {
     }, [])
 
     return (
-        <CareerContext.Provider value={{ careerData, skillsMastery, readiness, fetchCareer,setSkillsMastery, projects }}>
+        <CareerContext.Provider value={{ careerData, skillsMastery, readiness, fetchCareer, setSkillsMastery, projects }}>
             {children}
         </CareerContext.Provider>
     )

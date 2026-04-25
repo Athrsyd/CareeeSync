@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { use, useEffect, useState } from 'react'
 import { useUser } from '../../context/UserContext';
 import { useCareer } from '../../context/CareerContext';
 import TitleProject from '../../components/Project/TitleProject';
@@ -24,12 +24,31 @@ const Project = () => {
   const handleSubmitProject = async () => {
     if (!careerData?.id || !currentProject?.skill_id) return;
 
-    const updatedSkillsMastery = (careerData.skills_mastery || []).map((skill) => {
+    const selectedCareer = careerOptions.careers.find(
+      c => c.name === careerData?.career_name
+    );
+    const selectedSkill = selectedCareer?.skills.find(
+      s => s.id === currentProject.skill_id
+    );
+
+
+    let updatedSkillsMastery = (careerData.skills_mastery || []).map((skill) => {
       if (skill.skill_id === currentProject.skill_id) {
         return { ...skill, mastered: true };
       }
       return skill;
     });
+
+    
+    if (!updatedSkillsMastery.find(s => s.skill_id === currentProject.skill_id)) {
+      updatedSkillsMastery.push({
+        skill_id: currentProject.skill_id,
+        mastered: true,
+        weight: selectedSkill?.weight || 0
+      });
+    }
+
+    console.log('Updated Skills:', updatedSkillsMastery);
 
     const payload = {
       skills_mastery: updatedSkillsMastery,
@@ -39,7 +58,12 @@ const Project = () => {
     await updateMasterySkill(careerData.id, payload);
     await fetchCareer();
     setShowModal(false);
+
+    setTimeout(() => {
+      window.location.reload(); 
+    }, 3000);
   };
+  
 
 
 

@@ -1,11 +1,27 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
+import { useUser } from '../../context/UserContext'
+import { useCareer } from '../../context/CareerContext'
 import useManagePortfolio from '../../hooks/UseManagePortfolio'
 import { PORTFOLIO_STYLES, PORTFOLIO_TIPS } from '../../data/portfolioData'
 
 const ManagePortfolio = () => {
+    const { user } = useUser()
+    const { careerData } = useCareer()
     const { loading, error, showSuccess, portfolioId, initialFormData, submitPortfolio, setShowSuccess, setError } = useManagePortfolio()
     const [selectedStyle, setSelectedStyle] = useState('style1')
     const [formData, setFormData] = useState(initialFormData)
+    const [photoPreview, setPhotoPreview] = useState(null)
+
+    // Initialize career_id saat component mount
+    useEffect(() => {
+        if (careerData?.id) {
+            setFormData(prev => ({ 
+                ...prev, 
+                career_id: careerData.id,
+                user_id: user?.id || ''
+            }))
+        }
+    }, [careerData?.id, user?.id])
 
     const handleChange = (e) => {
         const { name, value } = e.target
@@ -14,26 +30,47 @@ const ManagePortfolio = () => {
 
     const handleFileChange = (e) => {
         const file = e.target.files[0]
-        setFormData(prev => ({ ...prev, photo: file }))
+        if (file) {
+            setFormData(prev => ({ ...prev, photo: file }))
+            // Generate preview URL
+            const reader = new FileReader()
+            reader.onloadend = () => {
+                setPhotoPreview(reader.result)
+            }
+            reader.readAsDataURL(file)
+        }
     }
 
     const handleSubmit = async (e) => {
         e.preventDefault()
-        const success = await submitPortfolio(formData)
         
+        // Pastikan user dan career id ada
+        if (!user?.id) {
+            setError('User ID tidak ditemukan')
+            return
+        }
+        
+        // Jangan override career_id yang sudah di-set, gunakan dari careerData
+        const success = await submitPortfolio(formData)
+
         if (success) {
             setFormData(initialFormData)
+            setPhotoPreview(null)
             setSelectedStyle('style1')
         }
     }
 
-    const portfolioUrl = `${window.location.origin}/portfolio/${portfolioId}`
+    const portfolioUrl = portfolioId && user?.username 
+        ? `${window.location.origin}/portfolio/${user.username}`
+        : ''
     const [copied, setCopied] = useState(false)
 
     const copyToClipboard = () => {
-        navigator.clipboard.writeText(portfolioUrl)
-        setCopied(true)
-        setTimeout(() => setCopied(false), 2000)
+        if (portfolioUrl) {
+            navigator.clipboard.writeText(portfolioUrl)
+            setCopied(true)
+            setTimeout(() => setCopied(false), 2000)
+        }
     }
 
     return (
@@ -63,7 +100,7 @@ const ManagePortfolio = () => {
                                 <h2 className="text-lg font-bold text-[#021124] mb-6 pb-3 border-b-2 border-primary">
                                     Informasi Pribadi
                                 </h2>
-                                
+
                                 <div className="mb-5">
                                     <label className="block text-sm font-semibold text-[#021124] mb-2">
                                         Nama Lengkap <span className="text-red-500">*</span>
@@ -142,7 +179,7 @@ const ManagePortfolio = () => {
                                 <h2 className="text-lg font-bold text-[#021124] mb-6 pb-3 border-b-2 border-primary">
                                     Latar Belakang
                                 </h2>
-                                
+
                                 <div className="mb-5">
                                     <label className="block text-sm font-semibold text-[#021124] mb-2">
                                         Pendidikan <span className="text-red-500">*</span>
@@ -191,7 +228,7 @@ const ManagePortfolio = () => {
                                 <h2 className="text-lg font-bold text-[#021124] mb-6 pb-3 border-b-2 border-primary">
                                     Informasi Kontak & Media Sosial
                                 </h2>
-                                
+
                                 <div className="mb-5">
                                     <label className="block text-sm font-semibold text-[#021124] mb-2">
                                         Email <span className="text-red-500">*</span>
@@ -260,13 +297,12 @@ const ManagePortfolio = () => {
                                             key={style.id}
                                             onClick={() => {
                                                 setSelectedStyle(style.id)
-                                                setFormData(prev => ({...prev, style: style.id}))
+                                                setFormData(prev => ({ ...prev, style: style.id }))
                                             }}
-                                            className={`relative p-4 rounded-2xl cursor-pointer transition-all duration-300 border-2 ${
-                                                selectedStyle === style.id
+                                            className={`relative p-4 rounded-2xl cursor-pointer transition-all duration-300 border-2 ${selectedStyle === style.id
                                                     ? 'border-primary bg-primary/10 shadow-lg'
                                                     : 'border-gray-300 bg-white/5 hover:border-primary/50'
-                                            }`}
+                                                }`}
                                         >
                                             {selectedStyle === style.id && (
                                                 <div className="absolute top-3 right-3 w-6 h-6 bg-primary rounded-full flex items-center justify-center">
@@ -275,14 +311,14 @@ const ManagePortfolio = () => {
                                                     </svg>
                                                 </div>
                                             )}
-                                            
+
                                             <div className="flex gap-4">
                                                 <div className="flex gap-2">
                                                     {style.colors.map((color, idx) => (
                                                         <div
                                                             key={idx}
                                                             className="w-8 h-8 rounded-lg border border-gray-300"
-                                                            style={{backgroundColor: color}}
+                                                            style={{ backgroundColor: color }}
                                                         />
                                                     ))}
                                                 </div>
@@ -322,7 +358,7 @@ const ManagePortfolio = () => {
                         <h3 className="text-xl font-bold text-[#021124] mb-6">
                             Pratinjau Portfolio
                         </h3>
-                        
+
                         <div className="space-y-4">
                             {/* Style Preview */}
                             <div>
@@ -330,8 +366,8 @@ const ManagePortfolio = () => {
                                 {PORTFOLIO_STYLES.map((style) => {
                                     if (style.id === selectedStyle) {
                                         return (
-                                            <div key={style.id} className="rounded-xl p-4 text-white" 
-                                                 style={{backgroundImage: `linear-gradient(135deg, ${style.colors[0]} 0%, ${style.colors[1]} 100%)`}}>
+                                            <div key={style.id} className="rounded-xl p-4 text-white"
+                                                style={{ backgroundImage: `linear-gradient(135deg, ${style.colors[0]} 0%, ${style.colors[1]} 100%)` }}>
                                                 <p className="font-bold text-sm">{style.name}</p>
                                                 <p className="text-xs opacity-90 mt-1">{style.description}</p>
                                             </div>
@@ -340,13 +376,17 @@ const ManagePortfolio = () => {
                                 })}
                             </div>
 
-                            <div className="bg-gray-200 rounded-full w-full h-64 flex items-center justify-center">
-                                <div className="text-center">
-                                    <svg className="w-16 h-16 text-gray-400 mx-auto mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                                    </svg>
-                                    <p className="text-sm text-gray-500">Preview Foto Profil</p>
-                                </div>
+                            <div className="bg-gray-200 rounded-full w-full h-64 flex items-center justify-center overflow-hidden">
+                                {photoPreview ? (
+                                    <img src={photoPreview} alt="Preview" className="w-full h-full object-cover" />
+                                ) : (
+                                    <div className="text-center">
+                                        <svg className="w-16 h-16 text-gray-400 mx-auto mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                                        </svg>
+                                        <p className="text-sm text-gray-500">Preview Foto Profil</p>
+                                    </div>
+                                )}
                             </div>
 
                             <div className="space-y-3">
@@ -402,19 +442,18 @@ const ManagePortfolio = () => {
                         <div className="bg-blue-50 rounded-2xl p-4 mb-6 border-2 border-blue-200">
                             <p className="text-sm text-gray-600 mb-2 font-medium">Link Portfolio Anda:</p>
                             <div className="flex items-center gap-2">
-                                <input 
-                                    type="text" 
-                                    value={portfolioUrl} 
-                                    readOnly 
+                                <input
+                                    type="text"
+                                    value={portfolioUrl}
+                                    readOnly
                                     className="flex-1 bg-white border border-blue-300 rounded-lg px-3 py-2 text-sm text-gray-700 truncate"
                                 />
                                 <button
                                     onClick={copyToClipboard}
-                                    className={`px-4 py-2 rounded-lg font-medium transition-all duration-300 whitespace-nowrap ${
-                                        copied 
-                                            ? 'bg-green-500 text-white' 
+                                    className={`px-4 py-2 rounded-lg font-medium transition-all duration-300 whitespace-nowrap ${copied
+                                            ? 'bg-green-500 text-white'
                                             : 'bg-blue-500 text-white hover:bg-blue-600'
-                                    }`}
+                                        }`}
                                 >
                                     {copied ? '✓ Disalin' : 'Salin'}
                                 </button>

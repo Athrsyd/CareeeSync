@@ -8,17 +8,20 @@ const PortfolioHooks = () => {
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState(null);
 
-    const fetchPortfolio = async (userId) => {
+    const fetchPortfolio = async (username) => {
         setLoading(true);
+        setError(null);
         try {
-            const response = await API.get(`/portfolio/${userId}`);
+            const response = await API.get(`/portfolio/${username}`);
+            console.log('Portfolio response:', response.data);
             setPortfolioData(response.data.data);
         } catch (error) {
-            console.error(error.response.data.message)
-            setError(error);
+            const errorMsg = error.response?.data?.message || 'Gagal mengambil portfolio';
+            console.error('Portfolio fetch error:', errorMsg);
+            setError(errorMsg);
+            setPortfolioData(null);
         } finally { 
             setLoading(false);
-            console.log(portfolioData || 'No portfolio data');
         }
     }
     return {
