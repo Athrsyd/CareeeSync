@@ -28,7 +28,7 @@ const CareerProvider = ({ children }) => {
         console.log('Skills mastery fetched successfully:', skills);
 
         const readinessScore = (skills || []).reduce(
-            (acc, skill) => acc + (skill.mastered ? skill.weight : 0),
+            (acc, skill) => acc + (skill?.mastered ? skill.weight : 0),
             0
         );
         setReadiness(readinessScore);
@@ -49,7 +49,7 @@ const CareerProvider = ({ children }) => {
             setProjects(projectsData.projects);
 
             const projectsUnfinished = projectsData.projects.filter(project => {
-                const skill = skillsMastery.find(skill => skill.skill_id === project.skill_id);
+                const skill = skillsMastery?.find(skill => skill.skill_id === project.skill_id);
                 return !skill || !skill.mastered;
             });
             console.log("project yang belum dikuasai untuk", careerData.career_name, 'adalah', projectsUnfinished);
