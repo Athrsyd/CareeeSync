@@ -11,22 +11,22 @@ import CareerOptions from '../../data/careerOptions.json'
 
 const Progress = () => {
   const { user } = useUser();
-  const { careerData } = useCareer();
+  const { careerData,skillsMastery } = useCareer();
   const [skillsBasic, setSkillsBasic] = useState([]); //ini state buat nyimpen skill yang diambil dari careerData, 
   const [skillsIntermediate, setSkillsIntermediate] = useState([]); //ini state buat nyimpen skill yang diambil dari careerData, 
   const [skillsAdvanced, setSkillsAdvanced] = useState([]); //ini state buat nyimpen skill yang diambil dari careerData, 
-  const [skillsMastery, setSkillsMastery] = useState([]); //ini state buat nyimpen skill yang dikuasai dari careerData
-
+  const [skillsMasteryProgress, setSkillsMastery] = useState([]); //ini state buat nyimpen skill yang dikuasai dari careerData,
+  
   const getSkillbyCareerName = () => {
     if (!careerData) return;
     const careerName = careerData.career_name
 
-    const skilll = CareerOptions.careers.find(career => career.name === careerName)
-    console.log("skill untuk", careerName, 'adalah', skilll.skills)
+    const skill = CareerOptions.careers.find(career => career.name === careerName)
+    console.log("skill untuk", careerName, 'adalah', skill.skills)
 
-    const skillsBasic = skilll.skills.filter(skill => skill.level === 'basic');
-    const skillsIntermediate = skilll.skills.filter(skill => skill.level === 'intermediate');
-    const skillsAdvanced = skilll.skills.filter(skill => skill.level === 'advanced');
+    const skillsBasic = skill.skills.filter(skill => skill.level === 'basic');
+    const skillsIntermediate = skill.skills.filter(skill => skill.level === 'intermediate');
+    const skillsAdvanced = skill.skills.filter(skill => skill.level === 'advanced');
     setSkillsBasic(skillsBasic);
     setSkillsIntermediate(skillsIntermediate);
     setSkillsAdvanced(skillsAdvanced);
@@ -35,9 +35,10 @@ const Progress = () => {
   const getMasteredSkillFromBackend = () => {
     if (!careerData) return;
 
-    const skillsMastery = careerData.skillsMastery || [];
-    console.log("skill yang dikuasai untuk", careerData.career_name, 'adalah', skillsMastery);
-    setSkillsMastery(skillsMastery);
+    const skill = CareerOptions.careers.find(career => career.name === careerData.career_name)
+    const skillsMasteryProgress = skill.skills.filter(s => skillsMastery.some(sm => sm.skill_id === s.id && sm.mastered));
+    console.log("skill yang dikuasai untuk", careerData.career_name, 'adalah', skillsMasteryProgress);
+    setSkillsMastery(skillsMasteryProgress);
   }
 
   useEffect(() => {
@@ -59,7 +60,7 @@ const Progress = () => {
           skillsBasic={skillsBasic}
           skillsIntermediate={skillsIntermediate}
           skillsAdvanced={skillsAdvanced}
-          skillsMastery={skillsMastery}  
+          skillsMastery={skillsMasteryProgress}  
         />
       </div>
     </main>
