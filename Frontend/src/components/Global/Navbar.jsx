@@ -10,7 +10,7 @@ const Navbar = () => {
     const { user } = useUser();
     const { careerData } = useCareer();
     return (
-        <div className="flex flex-row md:ml-10 lg:ml-8 gap-2 ">
+        <div className="flex flex-row justify-center gap-2 ">
             <div className="relative md:w-100 lg:w-190 ml-5 mt-3">
                 <input
                     type="search"

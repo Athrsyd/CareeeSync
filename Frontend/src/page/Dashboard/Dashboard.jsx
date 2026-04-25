@@ -36,7 +36,7 @@ const Dashboard = () => {
       <div className="flex flex-col mt-8 ml-15">
         <RecommendProject />
       </div>
-      <div className="flex flex-col mt-8 ml-5">
+      <div className="flex flex-col mt-8 md:ml-20 lg:ml-5">
         <LibraryReadinessDash />
       </div>
       <br />
