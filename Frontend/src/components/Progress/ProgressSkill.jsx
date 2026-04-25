@@ -4,30 +4,38 @@ import { useCareer } from '../../context/CareerContext';
 const ProgressSkillItemBasic = ({ skillsBasic, skillsMastery }) => {
   return (
     <>
-      {skillsBasic?.map((skill) => {
+      {skillsBasic?.map((skill, index) => {
         const isComplated = skillsMastery.some(
           (mastery) => mastery.id === skill.id,
         );
+        const isLeft = index % 2 === 0
         return (
-          <div
-            key={skill.name}
-            className="flex flex-row w-90 h-40 rounded-2xl bg-white outline-2 px-4 py-2 outline-primary"
-          >
-            <div className="flex flex-col w-[87%] mt-5 gap-2">
-              <h1 className="font-bold text-lg font-montserrat text-black">
-                {skill.name}
-              </h1>
-              <p className="text-sm font-montserrat font-[450] text-black/50">
-                {skill.description}
-              </p>
-            </div>
+          <div key={skill.id} className="relative w-full flex">
             <div
-              className={`flex rounded-4xl h-6 px-2 py-1 ${isComplated ? "text-[#51B673] bg-[#DEF2E5] w-30 " : "text-red-950 bg-red-400 w-28"}
-            `}
+              className={`
+        absolute top-1/2 h-[2.5px] bg-blue-300
+        ${isLeft ? "right-[49%] w-31.25 mr-2.25" : "left-[49%] w-25 ml-2.5"}
+      `}
+            />
+            <div
+              className={`flex flex-row w-90 h-40 rounded-2xl bg-white outline-2 px-4 py-2 outline-primary ${isLeft ? "mr-auto" : "mr-6 ml-auto"}`}
             >
-              <h1 className="font-montserrat font-[550] text-[10px] w-full">
-                {isComplated ? "Complated" : "Not Complated"}
-              </h1>
+              <div className="flex flex-col w-[87%] mt-5 gap-2">
+                <h1 className="font-bold text-lg font-montserrat text-black">
+                  {skill.name}
+                </h1>
+                <p className="text-sm font-montserrat font-[450] text-black/50">
+                  {skill.description}
+                </p>
+              </div>
+              <div
+                className={`flex rounded-4xl h-6 px-2 py-1 ${isComplated ? "text-[#51B673] bg-[#DEF2E5] w-20 " : "text-red-950 bg-red-400 w-28"}
+            `}
+              >
+                <h1 className="font-montserrat font-[550] text-[10px] w-full">
+                  {isComplated ? "Completed" : "Not Completed"}
+                </h1>
+              </div>
             </div>
           </div>
         );
@@ -39,30 +47,38 @@ const ProgressSkillItemBasic = ({ skillsBasic, skillsMastery }) => {
 const ProgressSkillItemIntermediate = ({ skillsIntermediate, skillsMastery }) => {
   return (
     <>
-      {skillsIntermediate?.map((skill) => {
+      {skillsIntermediate?.map((skill, index) => {
         const isComplated = skillsMastery.some(
           (mastery) => mastery.id === skill.id,
         );
+        const isLeft = index % 2 === 0; 
         return (
-          <div
-            key={skill.name}
-            className="flex flex-row w-90 h-40 rounded-2xl bg-white outline-2 px-4 py-2 outline-primary"
-          >
-            <div className="flex flex-col w-[87%] mt-5 gap-2">
-              <h1 className="font-bold text-lg font-montserrat text-black">
-                {skill.name}
-              </h1>
-              <p className="text-sm font-montserrat font-[450] text-black/50">
-                {skill.description}
-              </p>
-            </div>
+          <div key={skill.id} className="relative w-full flex">
             <div
-              className={`flex rounded-4xl h-6 px-2 py-1 ${isComplated ? "text-[#51B673] bg-[#DEF2E5] w-30 " : "text-red-950 bg-red-400 w-28"}
-            `}
+              className={`
+        absolute top-1/2 h-[2.5px] bg-blue-300
+        ${isLeft ? "right-[49%] w-31.25 mr-2.25" : "left-[49%] w-25 ml-2.5"}
+      `}
+            />
+            <div
+              className={`flex flex-row w-90 h-40 rounded-2xl bg-white outline-2 px-4 py-2 outline-primary ${isLeft ? "mr-auto" : "mr-6 ml-auto"}`}
             >
-              <h1 className="font-montserrat font-[550] text-[10px] w-full">
-                {isComplated ? "Complated" : "Not Complated"}
-              </h1>
+              <div className="flex flex-col w-[87%] mt-5 gap-2">
+                <h1 className="font-bold text-lg font-montserrat text-black">
+                  {skill.name}
+                </h1>
+                <p className="text-sm font-montserrat font-[450] text-black/50">
+                  {skill.description}
+                </p>
+              </div>
+              <div
+                className={`flex rounded-4xl h-6 px-2 py-1 ${isComplated ? "text-[#51B673] bg-[#DEF2E5] w-20 " : "text-red-950 bg-red-400 w-28"}
+            `}
+              >
+                <h1 className="font-montserrat font-[550] text-[10px] w-full">
+                  {isComplated ? "Completed" : "Not Completed"}
+                </h1>
+              </div>
             </div>
           </div>
         );
@@ -74,28 +90,36 @@ const ProgressSkillItemIntermediate = ({ skillsIntermediate, skillsMastery }) =>
 const ProgressSkillItemAdvance = ({ skillsAdvance, skillsMastery }) => {
   return (
     <>
-      {skillsAdvance?.map((skill) => {
+      {skillsAdvance?.map((skill, index) => {
         const isComplated = skillsMastery.some(mastery => mastery.id === skill.id);
+        const isLeft = index % 2 === 0;
         return (
-          <div
-            key={skill.name}
-            className="flex flex-row w-90 h-40 rounded-2xl bg-white outline-2 px-4 py-2 outline-primary"
-          >
-            <div className="flex flex-col w-[87%] mt-5 gap-2">
-              <h1 className="font-bold text-lg font-montserrat text-black">
-                {skill.name}
-              </h1>
-              <p className="text-sm font-montserrat font-[450] text-black/50">
-                {skill.description}
-              </p>
-            </div>
+          <div key={skill.id} className="relative w-full flex">
             <div
-              className={`flex rounded-4xl h-6 px-2 py-1 ${isComplated ? "text-[#51B673] bg-[#DEF2E5] w-30 " : "text-red-950 bg-red-400 w-28"}
-            `}
+              className={`
+        absolute top-1/2 h-[2.5px] bg-blue-300
+        ${isLeft ? "right-[49%] w-31.25 mr-2.25" : "left-[49%] w-25 ml-2.5"}
+      `}
+            />
+            <div
+              className={`flex flex-row w-90 h-40 rounded-2xl bg-white outline-2 px-4 py-2 outline-primary ${isLeft ? "mr-auto" : "mr-6 ml-auto"}`}
             >
-              <h1 className="font-montserrat font-[550] text-[10px] w-full">
-                {isComplated ? "Complated" : "Not Complated"}
-              </h1>
+              <div className="flex flex-col w-[87%] mt-5 gap-2">
+                <h1 className="font-bold text-lg font-montserrat text-black">
+                  {skill.name}
+                </h1>
+                <p className="text-sm font-montserrat font-[450] text-black/50">
+                  {skill.description}
+                </p>
+              </div>
+              <div
+                className={`flex rounded-4xl h-6 px-2 py-1 ${isComplated ? "text-[#51B673] bg-[#DEF2E5] w-20 " : "text-red-950 bg-red-400 w-28"}
+            `}
+              >
+                <h1 className="font-montserrat font-[550] text-[10px] w-full">
+                  {isComplated ? "Completed" : "Not Completed"}
+                </h1>
+              </div>
             </div>
           </div>
         );
@@ -108,18 +132,49 @@ const ProgressSkillItemAdvance = ({ skillsAdvance, skillsMastery }) => {
 const ProgressSkill = ({ skillsBasic, skillsIntermediate, skillsAdvanced, skillsMastery }) => {
   return (
     <>
-      <div className="flex flex-col gap-10">
-        <div className="flex flex-row flex-wrap gap-2 pr-2">
-          <ProgressSkillItemBasic skillsBasic={skillsBasic} skillsMastery={skillsMastery} />
+      <div
+        className="
+  relative flex flex-col gap-10 items-center
+  before:content-['']
+  before:absolute
+  before:top-0
+  before:left-1/2
+  before:-translate-x-1/2
+  before:w-[3.5px]
+  before:h-full
+  before:bg-blue-300
+"
+      >
+        <div className="w-full flex flex-col items-center">
+          <div className="absolute left-1/2 -translate-x-1/2 w-4 h-4 bg-blue-400 rounded-full z-10"></div>
+          <div className="z-10 bg-blue-200 px-4 py-1 rounded-full text-sm font-medium">
+            Basic
+          </div>
         </div>
-        <div className="flex flex-row flex-wrap gap-2 pr-2">
-          <ProgressSkillItemIntermediate
-            skillsIntermediate={skillsIntermediate} skillsMastery={skillsMastery}
-          />
+        <ProgressSkillItemBasic
+          skillsBasic={skillsBasic}
+          skillsMastery={skillsMastery}
+        />
+        <div className="w-full flex flex-col items-center">
+          <div className="absolute left-1/2 -translate-x-1/2 w-4 h-4 bg-blue-400 rounded-full z-10"></div>
+          <div className="z-10 bg-blue-200 px-4 py-1 rounded-full text-sm font-medium">
+            Intermediate
+          </div>
         </div>
-        <div className="flex flex-row flex-wrap gap-2 pr-2">
-          <ProgressSkillItemAdvance skillsAdvance={skillsAdvanced} skillsMastery={skillsMastery} />
+        <ProgressSkillItemIntermediate
+          skillsIntermediate={skillsIntermediate}
+          skillsMastery={skillsMastery}
+        />
+        <div className="w-full flex flex-col items-center">
+          <div className="absolute left-1/2 -translate-x-1/2 w-4 h-4 bg-blue-400 rounded-full z-10"></div>
+          <div className="z-10 bg-blue-200 px-4 py-1 rounded-full text-sm font-medium">
+            Advance
+          </div>
         </div>
+        <ProgressSkillItemAdvance
+          skillsAdvance={skillsAdvanced}
+          skillsMastery={skillsMastery}
+        />
       </div>
     </>
   );

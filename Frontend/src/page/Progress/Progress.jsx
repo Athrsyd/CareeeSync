@@ -56,11 +56,11 @@ const Progress = () => {
         <TitleProgress />
       </div>
       <div className="flex flex-col mt-10 ml-13">
-        <ProgressSkill 
+        <ProgressSkill
           skillsBasic={skillsBasic}
           skillsIntermediate={skillsIntermediate}
           skillsAdvanced={skillsAdvanced}
-          skillsMastery={skillsMasteryProgress}  
+          skillsMastery={skillsMasteryProgress}
         />
       </div>
     </main>
