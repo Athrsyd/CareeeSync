@@ -6,6 +6,7 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\UserCareerController;
 use App\Http\Controllers\PortfolioController;
 use App\Http\Controllers\ProgressController;
+use App\Http\Controllers\ProjectsFinishedController;
 
 
 Route::prefix('v1')->group(function () {
@@ -28,6 +29,9 @@ Route::prefix('v1')->group(function () {
         // Ini Endpoint buat feedback AI, ada start sama refresh dam
         Route::post('/feedback', [PortfolioController::class, 'StartFeedback']);
         Route::post('/feedback/refresh', [PortfolioController::class, 'RefreshFeedback']);
+        
+
+        Route::post('/projects-finished', [ProjectsFinishedController::class, 'Create']);
     });
 
     Route::get('/portfolio/{username}', [PortfolioController::class, 'GetPortfolio']);

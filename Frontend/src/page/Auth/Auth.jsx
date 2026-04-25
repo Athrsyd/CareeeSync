@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, use } from 'react'
 import { FaInstagram } from "react-icons/fa6";
 import { FaGoogle, FaFacebook } from "react-icons/fa";
 import { Eye, EyeOff } from "lucide-react";
@@ -6,6 +6,7 @@ import AuthHooks from '../../hooks/AuthHooks';
 import background from '../../assets/bg-auth.jpeg'
 import { useUser } from '../../context/UserContext'
 import { useCareer } from '../../context/CareerContext';
+import { useNavigate } from 'react-router-dom';
 
 const Auth = () => {
     const {
@@ -15,10 +16,17 @@ const Auth = () => {
         message, setMessage,
         AuthLoading, setAuthLoading,
         handleRegister, handleChange, handleLogin } = AuthHooks();
-    const { refetchUser } = useUser();
+    const { refetchUser, user } = useUser();
     const { fetchCareer } = useCareer();
     const [isSignIn, setIsSignIn] = useState(false);
     const [showPassword, setShowPassword] = useState(false);
+    const navigate = useNavigate();
+
+        useEffect(() => {
+        if (user) {
+            navigate('/dashboard');
+        }
+    }, [user, navigate]);
 
     const toggleButton = () => {
         setIsSignIn(!isSignIn);

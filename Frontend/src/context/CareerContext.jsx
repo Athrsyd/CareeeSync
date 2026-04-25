@@ -17,20 +17,20 @@ const CareerProvider = ({ children }) => {
     const { setCurrentProject } = useCurrentProject();
 
     const fetchCareer = async () => {
-        const data = await GetCareer()
-        setCareerData(data?.[0] || null);
-        console.log('Career data fetched successfully:', data?.[0]);
+        const data = await GetCareer();
+        const selectedCareer = data?.[0] || null;
 
-        const skills = await GetSkills();
-        setSkillsMastery(skills || []);
+        setCareerData(selectedCareer);
+        console.log('Career data fetched successfully:', selectedCareer);
+
+        const skills = selectedCareer?.skills_mastery || [];
+        setSkillsMastery(skills);
         console.log('Skills mastery fetched successfully:', skills);
 
-        const hitungLevel = (data) => {
-            const readinessPoin = data.skills_mastery.reduce((acc, skill) => acc + (skill.mastered ? skill.weight : 0), 0);
-            return readinessPoin;
-        };
-        const readinessScore = hitungLevel(data?.[0] || { skills_mastery: [] });
-        console.log('Readiness score calculated successfully:', readinessScore);
+        const readinessScore = (skills || []).reduce(
+            (acc, skill) => acc + (skill.mastered ? skill.weight : 0),
+            0
+        );
         setReadiness(readinessScore);
     }
 
@@ -61,7 +61,7 @@ const CareerProvider = ({ children }) => {
     }, [])
 
     return (
-        <CareerContext.Provider value={{ careerData, skillsMastery, readiness, fetchCareer }}>
+        <CareerContext.Provider value={{ careerData, skillsMastery, readiness, fetchCareer,setSkillsMastery, projects }}>
             {children}
         </CareerContext.Provider>
     )

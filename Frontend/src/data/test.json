@@ -1,0 +1,25 @@
+{
+    "skill_mastery": [
+        {
+            "weight": 6.5,
+            "mastered": true,
+            "skill_id": "html"
+        },
+        {
+            "weight": 8.13,
+            "mastered": true,
+            "skill_id": "react"
+        },
+        {
+            "weight": 8.13,
+            "mastered": true,
+            "skill_id": "javascript"
+        },
+        {
+            "weight": 6.5,
+            "mastered": true,
+            "skill_id": "css"
+        }
+    ],
+    "level": "basic"
+}

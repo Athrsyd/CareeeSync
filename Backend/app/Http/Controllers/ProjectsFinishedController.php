@@ -15,7 +15,7 @@ class ProjectsFinishedController extends Controller
             'project_title' => "string|required",
             'project_description' => "string|required",
             'project_output' => "string|required",
-            'tools_used' => "string|required"
+            'tools_used' => "required"
         ], [
             'project_title.required' => "Project title wajib diisi!",
             'project_description.required' => "Project description wajib diisi!",

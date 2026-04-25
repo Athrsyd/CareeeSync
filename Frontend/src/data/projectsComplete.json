@@ -5,100 +5,136 @@
             {
                 "skill_id": "html",
                 "title": "Struktur Website",
-                "instruction": "1. Buat file index.html baru\n2. Tambahkan DOCTYPE dan tag html dasar\n3. Gunakan semantic tags: <header>, <nav>, <main>, <article>, <section>, <aside>, <footer>\n4. Di dalam setiap section, tambahkan heading (h1-h6) sesuai hierarchi\n5. Buat minimal 3 paragraf konten dengan deskripsi\n6. Tambahkan unordered list <ul> dan ordered list <ol>\n7. Sisipkan minimal 3 link internal/eksternal dengan <a>\n8. Validate HTML di W3C Validator\n9. Buka di browser dan verifikasi tampilan struktur yang benar",
+                "instruction": "Mulailah dengan membuat file index.html baru, lalu susun struktur dasarnya menggunakan DOCTYPE dan tag html. Gunakan semantic tags seperti header, nav, main, article, section, aside, dan footer untuk mengorganisir konten secara logis. Isi setiap bagian dengan heading yang sesuai hierarkinya, minimal tiga paragraf konten, serta list berurutan dan tidak berurutan. Sisipkan beberapa link internal maupun eksternal, kemudian validasi hasilnya di W3C Validator dan buka di browser untuk memastikan strukturnya tampil dengan benar.",
                 "description": "Memahami cara membuat halaman web dasar dengan struktur yang rapi dan bermakna. Anda akan belajar mengorganisir konten menggunakan bagian-bagian logis seperti header, navigasi, konten utama, dan footer sehingga halaman lebih mudah dipahami.",
                 "output": "File HTML yang valid dengan struktur semantic yang lengkap",
-                "tools": ["VS Code", "Browser"],
+                "tools": [
+                    "VS Code",
+                    "Browser"
+                ],
                 "level": "basic",
                 "duration": "2 jam"
             },
             {
                 "skill_id": "css",
                 "title": "Styling Website",
-                "instruction": "1. Buat file CSS eksternal (styles.css)\n2. Link file CSS ke HTML menggunakan <link>\n3. Atur layout utama menggunakan CSS Grid atau Flexbox untuk navbar dan main sections\n4. Styling dasar: background color, font-family, font-size, color untuk text\n5. Atur padding dan margin untuk spacing yang konsisten (gunakan margin: 0 auto untuk center)\n6. Buat style khusus untuk: navbar, buttons, cards, links (hover effects)\n7. Gunakan color palette yang harmonis (max 4 warna utama)\n8. Atur responseive styling (minimal 2 breakpoints: mobile, desktop)\n9. Tes di berbagai browsers dan screen sizes",
+                "instruction": "Buat file styles.css terpisah dan hubungkan ke HTML menggunakan tag link. Atur layout utama dengan CSS Grid atau Flexbox, lalu tentukan warna latar, jenis font, ukuran teks, dan warna tulisan. Gunakan padding dan margin secara konsisten, buat tampilan khusus untuk navbar, tombol, card, dan efek hover pada link. Pilih palet warna yang harmonis (maksimal empat warna), kemudian tambahkan responsive styling dengan setidaknya dua breakpoint untuk mobile dan desktop. Uji hasilnya di berbagai browser dan ukuran layar.",
                 "description": "Mempercantik tampilan halaman website dengan warna, font, dan layout yang menarik. Anda akan belajar membuat halaman terlihat profesional dengan tata letak yang rapi dan warna yang cocok dipandang.",
                 "output": "CSS stylesheet yang memberikan tampilan halaman yang menarik dan konsisten",
-                "tools": ["VS Code", "Browser"],
+                "tools": [
+                    "VS Code",
+                    "Browser"
+                ],
                 "level": "basic",
                 "duration": "3 jam"
             },
             {
                 "skill_id": "javascript",
                 "title": "JavaScript Interaktif",
-                "instruction": "1. Buat form HTML dengan minimal 5 input fields: text, email, password, number, textarea\n2. Tambahkan button submit dan reset\n3. Implement validation JavaScript:\n   - Cek field tidak kosong\n   - Validasi format email dengan regex\n   - Cek password minimal 8 karakter\n   - Cek nomor harus angka positif\n4. Gunakan preventDefault() pada submit untuk stop form submission jika error\n5. Tampilkan error messages di bawah setiap field yang error\n6. Berikan visual feedback: warna merah untuk error, hijau untuk valid\n7. Jika semua valid, tampilkan success alert/message\n8. Console log semua error untuk debugging",
+                "instruction": "Buat form HTML dengan minimal lima jenis input (teks, email, password, angka, textarea) beserta tombol submit dan reset. Tulis logika validasi JavaScript untuk memastikan field tidak kosong, format email benar, password minimal delapan karakter, dan angka harus positif. Gunakan preventDefault() agar form tidak terkirim saat ada error, tampilkan pesan error di bawah setiap field yang bermasalah dengan warna merah, dan warna hijau untuk field yang valid. Jika semua input valid, tampilkan pesan sukses.",
                 "description": "Membuat form website yang bisa memvalidation input dari user sebelum dikirim. Anda akan belajar membuat website yang responseive terhadap tindakan pengguna dan memberikan feedback yang jelas jika ada kesalahan.",
                 "output": "Form HTML yang berfungsi dengan validation JavaScript lengkap",
-                "tools": ["VS Code", "Browser"],
+                "tools": [
+                    "VS Code",
+                    "Browser"
+                ],
                 "level": "intermediate",
                 "duration": "4 jam"
             },
             {
                 "skill_id": "react",
                 "title": "React Components",
-                "instruction": "1. Siapkan React project: npm create vite@latest my-app -- --template react\n2. Buat folder components/ dan buat 5 file component:\n   - Header.jsx: navbar dengan logo dan menu links\n   - Footer.jsx: copyright dan links footer\n   - Card.jsx: reusable card component dengan props\n   - Button.jsx: custom button component\n   - Form.jsx: form component dengan state\n3. Di App.jsx, gunakan useState untuk manage page navigation\n4. Siapkan React Router dengan 3 routes: /, /about, /contact\n5. Implement props passing untuk customize components\n6. Tes navigation antar halaman\n7. Bangun dan preview: npm run build && npm run preview",
+                "instruction": "Siapkan project React menggunakan Vite, lalu buat folder components berisi lima file: Header, Footer, Card, Button, dan Form. Di App.jsx, gunakan useState untuk navigasi antar halaman dan atur React Router dengan tiga route (/, /about, /contact). Hubungkan komponen-komponen tersebut menggunakan props, uji navigasinya, lalu build dan preview hasilnya.",
                 "description": "Membuat website modern yang dibagi menjadi component-component kecil yang bisa dipakai ulang. Anda akan belajar membuat website yang lebih terorganisir dan mudah untuk ditambah fitur baru.",
                 "output": "React application dengan berbagai pages dan reusable components",
-                "tools": ["VS Code", "Node.js", "Vite"],
+                "tools": [
+                    "VS Code",
+                    "Node.js",
+                    "Vite"
+                ],
                 "level": "advanced",
                 "duration": "1-2 hari"
             },
             {
                 "skill_id": "nodejs",
                 "title": "Node.js Express API",
-                "instruction": "1. Inisialisasi project: npm init -y && npm install express cors body-parser\n2. Buat server.js dengan Express setup dasar\n3. Configure middleware: app.use(express.json()), app.use(cors())\n4. Buat 3 endpoints:\n   - GET /api/items - return array of items\n   - POST /api/items - create item (validate request body)\n   - PUT/DELETE /api/items/:id - update/delete item\n5. Implement error handling dengan try-catch\n6. Return proper HTTP status codes (200, 201, 400, 404, 500)\n7. Tes semua endpoints dengan Postman\n8. Log requests ke console\n9. Start server: node server.js",
+                "instruction": "Inisialisasi project Node.js dan install Express beserta middleware yang dibutuhkan. Buat server.js dengan konfigurasi dasar Express, lalu tambahkan tiga endpoint: GET untuk mengambil data, POST untuk membuat item baru, serta PUT/DELETE untuk mengupdate atau menghapus berdasarkan ID. Setiap endpoint harus memiliki error handling dan mengembalikan HTTP status code yang tepat. Uji semua endpoint menggunakan Postman.",
                 "description": "Membuat backend server yang bisa menerima request dari client dan memberikan data. Anda akan belajar bagaimana website berbicara dengan database dan meresponse request pengguna.",
                 "output": "Express.js server dengan 3 working endpoints",
-                "tools": ["VS Code", "Node.js", "Postman"],
+                "tools": [
+                    "VS Code",
+                    "Node.js",
+                    "Postman"
+                ],
                 "level": "intermediate",
                 "duration": "1 hari"
             },
             {
                 "skill_id": "sql",
                 "title": "SQL Database",
-                "instruction": "1. Design ER diagram dengan min 3 tabel (buat di paper atau tool)\n2. Buat tabel dalam MySQL:\n   - users (id, name, email, created_at)\n   - posts (id, user_id, title, content, created_at)\n   - comments (id, post_id, user_id, text, created_at)\n3. Atur foreign keys dengan CONSTRAINT\n4. Insert sample data ke setiap tabel (min 5 records per tabel)\n5. Tulis SELECT queries:\n   - Query simple: SELECT * FROM users\n   - Query JOIN: SELECT posts.title, users.name FROM posts JOIN users\n   - Query GROUP BY: SELECT user_id, COUNT(*) FROM posts GROUP BY user_id\n   - Query ORDER BY dengan LIMIT\n6. Latihan UPDATE dan DELETE operations\n7. Dokumentasi semua queries",
+                "instruction": "Rancang ER diagram dengan minimal tiga tabel (users, posts, comments), lalu buat tabelnya di MySQL lengkap dengan foreign key antar tabel. Isi setiap tabel dengan minimal lima data contoh, kemudian latih berbagai query mulai dari SELECT sederhana, JOIN antar tabel, GROUP BY, hingga ORDER BY dengan LIMIT. Praktikkan juga operasi UPDATE dan DELETE, lalu dokumentasikan semua query yang dibuat.",
                 "description": "Belajar menyimpan dan mengambil data dari database dengan cara yang terstruktur. Anda akan memahami bagaimana website besar menyimpan jutaan data user dan cara menemukannya dengan cepat.",
                 "output": "Database dengan 3 tabel ter-relasi dan SQL queries yang berfungsi",
-                "tools": ["MySQL", "MySQL Workbench"],
+                "tools": [
+                    "MySQL",
+                    "MySQL Workbench"
+                ],
                 "level": "intermediate",
                 "duration": "1 hari"
             },
             {
                 "skill_id": "docker",
                 "title": "Docker Container",
-                "instruction": "1. Pasang Docker Desktop\n2. Buat Dockerfile di root project:\n   - FROM node:18\n   - WORKDIR /app\n   - COPY package*.json ./\n   - RUN npm install\n   - COPY . .\n   - EXPOSE 3000\n   - CMD ['npm', 'start']\n3. Bangun image: docker build -t my-app:1.0 .\n4. Jalankan container: docker run -p 3000:3000 my-app:1.0\n5. Verify app berjalan di localhost:3000\n6. Buat docker-compose.yml untuk menjalankan berbagai services (app + database)\n7. Tes: docker-compose up",
+                "instruction": "Install Docker Desktop, lalu buat Dockerfile di root project dengan instruksi untuk menggunakan base image Node.js, menyalin file, menginstall dependencies, dan menjalankan aplikasi. Build image tersebut dan jalankan sebagai container, verifikasi aplikasi berjalan di localhost. Selanjutnya buat docker-compose.yml untuk menjalankan beberapa service sekaligus (aplikasi dan database), lalu uji dengan docker-compose up.",
                 "description": "Mengemas aplikasi Anda dalam box (container) sehingga bisa dijalankan di mana saja tanpa perlu install banyak hal. Mirip seperti membungkus aplikasi beserta semua kebutuhan-nya untuk dikirim ke orang lain.",
                 "output": "Docker image dan running container",
-                "tools": ["Docker", "Docker Desktop"],
+                "tools": [
+                    "Docker",
+                    "Docker Desktop"
+                ],
                 "level": "intermediate",
                 "duration": "2 jam"
             },
             {
                 "skill_id": "authentication",
                 "title": "JWT Authentication",
-                "instruction": "1. Pasang bcryptjs dan jsonwebtoken: npm install bcryptjs jsonwebtoken\n2. Buat /register endpoint:\n   - Accept username, password\n   - Hash password dengan bcryptjs\n   - Store di database\n   - Return success message\n3. Buat /login endpoint:\n   - Accept username, password\n   - Find user di database\n   - Compare password dengan bcryptjs.compare()\n   - Generate JWT token jika match\n   - Return token\n4. Buat middleware verifyToken untuk protect routes:\n   - Extract token dari header Authorization\n   - Verify dengan jwt.verify()\n   - Return error jika invalid\n5. Implement refresh token mechanism (optional)\n6. Tes dengan Postman: login -> save token -> use token di header untuk akses protected route",
+                "instruction": "Install bcryptjs dan jsonwebtoken, lalu buat endpoint /register yang menerima username dan password, meng-hash password dengan bcryptjs, dan menyimpannya ke database. Buat juga endpoint /login yang memverifikasi password dan menghasilkan JWT token jika cocok. Buat middleware verifyToken untuk melindungi route tertentu dengan cara memvalidasi token dari header Authorization. Uji alur lengkapnya di Postman: login, simpan token, lalu gunakan token untuk mengakses protected route.",
                 "description": "Membuat sistem login yang aman agar hanya user yang terdaftar bisa akses fitur tertentu. Anda akan belajar cara melindungi password dan membuat session user yang aman.",
                 "output": "Authentication system dengan JWT token",
-                "tools": ["VS Code", "Node.js", "Postman"],
+                "tools": [
+                    "VS Code",
+                    "Node.js",
+                    "Postman"
+                ],
                 "level": "advanced",
                 "duration": "1-2 hari"
             },
             {
                 "skill_id": "testing",
                 "title": "Unit Testing",
-                "instruction": "1. Pasang Jest dan React Testing Library: npm install --save-dev @testing-library/react @testing-library/jest-dom jest\n2. Siapkan Jest config di package.json\n3. Untuk React components:\n   - Tes rendering: render(<Component />) dan check jika ada di document\n   - Tes user interactions: fireEvent.click(), userEvent.type()\n   - Tes conditional rendering: mount dengan different props\n   - Mock API calls dengan jest.mock()\n4. Untuk Node.js functions:\n   - Tes return values dengan expect(func()).toBe()\n   - Tes error handling dengan expect(() => func()).toThrow()\n5. Aim for 80%+ code coverage\n6. Jalankan tests: npm test\n7. Monitor coverage: npm test -- --coverage",
+                "instruction": "Install Jest dan React Testing Library, lalu konfigurasi Jest di package.json. Tulis test untuk React components mencakup rendering, interaksi pengguna (klik, ketik), conditional rendering, dan mock API call. Untuk fungsi Node.js, uji return value dan error handling. Targetkan code coverage minimal 80%, jalankan test dengan npm test, dan pantau hasilnya dengan flag --coverage.",
                 "description": "Menulis tes otomatis untuk memastikan kode Anda berfungsi dengan benar. Seperti memiliki asisten yang selalu mengecek apakah kode masih berfungsi setelah Anda membuat perubahan.",
                 "output": "Test suite dengan coverage minimal 80%",
-                "tools": ["Jest", "React Testing Library", "VS Code"],
+                "tools": [
+                    "Jest",
+                    "React Testing Library",
+                    "VS Code"
+                ],
                 "level": "advanced",
                 "duration": "1 hari"
             },
             {
                 "skill_id": "deployment",
                 "title": "Cloud Deployment",
-                "instruction": "1. Frontend deployment ke Vercel:\n   - Hubungkan GitHub repo ke Vercel\n   - Konfigurasi build command: npm run build\n   - Sebarkan otomatis setiap push ke main branch\n2. Backend deployment ke Heroku atau Railway:\n   - Buat Procfile: web: npm start\n   - Push ke Heroku: git push heroku main\n   - Atau setup Railway dari GitHub\n3. Database deployment:\n   - Gunakan MongoDB Atlas (cloud) atau MySQL managed service\n   - Siapkan connection string di environment variables\n4. Configure environment variables:\n   - DATABASE_URL, JWT_SECRET, API_KEY di hosting provider\n5. Tes production URL dan verifikasi semua fitur berfungsi\n6. Siapkan monitoring dan logging",
+                "instruction": "Deploy frontend ke Vercel dengan menghubungkan repo GitHub dan mengatur build command. Deploy backend ke Heroku atau Railway dengan membuat Procfile dan push ke platform tersebut. Gunakan layanan database cloud seperti MongoDB Atlas atau MySQL managed, lalu konfigurasi semua environment variable (DATABASE_URL, JWT_SECRET, dll.) di masing-masing platform. Uji URL produksi untuk memastikan semua fitur berjalan.",
                 "description": "Mengunggah aplikasi Anda ke internet sehingga bisa diakses oleh siapa saja dari mana saja. Bukan hanya di komputer lokal, tapi benar-benar live di server internet.",
                 "output": "Application yang dapat diakses via public URL",
-                "tools": ["Vercel", "Heroku", "Railway", "MongoDB Atlas"],
+                "tools": [
+                    "Vercel",
+                    "Heroku",
+                    "Railway",
+                    "MongoDB Atlas"
+                ],
                 "level": "advanced",
                 "duration": "1 hari"
             }
@@ -110,100 +146,135 @@
             {
                 "skill_id": "engine_basic",
                 "title": "Pelajari Dasar Mesin",
-                "instruction": "1. Belajar 4 siklus motor bensin:\n   - Intake stroke: katup intake buka, piston turun\n   - Compression: kedua katup tutup, piston naik\n   - Power: busi nyala, ledakan, piston turun\n   - Exhaust: katup exhaust buka, piston naik keluarkan gas\n2. Pelajari component utama: piston, ring, connecting rod, crankshaft, camshaft, valve\n3. Pahami timing diagram dan kapan setiap katup harus buka/tutup\n4. Buat sketsa atau diagram untuk setiap stroke\n5. Buat presentasi atau video penjelasan untuk teman\n6. Bandingkan motor 2 tak vs 4 tak",
+                "instruction": "Pelajari empat siklus mesin bensin secara berurutan: intake (piston turun menyedot campuran udara-bahan bakar), compression (piston naik memampatkan campuran), power (busi menyala dan ledakan mendorong piston turun), lalu exhaust (gas buang dikeluarkan). Pahami komponen utama seperti piston, ring, connecting rod, crankshaft, camshaft, dan katup. Buat sketsa diagram untuk setiap langkah, lalu bandingkan cara kerja mesin dua tak dan empat tak.",
                 "description": "Memahami cara kerja dasar mesin motor sehingga Anda bisa tahu apa yang terjadi di dalam ketika mesin menyala. Ini adalah fondasi untuk semua perbaikan motor nantinya.",
                 "output": "Pemahaman lengkap tentang cara kerja mesin motor",
-                "tools": ["Dokumen/Paper", "Video"],
+                "tools": [
+                    "Dokumen/Paper",
+                    "Video"
+                ],
                 "level": "basic",
                 "duration": "3 jam"
             },
             {
                 "skill_id": "tools",
                 "title": "Penguasaan Tools",
-                "instruction": "1. Kenali tools mekanik:\n   - Wrench set (berbagai ukuran)\n   - Screwdriver set (flat, Phillips)\n   - Socket set dengan ratchet\n   - Multimeter (untuk electrical)\n   - Engine scanner (untuk diagnosa)\n2. Untuk setiap tool, pelajari:\n   - Cara menggunakan yang benar\n   - Ukuran yang tepat untuk setiap baut\n   - Cara merawat dan bersihkan\n3. Latihan penggunaan di motor yang aman (tidak hidup)\n4. Buat checklist tool yang penting di workshop\n5. Pelajari storage yang benar untuk setiap tool",
+                "instruction": "Kenali satu per satu peralatan bengkel: berbagai ukuran kunci pas, set obeng (pipih dan Phillips), socket set dengan ratchet, multimeter untuk kelistrikan, dan scanner mesin untuk diagnosa. Untuk setiap alat, pelajari cara penggunaannya yang benar, ukuran yang sesuai untuk tiap baut, serta cara merawatnya. Latih penggunaannya pada motor yang tidak menyala, lalu buat daftar peralatan penting untuk workshop beserta panduan penyimpanannya.",
                 "description": "Belajar menggunakan peralatan bengkel dengan benar dan aman. Tools yang tepat membuat pekerjaan lebih mudah dan motor tidak rusak.",
                 "output": "Kemampuan menggunakan tools mekanik dengan benar",
-                "tools": ["Tool set", "Motor percobaan"],
+                "tools": [
+                    "Tool set",
+                    "Motor percobaan"
+                ],
                 "level": "basic",
                 "duration": "2 jam"
             },
             {
                 "skill_id": "safety",
                 "title": "Keselamatan Kerja",
-                "instruction": "1. Kenali PPE (Personal Protective Equipment):\n   - Safety glasses: proteksi mata dari percikan\n   - Gloves: proteksi tangan dari minyak dan tajam\n   - Safety helmet: saat bekerja di area tinggi\n   - Safety boots: proteksi kaki dari benda berat\n2. Pelajari prosedur keselamatan:\n   - Selalu matikan mesin sebelum kerja\n   - Gunakan jack dan block untuk keamanan\n   - Jangan memakai perhiasan longgar\n   - Rambut panjang harus diikat\n3. Handle bahan kimia dengan aman (bensin, oli, degreaser)\n4. Ketahui lokasi fire extinguisher dan first aid\n5. Buat safety manual/checklist untuk workshop",
+                "instruction": "Kenali perlengkapan keselamatan (PPE) yang wajib digunakan: kacamata pelindung, sarung tangan, helm, dan sepatu safety. Pelajari prosedur aman seperti selalu mematikan mesin sebelum bekerja, menggunakan jack dan block dengan benar, tidak mengenakan perhiasan longgar, dan mengikat rambut panjang. Pahami cara menangani bahan kimia seperti bensin dan oli, ketahui lokasi alat pemadam kebakaran dan P3K, lalu susun safety checklist untuk workshop.",
                 "description": "Mempelajari cara bekerja di bengkel dengan selamat tanpa cedera. Keselamatan adalah prioritas utama seorang mekanik profesional.",
                 "output": "Pengetahuan tentang prosedur keselamatan kerja",
-                "tools": ["PPE", "Dokumen safety"],
+                "tools": [
+                    "PPE",
+                    "Dokumen safety"
+                ],
                 "level": "basic",
                 "duration": "2 jam"
             },
             {
                 "skill_id": "fuel_system",
                 "title": "Diagnosa Fuel System",
-                "instruction": "1. Pahami component fuel system: fuel tank, fuel pump, fuel filter, fuel injector, fuel pressure regulator\n2. Diagnosa masalah:\n   - Motor sulit start: check fuel pump, fuel filter, spark plug\n   - Idle tidak stabil: fuel injector mungkin kotor\n   - Consumption tinggi: pressure regulator bermasalah\n3. Praktik membersihkan fuel injector:\n   - Lepas fuel rail dari motor\n   - Lepas injector dengan hati-hati\n   - Gunakan ultrasonic cleaner atau solvent\n   - Cek spray pattern dengan pressure tester\n4. Ganti fuel filter sesuai interval\n5. Tes fuel pressure dengan pressure gauge (harus sesuai spesifikasi)\n6. Dokumentasikan hasil diagnosa dan perbaikan",
+                "instruction": "Pahami komponen sistem bahan bakar dari tangki hingga injektor, lalu pelajari cara mendiagnosa masalah umum seperti motor sulit starter, idle tidak stabil, atau konsumsi bahan bakar tinggi. Praktikkan pembersihan fuel injector mulai dari melepas fuel rail, membersihkan injektor dengan ultrasonic cleaner atau solvent, hingga mengecek pola semprotannya. Ganti filter bahan bakar sesuai interval dan ukur tekanan bahan bakar menggunakan pressure gauge untuk memastikan sesuai spesifikasi.",
                 "description": "Belajar merawat sistem bahan bakar motor agar mesin mendapat asupan bahan bakar yang stabil dan bersih. Sistem ini penting untuk performance mesin yang optimal.",
                 "output": "Kemampuan diagnosa dan perbaikan fuel system",
-                "tools": ["Fuel pressure tester", "Fuel injector cleaner", "Wrench"],
+                "tools": [
+                    "Fuel pressure tester",
+                    "Fuel injector cleaner",
+                    "Wrench"
+                ],
                 "level": "intermediate",
                 "duration": "1 hari"
             },
             {
                 "skill_id": "electrical",
                 "title": "Sistem Kelistrikan",
-                "instruction": "1. Pelajari 3 subsystem:\n   - Starting system: battery, starter motor, solenoid\n   - Charging system: alternator, voltage regulator, battery\n   - Lighting system: headlight, taillight, turn signal\n2. Gunakan multimeter untuk test:\n   - Battery voltage (harus 12-13.5V saat mesin hidup)\n   - Ground connection dengan test lamp\n   - Continuity kabel-kabel\n   - Output alternator minimal 13.8V\n3. Diagnosa masalah:\n   - Motor tidak nyala: test battery dan starter\n   - Lampu redup: test alternator output\n   - Fuse jebol: cari short circuit\n4. Ganti component rusak dengan yang sesuai spesifikasi\n5. Dokumentasi hasil test",
+                "instruction": "Pelajari tiga subsistem kelistrikan motor: starting (baterai, starter, solenoid), charging (alternator, voltage regulator), dan lighting (lampu depan, belakang, sein). Gunakan multimeter untuk mengukur tegangan baterai, mengecek koneksi ground, memverifikasi kontinuitas kabel, serta mengukur output alternator. Diagnosa masalah seperti motor tidak mau menyala, lampu redup, atau sekring yang terus putus, lalu ganti komponen yang rusak sesuai spesifikasi.",
                 "description": "Memahami sistem listrik motor sehingga Anda bisa mengatasi masalah seperti motor tidak nyala atau lampu redup. Sistem ini penting untuk keselamatan berkendara.",
                 "output": "Kemampuan test dan perbaikan sistem electrical motor",
-                "tools": ["Multimeter", "Tes lamp", "Battery charger"],
+                "tools": [
+                    "Multimeter",
+                    "Tes lamp",
+                    "Battery charger"
+                ],
                 "level": "intermediate",
                 "duration": "1 hari"
             },
             {
                 "skill_id": "brake_system",
                 "title": "Perbaikan Rem",
-                "instruction": "1. Ketahui jenis rem: cakram (disc) dan drum\n2. Untuk disc brake:\n   - Lepas roda dan caliper\n   - Ganti brake pads yang aus (thickness < 2mm ganti)\n   - Clean disc dengan brake cleaner\n   - Bleed sistem (lepas air dari hydraulic lines)\n   - Tes rem sebelum berkendara\n3. Untuk drum brake:\n   - Lepas drum\n   - Inspect brake shoes\n   - Adjust lever jika perlu\n   - Ganti pads jika tebal < 2mm\n4. Tes brake lever feel - harus solid, tidak spongy\n5. Check brake fluid level dan condition\n6. Dokumentasikan maintenance",
+                "instruction": "Pahami perbedaan rem cakram dan rem tromol, lalu praktikkan penggantian kampas rem pada keduanya. Untuk rem cakram, lepas roda dan kaliper, ganti kampas yang sudah tipis (di bawah 2mm), bersihkan piringan, dan bleeding sistem hidrolik. Untuk rem tromol, buka drum, periksa sepatu rem, sesuaikan lever jika perlu. Pastikan tuas rem terasa solid (tidak spons), periksa level dan kondisi minyak rem, lalu catat hasil perawatannya.",
                 "description": "Belajar merawat rem motor agar selalu berfungsi dengan baik. Rem yang bagus adalah kunci keselamatan berkendara.",
                 "output": "Kemampuan maintain dan perbaiki sistem rem motor",
-                "tools": ["Brake tool set", "Brake fluid", "Wrench"],
+                "tools": [
+                    "Brake tool set",
+                    "Brake fluid",
+                    "Wrench"
+                ],
                 "level": "intermediate",
                 "duration": "1 hari"
             },
             {
                 "skill_id": "transmission",
                 "title": "Transmisi & Kopling",
-                "instruction": "1. Pelajari tipe transmisi: manual, automatic, CVT\n2. Pahami cara kerja kopling di manual transmission:\n   - Engaging: kopling engage saat motor start\n   - Disengaging: kopling lepas saat ganti gear\n3. Diagnosa masalah kopling:\n   - Slipping: kopling tidak engage penuh, buat jerking/getaran\n   - Dragging: kopling tidak lepas penuh saat shift\n   - Grabbing: gear tidak smooth saat shift\n4. Adjust cable kopling jika perlu (ada cable slack)\n5. Ganti kopling plates jika sudah aus (harus smooth surface)\n6. Bleed kopling hydraulic jika ada air\n7. Tes transmission smooth gear shift tanpa jerking",
+                "instruction": "Pelajari jenis-jenis transmisi (manual, otomatis, CVT) dan cara kerja kopling dalam memindahkan tenaga. Diagnosa masalah kopling seperti slipping (tidak engage penuh), dragging (tidak lepas sempurna), atau grabbing (perpindahan gear kasar). Sesuaikan kabel kopling jika ada kelonggaran, ganti kopling plate yang sudah aus, bleeding sistem hidrolik kopling jika diperlukan, lalu uji perpindahan gear untuk memastikan hasilnya mulus.",
                 "description": "Mempelajari bagaimana motor mentransfer tenaga ke roda lewat transmisi. Kopling yang baik membuat perubahan gear smooth dan aman.",
                 "output": "Kemampuan adjust dan perbaikan transmisi dan kopling",
-                "tools": ["Transmission tool", "Hydraulic fluid", "Wrench"],
+                "tools": [
+                    "Transmission tool",
+                    "Hydraulic fluid",
+                    "Wrench"
+                ],
                 "level": "advanced",
                 "duration": "1-2 hari"
             },
             {
                 "skill_id": "diagnostic",
                 "title": "Diagnostik Mesin",
-                "instruction": "1. Pelajari OBD (On-Board Diagnostics) system dan trouble codes\n2. Gunakan engine scanner:\n   - Hubungkan ke OBD port di motor\n   - Baca fault codes (contoh: P0300 = random misfire)\n   - Interpret error codes menggunakan manual\n   - Clear codes setelah perbaikan\n3. Praktik reading sensor data:\n   - RPM, engine load, coolant temperature\n   - Fuel pressure, ignition timing\n   - Oxygen sensor output\n4. Diagnosa masalah umum:\n   - Check engine light nyala: read code\n   - Motor idle kasar: cek ignition timing, fuel pressure\n   - Power loss: cek air filter, fuel supply\n5. Buat diagnostic report dengan findings",
+                "instruction": "Pelajari sistem OBD dan cara membaca fault code dari motor modern. Hubungkan engine scanner ke port OBD, baca kode kesalahan yang muncul, interpretasikan setiap kode menggunakan manual, lalu clear code setelah perbaikan selesai. Latih pembacaan data sensor secara live seperti RPM, suhu mesin, dan tekanan bahan bakar. Gunakan data ini untuk mendiagnosa masalah seperti check engine menyala, idle kasar, atau tenaga mesin yang berkurang.",
                 "description": "Menggunakan teknologi scanner modern untuk menemukan masalah mesin dengan akurat dan cepat. Ini membuat perbaikan lebih efisien dan tepat sasaran.",
                 "output": "Kemampuan menggunakan engine scanner untuk diagnostik",
-                "tools": ["Engine scanner", "Diagnostic software"],
+                "tools": [
+                    "Engine scanner",
+                    "Diagnostic software"
+                ],
                 "level": "advanced",
                 "duration": "1 hari"
             },
             {
                 "skill_id": "custom",
                 "title": "Custom & Modifikasi",
-                "instruction": "1. Konsultasi dengan customer:\n   - Tanya kebutuhan: performance, tampilan, comfort?\n   - Diskusikan budget dan timeline\n   - Jelaskan pro/cons modifikasi\n2. Modifikasi yang aman:\n   - Exhaust upgrade: improve flow, performance improve\n   - Air intake: bolt-on filter atau full intake system\n   - Suspension: lower spring untuk handling lebih baik\n   - Wheels: ukuran yang sesuai PCD motor\n3. Dokumentasi semua parts yang digunakan:\n   - Part name, part number, supplier\n   - Pasangation date, warranty\n4. Tes setelah modifikasi:\n   - Engine performance test\n   - Handling test\n   - Safety check semua component\n5. Jangan modifikasi engine internal tanpa expertise",
+                "instruction": "Awali dengan konsultasi bersama customer untuk memahami kebutuhan mereka — apakah ingin meningkatkan performa, tampilan, atau kenyamanan — sambil mendiskusikan budget dan timeline. Lakukan modifikasi yang aman seperti upgrade knalpot, pemasangan air intake aftermarket, penyesuaian suspensi, atau penggantian velg sesuai PCD motor. Catat semua komponen yang digunakan beserta nomor part dan tanggal pemasangannya, lalu uji hasilnya dari sisi performa, handling, dan keamanan.",
                 "description": "Membantu customer menyesuaikan motor sesuai kebutuhan mereka tanpa mengorbankan keselamatan atau keandalan motor. Custom yang baik membuat motor lebih cocok untuk pemilik.",
                 "output": "Kemampuan melakukan modifikasi motor yang aman",
-                "tools": ["Modification parts", "Wrench set", "Tes equipment"],
+                "tools": [
+                    "Modification parts",
+                    "Wrench set",
+                    "Tes equipment"
+                ],
                 "level": "advanced",
                 "duration": "1-2 hari"
             },
             {
                 "skill_id": "business",
                 "title": "Manajemen Bengkel",
-                "instruction": "1. Inventory management:\n   - Buat list spare parts dengan harga dan supplier\n   - Monitor stock level, set reorder point\n   - Organize storage agar mudah cari\n2. Pricing strategy:\n   - Calculate labor cost (jam kerja × hourly rate)\n   - Add markup untuk profit (20-30%)\n   - Competitive dengan bengkel lain\n3. Customer relationship:\n   - Keep customer database dengan contact info\n   - Record service history setiap motor\n   - Follow up dengan customer setelah servis\n4. Warranty management:\n   - Define warranty period (minimal 30 hari)\n   - Track warranty claims\n   - Solve warranty issues cepat\n5. Financial tracking:\n   - Record income dan expenses\n   - Calculate monthly profit\n   - Plan business expansion",
+                "instruction": "Kelola inventaris spare part dengan membuat daftar lengkap beserta harga dan supplier, pantau stok secara rutin, dan atur penyimpanan agar mudah ditemukan. Hitung harga layanan secara transparan dengan memperhitungkan biaya tenaga kerja, markup keuntungan, dan harga pasar. Bangun database pelanggan, catat riwayat servis setiap motor, dan lakukan follow-up setelah servis. Lacak pemasukan dan pengeluaran bulanan untuk menghitung profit dan merencanakan pengembangan bengkel.",
                 "description": "Belajar menjalankan bengkel sebagai bisnis yang menguntungkan, dari mengelola stok spare part hingga layanan pelanggan yang baik. Ini penting untuk kesuksesan jangka panjang.",
                 "output": "Sistem manajemen bengkel yang terorganisir",
-                "tools": ["Accounting software", "Inventory system"],
+                "tools": [
+                    "Accounting software",
+                    "Inventory system"
+                ],
                 "level": "advanced",
                 "duration": "1 hari"
             }
@@ -215,100 +286,132 @@
             {
                 "skill_id": "c_sharp",
                 "title": "C# Fundamentals",
-                "instruction": "1. Siapkan: Pasang Visual Studio Community (free)\n2. Pelajari syntax dasar:\n   - Variables: int, float, string, bool dengan type declaration\n   - Operators: arithmetic, comparison, logical\n   - Control flow: if/else, switch, ternary operator\n3. Loops:\n   - for loop: for(int i=0; i<10; i++)\n   - while/do-while: condition-based loop\n   - foreach: iterate through collections\n4. Functions:\n   - Method declaration, parameters, return type\n   - Overloading: berbagai methods sama name dengan different params\n5. OOP Basics:\n   - Classes dan objects\n   - Properties dan methods\n   - Constructors\n6. Collections:\n   - Arrays: int[] numbers = new int[10]\n   - Lists: List<int> numbers = new List<int>()\n   - Dictionaries: Dictionary<string, int>\n7. Latihan dengan coding problems",
+                "instruction": "Mulai dengan menginstall Visual Studio Community, lalu pelajari sintaks dasar C# seperti deklarasi variabel, operator, dan kontrol alur (if/else, switch). Latih penggunaan loop (for, while, foreach) dan buat berbagai fungsi dengan parameter serta return type yang berbeda. Pahami konsep OOP dasar seperti class, object, property, method, dan constructor. Eksplor penggunaan koleksi data seperti array, List, dan Dictionary melalui latihan soal coding.",
                 "description": "Belajar bahasa pemrograman yang digunakan untuk membuat game di Unity. Anda akan memahami konsep dasar coding seperti variabel, loop, dan fungsi.",
                 "output": "Pemahaman C# syntax dan OOP basics",
-                "tools": ["Visual Studio", "VS Code"],
+                "tools": [
+                    "Visual Studio",
+                    "VS Code"
+                ],
                 "level": "basic",
                 "duration": "2 hari"
             },
             {
                 "skill_id": "unity",
                 "title": "Unity Engine Basics",
-                "instruction": "1. Pasang Unity Hub dan Unity Editor (LTS version)\n2. Buat new 2D project\n3. Belajar UI elements:\n   - Scene: tempat game objects hidup\n   - Hierarchy: tree dari semua objects di scene\n   - Inspector: properties object yang selected\n4. Buat simple 2D game (dot avoiding):\n   - Buat player sprite (simple square atau circle)\n   - Buat enemy sprites\n   - Add Rigidbody2D dan Collider untuk physics\n5. Implement movement:\n   - Script C#: GetAxis untuk input\n   - Translate atau Rigidbody.velocity untuk movement\n6. Implement collision:\n   - OnCollisionEnter2D() atau OnTriggerEnter2D()\n   - Count score saat collect item\n7. Bangun dan export game sebagai .exe atau .apk",
+                "instruction": "Install Unity Hub dan buat project 2D baru. Kenali elemen antarmuka utama: Scene sebagai dunia game, Hierarchy sebagai daftar objek, dan Inspector sebagai panel properti. Buat game sederhana seperti menghindari musuh dengan cara membuat sprite untuk player dan enemy, menambahkan Rigidbody2D dan Collider untuk fisika, lalu tulis script C# untuk pergerakan menggunakan input sumbu. Implementasikan deteksi tabrakan untuk menghitung skor, kemudian build game menjadi file yang bisa dijalankan.",
                 "description": "Belajar menggunakan game engine Unity untuk membuat game 2D. Anda akan lihat bagaimana physics, sprite, dan script bekerja sama membuat game.",
                 "output": "Simple 2D game yang bisa dimainkan",
-                "tools": ["Unity", "VS Code"],
+                "tools": [
+                    "Unity",
+                    "VS Code"
+                ],
                 "level": "intermediate",
                 "duration": "1 hari"
             },
             {
                 "skill_id": "graphics",
                 "title": "Graphics Programming",
-                "instruction": "1. Pahami graphics pipeline:\n   - Vertex shader: posisi object di 3D space\n   - Fragment/Pixel shader: warna setiap pixel\n   - Rasterization: convert 3D ke 2D pixels\n2. Belajar Shader Lab (Unity shader language)\n3. Buat custom shaders:\n   - Basic color shader\n   - Texture mapping shader\n   - Normal mapping untuk 3D lighting effect\n   - Parallax mapping untuk depth illusion\n4. Optimize graphics:\n   - Bake lighting untuk reduce runtime calculation\n   - Use LOD (Level of Detail) untuk distant objects\n   - Reduce poly count dengan optimization tools\n5. Profile dengan Unity Profiler untuk find bottlenecks\n6. Tes di berbagai GPU capability",
+                "instruction": "Pahami alur graphics pipeline dari vertex shader (posisi objek di ruang 3D) hingga fragment shader (warna tiap piksel) dan proses rasterisasi. Buat beberapa custom shader menggunakan ShaderLab: mulai dari shader warna dasar, texture mapping, normal mapping untuk efek pencahayaan 3D, hingga parallax mapping untuk ilusi kedalaman. Optimalkan grafis dengan baking lighting, LOD untuk objek jauh, dan pengurangan jumlah polygon, lalu gunakan Unity Profiler untuk menemukan bottleneck.",
                 "description": "Memahami bagaimana komputer mengubah 3D model menjadi gambar yang Anda lihat. Dengan pengetahuan ini, Anda bisa membuat game dengan grafis yang bagus dan performance optimal.",
                 "output": "Custom shaders dan optimized graphics",
-                "tools": ["Unity", "Shader Lab", "Profiler"],
+                "tools": [
+                    "Unity",
+                    "Shader Lab",
+                    "Profiler"
+                ],
                 "level": "advanced",
                 "duration": "2 hari"
             },
             {
                 "skill_id": "physics",
                 "title": "Physics Engine",
-                "instruction": "1. Siapkan physics di Unity:\n   - Add Rigidbody component untuk objects yang perlu physics\n   - Configure mass, drag, constraints\n2. Add colliders:\n   - Box Collider: untuk rectangular objects\n   - Sphere Collider: untuk round objects\n   - Capsule Collider: untuk character\n3. Implement movement dengan physics:\n   - AddForce(): apply force ke object\n   - Velocity: set direct velocity\n   - MovePosition(): smooth movement\n4. Implement gravity dan jumping:\n   - Gravity automatic dari physics\n   - Detect ground dengan raycast\n   - Apply upward force saat jump\n5. Buat platformer mechanics:\n   - Moving platforms\n   - Slopes dan slippery surfaces\n   - Double jump\n6. Tes dengan berbagai mass dan forces",
+                "instruction": "Tambahkan Rigidbody component pada objek yang membutuhkan fisika dan konfigurasikan mass, drag, serta constraints-nya. Pasang collider yang sesuai (Box, Sphere, atau Capsule) lalu implementasikan pergerakan berbasis fisika menggunakan AddForce(), velocity, atau MovePosition(). Buat mekanik lompatan dengan mendeteksi tanah via raycast lalu memberikan gaya ke atas, kemudian tambahkan elemen platform seperti platform bergerak, kemiringan, dan double jump. Uji dengan berbagai nilai massa dan gaya.",
                 "description": "Belajar membuat gerakan game yang terasa natural dengan menggunakan physics engine. Karakter bisa jatuh, melompat, dan berinteraksi dengan dunia game dengan natural.",
                 "output": "Game dengan physics-based movement",
-                "tools": ["Unity", "Physics engine"],
+                "tools": [
+                    "Unity",
+                    "Physics engine"
+                ],
                 "level": "intermediate",
                 "duration": "1 hari"
             },
             {
                 "skill_id": "audio",
                 "title": "Audio Programming",
-                "instruction": "1. Prepare audio files: MP3 atau WAV format\n2. Impor ke Unity dan configure:\n   - Audio Importer settings\n   - Set compression untuk optimize size\n3. Buat AudioManager script:\n   - Method PlaySound(string soundName)\n   - Method PlayMusic(string musicName)\n4. Siapkan audio sources di scenes:\n   - 2D Audio Source: untuk UI sounds, tanpa position\n   - 3D Audio Source: untuk game world sounds, position-based\n5. Implement sound triggering:\n   - Play jump sound saat player jump\n   - Play collision sound saat collision\n   - Background music loop\n6. Audio settings:\n   - Volume control (0-1 scale)\n   - Pitch variation untuk variation\n   - Fade in/out dengan Lerp\n7. Tes audio di berbagai device",
+                "instruction": "Siapkan file audio dalam format MP3 atau WAV, impor ke Unity, dan atur kompresi untuk mengoptimalkan ukuran file. Buat AudioManager script dengan method PlaySound() dan PlayMusic() yang bisa dipanggil dari manapun. Gunakan 2D Audio Source untuk suara UI dan 3D Audio Source untuk suara dalam dunia game berdasarkan posisi. Hubungkan suara dengan event gameplay seperti lompatan, tabrakan, dan musik latar yang loop, lalu uji di berbagai perangkat.",
                 "description": "Menambahkan musik dan sound effects ke game untuk membuat gameplay lebih immersive. Audio yang tepat membuat game terasa lebih hidup dan exciting.",
                 "output": "Game dengan integrated audio system",
-                "tools": ["Unity", "Audacity"],
+                "tools": [
+                    "Unity",
+                    "Audacity"
+                ],
                 "level": "intermediate",
                 "duration": "1 hari"
             },
             {
                 "skill_id": "ai",
                 "title": "Game AI",
-                "instruction": "1. Implement pathfinding dengan A* algorithm:\n   - NavMesh setup di scene\n   - NavMeshAgent component untuk NPC\n   - SetDestination() untuk pathfinding\n2. Buat state machine untuk AI behavior:\n   - Idle state\n   - Chase state: saat detect player\n   - Attack state\n   - Flee state: saat HP rendah\n3. Implement decision making:\n   - Check distance ke player\n   - Check line of sight\n   - Random patrol points\n4. Add perception system:\n   - SphereCollider trigger untuk detection radius\n   - Raycast untuk line-of-sight check\n5. Tes AI behavior di berbagai scenarios\n6. Tune AI difficulty dengan parameters (speed, detection range, etc)",
+                "instruction": "Implementasikan pathfinding menggunakan NavMesh dengan cara memanggang NavMesh di scene dan menambahkan NavMeshAgent ke NPC. Buat state machine untuk perilaku AI dengan empat state: Idle, Chase (saat mendeteksi player), Attack, dan Flee (saat HP rendah). Tambahkan sistem persepsi menggunakan SphereCollider sebagai radius deteksi dan Raycast untuk mengecek line-of-sight. Uji perilaku AI dalam berbagai skenario dan sesuaikan parameter kesulitannya.",
                 "description": "Membuat karakter NPC (non-player character) yang terlihat pintar dan challenging. AI yang baik membuat game lebih fun dan engaging.",
                 "output": "Game dengan AI enemies/NPCs",
-                "tools": ["Unity", "NavMesh"],
+                "tools": [
+                    "Unity",
+                    "NavMesh"
+                ],
                 "level": "advanced",
                 "duration": "2 hari"
             },
             {
                 "skill_id": "gameplay",
                 "title": "Gameplay Design",
-                "instruction": "1. Buat Game Design Document (GDD):\n   - Game concept dan core loop\n   - Target audience dan platform\n   - Gameplay mechanics\n   - Win/lose conditions\n2. Design core gameplay loop:\n   - Player action (shoot, jump, collect)\n   - Sistem respons (damage, score, spawn enemy)\n   - Feedback ke player (visual, audio)\n3. Implement progression system:\n   - Levels dengan increasing difficulty\n   - Unlocking new abilities\n   - Scoring system\n4. Balance gameplay:\n   - Player difficulty curve\n   - Resource management\n   - Reward timing\n5. Tes gameplay:\n   - Playtest dengan friends\n   - Adjust difficulty\n   - Iterate berdasarkan feedback\n6. Documentation semua mechanics",
+                "instruction": "Mulai dengan membuat Game Design Document yang berisi konsep game, core loop, target pemain, mekanik gameplay, serta kondisi menang dan kalah. Rancang core loop yang melibatkan aksi pemain, respons sistem, dan umpan balik visual/audio. Implementasikan sistem progres dengan level yang semakin sulit, unlock kemampuan baru, dan sistem skor. Lakukan playtest bersama teman untuk menilai kesulitan dan kesenangan, lalu iterasi berdasarkan umpan balik yang didapat.",
                 "description": "Mendesain pengalaman bermain yang fun dan engaging. Gameplay yang baik membuat pemain terus ingin bermain dan tantang level berikutnya.",
                 "output": "Balanced game dengan progression system",
-                "tools": ["Unity", "GDD template"],
+                "tools": [
+                    "Unity",
+                    "GDD template"
+                ],
                 "level": "advanced",
                 "duration": "1-2 hari"
             },
             {
                 "skill_id": "optimization",
                 "title": "Performance Optimization",
-                "instruction": "1. Profile game dengan Unity Profiler:\n   - CPU usage analysis\n   - Memory usage tracking\n   - GPU bottlenecks\n2. Optimize rendering:\n   - Reduce draw calls dengan batching\n   - Use object pooling untuk frequent objects\n   - Disable objects outside camera\n   - LOD groups untuk distant objects\n3. Optimize physics:\n   - Reduce collider complexity\n   - Use kinematic rigidbodies untuk static objects\n   - Adjust physics tick rate\n4. Memory optimization:\n   - Compress textures\n   - Reduce poly count di models\n   - Unload unused assets\n5. Code optimization:\n   - Avoid expensive calculations di Update()\n   - Cache component references\n   - Use appropriate data structures\n6. Tes target FPS (60 FPS untuk smooth gameplay)",
+                "instruction": "Gunakan Unity Profiler untuk menganalisis penggunaan CPU, memori, dan GPU. Optimalkan rendering dengan mengurangi draw call melalui batching, terapkan object pooling untuk objek yang sering muncul, dan aktifkan LOD untuk objek yang jauh. Kurangi kompleksitas physics collider, gunakan kinematic rigidbody untuk objek statis, dan kompres tekstur agar ukuran memori lebih kecil. Hindari kalkulasi berat di dalam fungsi Update() dan cache referensi komponen. Target minimal 60 FPS untuk gameplay yang mulus.",
                 "description": "Membuat game yang lancar di berbagai device. Game yang lag membuat pengalaman bermain jelek, jadi optimization penting untuk game yang baik.",
                 "output": "Optimized game dengan stable 60+ FPS",
-                "tools": ["Unity Profiler", "Optimization tools"],
+                "tools": [
+                    "Unity Profiler",
+                    "Optimization tools"
+                ],
                 "level": "advanced",
                 "duration": "1 hari"
             },
             {
                 "skill_id": "mobile_dev",
                 "title": "Mobile Game Development",
-                "instruction": "1. Configure mobile platform:\n   - Bangun Settings: switch platform ke Android/iOS\n   - Player settings: screen orientation, resolution\n   - Bundle ID setup\n2. Optimize untuk mobile:\n   - Reduce quality settings\n   - Optimize touch controls (larger buttons)\n   - Battery usage considerations\n   - Network optimization untuk online features\n3. Implement touch controls:\n   - Input.touchCount untuk multi-touch\n   - Raycast untuk tap detection\n   - Swipe detection dengan drag\n4. Tes di real device:\n   - Bangun APK untuk Android\n   - Hubungkan device ke PC\n   - Debug di device dengan Logcat\n5. Handle device variations:\n   - Different screen sizes\n   - Different OS versions\n   - Performance variations\n6. Prepare untuk app store submission",
+                "instruction": "Atur platform di Build Settings ke Android atau iOS, lalu sesuaikan Player Settings untuk orientasi layar dan Bundle ID. Optimalkan kualitas grafis untuk mobile, perbesar elemen UI agar mudah disentuh, dan pertimbangkan konsumsi baterai. Implementasikan kontrol sentuh menggunakan Input.touchCount untuk multi-touch dan raycast untuk deteksi tap. Build APK untuk Android, sambungkan perangkat nyata, dan debug menggunakan Logcat. Tangani variasi layar dan versi OS yang berbeda.",
                 "description": "Membuat game yang dioptimalkan khusus untuk smartphone. Mobile game punya constraints berbeda dari PC, jadi perlu special considerations.",
                 "output": "Mobile game built dan tested",
-                "tools": ["Unity", "Android SDK", "iOS SDK"],
+                "tools": [
+                    "Unity",
+                    "Android SDK",
+                    "iOS SDK"
+                ],
                 "level": "advanced",
                 "duration": "1-2 hari"
             },
             {
                 "skill_id": "publishing",
                 "title": "Game Publishing",
-                "instruction": "1. Prepare game untuk release:\n   - Final QA testing\n   - Remove debug logs\n   - Optimize build size\n   - Buat icon dan splash screen\n2. Buat store listing:\n   - Tulis compelling game description\n   - Take screenshots (minimum 3, maximum 5)\n   - Buat trailer (30-60 seconds)\n   - Choose category dan keywords\n3. Siapkan analytics:\n   - Google Analytics untuk tracking\n   - Crash reporting (Firebase Crashlytics)\n   - Performance monitoring\n4. Submit ke app store:\n   - Google Play Console untuk Android\n   - App Store Connect untuk iOS\n   - Wait untuk review (1-3 days)\n5. Post-launch:\n   - Monitor reviews dan ratings\n   - Fix bugs quickly\n   - Plan updates dan new features\n   - Engage dengan community",
+                "instruction": "Persiapkan game untuk rilis dengan menjalankan QA final, menghapus debug log, mengoptimalkan ukuran build, serta membuat ikon dan splash screen. Buat listing di toko dengan deskripsi menarik, minimal tiga screenshot, dan trailer 30-60 detik. Pasang analytics seperti Google Analytics dan crash reporting via Firebase Crashlytics. Submit ke Google Play Console atau App Store Connect, pantau ulasan setelah rilis, perbaiki bug dengan cepat, dan rencanakan pembaruan berikutnya.",
                 "description": "Meluncurkan game Anda ke dunia sehingga orang lain bisa memainkannya. Publishing bukan hanya upload, tapi juga marketing dan community management.",
                 "output": "Published game di app stores",
-                "tools": ["Google Play Console", "App Store Connect"],
+                "tools": [
+                    "Google Play Console",
+                    "App Store Connect"
+                ],
                 "level": "advanced",
                 "duration": "1 hari"
             }
@@ -320,100 +423,134 @@
             {
                 "skill_id": "netberfungsi_basics",
                 "title": "Dasar Jaringan",
-                "instruction": "1. Pahami OSI Model 7 layers:\n   - Physical: cables, connectors\n   - Data Link: MAC addressing, switches\n   - Network: IP addressing, routing\n   - Transport: TCP, UDP ports\n   - Session, Presentation, Application layers\n2. TCP/IP Model (simplified OSI):\n   - Link layer: hardware\n   - Internet layer: IP (routing)\n   - Transport layer: TCP (reliable), UDP (fast)\n   - Application: HTTP, FTP, DNS, etc\n3. IP Addressing:\n   - IPv4: 192.168.1.1 format\n   - Subnet mask: /24 notation\n   - Subnetting practice: divide network\n4. Routing basics:\n   - Default gateway\n   - Route table\n   - Static vs dynamic routing\n5. Latihan dengan Cisco Packet Tracer:\n   - Bangun simple network topology\n   - Hubungkan 2 devices dan test ping\n6. Document network architecture",
+                "instruction": "Pelajari tujuh lapisan OSI Model mulai dari Physical (kabel dan konektor) hingga Application (HTTP, DNS, FTP), lalu sederhanakan pemahaman dengan TCP/IP Model empat lapisan. Pelajari pengalamatan IPv4 dengan notasi subnet /24 dan latihan subnetting untuk membagi jaringan. Pahami konsep routing dasar seperti default gateway, tabel route, serta perbedaan static dan dynamic routing. Praktikkan semua ini di Cisco Packet Tracer dengan membuat topologi sederhana dan menguji konektivitas antar perangkat menggunakan ping.",
                 "description": "Memahami dasar bagaimana komputer-komputer saling berkomunikasi di jaringan. Ini adalah fondasi untuk menjadi network engineer yang baik.",
                 "output": "Pemahaman network fundamentals",
-                "tools": ["Cisco Packet Tracer", "Command line"],
+                "tools": [
+                    "Cisco Packet Tracer",
+                    "Command line"
+                ],
                 "level": "basic",
                 "duration": "2 hari"
             },
             {
                 "skill_id": "routing",
                 "title": "Routing & Switching",
-                "instruction": "1. Router configuration:\n   - Hubungkan ke router via console\n   - Basic setup: hostname, IP address\n   - Enable telnet/SSH untuk remote access\n2. Configure routing:\n   - Static route: ip route 192.168.2.0 255.255.255.0 192.168.1.2\n   - Dynamic routing dengan OSPF atau RIP\n   - Tes dengan tracert command\n3. Switch configuration:\n   - VLAN setup: separate network logically\n   - Trunk setup: allow berbagai VLAN\n   - Port security: limit MAC addresses per port\n4. Tes connectivity:\n   - ping antar device\n   - tracert untuk trace route path\n   - show commands untuk verify configuration\n5. Latihan di Cisco Packet Tracer\n6. Document network topology",
+                "instruction": "Hubungkan ke router via console dan lakukan konfigurasi dasar seperti hostname, alamat IP, dan akses remote via SSH. Konfigurasi routing statis dan dynamic (OSPF atau RIP), lalu uji jalur paket menggunakan perintah tracert. Pada switch, buat VLAN untuk memisahkan jaringan secara logis, atur trunk agar beberapa VLAN bisa melewati satu link, dan aktifkan port security. Verifikasi semua konfigurasi menggunakan show commands dan dokumentasikan topologi jaringan yang dibuat.",
                 "description": "Belajar mengatur perangkat yang merouting traffic antar network dan mengorganisir koneksi dengan switch. Ini penting untuk membangun network yang scale.",
                 "output": "Working routing dan switching configuration",
-                "tools": ["Cisco Packet Tracer", "Router", "Switch"],
+                "tools": [
+                    "Cisco Packet Tracer",
+                    "Router",
+                    "Switch"
+                ],
                 "level": "intermediate",
                 "duration": "2 hari"
             },
             {
                 "skill_id": "firewall",
                 "title": "Firewall Configuration",
-                "instruction": "1. Firewall basics:\n   - Stateless: check setiap packet\n   - Stateful: track connection state\n   - Rules order matters (top ke bottom)\n2. Access Control List (ACL):\n   - Standard ACL: based on source IP\n   - Extended ACL: source, destination, port, protocol\n   - Syntax: access-list 100 permit tcp 192.168.1.0 0.0.0.255 any eq 80\n3. Apply ACL ke interface:\n   - Inbound: filter incoming traffic\n   - Outbound: filter outgoing traffic\n4. Tes firewall rules:\n   - ping blocked/allowed\n   - telnet ke port test\n   - verify rules active\n5. Latihan di Cisco ASA atau packet tracer\n6. Document security policies",
+                "instruction": "Pahami perbedaan firewall stateless dan stateful, serta pentingnya urutan rules (dari atas ke bawah). Buat Access Control List (ACL) standar berbasis IP sumber dan ACL extended berbasis IP, port, serta protokol. Terapkan ACL ke interface sebagai inbound atau outbound filter, lalu uji hasilnya dengan mencoba ping dan telnet ke port tertentu. Praktikkan di Cisco ASA atau Packet Tracer dan dokumentasikan semua kebijakan keamanan yang diterapkan.",
                 "description": "Membuat aturan keamanan untuk melindungi network dari traffic yang tidak diinginkan. Firewall adalah gatekeeper yang menjaga siapa saja bisa masuk ke network.",
                 "output": "Firewall rules yang berfungsi",
-                "tools": ["Cisco ASA", "Packet Tracer"],
+                "tools": [
+                    "Cisco ASA",
+                    "Packet Tracer"
+                ],
                 "level": "intermediate",
                 "duration": "2 hari"
             },
             {
                 "skill_id": "vpn",
                 "title": "VPN Siapkan",
-                "instruction": "1. VPN concepts:\n   - Site-to-site VPN: office A ke office B\n   - Remote access VPN: individual ke company network\n   - Encryption: data tidak bisa dibaca\n2. IPSec VPN setup:\n   - Phase 1 (IKE): negotiate encryption method\n   - Phase 2 (IPSec): actual data transmission\n   - Config: crypto map, transform set, etc\n3. Tes VPN connection:\n   - Ping across tunnel\n   - Check tunnel status\n   - Monitor traffic\n4. Remote access VPN:\n   - VPN Setup server\n   - Buat user accounts\n   - Config client VPN software\n5. Troubleshoot:\n   - Check crypto policies match\n   - Verify tunnel up\n   - Monitor logs\n6. Document VPN architecture",
+                "instruction": "Pahami dua jenis VPN: site-to-site untuk menghubungkan dua kantor, dan remote access untuk pengguna individual. Konfigurasi IPSec VPN dengan dua fase: Phase 1 (IKE) untuk negosiasi metode enkripsi dan Phase 2 untuk transmisi data sebenarnya. Uji tunnel VPN dengan melakukan ping lintas tunnel dan memantau statusnya. Untuk remote access VPN, buat akun pengguna dan konfigurasi software VPN client, lalu troubleshoot jika tunnel tidak terbentuk dengan memeriksa kecocokan crypto policy.",
                 "description": "Membuat koneksi aman antara office atau untuk remote worker. VPN mengenkripsi data sehingga aman meskipun melewati internet publik.",
                 "output": "Working VPN tunnel/connection",
-                "tools": ["Cisco VPN", "VPN client"],
+                "tools": [
+                    "Cisco VPN",
+                    "VPN client"
+                ],
                 "level": "intermediate",
                 "duration": "1 hari"
             },
             {
                 "skill_id": "dns",
                 "title": "DNS & DHCP Configuration",
-                "instruction": "1. DNS setup:\n   - Pasang DNS server (Windows Server atau Linux)\n   - Buat forward lookup zone: map domain to IP\n   - Buat A records: hostname to IP\n   - Buat MX records: mail server\n   - Buat CNAME: alias\n   - Tes dengan nslookup atau dig command\n2. DHCP setup:\n   - Buat DHCP scope: range of IPs\n   - Set lease time (default 8 days)\n   - Configure options: gateway, DNS server, etc\n   - Exclude IPs untuk servers\n3. DNS security:\n   - DNSSEC: prevent DNS spoofing\n   - DNS filtering: block malicious domains\n4. Tes DHCP:\n   - Request IP dari client\n   - Verify config dengan ipconfig /all\n5. Monitor dan troubleshoot:\n   - Check DNS resolution\n   - Monitor DHCP scope usage\n6. Documentation",
+                "instruction": "Install dan konfigurasi DNS server (Windows Server atau Linux), buat forward lookup zone, lalu tambahkan berbagai record: A record untuk memetakan hostname ke IP, MX record untuk mail server, dan CNAME sebagai alias. Uji resolusi DNS menggunakan perintah nslookup atau dig. Untuk DHCP, buat scope dengan rentang IP yang diinginkan, atur lease time, dan konfigurasikan opsi seperti gateway dan DNS server. Aktifkan DNSSEC untuk mencegah DNS spoofing dan pantau penggunaan scope secara berkala.",
                 "description": "Mengatur server yang menjawab pertanyaan seperti \"Apa IP address google.com\" (DNS) dan memberikan IP otomatis ke device yang baru connect (DHCP). Ini membuat network lebih mudah dikelola.",
                 "output": "Working DNS dan DHCP servers",
-                "tools": ["Windows Server", "Linux", "DNS/DHCP server"],
+                "tools": [
+                    "Windows Server",
+                    "Linux",
+                    "DNS/DHCP server"
+                ],
                 "level": "intermediate",
                 "duration": "1 hari"
             },
             {
                 "skill_id": "wireless",
                 "title": "Wireless Network Setup",
-                "instruction": "1. Planning wireless network:\n   - Site survey: check coverage area\n   - Determine AP (access point) placement\n   - Calculate number of APs needed\n2. Configure access point:\n   - SSID (network name)\n   - Security: WPA2 atau WPA3\n   - Channel selection (1, 6, 11 untuk 2.4GHz)\n   - Transmit power settings\n3. VLAN segmentation:\n   - Guest VLAN: separate traffic\n   - Employee VLAN: internal network\n4. Security implementation:\n   - Strong password untuk admin\n   - Disable WPS (brute force risk)\n   - MAC filtering (optional)\n5. Tes coverage:\n   - Signal strength di berbagai area\n   - Roaming antar AP\n   - Speed test\n6. Monitor:\n   - Terhubung clients\n   - Channel interference\n7. Documentation",
+                "instruction": "Lakukan site survey untuk menentukan penempatan access point yang optimal. Konfigurasi AP dengan SSID, keamanan WPA2/WPA3, pemilihan channel (1, 6, atau 11 untuk 2.4GHz), dan pengaturan daya pancar. Segmentasikan jaringan menggunakan VLAN untuk memisahkan trafik tamu dan karyawan. Nonaktifkan WPS dan gunakan password admin yang kuat. Uji kekuatan sinyal di berbagai area, pastikan roaming antar AP berjalan mulus, dan lakukan speed test untuk memverifikasi performa.",
                 "description": "Membuat jaringan WiFi yang coverage baik dan secure. Wireless network yang baik memungkinkan user mobile untuk tetap produktif.",
                 "output": "Working wireless network",
-                "tools": ["Access Point", "WiFi analyzer tools"],
+                "tools": [
+                    "Access Point",
+                    "WiFi analyzer tools"
+                ],
                 "level": "intermediate",
                 "duration": "1 hari"
             },
             {
                 "skill_id": "monitoring",
                 "title": "Network Monitoring",
-                "instruction": "1. Siapkan monitoring tool (Nagios, Zabbix, atau PRTG):\n   - Pasang di server\n   - Configure host dan services to monitor\n   - Add devices: routers, switches, servers\n2. Define monitoring metrics:\n   - Ping (device up/down)\n   - CPU usage threshold\n   - Memory usage threshold\n   - Disk usage threshold\n   - Network interface bandwidth\n3. Siapkan alerts:\n   - Email notification saat threshold exceed\n   - SMS untuk critical issues\n   - Log semua events\n4. Buat dashboards:\n   - Real-time network status\n   - Historical trends\n   - Performance reports\n5. Troubleshooting:\n   - Identify problematic devices\n   - Analyze performance trends\n   - Predict capacity issues\n6. Generate reports\n7. Capacity planning",
+                "instruction": "Install tool monitoring seperti Nagios, Zabbix, atau PRTG di server, lalu tambahkan semua perangkat jaringan (router, switch, server) sebagai host yang dipantau. Tentukan metrik yang ingin dipantau seperti status ping, penggunaan CPU, memori, disk, dan bandwidth interface. Konfigurasi alert via email atau SMS saat threshold terlampaui. Buat dashboard real-time untuk melihat status jaringan secara keseluruhan, analisis tren historis, dan gunakan datanya untuk perencanaan kapasitas ke depan.",
                 "description": "Menggunakan tools untuk mengawasi kesehatan network 24/7. Monitoring yang baik membantu menemukan masalah sebelum user menyadari ada problem.",
                 "output": "Working monitoring system dengan dashboards",
-                "tools": ["Nagios", "Zabbix", "PRTG"],
+                "tools": [
+                    "Nagios",
+                    "Zabbix",
+                    "PRTG"
+                ],
                 "level": "advanced",
                 "duration": "1 hari"
             },
             {
                 "skill_id": "troubleshooting",
                 "title": "Network Troubleshooting",
-                "instruction": "1. Troubleshooting methodology:\n   - Define the problem clearly\n   - Gather information (ping, trace, logs)\n   - Identify the cause\n   - Implement solution\n   - Verify the fix\n   - Document\n2. Tools untuk troubleshoot:\n   - ping: check connectivity\n   - tracert: trace path ke destination\n   - netstat: show connections dan ports\n   - ipconfig: show IP configuration\n   - arp: show MAC address table\n3. Diagnosa masalah umum:\n   - Cannot reach server: check route, firewall\n   - Slow network: check bandwidth, interference\n   - DNS tidak berfungsi: check DNS server, configuration\n   - Device not getting IP: check DHCP\n4. Log analysis:\n   - Review system logs\n   - Check application logs\n   - Correlate timestamps\n5. Latihan:\n   - Simulate problems\n   - Latihan troubleshooting methodology",
+                "instruction": "Gunakan pendekatan sistematis untuk setiap masalah: identifikasi gejala, isolasi area bermasalah, uji hipotesis, terapkan perbaikan, dan verifikasi hasilnya. Untuk tidak ada air panas, periksa pengaturan dan kondisi water heater, selang supply, dan mixing valve. Untuk tekanan rendah, cek apakah shutoff valve terbuka penuh, kondisi pressure regulator, dan kemungkinan sumbatan. Untuk fixture bocor, ganti flapper toilet yang aus atau cartridge faucet yang rusak. Untuk suara pipa, pasang water hammer damper atau kencangkan pipa yang longgar.",
                 "description": "Belajar menemukan dan mengatasi masalah network dengan sistematis. Troubleshooting yang baik menghemat waktu dan meminimalkan downtime.",
                 "output": "Troubleshooting skills dan documentation",
-                "tools": ["Command line tools", "Logs"],
+                "tools": [
+                    "Command line tools",
+                    "Logs"
+                ],
                 "level": "advanced",
                 "duration": "1 hari"
             },
             {
                 "skill_id": "cloud_network",
                 "title": "Cloud Network Integration",
-                "instruction": "1. AWS netberfungsi:\n   - Buat VPC (Virtual Private Cloud)\n   - Buat subnets di berbagai AZ (availability zones)\n   - Siapkan Internet Gateway untuk internet access\n   - Siapkan NAT Gateway untuk private subnet\n   - Configure route tables\n   - Buat security groups dan NACLs\n2. Azure netberfungsi:\n   - Buat virtual network\n   - Buat subnets\n   - Siapkan network security groups\n   - Buat and configure network interface\n3. Hybrid network:\n   - VPN atau ExpressRoute connection to on-premises\n   - Site-to-site connectivity\n4. Security:\n   - Implement WAF (Web Application Firewall)\n   - DDoS protection\n   - Network segmentation\n5. Monitoring cloud network:\n   - Flow logs\n   - VPC Flow Logs analysis\n6. Cost optimization:\n   - Monitor bandwidth usage\n   - Optimize data transfer",
+                "instruction": "Di AWS, buat VPC dengan subnet di beberapa Availability Zone, konfigurasikan Internet Gateway untuk akses internet, NAT Gateway untuk subnet privat, dan atur route table serta security group. Di Azure, buat virtual network dengan subnet dan network security group. Hubungkan jaringan on-premises ke cloud menggunakan VPN atau ExpressRoute. Tambahkan lapisan keamanan dengan WAF dan proteksi DDoS. Aktifkan VPC Flow Logs untuk monitoring dan pantau penggunaan bandwidth untuk mengoptimalkan biaya.",
                 "description": "Mengintegrasikan on-premises network dengan cloud infrastructure. Ini penting saat company migrate ke cloud atau hybrid setup.",
                 "output": "Cloud network infrastructure",
-                "tools": ["AWS", "Azure", "VPN"],
+                "tools": [
+                    "AWS",
+                    "Azure",
+                    "VPN"
+                ],
                 "level": "advanced",
                 "duration": "2 hari"
             },
             {
                 "skill_id": "capacity_planning",
                 "title": "Network Capacity Planning",
-                "instruction": "1. Analyze current network:\n   - Document current infrastructure\n   - Collect usage statistics\n   - Identify bottlenecks\n   - Tes bandwidth utilization\n2. Forecast requirements:\n   - User growth projection\n   - Application growth\n   - Peak vs average usage\n   - Future technology requirements\n3. Design scalable architecture:\n   - Multi-layer network design\n   - Load balancing\n   - Redundancy untuk high availability\n   - Bandwidth over-provisioning (30% headroom)\n4. Cost analysis:\n   - Equipment cost\n   - Pasangation cost\n   - Maintenance cost\n   - ROI calculation\n5. Buat capacity plan document:\n   - Current state assessment\n   - Future state design\n   - Implementation timeline\n   - Budget estimate\n6. Present ke management",
+                "instruction": "Analisis kondisi jaringan saat ini dengan mendokumentasikan infrastruktur, mengumpulkan statistik penggunaan, dan mengidentifikasi bottleneck. Buat proyeksi kebutuhan masa depan berdasarkan pertumbuhan pengguna, aplikasi baru, dan perkiraan trafik puncak. Rancang arsitektur yang scalable dengan multi-layer design, load balancing, redundansi untuk high availability, dan provisioning bandwidth 30% di atas kebutuhan normal. Hitung biaya peralatan, instalasi, dan pemeliharaan, lalu susun dokumen capacity plan yang siap dipresentasikan ke manajemen.",
                 "description": "Merencanakan pertumbuhan network ke depan sehingga network tidak overloaded. Planning yang baik mencegah masalah performance di masa depan.",
                 "output": "Capacity plan document",
-                "tools": ["Spreadsheet", "Network design tools"],
+                "tools": [
+                    "Spreadsheet",
+                    "Network design tools"
+                ],
                 "level": "advanced",
                 "duration": "1 hari"
             }
@@ -425,100 +562,132 @@
             {
                 "skill_id": "design_principles",
                 "title": "Design Principles",
-                "instruction": "1. Typography:\n   - Choose font yang readable (sans-serif untuk web)\n   - Font size hierarchy: H1 > H2 > body text\n   - Line height 1.5-1.8 untuk readability\n   - Max 2-3 fonts per design\n2. Color theory:\n   - Complementary colors untuk contrast\n   - Choose color psychology: blue=trust, red=urgency\n   - Check color contrast ratio (WCAG AA minimum 4.5:1)\n   - Buat color palette (primary, secondary, accent)\n3. Balance dan alignment:\n   - Symmetrical vs asymmetrical layouts\n   - Grid system untuk consistency\n   - White space untuk breathing room\n4. Visual hierarchy:\n   - Size: bigger=more important\n   - Color: brighter=attention\n   - Position: top-left=first attention\n5. Analyze existing designs: good dan bad\n6. Apply principles ke mockup design",
+                "instruction": "Mulai dengan memahami tipografi: pilih font yang mudah dibaca (sans-serif untuk web), buat hierarki ukuran heading yang jelas, dan gunakan maksimal dua atau tiga font dalam satu desain. Pelajari teori warna dan psikologinya, pastikan rasio kontras memenuhi standar WCAG AA (minimal 4.5:1), lalu susun palet warna yang harmonis. Terapkan prinsip keseimbangan, alignment, dan penggunaan white space yang tepat. Bangun hierarki visual melalui ukuran, warna, dan posisi elemen, kemudian terapkan semua prinsip ini ke dalam mockup desain.",
                 "description": "Memahami prinsip-prinsip desain visual yang membuat interface terlihat bagus dan mudah digunakan. Desain yang baik tidak hanya cantik, tapi juga fungsional.",
                 "output": "Design principles applied correctly",
-                "tools": ["Figma", "Paper"],
+                "tools": [
+                    "Figma",
+                    "Paper"
+                ],
                 "level": "basic",
                 "duration": "2 hari"
             },
             {
                 "skill_id": "wireframing",
                 "title": "Wireframing",
-                "instruction": "1. Pahami wireframing purpose:\n   - Plan layout tanpa distraction dari visual\n   - Focus pada information architecture\n   - Communication tool dengan stakeholders\n2. Buat low-fidelity wireframes:\n   - Simple shapes: rectangles, lines\n   - Label setiap section: header, nav, content, footer\n   - Define content hierarchy\n   - Placement dari buttons dan forms\n3. Define user flows:\n   - Happy path: ideal user journey\n   - Alternative paths: edge cases\n   - Error states\n4. Iterate berdasarkan feedback:\n   - Get stakeholder approval\n   - Make revisions\n   - Finalize wireframe\n5. Convert ke high-fidelity:\n   - Add colors, typography, images\n   - Buat interactive prototype\n6. Documentation",
+                "instruction": "Mulai dengan membuat wireframe low-fidelity menggunakan bentuk-bentuk sederhana (kotak dan garis) yang fokus pada tata letak dan arsitektur informasi tanpa terdistraksi oleh detail visual. Tentukan hierarki konten, posisi tombol dan form, lalu petakan user flow mulai dari jalur utama hingga kondisi error. Kumpulkan umpan balik dari stakeholder, lakukan revisi, dan setelah disetujui, tingkatkan ke wireframe high-fidelity dengan menambahkan warna, tipografi, dan gambar. Buat prototype interaktif untuk menguji alur secara langsung.",
                 "description": "Merencanakan layout halaman sebelum membuat desain visual yang detail. Wireframe adalah blueprint yang memandu desain dan development.",
                 "output": "Low-fidelity dan high-fidelity wireframes",
-                "tools": ["Figma", "Paper", "Balsamiq"],
+                "tools": [
+                    "Figma",
+                    "Paper",
+                    "Balsamiq"
+                ],
                 "level": "basic",
                 "duration": "2 hari"
             },
             {
                 "skill_id": "figma",
                 "title": "Figma Mastery",
-                "instruction": "1. Figma interface:\n   - Workspace: canvas, layers panel, properties panel\n   - Tools: selection, frame, text, shapes\n   - Shortcuts untuk speed: V (select), F (frame), T (text)\n2. Buat designs:\n   - Buat frames untuk berbagai screen sizes\n   - Draw shapes dan text\n   - Apply fills, strokes, shadows\n   - Use constraints untuk responseive behavior\n3. Components dan libraries:\n   - Buat button component\n   - Reuse component berbagai times\n   - Update component: affect semua instances\n   - Shared libraries untuk team collaboration\n4. Interactive prototype:\n   - Hubungkan frames dengan connections\n   - Add interactions: on click → go to frame\n   - Tes prototype flow\n5. Collaboration:\n   - Share project dengan team\n   - Comment pada design\n   - Version history\n6. Ekspor:\n   - Ekspor untuk developer: SVG, PNG\n   - Generate specs automatically",
+                "instruction": "Kenali antarmuka Figma: canvas, panel layers, panel properties, dan shortcut penting (V untuk select, F untuk frame, T untuk text). Buat desain dengan berbagai ukuran frame, aplikasikan fill, stroke, dan shadow, lalu gunakan constraints untuk perilaku responsif. Buat dan reuse component untuk efisiensi — ketika component diperbarui, semua instance akan ikut berubah. Hubungkan frame-frame menjadi prototype interaktif dengan animasi transisi, bagikan ke tim untuk kolaborasi dan komentar, serta ekspor aset untuk developer dalam format SVG atau PNG.",
                 "description": "Menguasai tool Figma untuk design modern. Figma adalah tool yang paling digunakan designer saat ini dan memudahkan kolaborasi dengan team.",
                 "output": "Design system dan interactive prototype di Figma",
-                "tools": ["Figma"],
+                "tools": [
+                    "Figma"
+                ],
                 "level": "intermediate",
                 "duration": "3 hari"
             },
             {
                 "skill_id": "user_research",
                 "title": "User Research",
-                "instruction": "1. Research plan:\n   - Define research objectives\n   - Identify target users\n   - Choose research method (interviews, surveys, observation)\n   - Timeline dan budget\n2. Buat interview guide:\n   - Open-ended questions\n   - Follow-up questions\n   - Tes dengan pilot interview\n3. Conduct interviews:\n   - Recruit 5-10 users representative\n   - Record dengan permission\n   - Take notes\n   - Ask follow-up questions\n4. Analyze findings:\n   - Identify patterns dan themes\n   - Quotes yang significant\n   - Pain points dan needs\n5. Buat user personas:\n   - Name, photo, demographics\n   - Goals dan needs\n   - Pain points\n   - Quote representing user\n6. Document insights dan recommendations",
+                "instruction": "Buat rencana riset yang mendefinisikan tujuan, target pengguna, metode (wawancara, survei, atau observasi), serta timeline. Susun panduan wawancara dengan pertanyaan terbuka dan uji coba dulu dengan pilot interview. Rekrut 5-10 pengguna representatif, lakukan wawancara sambil mencatat poin penting, dan ajukan pertanyaan lanjutan untuk menggali lebih dalam. Analisis temuan untuk menemukan pola dan pain point, lalu buat user persona lengkap dengan nama, demografi, tujuan, dan kutipan representatif. Dokumentasikan semua insight dan rekomendasinya.",
                 "description": "Memahami kebutuhan dan behavior user sebelum design. Research-based design menghasilkan produk yang lebih sesuai dengan apa yang user inginkan.",
                 "output": "User personas dan research insights",
-                "tools": ["Interview template", "Survey tools"],
+                "tools": [
+                    "Interview template",
+                    "Survey tools"
+                ],
                 "level": "intermediate",
                 "duration": "2 hari"
             },
             {
                 "skill_id": "usability_testing",
                 "title": "Usability Tesing",
-                "instruction": "1. Buat test scenarios:\n   - Task-based: \"Find product X dan add to cart\"\n   - Clear success criteria\n   - Expected time: 5-10 minutes\n   - Prepare 3-5 tasks\n2. Recruit test users:\n   - Representative dari target audience\n   - 5 users minimum untuk get insights\n   - Diverse backgrounds\n3. Conduct test session:\n   - Introductions dan explain process\n   - Think-aloud: user verbalize thoughts\n   - Observe: don't help\n   - Ask open-ended questions\n   - Record dengan permission\n4. Collect feedback:\n   - Observe where user hesitate\n   - Note error messages user encounter\n   - Ask \"how did you feel\"\n   - SUS score (System Usability Scale)\n5. Analyze results:\n   - Identify usability problems\n   - Prioritize fixes\n   - Document severity\n6. Iterate design berdasarkan findings",
+                "instruction": "Buat skenario pengujian berbasis tugas yang jelas seperti 'cari produk X dan tambahkan ke keranjang', dengan kriteria keberhasilan yang terukur. Rekrut minimal lima pengguna dari target audiens yang beragam. Saat sesi, minta pengguna untuk bersuara (think-aloud) sambil kamu mengamati tanpa membantu. Catat di mana pengguna ragu atau membuat kesalahan, dan ajukan pertanyaan terbuka di akhir. Analisis hasil untuk menemukan masalah usability, prioritaskan berdasarkan tingkat keparahannya, lalu iterasi desain berdasarkan temuan tersebut.",
                 "description": "Tes desain dengan user nyata untuk menemukan masalah usability sebelum launch. Usability testing menghemat biaya development untuk mengatasi masalah setelah launch.",
                 "output": "Usability test report dengan findings",
-                "tools": ["Figma", "Recording tool", "Survey"],
+                "tools": [
+                    "Figma",
+                    "Recording tool",
+                    "Survey"
+                ],
                 "level": "intermediate",
                 "duration": "1 hari"
             },
             {
                 "skill_id": "information_arch",
                 "title": "Information Architecture",
-                "instruction": "1. Card sorting exercise:\n   - Buat cards untuk content pieces\n   - Users organize cards into categories\n   - Identify logical groupings\n   - Analyze patterns\n2. Buat sitemap:\n   - Main categories\n   - Sub-categories\n   - Pages di bawah setiap category\n   - Use tree structure\n3. Design user flows:\n   - Entry point (homepage)\n   - Decision points (navigation options)\n   - Content pages\n   - Exit points\n4. Determine navigation:\n   - Primary navigation (main menu)\n   - Secondary navigation (sub-menu)\n   - Breadcrumbs\n   - Footer links\n5. Tes architecture:\n   - Tree testing: user find content\n   - First click test: user click where expected\n6. Documentation dan labeling",
+                "instruction": "Lakukan card sorting: tulis item konten di kartu terpisah dan minta pengguna mengelompokkannya secara logis. Analisis pola pengelompokan yang muncul, lalu buat sitemap berbentuk struktur pohon yang menggambarkan kategori utama, subkategori, dan halaman di dalamnya. Rancang user flow dari titik masuk hingga halaman tujuan. Tentukan struktur navigasi (primer, sekunder, breadcrumb, dan footer). Uji arsitektur ini dengan tree testing atau first click test untuk memastikan pengguna bisa menemukan konten dengan mudah.",
                 "description": "Mengorganisir konten website dengan cara yang logis sehingga user mudah menemukan apa yang mereka cari. Informasi yang well-organized meningkatkan user satisfaction.",
                 "output": "Sitemap dan user flow diagram",
-                "tools": ["Figma", "Miro", "Card sorting tool"],
+                "tools": [
+                    "Figma",
+                    "Miro",
+                    "Card sorting tool"
+                ],
                 "level": "intermediate",
                 "duration": "2 hari"
             },
             {
                 "skill_id": "accessibility",
                 "title": "Accessibility Design",
-                "instruction": "1. WCAG guidelines (Level AA):\n   - Perceivable: text readable, images have alt text\n   - Operable: keyboard navigation, no seizure risk\n   - Pahamiable: clear language, predictable\n   - Robust: compatible dengan assistive technology\n2. Color accessibility:\n   - Contrast ratio minimal 4.5:1 untuk text\n   - Don't rely on color alone (use symbols too)\n   - Tes dengan color blindness simulator\n3. Typography:\n   - Font size minimal 14px untuk body text\n   - Line height 1.5 minimum\n   - Avoid all caps (harder to read)\n4. Forms:\n   - Label setiap input\n   - Error messages clear\n   - Keyboard accessible\n   - Focus states visible\n5. Tesing tools:\n   - WAVE browser extension\n   - Lighthouse audit\n   - Screen reader testing\n6. Document accessibility practices",
+                "instruction": "Pahami empat prinsip WCAG: Perceivable, Operable, Understandable, dan Robust. Pastikan rasio kontras warna minimal 4.5:1 dan jangan hanya mengandalkan warna sebagai satu-satunya penanda informasi — tambahkan simbol atau label. Gunakan ukuran font minimal 14px dengan line height 1.5 dan hindari huruf kapital semua. Pastikan setiap input form memiliki label, pesan error yang jelas, dapat diakses dengan keyboard, dan memiliki focus state yang terlihat. Uji hasilnya menggunakan WAVE, Lighthouse, dan screen reader.",
                 "description": "Desain yang accessible memastikan semua orang bisa menggunakan product, termasuk user dengan disabilities. Ini bukan hanya ethical, tapi juga legal requirement.",
                 "output": "Accessible design meeting WCAG AA",
-                "tools": ["WAVE", "Lighthouse", "Screen reader"],
+                "tools": [
+                    "WAVE",
+                    "Lighthouse",
+                    "Screen reader"
+                ],
                 "level": "intermediate",
                 "duration": "2 hari"
             },
             {
                 "skill_id": "design_thinking",
                 "title": "Design Thinking Process",
-                "instruction": "1. Empathize phase:\n   - Interview users\n   - Observe behavior\n   - Buat empathy map\n   - Define user personas\n2. Define phase:\n   - Identify problem statements\n   - User needs vs wants\n   - Point of view statement\n   - Buat problem statement\n3. Ideate phase:\n   - Brainstorm solutions (no judgement)\n   - Crazy 8: sketch 8 ideas in 8 minutes\n   - Vote pada ideas terbaik\n   - Combine ideas\n4. Prototype phase:\n   - Buat paper prototype\n   - Interactive wireframes\n   - Prototype final design\n5. Tes phase:\n   - Usability test dengan users\n   - Iterate berdasarkan feedback\n   - Refine solution\n6. Document process dan learnings",
+                "instruction": "Mulai dari fase Empathize dengan mewawancarai pengguna, mengobservasi perilaku mereka, dan membuat empathy map. Di fase Define, rumuskan problem statement berdasarkan kebutuhan nyata pengguna. Pada fase Ideate, brainstorm sebanyak mungkin solusi tanpa penilaian — coba teknik Crazy 8 (sketsa delapan ide dalam delapan menit) lalu pilih yang terbaik. Buat prototype mulai dari kertas hingga wireframe interaktif. Di fase Test, lakukan usability testing dan gunakan umpan baliknya untuk menyempurnakan solusi.",
                 "description": "Menggunakan metodologi design thinking untuk solve masalah user dengan systematic. Design thinking memastikan solusi user-centered dan innovative.",
                 "output": "Design thinking process documentation",
-                "tools": ["Figma", "Miro", "Prototype tools"],
+                "tools": [
+                    "Figma",
+                    "Miro",
+                    "Prototype tools"
+                ],
                 "level": "advanced",
                 "duration": "2 hari"
             },
             {
                 "skill_id": "prototyping",
                 "title": "Interactive Prototyping",
-                "instruction": "1. High-fidelity prototype di Figma:\n   - Buat frames untuk semua screens\n   - Add actual content, images, text\n   - Apply final colors dan typography\n2. Add interactions:\n   - Button click → navigate ke new screen\n   - Form submit → success screen\n   - Hover effects\n   - Scroll behavior\n   - Modal dialogs\n3. Buat user flows:\n   - Map screens dalam flow\n   - Define transitions\n   - Tes flow untuk breakpoints\n4. Usability testing:\n   - Share prototype link\n   - Observe user interaction\n   - Collect feedback\n   - Note issues\n5. Iterate:\n   - Refine based on feedback\n   - Tes again\n   - Document changes\n6. Handoff ke developer\n   - Ekspor specs\n   - Buat dev documentation",
+                "instruction": "Buat prototype high-fidelity di Figma dengan konten, gambar, dan tipografi yang sudah final. Tambahkan interaksi: klik tombol berpindah halaman, submit form ke halaman sukses, efek hover, perilaku scroll, dan dialog modal. Petakan semua layar dalam user flow dan tentukan transisi antar halaman. Bagikan link prototype ke pengguna untuk usability testing, catat masalah yang ditemukan, lalu iterasi dan perbaiki. Setelah final, handoff ke developer dengan menyertakan spesifikasi dan dokumentasi.",
                 "description": "Membuat prototype yang interactive sehingga user bisa merasakan bagaimana website/app akan bekerja sebelum development. Prototype yang baik memastikan developer dan designer aligned.",
                 "output": "Interactive prototype siap untuk usability testing",
-                "tools": ["Figma"],
+                "tools": [
+                    "Figma"
+                ],
                 "level": "advanced",
                 "duration": "1 hari"
             },
             {
                 "skill_id": "design_system",
                 "title": "Design System Creation",
-                "instruction": "1. Define design tokens:\n   - Colors: primary, secondary, neutral, status\n   - Typography: font families, sizes, weights\n   - Spacing: padding, margin units (8px grid)\n   - Shadows, borders, border-radius\n2. Buat component library:\n   - Basic: Button, Input, Label\n   - Composite: Form, Card, Header\n   - Containers: Modal, Sidebar, Section\n   - Each component dengan variants (default, hover, disabled, etc)\n3. Document guidelines:\n   - Usage rules: when to use each component\n   - Best practices\n   - Do's dan don'ts\n   - Examples\n4. Figma setup:\n   - Buat main file dengan components\n   - Buat library untuk team\n   - Version control\n5. Maintain consistency:\n   - Regular audits\n   - Update components\n   - Communicate changes\n6. Team adoption\n   - Training\n   - Documentation\n   - Support",
+                "instruction": "Definisikan design token terlebih dahulu: warna (primary, secondary, neutral, status), tipografi (family, ukuran, ketebalan), spacing berbasis grid 8px, serta shadow dan border radius. Bangun library komponen mulai dari elemen dasar (Button, Input, Label) hingga komposit (Form, Card, Header) dan container (Modal, Sidebar). Dokumentasikan panduan penggunaan setiap komponen dengan contoh do's dan don'ts. Atur semua ini di Figma sebagai shared library untuk tim, lakukan audit berkala untuk menjaga konsistensi, dan sediakan training saat ada pembaruan.",
                 "description": "Membuat comprehensive guide untuk design dan development sehingga semua produk konsisten dan scalable. Design system menghemat waktu dan memastikan quality.",
                 "output": "Complete design system dengan components",
-                "tools": ["Figma"],
+                "tools": [
+                    "Figma"
+                ],
                 "level": "advanced",
                 "duration": "2 hari"
             }
@@ -530,100 +699,129 @@
             {
                 "skill_id": "cad_basics",
                 "title": "CAD Fundamentals",
-                "instruction": "1. Siapkan CAD software (AutoCAD atau LibreCAD):\n   - Pasang dan launch aplikasi\n   - Pahami interface: command line, toolbars, viewports\n   - Configure drawing templates\n2. Basic drawing commands:\n   - Line: draw line segments L + click 2 points\n   - Rectangle: draw rectangle R + specify dimensions\n   - Circle: draw circle C + center + radius\n   - Arc: draw arc dengan 3 points\n   - Polygon: regular polygon dengan sides\n3. Drawing navigation:\n   - Pan: hold scroll wheel, move mouse\n   - Zoom: scroll wheel in/out\n   - Fit to screen: use Fit command\n4. Layers:\n   - Buat layer untuk berbagai element (walls, furniture, etc)\n   - Assign color dan line type per layer\n5. Latihan: draw simple room layout\n6. Save file dengan naming convention",
+                "instruction": "Install AutoCAD atau LibreCAD, lalu kenali antarmuka utamanya: command line, toolbar, dan viewport. Latih perintah dasar menggambar seperti Line (L), Rectangle (R), Circle (C), Arc, dan Polygon. Kuasai navigasi gambar dengan pan (tahan scroll wheel), zoom (scroll), dan fit to screen. Buat layer terpisah untuk elemen yang berbeda seperti dinding dan furnitur, atur warna dan jenis garis tiap layer, lalu latih semua ini dengan membuat denah ruangan sederhana dan simpan dengan konvensi penamaan yang rapi.",
                 "description": "Mempelajari dasar-dasar software CAD untuk membuat gambar teknis. CAD adalah tool essential untuk drafter profesional.",
                 "output": "Simple room layout drawing di CAD",
-                "tools": ["AutoCAD", "LibreCAD"],
+                "tools": [
+                    "AutoCAD",
+                    "LibreCAD"
+                ],
                 "level": "basic",
                 "duration": "2 hari"
             },
             {
                 "skill_id": "drawing_standards",
                 "title": "Drawing Standards",
-                "instruction": "1. Pahami ISO 128 standards untuk technical drawings:\n   - Line types: solid (main), dashed (hidden), dotted (center)\n   - Line weights: thick untuk outline, thin untuk details\n   - Scale: 1:100 untuk floor plan, 1:50 untuk details\n2. Title block dan sheet format:\n   - Design A4 atau A3 template dengan title block\n   - Include: project name, date, scale, drawn by, checked by\n   - Company logo placement\n3. Dimensioning standards:\n   - Dimension line: thin solid line dengan arrows\n   - Text placement: above line atau center\n   - Spacing: consistent gaps between dimensions\n   - Never dimension same element twice\n4. Notation dan symbols:\n   - North arrow direction\n   - Material symbols\n   - Door/window swing symbols\n5. Buat standard template\n6. Apply ke drawing",
+                "instruction": "Pelajari standar ISO 128 untuk gambar teknis, mencakup jenis garis (solid untuk outline, putus-putus untuk tersembunyi, titik-titik untuk garis tengah), ketebalan garis, dan skala yang tepat (1:100 untuk denah, 1:50 untuk detail). Buat template A4 atau A3 dengan title block yang memuat nama proyek, tanggal, skala, nama drafter, dan pemeriksa. Pelajari standar dimensi (garis, teks, dan jarak yang konsisten), serta simbol-simbol penting seperti arah utara, simbol material, dan ayunan pintu/jendela",
                 "description": "Mempelajari standar internasional untuk gambar teknis sehingga bisa dipahami oleh siapa saja. Standar yang benar membuat komunikasi antar profesional lebih jelas.",
                 "output": "CAD drawing following ISO standards",
-                "tools": ["AutoCAD"],
+                "tools": [
+                    "AutoCAD"
+                ],
                 "level": "basic",
                 "duration": "2 hari"
             },
             {
                 "skill_id": "architectural",
                 "title": "Architectural Drafting",
-                "instruction": "1. Pahami building components:\n   - Walls: material thickness varies\n   - Doors: swing direction, type (single, double, sliding)\n   - Windows: type, size, placement\n   - Stairs: riser dan tread dimensions\n2. Draw floor plan:\n   - Draw walls dengan correct thickness\n   - Add doors dan windows\n   - Add furniture layout (optional)\n   - Add dimensions: all walls, openings\n   - Add area annotation\n3. Draw elevation (side view):\n   - Show height dimensions\n   - Show door/window heights\n   - Show material textures\n   - Add materials legend\n4. Draw section (cut-through view):\n   - Show vertical relationships\n   - Depth measurements\n   - Material layers\n5. Add annotations dan notes\n6. Buat comprehensive drawing set",
+                "instruction": "Pahami komponen bangunan: dinding dengan ketebalan material yang bervariasi, pintu dengan arah buka dan jenisnya, jendela, serta tangga dengan ukuran riser dan tread. Buat denah lantai lengkap dengan dinding yang tepat, pintu, jendela, dan dimensi seluruh ruangan. Gambar elevasi untuk menampilkan ketinggian dan material, lalu buat potongan (section) untuk memperlihatkan hubungan vertikal antar elemen. Lengkapi dengan anotasi, catatan material, dan kumpulan gambar yang komprehensif.",
                 "description": "Membuat gambar bangunan yang detail dan akurat untuk keperluan konstruksi. Gambar yang baik memastikan builder memahami desain dengan benar.",
                 "output": "Complete architectural drawing set (floor plan, elevation, section)",
-                "tools": ["AutoCAD", "Revit"],
+                "tools": [
+                    "AutoCAD",
+                    "Revit"
+                ],
                 "level": "intermediate",
                 "duration": "1-2 hari"
             },
             {
                 "skill_id": "mechanical",
                 "title": "Mechanical Drafting",
-                "instruction": "1. Pahami mechanical drawing standards:\n   - Multi-view: front, top, side views\n   - Orthographic projection: standard placement\n   - Hidden lines: dashed untuk features tidak terlihat\n2. Draw mechanical parts:\n   - Use construction lines untuk layout\n   - Draw outline dengan visible lines\n   - Add hidden lines untuk internal features\n   - Add centerlines untuk symmetric parts\n3. Dimensioning mechanical drawings:\n   - Overall dimensions first\n   - Then detail dimensions\n   - Tolerances: +/- values untuk accuracy\n   - Notes untuk special requirements\n4. Section views:\n   - Cut through part untuk show internal detail\n   - Hatch fill untuk show materials\n5. Assembly drawings:\n   - Show berbagai parts dan how they fit\n   - Numbering parts dengan bill of materials\n6. Buat complete mechanical drawing",
+                "instruction": "Pelajari standar gambar mekanik dengan proyeksi ortografis: tampak depan, atas, dan samping. Gunakan garis konstruksi untuk tata letak awal, lalu gambar outline dengan garis terlihat, garis tersembunyi (putus-putus) untuk fitur internal, dan garis pusat untuk bagian simetris. Tambahkan dimensi secara lengkap mulai dari keseluruhan hingga detail, serta toleransi (+/-) untuk akurasi manufaktur. Buat section view untuk memperlihatkan detail internal dengan hatch fill, dan assembly drawing yang menunjukkan hubungan antar komponen.",
                 "description": "Membuat gambar mesin dan component dengan presisi tinggi. Gambar mekanik yang akurat memastikan manufaktur hasil yang sempurna.",
                 "output": "Complete mechanical drawing with tolerances",
-                "tools": ["AutoCAD", "SolidWorks"],
+                "tools": [
+                    "AutoCAD",
+                    "SolidWorks"
+                ],
                 "level": "intermediate",
                 "duration": "1-2 hari"
             },
             {
                 "skill_id": "3d_modeling",
                 "title": "3D Modeling Basics",
-                "instruction": "1. Introduction to 3D CAD (SolidWorks atau Fusion 360):\n   - Buat new part file\n   - Pahami sketch vs part\n   - Pahami constraints\n2. Buat simple 3D models:\n   - Sketch rectangle\n   - Extrude sketch ke 3D (pad command)\n   - Add second feature (pocket - subtract material)\n   - Round corners (fillet)\n3. Advanced features:\n   - Chamfer untuk bevel edges\n   - Circular pattern: repeat feature\n   - Mirror: duplicate features\n4. Assembly (put berbagai parts together):\n   - Buat assembly file\n   - Insert parts\n   - Constrain parts: coincident, distance\n   - Tes motion (untuk moving parts)\n5. Generate 2D drawings dari 3D model:\n   - Buat views: front, top, side automatically\n   - Add dimensions dari model\n   - Update drawings jika model change\n6. Buat parametric model",
+                "instruction": "Buka file part baru di SolidWorks atau Fusion 360 dan pelajari perbedaan antara sketch (gambar 2D) dan part (model 3D). Buat model 3D pertama dengan cara: sketch kotak, extrude menjadi solid, tambahkan pocket untuk mengurangi material, lalu haluskan sudutnya dengan fillet. Eksplorasi fitur lanjutan seperti chamfer, circular pattern, dan mirror. Rakit beberapa part dalam assembly file dengan constraint yang sesuai, lalu generate drawing 2D otomatis dari model 3D lengkap dengan dimensi.",
                 "description": "Membuat model 3D dari produk atau component. Model 3D membantu visualisasi desain dan memudahkan manufaktur.",
                 "output": "3D model dengan assembly dan 2D drawings",
-                "tools": ["SolidWorks", "Fusion 360"],
+                "tools": [
+                    "SolidWorks",
+                    "Fusion 360"
+                ],
                 "level": "intermediate",
                 "duration": "2 hari"
             },
             {
                 "skill_id": "rendering",
                 "title": "Visualization & Rendering",
-                "instruction": "1. Siapkan rendering software (V-Ray atau built-in renderer):\n   - Pasang plugins\n   - Configure settings\n2. Prepare 3D model untuk rendering:\n   - Clean up geometry: delete unnecessary elements\n   - Assign materials: wood, metal, plastic, etc\n   - Add lighting: main light (sun), fill lights\n   - Add environment: sky, background\n3. Camera setup:\n   - Choose camera angle untuk best view\n   - Adjust focal length\n   - Compose shot\n4. Render settings:\n   - Resolution: minimum 1920x1080\n   - Quality: high untuk final render\n   - Anti-aliasing untuk smooth edges\n5. Render image\n6. Post-processing (Photoshop):\n   - Adjust levels, brightness\n   - Add shadows, reflections\n   - Watermark jika perlu",
+                "instruction": "Install software rendering seperti V-Ray atau gunakan renderer bawaan aplikasi. Persiapkan model 3D dengan membersihkan geometri yang tidak perlu, lalu assign material yang realistis (kayu, logam, plastik). Atur pencahayaan utama (matahari) dan fill light, serta latar belakang environment. Pilih sudut kamera terbaik dan sesuaikan focal length untuk komposisi yang menarik. Render dengan resolusi minimal 1920x1080 dan kualitas tinggi, lalu lakukan post-processing di Photoshop untuk menyempurnakan pencahayaan dan menambahkan watermark jika perlu.",
                 "description": "Mengubah model 3D menjadi gambar yang indah dan realistis. Rendering yang bagus membantu client memvisualisasikan final product sebelum produksi.",
                 "output": "High-quality rendered images",
-                "tools": ["V-Ray", "Lumion", "Photoshop"],
+                "tools": [
+                    "V-Ray",
+                    "Lumion",
+                    "Photoshop"
+                ],
                 "level": "advanced",
                 "duration": "1 hari"
             },
             {
                 "skill_id": "bim",
                 "title": "BIM Workflow",
-                "instruction": "1. Pahami BIM (Banguning Information Modeling):\n   - Not just drawing, tapi data-rich model\n   - Single source of truth untuk project\n   - Collaboration across disciplines\n2. Buat BIM model di Revit:\n   - Start dengan template\n   - Define levels (floors)\n   - Draw walls, doors, windows\n   - Add mechanical/electrical components\n3. Add information ke model:\n   - Material properties\n   - Cost data\n   - Schedule data\n4. Buat schedules dari model:\n   - Door/window schedule: automatic list\n   - Room schedule\n   - Material quantity\n5. Clash detection:\n   - Check jika systems overlap (electrical vs structural)\n   - Resolve conflicts\n6. Coordinate dengan team\n   - Share model untuk collaboration\n   - Track changes",
+                "instruction": "Pahami bahwa BIM bukan sekadar gambar, melainkan model kaya informasi yang menjadi satu sumber kebenaran proyek. Di Revit, mulai dari template, definisikan level (lantai), lalu gambar dinding, pintu, dan jendela. Tambahkan informasi pada elemen model seperti material, biaya, dan jadwal. Manfaatkan fitur schedule untuk menghasilkan daftar pintu, jendela, dan material secara otomatis. Lakukan clash detection untuk menemukan konflik antar sistem (misalnya instalasi listrik yang bertabrakan dengan struktur), lalu koordinasikan hasilnya dengan tim.",
                 "description": "Menggunakan metodologi BIM untuk project management yang lebih efisien. BIM memungkinkan kolaborasi lebih baik dan mengurangi error di lapangan.",
                 "output": "BIM model dengan schedules dan coordination",
-                "tools": ["Revit"],
+                "tools": [
+                    "Revit"
+                ],
                 "level": "advanced",
                 "duration": "2 hari"
             },
             {
                 "skill_id": "site_plan",
                 "title": "Site Planning",
-                "instruction": "1. Pahami site constraints:\n   - Property boundary: from survey\n   - Existing structures\n   - Topography: hills, slopes\n   - Utilities: water, power, sewer locations\n   - Zoning requirements\n2. Buat site plan:\n   - Draw property boundary to scale\n   - Add existing structures\n   - Add contours (topographic lines)\n   - Add utilities lines\n   - Show North arrow\n3. Plan site layout:\n   - Placement of new building\n   - Parking lot design\n   - Landscaping areas\n   - Access roads\n4. Utilities layout:\n   - Water connection point\n   - Electrical service\n   - Sewer connection\n   - Gas (if applicable)\n5. Add dimensions dan annotations\n6. Buat comprehensive site plan",
+                "instruction": "Pahami kendala tapak: batas properti dari hasil survei, bangunan eksisting, topografi, utilitas bawah tanah, dan ketentuan zonasi. Gambar batas properti ke skala yang tepat, tambahkan bangunan eksisting, kontur topografi, dan jalur utilitas. Rencanakan penempatan bangunan baru, area parkir, ruang hijau, dan akses kendaraan. Tandai titik sambungan utilitas (air, listrik, drainase) dan lengkapi dengan dimensi, anotasi, dan arah utara.",
                 "description": "Merencanakan penggunaan lahan dan penempatan bangunan secara optimal. Perencanaan site yang baik memastikan efisiensi dan kepatuhan regulasi.",
                 "output": "Complete site plan with utilities",
-                "tools": ["AutoCAD", "Revit"],
+                "tools": [
+                    "AutoCAD",
+                    "Revit"
+                ],
                 "level": "advanced",
                 "duration": "1 hari"
             },
             {
                 "skill_id": "detail_drawing",
                 "title": "Detail Drawings",
-                "instruction": "1. Pahami detail drawings:\n   - Focus pada specific connection atau element\n   - Larger scale untuk clarity: 1:10 atau 1:5\n   - Show construction method\n   - Include all dimensions dan materials\n2. Types of details:\n   - Wall section: show layers dari foundation ke roof\n   - Door/window detail: show frame, jamb, sill\n   - Roof detail: show insulation, flashing, drip edge\n   - Foundation detail: show concrete, rebar, waterproofing\n3. Buat detail drawing:\n   - Draw large-scale close-up\n   - Show all materials dengan hatching\n   - Add dimensions: every element\n   - Add notes: materials, installation method\n   - Add callout reference ke main plan\n4. Use cross-referencing\n5. Buat berbagai details untuk complete project\n6. Documentation",
+                "instruction": "Pahami bahwa detail drawing berfokus pada satu elemen atau sambungan tertentu dengan skala besar (1:10 atau 1:5) untuk memperlihatkan metode konstruksi secara jelas. Gambar berbagai jenis detail: potongan dinding (dari fondasi ke atap), detail kusen pintu/jendela (frame, jamb, sill), detail atap (insulasi, flashing), dan detail fondasi (beton, tulangan, waterproofing). Tampilkan semua material dengan hatch yang sesuai, beri dimensi setiap elemen, dan tambahkan catatan tentang material serta metode pemasangannya.",
                 "description": "Membuat gambar detail yang menunjukkan cara konstruksi yang tepat. Detail yang jelas mencegah kesalahan di lapangan dan menghemat waktu konstruksi.",
                 "output": "Multiple detail drawings for construction",
-                "tools": ["AutoCAD"],
+                "tools": [
+                    "AutoCAD"
+                ],
                 "level": "advanced",
                 "duration": "1 hari"
             },
             {
                 "skill_id": "quantity_take_off",
                 "title": "Quantity Take-off & BOQ",
-                "instruction": "1. Pahami quantity take-off (QTO):\n   - Extract quantities dari drawings\n   - Input untuk cost estimation\n   - Basis untuk procurement\n2. Measure from drawings:\n   - Use scale ruler untuk manual measurement\n   - Or use CAD measurement tools (better accuracy)\n   - Linear measurements: lengths, perimeter\n   - Area measurements: square meters\n   - Volume measurements: cubic meters\n3. Buat Bill of Quantities (BOQ):\n   - List semua items dengan quantities\n   - Format:\n     Item | Description | Unit | Quantity | Unit Price | Total\n   - Group items logically (structural, mechanical, electrical)\n4. Quality check:\n   - Verify measurements\n   - Cross-check dengan drawings\n   - Double-count critical items\n5. Buat BOQ spreadsheet\n6. Present untuk bidding/estimation",
+                "instruction": "Pahami bahwa quantity take-off (QTO) adalah proses mengekstrak kuantitas material dari gambar sebagai dasar estimasi biaya dan pengadaan. Ukur dari gambar menggunakan alat ukur skala atau fitur pengukuran di CAD untuk mendapatkan panjang, luas, dan volume. Susun Bill of Quantities (BOQ) dalam format tabel: item, deskripsi, satuan, kuantitas, harga satuan, dan total. Kelompokkan item secara logis (struktural, mekanikal, elektrikal), verifikasi ulang semua pengukuran, lalu sajikan BOQ untuk keperluan tender atau estimasi.",
                 "description": "Menghitung jumlah material dan biaya dari gambar teknis. Quantity yang akurat penting untuk budgeting dan procurement yang tepat.",
                 "output": "Accurate Bill of Quantities",
-                "tools": ["AutoCAD", "Excel", "Takeoff software"],
+                "tools": [
+                    "AutoCAD",
+                    "Excel",
+                    "Takeoff software"
+                ],
                 "level": "advanced",
                 "duration": "1 hari"
             }
@@ -638,97 +836,132 @@
                 "instruction": "1. Pahami water system:\n   - Supply system: dari water meter ke fixtures\n   - Pressure: main supply typically 40-60 PSI\n   - Distribution: main line splits ke branch lines\n   - Hot water system: dari water heater ke outlets\n2. Drain system:\n   - Gravity flow: drain harus slope 1/4\" per foot\n   - Vent stack: prevents vacuum, allows air escape\n   - Trap: water seal prevents sewer gas\n   - Clean-out: access untuk maintenance\n3. Main components:\n   - Pipes: copper, PVC, PEX\n   - Fittings: elbows, tees, couplings\n   - Fixtures: sinks, toilets, tubs, showers\n   - Valves: main shutoff, fixture shutoff\n4. Codes dan standards\n5. Draw simple plumbing diagram\n6. Pahami layout requirements",
                 "description": "Belajar cara kerja sistem pipa air dan pembuangan di rumah atau bangunan. Pemahaman ini adalah fondasi untuk menjadi tukang pipa profesional.",
                 "output": "Pahamiing of water dan drain systems",
-                "tools": ["Diagram/Drawing", "Documentation"],
+                "tools": [
+                    "Diagram/Drawing",
+                    "Documentation"
+                ],
                 "level": "basic",
                 "duration": "2 hari"
             },
             {
                 "skill_id": "pipe_installation",
                 "title": "Pipe Pasangation",
-                "instruction": "1. Pipe types dan materials:\n   - Copper: rigid, long-lasting, expensive\n     Tools: tube cutter, bender, solder\n   - PVC: rigid, cheap, for cold water/drain\n     Tools: PVC cutter, cement\n   - PEX: flexible, good untuk hot water\n     Tools: PEX cutter, expansion tool, crimper\n2. Prepare pipes:\n   - Measure length needed (deduct for fittings)\n   - Cut dengan appropriate tool\n   - Deburr (remove sharp edges)\n3. Join pipes:\n   - Copper: solder joints (heat metal, melt solder)\n   - PVC: cement joints (apply primer, cement, push)\n   - PEX: expand fitting (expand tube, insert fitting)\n4. Tes connections:\n   - Check untuk leaks\n   - Pressure test (untuk sure)\n5. Roughin (install before walls close)\n6. Latihan dengan scrap pipes",
+                "instruction": "Kenali karakteristik tiga jenis pipa: copper (kaku dan tahan lama, disambung dengan solder), PVC (kaku dan murah untuk air dingin/drain, disambung dengan cement), dan PEX (fleksibel untuk air panas, disambung dengan ekspansi atau crimping). Ukur panjang yang dibutuhkan dengan memperhitungkan fitting, potong menggunakan alat yang sesuai, dan hilangkan sisi tajam hasil potongan. Sambungkan setiap jenis pipa dengan teknik yang benar, lalu uji semua sambungan dari kebocoran — idealnya dengan pressure test.",
                 "description": "Belajar memasang pipa dengan berbagai material dan metode sambungan. Instalasi yang benar mencegah kebocoran dan memastikan sistem bertahan lama.",
                 "output": "Properly installed piping without leaks",
-                "tools": ["Pipe cutter", "Solder", "PVC cement", "PEX crimper"],
+                "tools": [
+                    "Pipe cutter",
+                    "Solder",
+                    "PVC cement",
+                    "PEX crimper"
+                ],
                 "level": "intermediate",
                 "duration": "1 hari"
             },
             {
                 "skill_id": "fixture_install",
                 "title": "Fixture Pasangation",
-                "instruction": "1. Toilet installation:\n   - Remove old toilet (drain water, unbolt)\n   - Clean wax ring area\n   - Pasang new wax ring\n   - Lower new toilet, align holes, bolt down\n   - Hubungkan water supply line\n   - Tes flush\n2. Sink installation:\n   - Cut hole dalam counter\n   - Pasang faucet onto sink\n   - Pasang strainer basket\n   - Hubungkan hot/cold water lines\n   - Pasang P-trap dan drain line\n   - Seal dengan silicone (if needed)\n   - Tes untuk leaks\n3. Tub/Shower installation:\n   - Prepare rough-in plumbing (before walls)\n   - Pasang mixing valve\n   - Hubungkan supply lines\n   - Pasang shower head\n   - Pasang tub spout dengan diverter\n   - Tes all controls\n4. Hubungkan fixtures to rough-in\n5. Tes all fixtures\n6. Final inspection",
+                "instruction": "Untuk toilet, lepas yang lama, pasang wax ring baru, turunkan toilet ke posisi yang tepat, kencangkan baut, dan sambungkan selang supply. Untuk wastafel, potong lubang di countertop, pasang faucet ke wastafel, sambungkan selang air panas dan dingin, lalu pasang P-trap ke saluran drain. Untuk tub atau shower, kerja dimulai dari rough-in plumbing sebelum dinding ditutup: pasang mixing valve, sambungkan selang supply, dan pasang shower head beserta spout. Uji semua fixture dari kebocoran sebelum menutup dinding.",
                 "description": "Memasang fixture seperti toilet, sink, dan shower di rumah atau bangunan. Pemasangan yang benar memastikan fixture berfungsi dengan baik dan tidak ada kebocoran.",
                 "output": "Properly installed fixtures",
-                "tools": ["Wrench", "Screwdriver", "Silicone sealant"],
+                "tools": [
+                    "Wrench",
+                    "Screwdriver",
+                    "Silicone sealant"
+                ],
                 "level": "intermediate",
                 "duration": "1 hari"
             },
             {
                 "skill_id": "water_heater",
                 "title": "Water Heater Pasangation",
-                "instruction": "1. Types water heaters:\n   - Tanked: stores hot water, faster recovery\n   - Tankless: heats on-demand, space-saving\n   - Solar: energy-efficient\n2. Tank water heater installation:\n   - Prepare location: flat surface, drain access\n   - Pasang relief valve\n   - Hubungkan cold water supply inlet\n   - Hubungkan hot water outlet\n   - Pasang shutoff valve\n   - Hubungkan drain line\n   - Pasang anode rod (prevent rust)\n   - Tes pressure relief valve\n3. Tankless heater installation:\n   - Simpler connections\n   - Hot/cold inlet/outlet\n   - Gas line connection (if gas)\n   - Ventilation (if gas)\n4. Tes system:\n   - Check untuk leaks\n   - Tes hot water temperature\n   - Verify pressure relief works\n5. Maintenance schedule setup\n6. Safety inspection",
+                "instruction": "Pahami tiga tipe water heater: tanked (menyimpan air panas, pemulihan lebih cepat), tankless (memanaskan on-demand, lebih hemat tempat), dan solar (paling hemat energi). Untuk water heater tangki, siapkan lokasi yang rata, pasang relief valve, sambungkan inlet air dingin dan outlet air panas, pasang shutoff valve dan drain line, serta anode rod untuk mencegah karat. Uji sistem dengan mengecek kebocoran, suhu air panas yang dihasilkan, dan fungsi pressure relief valve. Buat jadwal perawatan rutin untuk menjaga performa dan efisiensinya.",
                 "description": "Memasang dan merawat sistem pemanas air sehingga Anda selalu punya air hangat. Perawatan yang baik membuat heater bertahan lama dan hemat energi.",
                 "output": "Working water heater system",
-                "tools": ["Wrench", "Pipe wrench", "Thermometer"],
+                "tools": [
+                    "Wrench",
+                    "Pipe wrench",
+                    "Thermometer"
+                ],
                 "level": "intermediate",
                 "duration": "1 hari"
             },
             {
                 "skill_id": "drain_cleaning",
                 "title": "Drain Cleaning & Maintenance",
-                "instruction": "1. Prevention maintenance:\n   - Use drain screens untuk catch hair/debris\n   - Regular flush dengan hot water\n   - Avoid grease, food scraps\n2. Simple clogs:\n   - Use plunger: seal drain, pump vigorously\n   - Use drain snake: manually (hand crank atau powered)\n   - Chemical drain cleaner (last resort, dangerous)\n3. Stubborn clogs:\n   - Remove trap (P-trap under sink)\n   - Snake dari trap opening\n   - Or remove clean-out plug, snake from there\n4. Video inspection:\n   - Camera probe untuk locate clog atau damage\n   - Identify problem accurately\n5. Professional cleaning:\n   - High-pressure jetting untuk clean pipes\n   - Remove buildup, grease, roots\n6. Document problems found\n7. Prevent future clogs",
+                "instruction": "Lakukan pencegahan secara rutin: gunakan saringan untuk menangkap rambut dan kotoran, bilas dengan air panas secara berkala, dan hindari membuang minyak atau sisa makanan ke drain. Untuk sumbatan ringan, coba dengan plunger terlebih dahulu dengan cara menyegel drain dan memompa dengan kuat. Jika tidak berhasil, gunakan drain snake untuk menerobos sumbatan secara mekanis. Untuk sumbatan bandel, lepas P-trap di bawah wastafel dan snake dari sana. Lakukan inspeksi kamera jika masalahnya tidak terlihat, dan high-pressure jetting untuk membersihkan penumpukan besar.",
                 "description": "Belajar mengatasi penyumbatan dan membersihkan pipa. Drains yang bersih penting untuk sanitation dan fungsi sistem pipa.",
                 "output": "Clear drains dan knowledge to prevent future clogs",
-                "tools": ["Plunger", "Drain snake", "Video camera"],
+                "tools": [
+                    "Plunger",
+                    "Drain snake",
+                    "Video camera"
+                ],
                 "level": "intermediate",
                 "duration": "1 hari"
             },
             {
                 "skill_id": "leak_detection",
                 "title": "Leak Detection & Repair",
-                "instruction": "1. Identify leak location:\n   - Visual inspection: wet spots, stains\n   - Listen: hissing sound indicates water leak\n   - Water meter test: monitor meter with nothing running\n   - Pressure test: use pressure gauge\n2. Types of leaks:\n   - Pinhole leaks: corrosion in copper pipes\n   - Joint leaks: bad solder atau fitting\n   - Crack leaks: pipe damage\n   - Fixture leaks: worn washers atau seals\n3. Repair methods:\n   - For joint: resolder copper atau tighten fitting\n   - For pinhole: patch clamp (temporary) atau replace section\n   - For fixture: replace washers atau seals\n   - For crack: replace pipe section\n4. Temporary vs permanent fixes\n5. Prevention tips\n6. Document repair work",
+                "instruction": "Identifikasi kebocoran dengan inspeksi visual (cari noda basah atau bekas air), dengarkan suara mendesis, dan lakukan water meter test dengan memantau meteran saat tidak ada yang menggunakan air. Gunakan pressure gauge untuk mengonfirmasi kebocoran. Kenali jenis-jenis kebocoran: pinhole leak dari korosi pada pipa copper, kebocoran sambungan akibat solder atau fitting yang kurang baik, retakan akibat kerusakan fisik, dan kebocoran pada fixture akibat washer atau seal yang aus. Perbaiki sesuai jenisnya, dan dokumentasikan setiap pekerjaan perbaikan.",
                 "description": "Menemukan dan memperbaiki kebocoran dengan cepat dan akurat. Leak yang tidak ditangani bisa menyebabkan kerusakan struktur dan mubazir air.",
                 "output": "Repaired leaks with no water loss",
-                "tools": ["Pressure gauge", "Pipe cutter", "Solder"],
+                "tools": [
+                    "Pressure gauge",
+                    "Pipe cutter",
+                    "Solder"
+                ],
                 "level": "advanced",
                 "duration": "1 hari"
             },
             {
                 "skill_id": "bathroom_remodel",
                 "title": "Bathroom Renovation",
-                "instruction": "1. Plan layout:\n   - Measure existing space\n   - Sketch new layout\n   - Identify fixture locations\n   - Plan rough-in plumbing\n2. Rough-in work (before walls):\n   - Pasang supply lines\n   - Pasang drain lines (proper slope)\n   - Pasang vent stacks\n   - Tes wszystko before walls close\n3. Fixture installation:\n   - Pasang toilet\n   - Pasang sink/vanity\n   - Pasang tub/shower\n   - Hubungkan hot water heater\n4. Finishing touches:\n   - Caulk seals\n   - Pasang traps și strainers\n   - Pressure test system\n5. Final inspection\n6. Documentation",
+                "instruction": "Mulai dengan merencanakan tata letak baru: ukur ruang, sketsa posisi fixture, dan identifikasi lokasi rough-in plumbing. Kerjakan rough-in sebelum dinding ditutup — pasang pipa supply, pipa drain dengan kemiringan yang benar, dan vent stack, lalu uji semuanya. Setelah dinding selesai, pasang toilet, wastafel/vanity, dan tub/shower secara berurutan. Selesaikan dengan caulking di setiap sambungan, pasang trap dan strainer, lakukan pressure test pada seluruh sistem, dan pastikan semua fixture berfungsi sempurna sebelum inspeksi akhir.",
                 "description": "Merenovasi kamar mandi dengan mengganti pipa dan fixture lama. Renovasi yang baik meningkatkan fungsionalitas dan estetika bathroom.",
                 "output": "Complete bathroom renovation",
-                "tools": ["Complete plumbing toolkit"],
+                "tools": [
+                    "Complete plumbing toolkit"
+                ],
                 "level": "advanced",
                 "duration": "1-2 hari"
             },
             {
                 "skill_id": "code_compliance",
                 "title": "Plumbing Code Compliance",
-                "instruction": "1. Belajar IPC (International Plumbing Code) basics:\n   - Trap requirements: every drain harus have trap\n   - Vent requirements: vent stack size, slope\n   - Pipe sizing: based on fixture units\n   - Slope requirements: 1/4\" per foot minimum\n   - Access requirements: clean-outs every 100 feet\n2. Water supply requirements:\n   - Pressure: 20-80 PSI normal range\n   - Flow rate: fixtures specify minimum GPM\n   - Backflow prevention: required in many jurisdictions\n3. Drain requirements:\n   - Material approval list\n   - Joint requirements\n   - Support spacing (hangers)\n4. Common violations\n5. Get permits dan inspections\n6. Documentation",
+                "instruction": "Pelajari persyaratan dasar International Plumbing Code (IPC): setiap drain wajib memiliki trap, vent stack harus berukuran dan kemiringan yang tepat, ukuran pipa dihitung berdasarkan fixture unit, kemiringan drain minimal 1/4 inci per kaki, dan clean-out dipasang setiap 100 kaki. Pahami persyaratan supply air (tekanan 20-80 PSI, flow rate minimum per fixture, dan backflow prevention). Pelajari juga persyaratan material yang disetujui, jarak support pipa, dan dokumen yang dibutuhkan untuk permit. Selalu minta inspeksi resmi setelah instalasi selesai.",
                 "description": "Memahami regulasi plumbing agar instalasi aman dan legal. Code compliance penting untuk keamanan dan menghindari masalah dengan authority.",
                 "output": "Code-compliant plumbing installation",
-                "tools": ["IPC Code book", "Inspection forms"],
+                "tools": [
+                    "IPC Code book",
+                    "Inspection forms"
+                ],
                 "level": "advanced",
                 "duration": "1 hari"
             },
             {
                 "skill_id": "troubleshooting",
                 "title": "Troubleshooting Skills",
-                "instruction": "1. No hot water:\n   - Check water heater: is it on? check temperature setting\n   - Check supply line connection\n   - Check mixing valve setting\n   - If heater cold, may need repair/replacement\n2. Low pressure:\n   - Check main shutoff valve: is it fully open?\n   - Check pressure regulator: may be stuck\n   - Check supply line: may have blockage\n   - Tes with pressure gauge\n3. Leaking fixtures:\n   - Toilet: running, leaking - replace flapper\n   - Faucet: dripping - replace washer atau cartridge\n   - Hubungkanions: tighten atau reseal\n4. Noisy pipes:\n   - Water hammer: install damper\n   - Loose pipes: secure dengan clamps\n   - Vibration: check pump operation\n5. Methodical approach:\n   - Identify symptom\n   - Isolate problem\n   - Tes hypothesis\n   - Implement fix\n   - Verify solution\n6. Document procedures",
+                "instruction": "Gunakan pendekatan sistematis untuk setiap masalah: identifikasi gejala, isolasi area bermasalah, uji hipotesis, terapkan perbaikan, dan verifikasi hasilnya. Untuk tidak ada air panas, periksa pengaturan dan kondisi water heater, selang supply, dan mixing valve. Untuk tekanan rendah, cek apakah shutoff valve terbuka penuh, kondisi pressure regulator, dan kemungkinan sumbatan. Untuk fixture bocor, ganti flapper toilet yang aus atau cartridge faucet yang rusak. Untuk suara pipa, pasang water hammer damper atau kencangkan pipa yang longgar.",
                 "description": "Mendiagnosa dan memperbaiki masalah plumbing yang sering terjadi. Troubleshooting skills yang baik membuat Anda plumber yang efisien.",
                 "output": "Troubleshooting skills untuk masalah plumbing umum",
-                "tools": ["Diagnostic tools", "Repair supplies"],
+                "tools": [
+                    "Diagnostic tools",
+                    "Repair supplies"
+                ],
                 "level": "advanced",
                 "duration": "1 hari"
             },
             {
                 "skill_id": "business",
                 "title": "Plumbing Business Management",
-                "instruction": "1. Estimate jobs:\n   - Material cost: list all materials needed\n   - Labor cost: hour × hourly rate\n   - Overhead: 20-30%\n   - Profit margin: 15-25%\n   - Total estimate price\n2. Scheduling:\n   - Manage job calendar\n   - Estimate time per job\n   - Route efficiency: group nearby jobs\n   - Buffer time untuk emergencies\n3. Customer service:\n   - Clear communication about timeline\n   - Keep area clean during work\n   - Explain what you're doing\n   - Follow-up after job\n4. Warranty policy\n5. Record keeping:\n   - Job documentation\n   - Materials used\n   - Photos\n6. Business growth\n   - Reputation building\n   - Reviews management\n   - Referral network",
+                "instruction": "Kelola inventaris spare part dengan membuat daftar lengkap beserta harga dan supplier, pantau stok secara rutin, dan atur penyimpanan agar mudah ditemukan. Hitung harga layanan secara transparan dengan memperhitungkan biaya tenaga kerja, markup keuntungan, dan harga pasar. Bangun database pelanggan, catat riwayat servis setiap motor, dan lakukan follow-up setelah servis. Lacak pemasukan dan pengeluaran bulanan untuk menghitung profit dan merencanakan pengembangan bengkel.",
                 "description": "Menjalankan bisnis plumbing yang menguntungkan dan profesional. Business management skills penting untuk kesuksesan jangka panjang.",
                 "output": "Business management system setup",
-                "tools": ["Estimating software", "Accounting software"],
+                "tools": [
+                    "Estimating software",
+                    "Accounting software"
+                ],
                 "level": "advanced",
                 "duration": "1 hari"
             }
@@ -740,50 +973,68 @@
             {
                 "skill_id": "paint_types",
                 "title": "Paint Types & Materials",
-                "instruction": "1. Pahami automotive paint types:\n   - Single stage: one coat, color + protection\n   - Basecoat/clearcoat: color layer + clear protective layer (modern standard)\n   - Urethane: durable, UV resistant\n   - Acrylic: water-based, environmentally friendly\n2. Paint components:\n   - Pigments: provide color\n   - Binder: holds pigment together\n   - Solvent: makes paint liquid\n   - Additives: flow control, drying, etc\n3. Primer types:\n   - Epoxy: best adhesion, protect bare metal\n   - Acrylic: good adhesion, budget-friendly\n   - Polyester: smooth finish\n4. Clearcoat:\n   - Protect dari UV, chemicals\n   - Provide gloss finish\n5. Belajar paint ratios:\n   - Base color + thinner ratio\n   - Primer + hardener\n6. Safety: VOC (volatile organic compounds) regulations",
+                "instruction": "Pahami perbedaan tipe cat otomotif: single stage (satu lapisan untuk warna dan proteksi), basecoat/clearcoat (standar modern dengan lapisan warna + lapisan bening pelindung), urethane (tahan lama dan UV), serta acrylic (berbasis air dan ramah lingkungan). Kenali komponen cat: pigmen untuk warna, binder sebagai perekat, solvent untuk kekentalan, dan additive untuk kontrol aliran dan pengeringan. Pelajari jenis primer (epoxy untuk adhesion terbaik, acrylic untuk budget, polyester untuk permukaan halus) dan fungsi clearcoat sebagai pelindung UV dan pemberi kilap.",
                 "description": "Memahami jenis-jenis cat dan material yang digunakan untuk mengecat kendaraan. Pengetahuan ini penting untuk hasil yang bagus dan tahan lama.",
                 "output": "Pahamiing of automotive paint materials",
-                "tools": ["Paint samples", "Technical data sheets"],
+                "tools": [
+                    "Paint samples",
+                    "Technical data sheets"
+                ],
                 "level": "basic",
                 "duration": "2 hari"
             },
             {
                 "skill_id": "surface_prep",
                 "title": "Surface Preparation",
-                "instruction": "1. Cleaning:\n   - Wash vehicle dengan soap dan water\n   - Remove grease, oil, dirt\n   - Dry completely\n2. Sanding:\n   - Use 220-320 grit sandpaper untuk smooth existing paint\n   - 120-180 grit untuk rough areas atau rust\n   - Sand evenly, circular motions\n   - Remove dust dengan tack cloth\n3. Repair damage:\n   - Fill dents dengan body filler\n   - Sand smooth when dry\n   - Buat even surface\n4. Masking:\n   - Use masking tape untuk protect areas tidak perlu cat\n   - Tape trim, windows, lights\n   - Use plastic sheeting untuk large areas\n   - Ensure tape is tight, no paint bleed\n5. Primer application:\n   - Apply primer coat\n   - Fill small imperfections\n   - Proper adhesion untuk base coat\n6. Final surface check",
+                "instruction": "Cuci kendaraan bersih dengan sabun, angkat semua kotoran dan minyak, lalu keringkan sempurna. Amplas permukaan dengan kertas amplas 220-320 grit untuk cat lama atau 120-180 grit untuk area berkarat, lakukan dengan gerakan melingkar yang merata, dan bersihkan debu dengan tack cloth. Perbaiki penyok dengan body filler, amplas rata setelah kering. Tutup area yang tidak perlu dicat dengan masking tape dan plastik pelindung. Aplikasikan primer sebagai lapisan dasar untuk adhesion yang baik dan tampilan akhir yang mulus.",
                 "description": "Mempersiapkan permukaan kendaraan dengan benar sebelum dicat. Surface preparation yang baik menentukan hasil akhir yang berkualitas.",
                 "output": "Properly prepared vehicle surface",
-                "tools": ["Sandpaper", "Body filler", "Masking tape", "Tack cloth"],
+                "tools": [
+                    "Sandpaper",
+                    "Body filler",
+                    "Masking tape",
+                    "Tack cloth"
+                ],
                 "level": "basic",
                 "duration": "1 hari"
             },
             {
                 "skill_id": "spray_technique",
                 "title": "Spray Painting Technique",
-                "instruction": "1. Equipment setup:\n   - HVLP spray gun (air cap, fluid tip, needle)\n   - Compressor: sufficient CFM untuk gun\n   - Hose dengan filters\n   - Mix paint correctly (per ratio)\n2. Spray gun mechanics:\n   - Trigger control: smooth, consistent\n   - Distance: 6-8 inches dari surface\n   - Angle: perpendicular untuk even coverage\n   - Speed: consistent side-to-side motion\n3. Spray pattern:\n   - Overlap: 50% untuk even coverage\n   - Horizontal passes: top to bottom\n   - Vertical passes untuk corners\n   - Latihan dengan scrap material first\n4. Multi-coat painting:\n   - First coat: light, don't soak\n   - Wait между coats (as per paint data)\n   - Bangun up to desired coverage (usually 2-3 coats)\n5. Clearcoat application:\n   - Last coats untuk protection\n   - Same technique as base coat\n6. Cleanup immediately after",
+                "instruction": "Siapkan HVLP spray gun dengan pengaturan yang tepat, compressor dengan CFM yang cukup, dan campurkan cat sesuai rasio yang ditentukan. Pegang gun 6-8 inci dari permukaan, tegak lurus, dan gerakkan dengan kecepatan konstan ke kanan-kiri dengan overlap 50% di setiap lintasan. Mulai dari lapisan ringan (light coat) agar tidak mengalir, tunggu sesuai waktu yang ditentukan antar lapisan, lalu bangun ketebalan secara bertahap (biasanya 2-3 lapisan). Aplikasikan clearcoat dengan teknik yang sama sebagai lapisan pelindung terakhir, dan bersihkan gun segera setelah selesai.",
                 "description": "Menguasai teknik spray yang benar untuk hasil cat yang smooth dan merata. Teknik yang baik menghasilkan finish yang professional.",
                 "output": "Smooth, even paint finish",
-                "tools": ["HVLP spray gun", "Compressor"],
+                "tools": [
+                    "HVLP spray gun",
+                    "Compressor"
+                ],
                 "level": "intermediate",
                 "duration": "2 hari"
             },
             {
                 "skill_id": "color_matching",
                 "title": "Color Matching",
-                "instruction": "1. Find original color:\n   - Check under door jamb (paint code label)\n   - Contact manufacturer (provide VIN)\n   - Use color scanner tool\n2. Get paint mixed:\n   - Provide color code ke paint supplier\n   - Supplier will mix factory formula\n   - Get berbagai quarts untuk testing\n3. Tes match:\n   - Apply test coat di hidden area (inside door jamb)\n   - Let dry completely (color shifts as dry)\n   - Compare under natural light\n   - Adjust if needed: tint untuk match\n4. Account untuk variation:\n   - Old paint may faded dari UV\n   - May need slight adjustment untuk blend\n5. Document color code untuk future touch-ups\n6. Keep leftover paint untuk future repairs",
+                "instruction": "Temukan kode warna original kendaraan di label yang biasanya ada di dalam door jamb, atau minta ke dealer menggunakan nomor VIN. Bawa kode tersebut ke supplier cat untuk dicampur sesuai formula pabrik. Uji kecocokan warna di area tersembunyi (dalam door jamb), biarkan benar-benar kering karena warna bisa bergeser saat kering, lalu bandingkan di bawah cahaya alami. Jika cat lama sudah memudar karena UV, mungkin perlu sedikit penyesuaian tint. Simpan sisa cat untuk keperluan touch-up di masa mendatang.",
                 "description": "Mencocokkan warna cat dengan tepat sehingga hasil akhirnya sesuai dengan warna kendaraan original atau yang diinginkan customer. Warna yang cocok penting untuk kepuasan customer.",
                 "output": "Accurate color match",
-                "tools": ["Color code label", "Color scanner", "Tes surface"],
+                "tools": [
+                    "Color code label",
+                    "Color scanner",
+                    "Tes surface"
+                ],
                 "level": "intermediate",
                 "duration": "1 hari"
             },
             {
                 "skill_id": "troubleshooting",
                 "title": "Paint Defects & Troubleshooting",
-                "instruction": "1. Common defects:\n   - Orange peel: rough texture like orange skin\n     Cause: air pressure too high, thinner wrong\n   - Jalankans/sags: paint flows down\n     Cause: too much paint, sprayed too thick\n   - Dust/debris: particle dalam paint\n     Cause: dirty environment, contaminated paint\n   - Sanding scratches: visible scratches sebelum clearcoat\n     Cause: coarse sandpaper, improper technique\n2. Correction methods:\n   - Light defects: sand smooth, polish\n   - Major defects: sand off, respray\n3. Prevention:\n   - Proper spray technique\n   - Clean environment\n   - Correct thinner ratio\n   - Correct pressure settings\n4. Quality control:\n   - Inspect each coat\n   - Correct issues before final coat\n   - Spot-check final result\n5. Document processes",
+                "instruction": "Gunakan pendekatan sistematis untuk setiap masalah: identifikasi gejala, isolasi area bermasalah, uji hipotesis, terapkan perbaikan, dan verifikasi hasilnya. Untuk tidak ada air panas, periksa pengaturan dan kondisi water heater, selang supply, dan mixing valve. Untuk tekanan rendah, cek apakah shutoff valve terbuka penuh, kondisi pressure regulator, dan kemungkinan sumbatan. Untuk fixture bocor, ganti flapper toilet yang aus atau cartridge faucet yang rusak. Untuk suara pipa, pasang water hammer damper atau kencangkan pipa yang longgar.",
                 "description": "Mengenali dan memperbaiki cacat cat yang mungkin terjadi. Troubleshooting yang baik memastikan hasil akhir berkualitas tinggi.",
                 "output": "Defect-free paint finish",
-                "tools": ["Sandpaper", "Polishing compounds"],
+                "tools": [
+                    "Sandpaper",
+                    "Polishing compounds"
+                ],
                 "level": "intermediate",
                 "duration": "1 hari"
             },
@@ -793,7 +1044,10 @@
                 "instruction": "1. Matte finish:\n   - Use matte clearcoat\n   - Different application technique\n   - Requires special care (no wax polish)\n2. Pearl/Metallic finishes:\n   - Contains metal flakes atau mica\n   - Requires special primer untuk hide undercoat\n   - Multiple light coats untuk depth\n   - Color shifts depending on angle\n3. Candy colors:\n   - Translucent color over base\n   - Banguns up depth dengan berbagai coats\n   - Requires special clearcoat\n4. Custom effects:\n   - Flames, designs: use masking\n   - Airbrush untuk details\n   - Pinstriping tools\n5. Application techniques:\n   - Prep same as solid colors\n   - Follow paint manufacturer guidelines\n   - May require extended cure time\n6. Safety precautions untuk special products",
                 "description": "Mengaplikasikan finish khusus seperti pearl, matte, atau custom designs. Finish spesial membuat kendaraan terlihat unik dan premium.",
                 "output": "Professional special finish application",
-                "tools": ["Airbrush", "Custom masking tools"],
+                "tools": [
+                    "Airbrush",
+                    "Custom masking tools"
+                ],
                 "level": "advanced",
                 "duration": "1-2 hari"
             },
@@ -803,7 +1057,11 @@
                 "instruction": "1. Remove damaged panel:\n   - Unbolt existing panel (remove nuts/bolts)\n   - Carefully lift off\n   - Note alignment marks\n2. Prepare new panel:\n   - Ensure correct fit\n   - Check gaps dengan adjacent panels\n   - Pasang panel in same position\n   - Tighten bolts gradually, check alignment\n3. Surface preparation:\n   - Sand primer dari new panel\n   - Sand edges untuk blend dengan existing paint\n   - Apply primer ke raw areas\n4. Paint new panel:\n   - Match color exactly\n   - Apply berbagai coats\n   - Blend edges dengan existing paint\n5. Final adjustments:\n   - Check gaps\n   - Ensure smooth transition\n   - Polish untuk integrated look\n6. Quality inspection",
                 "description": "Mengganti panel kendaraan yang rusak dan mengecat sehingga terlihat seperti original. Panel replacement penting untuk memperbaiki kerusakan major.",
                 "output": "Seamlessly replaced panel",
-                "tools": ["Socket set", "Sandpaper", "Paint"],
+                "tools": [
+                    "Socket set",
+                    "Sandpaper",
+                    "Paint"
+                ],
                 "level": "advanced",
                 "duration": "1 hari"
             },
@@ -813,7 +1071,10 @@
                 "instruction": "1. Project planning:\n   - Estimate materials: gallons primer, base, clear\n   - Plan timeline\n   - Prepare workspace\n   - Siapkan lighting\n2. Complete disassembly (if needed):\n   - Remove trim pieces\n   - Remove windows, doors\n   - Allows access untuk all surfaces\n3. Paint process:\n   - Prime entire vehicle\n   - Base coat (berbagai passes)\n   - Clearcoat (final protection)\n4. Panel-by-panel approach:\n   - Spray each panel\n   - Maintain wet edge untuk blend\n   - Overlap transitions\n5. Detail work:\n   - Inside door jambs\n   - Engine bay\n   - Under hood\n   - Trunk\n6. Final cure time\n   - Let dry completely (24-48 hours)\n   - Final inspection\n   - Polish untuk shine",
                 "description": "Mengecat ulang seluruh kendaraan untuk hasil yang fresh seperti baru. Full repaint membutuhkan skill dan perencanaan yang matang.",
                 "output": "Complete vehicle repaint with professional finish",
-                "tools": ["Complete spray setup", "Masking materials"],
+                "tools": [
+                    "Complete spray setup",
+                    "Masking materials"
+                ],
                 "level": "advanced",
                 "duration": "2-3 hari"
             },
@@ -823,17 +1084,24 @@
                 "instruction": "1. Types of protective coatings:\n   - Ceramic coating: extreme protection, gloss\n   - PPF (Paint Protection Film): physical barrier\n   - Wax: traditional protection, easier maintenance\n   - Sealant: hybrid protection\n2. Ceramic coating application:\n   - Deep clean vehicle\n   - Clay bar untuk smooth paint\n   - Apply coating per manufacturer instructions\n   - Cure time (usually 24 hours)\n   - Provides protection untuk years\n3. PPF installation:\n   - Precision-cut film\n   - Apply ke high-damage areas (hood, bumper, doors)\n   - Prevent stone chips dan scratches\n4. Maintenance schedule:\n   - Regular wash: bi-weekly\n   - Wax application: monthly atau quarterly\n   - Clay bar: quarterly\n   - Professional detailing: annually\n5. Touch-up procedures\n6. Long-term care",
                 "description": "Melindungi hasil paint job dengan coating berkualitas tinggi sehingga awet dan tahan lama. Protective coating penting untuk investment protection.",
                 "output": "Protected paint with long-term durability",
-                "tools": ["Ceramic coating", "PPF", "Detailing supplies"],
+                "tools": [
+                    "Ceramic coating",
+                    "PPF",
+                    "Detailing supplies"
+                ],
                 "level": "advanced",
                 "duration": "1 hari"
             },
             {
                 "skill_id": "business",
                 "title": "Paint Shop Business",
-                "instruction": "1. Pricing strategy:\n   - Labor rate: per hour atau per job\n   - Material cost: factor in waste\n   - Overhead: facility, utilities, equipment\n   - Profit margin: typically 30-50%\n   - Quote customers accurately\n2. Efficiency:\n   - Minimize drying time: optimize schedule\n   - Batch similar jobs\n   - Maintain equipment properly\n   - Keep workspace organized\n3. Quality control:\n   - Inspect each stage\n   - Before customer pickup\n   - Warranty: stand behind work\n4. Customer communication:\n   - Explain process clearly\n   - Show progress\n   - Address concerns\n   - Follow-up after job\n5. Marketing:\n   - Word-of-mouth referrals\n   - Social media showcase\n   - Bangun reputation\n6. Safety compliance",
+                "instruction": "Kelola inventaris spare part dengan membuat daftar lengkap beserta harga dan supplier, pantau stok secara rutin, dan atur penyimpanan agar mudah ditemukan. Hitung harga layanan secara transparan dengan memperhitungkan biaya tenaga kerja, markup keuntungan, dan harga pasar. Bangun database pelanggan, catat riwayat servis setiap motor, dan lakukan follow-up setelah servis. Lacak pemasukan dan pengeluaran bulanan untuk menghitung profit dan merencanakan pengembangan bengkel.",
                 "description": "Menjalankan bisnis paint shop yang sukses dan menguntungkan. Business skills penting untuk growth dan sustainability.",
                 "output": "Professional paint shop operation",
-                "tools": ["Estimating software", "Accounting tools"],
+                "tools": [
+                    "Estimating software",
+                    "Accounting tools"
+                ],
                 "level": "advanced",
                 "duration": "1 hari"
             }
@@ -848,97 +1116,134 @@
                 "instruction": "1. Basic concepts:\n   - Voltage (V): electrical potential, measured dalam volts\n   - Current (I): flow of electrons, amperes\n   - Resistance (R): opposition to current, ohms\n   - Ohm's law: V = I × R\n2. Components:\n   - Resistor: limit current\n   - Capacitor: store electrical energy\n   - Inductor: store magnetic energy\n   - Diode: one-way valve untuk electricity\n   - Transistor: switch atau amplify\n   - LED: light emitting diode\n3. Circuits:\n   - Series: components connect in line\n   - Parallel: components connect in branches\n   - Circuit protection: fuse, breaker\n4. Breadboard basics:\n   - Bangun simple circuits without soldering\n   - Latihan LED circuit, buzzer circuit\n5. Multimeter usage:\n   - Measure voltage, current, resistance\n   - Check circuit continuity\n6. Safety precautions",
                 "description": "Mempelajari dasar-dasar elektronika untuk memahami cara kerja device IoT. Pengetahuan ini essential untuk troubleshooting dan project development.",
                 "output": "Pahamiing of electronics fundamentals",
-                "tools": ["Multimeter", "Breadboard", "Components"],
+                "tools": [
+                    "Multimeter",
+                    "Breadboard",
+                    "Components"
+                ],
                 "level": "basic",
                 "duration": "2 hari"
             },
             {
                 "skill_id": "microcontroller",
                 "title": "Microcontroller Programming",
-                "instruction": "1. Choose platform: Arduino, Raspberry Pi, STM32\n2. Siapkan Arduino environment:\n   - Download IDE\n   - Select board type\n   - Choose COM port\n3. Basic programming:\n   - void setup(): runs once at start\n   - void loop(): runs repeatedly\n   - digitalTulis(): set pin HIGH/LOW\n   - digitalBaca(): read pin state\n   - delay(): pause execution\n4. Blink LED project:\n   - Hubungkan LED to pin 13\n   - Tulis code untuk blink on/off\n   - Upload code to board\n   - Verify LED blinks\n5. Digital input:\n   - Hubungkan button to pin\n   - Baca button state\n   - Trigger action based on button\n6. Analog input/output\n   - PWM untuk control LED brightness",
+                "instruction": "Install Arduino IDE, pilih jenis board yang digunakan, dan sambungkan via USB. Pahami struktur program Arduino: setup() yang berjalan sekali saat mulai, dan loop() yang berjalan terus-menerus. Pelajari fungsi dasar: digitalWrite() untuk mengatur pin HIGH/LOW, digitalRead() untuk membaca input, dan delay() untuk jeda. Mulai dengan proyek Blink — sambungkan LED ke pin 13, tulis kode untuk menyala-matikannya, upload ke board, dan verifikasi hasilnya. Lanjutkan dengan membaca tombol sebagai input digital dan mengontrol kecerahan LED menggunakan PWM.",
                 "description": "Belajar programming microcontroller yang mengontrol device IoT. Programming skills ini penting untuk membuat logic dan automation.",
                 "output": "Working microcontroller programs",
-                "tools": ["Arduino IDE", "Microcontroller board"],
+                "tools": [
+                    "Arduino IDE",
+                    "Microcontroller board"
+                ],
                 "level": "basic",
                 "duration": "2 hari"
             },
             {
                 "skill_id": "sensors",
                 "title": "Sensor Integration",
-                "instruction": "1. Types of sensors:\n   - Temperature: DHT22, DS18B20\n   - Humidity: DHT22, BME680\n   - Motion: PIR sensor\n   - Light: photoresistor (LDR)\n   - Distance: ultrasonic sensor\n   - Pressure: BMP380\n2. Sensor connection:\n   - Baca datasheet: pinout, voltage, protocol\n   - Hubungkan power (VCC), ground (GND)\n   - Hubungkan signal pin to microcontroller\n3. Baca sensor data:\n   - Digital sensors: simple HIGH/LOW read\n   - Analog sensors: analogBaca() function\n   - Serial communication: I2C, SPI\n4. Data processing:\n   - Baca berbagai times, average\n   - Filter noise: apply algorithms\n   - Calibration: offset untuk accuracy\n5. Sensor projects:\n   - Temperature logger\n   - Motion-triggered alarm\n   - Light sensor untuk automation\n6. Troubleshooting\n   - Verify connections\n   - Check sensor data format",
+                "instruction": "Kenali berbagai jenis sensor: DHT22 untuk suhu dan kelembaban, sensor PIR untuk gerakan, LDR untuk cahaya, sensor ultrasonik untuk jarak, dan BMP380 untuk tekanan. Baca datasheet setiap sensor untuk mengetahui pinout, tegangan operasi, dan protokol komunikasinya, lalu sambungkan ke microcontroller (VCC, GND, dan pin sinyal). Baca data sensor melalui fungsi analogRead() untuk sensor analog atau via protokol I2C/SPI untuk sensor digital. Proses data dengan merata-rata beberapa pembacaan untuk mengurangi noise, lakukan kalibrasi jika diperlukan, dan buat proyek seperti logger suhu atau alarm berbasis gerakan.",
                 "description": "Mengintegrasikan berbagai sensor untuk mengumpulkan data dari lingkungan. Sensor adalah mata dan telinga dari IoT system.",
                 "output": "Working sensor readings dan data collection",
-                "tools": ["Sensors", "Microcontroller", "Breadboard"],
+                "tools": [
+                    "Sensors",
+                    "Microcontroller",
+                    "Breadboard"
+                ],
                 "level": "intermediate",
                 "duration": "1-2 hari"
             },
             {
                 "skill_id": "wireless_comms",
                 "title": "Wireless Communication",
-                "instruction": "1. WiFi connectivity:\n   - ESP8266 atau ESP32 development boards\n   - Hubungkan to WiFi network\n   - Send data to cloud server\n   - Receive commands from cloud\n2. Bluetooth:\n   - HM-10 Bluetooth module\n   - Hubungkan dengan smartphone\n   - Send/receive data via Bluetooth\n   - Bangun mobile app untuk control\n3. LoRaWAN:\n   - Long-range, low-power communication\n   - Great untuk wide-area IoT networks\n4. Mobile app integration:\n   - Use MIT App Inventor atau Flutter\n   - Design UI untuk control device\n   - Send commands via Bluetooth/WiFi\n   - Receive sensor data, display di app\n5. Cloud connectivity:\n   - HTTP requests to cloud service\n   - REST API integration\n   - Cloud storage untuk data\n6. Security: authentication, encryption",
+                "instruction": "Gunakan board ESP8266 atau ESP32 untuk konektivitas WiFi — sambungkan ke jaringan dan kirim data sensor ke server cloud melalui HTTP request. Untuk Bluetooth, gunakan modul HM-10 untuk berkomunikasi dengan smartphone dan kontrol perangkat dari jarak dekat. Pelajari LoRaWAN untuk komunikasi jarak jauh dengan daya rendah. Buat aplikasi mobile sederhana menggunakan MIT App Inventor atau Flutter untuk menampilkan data sensor dan mengirim perintah ke perangkat. Terapkan enkripsi dan autentikasi dasar untuk keamanan komunikasi.",
                 "description": "Menghubungkan IoT device ke internet dan aplikasi mobile. Wireless communication membuat device dapat dikontrol dari mana saja.",
                 "output": "Terhubung IoT device dengan wireless communication",
-                "tools": ["ESP8266", "Bluetooth module", "Mobile app"],
+                "tools": [
+                    "ESP8266",
+                    "Bluetooth module",
+                    "Mobile app"
+                ],
                 "level": "intermediate",
                 "duration": "2 hari"
             },
             {
                 "skill_id": "cloud_platform",
                 "title": "Cloud Platform Integration",
-                "instruction": "1. Choose cloud platform: AWS IoT Core, Azure IoT Hub, Google Cloud IoT\n2. Siapkan account dan create project\n3. Device provisioning:\n   - Register device\n   - Get credentials (keys, certificates)\n   - Download certificate ke device\n4. Send data to cloud:\n   - MQTT protocol: publish sensor data\n   - Hubungkan dengan broker\n   - Topic format: device/sensor/temperature\n   - Send JSON data\n5. Cloud processing:\n   - Store data dalam database\n   - Buat rules untuk automation\n   - Trigger actions based on conditions\n6. Dashboard creation:\n   - Visualize sensor data\n   - Real-time charts\n   - Remote control interface\n7. Security\n   - Encryption for data in transit\n   - Authentication tokens",
+                "instruction": "Daftarkan akun di platform IoT cloud (AWS IoT Core, Azure IoT Hub, atau Google Cloud IoT) dan buat project baru. Daftarkan perangkat, unduh sertifikat autentikasi, dan simpan di perangkat. Kirim data sensor ke cloud menggunakan protokol MQTT dengan format topik seperti device/sensor/temperature dan payload JSON. Di sisi cloud, simpan data ke database, buat rules untuk automasi (misalnya kirim notifikasi jika suhu melewati ambang batas), dan buat dashboard untuk visualisasi data real-time beserta kontrol jarak jauh.",
                 "description": "Menghubungkan IoT device ke platform cloud untuk storage dan processing data. Cloud integration memungkinkan advanced analytics dan remote management.",
                 "output": "IoT device connected to cloud platform",
-                "tools": ["AWS", "Azure", "MQTT client"],
+                "tools": [
+                    "AWS",
+                    "Azure",
+                    "MQTT client"
+                ],
                 "level": "intermediate",
                 "duration": "2 hari"
             },
             {
                 "skill_id": "automation",
                 "title": "Home Automation Project",
-                "instruction": "1. Plan system:\n   - Identify devices to control: lights, fans, doors\n   - Design automation rules\n   - Choose wireless technology (WiFi, Zigbee)\n2. Pasang hardware:\n   - Smart switches untuk lights\n   - Smart plugs untuk appliances\n   - Smart locks untuk doors\n   - Central hub untuk coordination\n3. Siapkan automation rules:\n   - Time-based: lights on at sunset\n   - Sensor-based: lights on when motion detected\n   - Manual: smartphone app control\n   - Conditional: if temperature > 30, turn on AC\n4. Integration:\n   - Hubungkan all devices ke hub\n   - Verify communication\n   - Tes automation sequences\n5. Mobile app control\n   - Pasang official app atau use generic control app\n   - Siapkan rooms, devices\n   - Buat automation scenarios\n6. Monitoring dan optimization",
+                "instruction": "Rencanakan sistem dengan mengidentifikasi perangkat yang ingin dikontrol (lampu, kipas, kunci pintu) dan rancang aturan otomasi. Pasang hardware: smart switch untuk lampu, smart plug untuk peralatan, smart lock untuk pintu, dan hub sebagai pusat koordinasi. Buat aturan otomasi berbasis waktu (lampu menyala saat matahari terbenam), sensor (lampu menyala saat ada gerakan), atau kondisi (AC menyala jika suhu lebih dari 30°C). Hubungkan semua perangkat ke hub, uji setiap skenario automasi, dan gunakan aplikasi mobile untuk kontrol manual dan monitoring.",
                 "description": "Membuat sistem automasi rumah yang intelligent dan convenient. Home automation membuat hidup lebih nyaman dan efisien energi.",
                 "output": "Functional home automation system",
-                "tools": ["Smart devices", "Hub", "Mobile app"],
+                "tools": [
+                    "Smart devices",
+                    "Hub",
+                    "Mobile app"
+                ],
                 "level": "advanced",
                 "duration": "2 hari"
             },
             {
                 "skill_id": "industrial_iot",
                 "title": "Industrial IoT Applications",
-                "instruction": "1. Industrial sensors:\n   - Temperature sensors: monitor machinery\n   - Vibration sensors: detect anomalies\n   - Pressure sensors: hydraulic systems\n   - Flow sensors: fluid/gas monitoring\n2. Data collection system:\n   - Gateway untuk collect data dari berbagai sensors\n   - Edge computing: local processing\n   - Send summaries to cloud\n3. Predictive maintenance:\n   - Collect historical data\n   - Analyze patterns\n   - Predict failures before occur\n   - Alert maintenance team\n4. Energy monitoring:\n   - Monitor power consumption\n   - Identify inefficiencies\n   - Optimize operations\n5. Real-time dashboards\n   - Live machine status\n   - Alert system\n   - Performance metrics\n6. Security\n   - Secure device authentication\n   - Network segmentation",
+                "instruction": "Pasang sensor industri untuk memonitor kondisi mesin: sensor suhu, getaran, tekanan, dan aliran. Kumpulkan data dari semua sensor melalui gateway dan lakukan edge computing untuk pemrosesan lokal sebelum mengirim ringkasannya ke cloud. Bangun sistem predictive maintenance dengan menganalisis data historis untuk menemukan pola dan memprediksi kerusakan sebelum terjadi. Pantau konsumsi energi untuk mengidentifikasi inefisiensi. Buat dashboard real-time yang menampilkan status mesin, sistem alert, dan metrik performa.",
                 "description": "Menerapkan IoT dalam industri untuk monitoring, optimization, dan predictive maintenance. Industrial IoT meningkatkan efisiensi dan mengurangi downtime.",
                 "output": "Industrial IoT monitoring system",
-                "tools": ["Industrial sensors", "Gateway", "Analytics platform"],
+                "tools": [
+                    "Industrial sensors",
+                    "Gateway",
+                    "Analytics platform"
+                ],
                 "level": "advanced",
                 "duration": "2 hari"
             },
             {
                 "skill_id": "data_analytics",
                 "title": "IoT Data Analytics",
-                "instruction": "1. Data collection dan storage:\n   - Time-series database untuk IoT data\n   - InfluxDB, TimescaleDB, atau cloud solutions\n   - Data retention policies\n2. Data visualization:\n   - Grafana untuk dashboards\n   - Real-time charts, gauges, graphs\n   - Historical trends\n   - Alerts untuk anomalies\n3. Analytics:\n   - Python dengan pandas, numpy\n   - Analyze sensor data patterns\n   - Identify trends\n   - Forecast future values\n4. Machine learning (optional):\n   - Anomaly detection\n   - Predictive modeling\n   - Classification algorithms\n5. Reports generation\n   - Automated reports\n   - Executive summaries\n   - Performance metrics\n6. Data security\n   - Access control\n   - Data privacy",
+                "instruction": "Simpan data IoT dalam time-series database seperti InfluxDB atau TimescaleDB dengan kebijakan retensi data yang sesuai. Buat dashboard interaktif menggunakan Grafana dengan grafik real-time, gauge, dan tren historis, serta alert otomatis saat terjadi anomali. Gunakan Python dengan pandas dan numpy untuk menganalisis pola data sensor dan membuat prediksi nilai ke depan. Pertimbangkan penerapan machine learning sederhana untuk deteksi anomali atau klasifikasi. Buat laporan otomatis yang menyajikan ringkasan performa dan insight untuk pengambilan keputusan.",
                 "description": "Menganalisis data IoT untuk mendapatkan insights valuable. Data analytics mengubah raw data menjadi actionable intelligence.",
                 "output": "Analytics dashboard dan insights reports",
-                "tools": ["Grafana", "Python", "Analytics tools"],
+                "tools": [
+                    "Grafana",
+                    "Python",
+                    "Analytics tools"
+                ],
                 "level": "advanced",
                 "duration": "2 hari"
             },
             {
                 "skill_id": "security",
                 "title": "IoT Security",
-                "instruction": "1. Device security:\n   - Firmware updates: patch vulnerabilities\n   - Strong passwords: avoid defaults\n   - Physical security: secure device from tampering\n   - Secure boot: prevent unauthorized firmware\n2. Network security:\n   - Encryption: TLS/SSL untuk data in transit\n   - Firewall: filter unauthorized access\n   - VPN: secure remote access\n   - Network segmentation: isolate IoT devices\n3. Authentication:\n   - Certificates: device identity\n   - API keys: application authentication\n   - OAuth 2.0: secure access\n4. Data protection:\n   - Encryption at rest: stored data\n   - Access control: who can access\n   - Audit logs: track access\n5. Threat monitoring:\n   - IDS (Intrusion Detection System)\n   - Anomaly detection\n   - Response procedures\n6. Compliance\n   - GDPR, HIPAA (if applicable)\n   - Standards: NIST, ISO 27001",
+                "instruction": "Amankan perangkat dengan selalu memperbarui firmware, menggunakan password yang kuat (bukan default), dan mengaktifkan secure boot. Di sisi jaringan, enkripsi data menggunakan TLS/SSL, konfigurasikan firewall, dan segmentasikan perangkat IoT ke network terpisah. Implementasikan autentikasi menggunakan sertifikat digital dan API key. Lindungi data dengan enkripsi saat disimpan dan terapkan access control yang ketat. Aktifkan intrusion detection system untuk mendeteksi aktivitas mencurigakan, dan pastikan kepatuhan terhadap regulasi seperti GDPR jika berlaku.",
                 "description": "Mengamankan IoT system dari cyber threats dan vulnerability. Security adalah critical foundation untuk system yang trustworthy.",
                 "output": "Secure IoT infrastructure",
-                "tools": ["Security tools", "Encryption libraries"],
+                "tools": [
+                    "Security tools",
+                    "Encryption libraries"
+                ],
                 "level": "advanced",
                 "duration": "2 hari"
             },
             {
                 "skill_id": "system_design",
                 "title": "Complete IoT System Design",
-                "instruction": "1. Requirements analysis:\n   - Define use case dan objectives\n   - Identify constraints: power, bandwidth, cost\n   - Specify performance requirements\n2. System architecture:\n   - Device layer: sensors, actuators\n   - Gateway/edge layer: local processing\n   - Network layer: communication protocol\n   - Cloud layer: storage, analytics\n   - Application layer: user interface\n3. Technology selection:\n   - Microcontroller: based on requirements\n   - Wireless: WiFi, LoRa, NB-IoT\n   - Cloud platform: AWS, Azure, Google\n   - Database: time-series, relational\n4. Prototype development\n   - Bangun MVP (Minimum Viable Product)\n   - Tes functionality\n   - Get feedback\n5. Scalability planning\n   - Can system handle growth?\n   - Load balancing\n   - Database optimization\n6. Documentation\n   - System architecture diagrams\n   - Component specifications\n   - Integration guide",
+                "instruction": "Mulai dengan analisis kebutuhan: definisikan use case, identifikasi batasan (daya, bandwidth, biaya), dan tentukan persyaratan performa. Rancang arsitektur berlapis: device layer (sensor dan aktuator), gateway/edge layer (pemrosesan lokal), network layer (protokol komunikasi), cloud layer (storage dan analitik), dan application layer (antarmuka pengguna). Pilih teknologi yang sesuai di setiap layer, lalu bangun MVP untuk memvalidasi konsep. Rencanakan skalabilitas agar sistem bisa bertumbuh, dan dokumentasikan seluruh arsitektur dalam diagram beserta spesifikasi komponen dan panduan integrasi.",
                 "description": "Mendesain complete IoT system dari awal sampai implementasi. System design skills penting untuk project sukses.",
                 "output": "Complete IoT system design document",
-                "tools": ["Design tools", "Documentation"],
+                "tools": [
+                    "Design tools",
+                    "Documentation"
+                ],
                 "level": "advanced",
                 "duration": "1-2 hari"
             }
@@ -950,100 +1255,131 @@
             {
                 "skill_id": "accounting_basics",
                 "title": "Accounting Fundamentals",
-                "instruction": "1. Basic equation: Assets = Liabilities + Equity\n   - Assets: apa yang dimiliki perusahaan\n   - Liabilities: utang/kewajiban\n   - Equity: modal pemilik\n2. Double-entry bookkeeping:\n   - Setiap transaksi affect dua akun\n   - Debit + Credit harus balanced\n   - Contoh: buy equipment dengan uang\n     Debit Equipment, Credit Cash\n3. Account types:\n   - Asset accounts: cash, accounts receivable, inventory\n   - Liability accounts: accounts payable, loans\n   - Equity accounts: capital, retained earnings\n   - Income accounts: sales, revenue\n   - Expense accounts: salary, supplies, rent\n4. Accounting cycle:\n   - Record transactions\n   - Post to ledger\n   - Prepare trial balance\n   - Adjust entries\n   - Prepare financial statements\n5. Latihan: journal entry untuk berbagai transaksi",
+                "instruction": "Pahami persamaan dasar akuntansi: Aset = Liabilitas + Ekuitas, di mana aset adalah apa yang dimiliki, liabilitas adalah utang, dan ekuitas adalah modal pemilik. Pelajari double-entry bookkeeping: setiap transaksi memengaruhi dua akun (debit dan kredit harus selalu seimbang). Kenali lima jenis akun: aset, liabilitas, ekuitas, pendapatan, dan beban. Pahami siklus akuntansi dari pencatatan transaksi, posting ke buku besar, penyusunan neraca saldo, jurnal penyesuaian, hingga penyusunan laporan keuangan. Latih diri dengan membuat jurnal untuk berbagai jenis transaksi sehari-hari.",
                 "description": "Memahami konsep dasar akuntansi yang fundamental untuk semua pekerjaan akuntansi. Pengetahuan ini adalah fondasi untuk career yang sukses.",
                 "output": "Pahamiing of basic accounting principles",
-                "tools": ["Accounting textbook", "Spreadsheet"],
+                "tools": [
+                    "Accounting textbook",
+                    "Spreadsheet"
+                ],
                 "level": "basic",
                 "duration": "3 hari"
             },
             {
                 "skill_id": "accounting_software",
                 "title": "Accounting Software",
-                "instruction": "1. Choose software: QuickBooks, Xero, FreshBooks, Zoho Books\n2. Siapkan company:\n   - Buat chart of accounts\n   - Define fiscal year\n   - Set up payment terms\n3. Record transactions:\n   - Invoice creation: track sales\n   - Bill entry: track expenses\n   - Payment recording: track cash flow\n   - Bank reconciliation: verify transactions\n4. Basic features:\n   - Generate invoices\n   - Track expenses\n   - Buat purchase orders\n   - Track inventory (if applicable)\n5. Reports:\n   - Income statement\n   - Balance sheet\n   - Cash flow statement\n   - Trial balance\n6. User accounts untuk multi-user access\n7. Backup dan security",
+                "instruction": "Pilih software seperti QuickBooks atau Xero, lalu buat perusahaan baru dengan mengatur chart of accounts, tahun fiskal, dan term pembayaran. Latih pencatatan transaksi harian: buat invoice untuk penjualan, catat tagihan pengeluaran, rekam pembayaran, dan lakukan rekonsiliasi bank setiap bulan. Manfaatkan fitur laporan untuk menghasilkan income statement, balance sheet, cash flow statement, dan trial balance secara otomatis. Atur hak akses pengguna yang berbeda dan pastikan data selalu dibackup secara rutin.",
                 "description": "Belajar menggunakan software akuntansi modern untuk efficiency dan accuracy. Software adalah tool essential untuk akuntan modern.",
                 "output": "Proficiency with accounting software",
-                "tools": ["QuickBooks", "Xero", "Spreadsheet"],
+                "tools": [
+                    "QuickBooks",
+                    "Xero",
+                    "Spreadsheet"
+                ],
                 "level": "basic",
                 "duration": "2 hari"
             },
             {
                 "skill_id": "bookkeeping",
                 "title": "Bookkeeping Processes",
-                "instruction": "1. Daily bookkeeping tasks:\n   - Record all transactions\n   - Review untuk completeness dan accuracy\n   - File receipts\n   - Reconcile accounts\n2. Invoice management:\n   - Record invoice details\n   - Track aging (overdue invoices)\n   - Follow up untuk collection\n   - Record payment\n3. Bill payment:\n   - Record bills dari vendors\n   - Schedule payment\n   - Record payment\n   - Reconcile dengan vendor statements\n4. Expense tracking:\n   - Categorize expenses correctly\n   - Ensure supporting documentation\n   - Monitor budget vs actual\n5. Bank reconciliation:\n   - Monthly: compare book vs bank statement\n   - Identify discrepancies\n   - Adjust untuk timing differences\n   - Verify cash position\n6. Month-end closing:\n   - Complete all transactions\n   - Prepare trial balance\n   - Review untuk accuracy",
+                "instruction": "Lakukan tugas harian dengan disiplin: catat setiap transaksi segera, simpan bukti seperti nota dan struk, dan rekonsiliasi akun secara rutin. Kelola invoice pelanggan dengan memantau umur piutang dan menindaklanjuti yang sudah jatuh tempo. Catat tagihan dari vendor dan jadwalkan pembayarannya secara teratur. Rekonsiliasi bank setiap bulan: bandingkan catatan pembukuan dengan rekening koran, identifikasi selisih, dan sesuaikan untuk perbedaan waktu. Lakukan penutupan bulanan dengan menyelesaikan semua transaksi dan menyiapkan neraca saldo.",
                 "description": "Melakukan pekerjaan bookkeeping sehari-hari dengan accurate dan organized. Bookkeeping yang baik ensures semua transaksi tercatat dengan benar.",
                 "output": "Well-organized bookkeeping records",
-                "tools": ["Accounting software", "Spreadsheet"],
+                "tools": [
+                    "Accounting software",
+                    "Spreadsheet"
+                ],
                 "level": "intermediate",
                 "duration": "1 hari"
             },
             {
                 "skill_id": "payroll",
                 "title": "Payroll Management",
-                "instruction": "1. Payroll components:\n   - Gross salary: total sebelum deductions\n   - Deductions: tax, insurance, loans\n   - Net pay: take-home setelah deductions\n   - Employer contributions: pension, insurance\n2. Tax calculations:\n   - Income tax: based on salary, tax brackets\n   - Social security: fixed percentage\n   - Health insurance: employee portion\n   - Other deductions: approved leave, advances\n3. Payroll cycle:\n   - Collect hours worked (timesheet)\n   - Calculate salary\n   - Deduct taxes dan other items\n   - Generate payslip\n   - Process payment\n   - Record dalam accounting system\n4. Payroll software\n   - Siapkan employee details\n   - Enter hours/attendance\n   - System calculates automatically\n   - Generate reports\n5. Compliance\n   - Maintain payroll records\n   - File tax returns\n   - Submit mandatory contributions\n6. Audit trail",
+                "instruction": "Pahami komponen payroll: gaji kotor (sebelum potongan), berbagai potongan (pajak, BPJS, pinjaman), gaji bersih (take-home pay), dan kontribusi pemberi kerja. Hitung pajak penghasilan berdasarkan bracket yang berlaku, potongan jaminan sosial dengan persentase tetap, dan potongan lain yang sudah disetujui. Jalankan siklus payroll bulanan: kumpulkan data kehadiran, hitung gaji, potong pajak dan item lain, cetak slip gaji, proses pembayaran, dan catat di sistem akuntansi. Pastikan semua kewajiban pelaporan pajak dan iuran wajib dipenuhi tepat waktu.",
                 "description": "Mengelola payroll karyawan dengan accurate dan compliant dengan regulasi. Payroll yang tepat waktu dan akurat penting untuk employee satisfaction.",
                 "output": "Accurate payroll processing",
-                "tools": ["Payroll software", "Spreadsheet"],
+                "tools": [
+                    "Payroll software",
+                    "Spreadsheet"
+                ],
                 "level": "intermediate",
                 "duration": "1 hari"
             },
             {
                 "skill_id": "tax_compliance",
                 "title": "Tax Compliance",
-                "instruction": "1. Types of taxes:\n   - Income tax: individual atau corporate\n   - Sales tax/VAT: pada purchases\n   - Property tax: pada real estate\n   - Employment tax: payroll related\n2. Tax planning:\n   - Pahami tax brackets\n   - Identify deductible expenses\n   - Plan untuk minimize tax liability legally\n   - Track deductions throughout year\n3. Tax documentation:\n   - Keep all receipts: expenses, payments\n   - Documentation untuk deductions\n   - Bank statements\n   - Invoices dan purchase orders\n4. Tax filing:\n   - Prepare tax return forms\n   - Include all income\n   - Claim deductions\n   - Calculate taxes owed or refund\n   - File before deadline\n5. Records retention\n   - Keep untuk minimum 7 years\n   - Organized filing system\n   - Digital backup\n6. Compliance calendar\n   - Imporant dates\n   - Extension deadlines\n   - Payment schedules",
+                "instruction": "Kenali jenis-jenis pajak yang berlaku: pajak penghasilan, PPN atas transaksi, pajak properti, dan pajak terkait penggajian. Rencanakan pajak secara legal dengan memahami tarif yang berlaku, mengidentifikasi biaya yang dapat dikurangkan, dan melacak dokumentasi sepanjang tahun. Simpan semua bukti pendukung: nota, kuitansi, faktur, dan rekening koran. Siapkan laporan pajak yang mencakup seluruh penghasilan dan manfaatkan semua pengurangan yang sah, lalu ajukan sebelum batas waktu. Pertahankan arsip dokumen minimal tujuh tahun dengan backup digital yang terorganisir.",
                 "description": "Memastikan perusahaan compliant dengan semua tax requirements. Tax compliance yang baik mencegah penalties dan masalah legal.",
                 "output": "Tax compliance plan dan filings",
-                "tools": ["Tax software", "Documentation files"],
+                "tools": [
+                    "Tax software",
+                    "Documentation files"
+                ],
                 "level": "intermediate",
                 "duration": "1-2 hari"
             },
             {
                 "skill_id": "financial_statements",
                 "title": "Financial Statements Preparation",
-                "instruction": "1. Income Statement (P&L):\n   - Revenue: total sales/income\n   - Minus operating expenses\n   - Equals operating profit\n   - Minus interest, tax\n   - Equals net income\n   - Format: period (monthly/quarterly/annual)\n2. Balance Sheet:\n   - Assets = Liabilities + Equity\n   - Current assets: cash, receivables\n   - Fixed assets: equipment, property\n   - Current liabilities: payables, short-term loans\n   - Long-term liabilities\n   - Date snapshot (not period)\n3. Cash Flow Statement:\n   - Operating cash flow: dari business operations\n   - Investing cash flow: purchases/sales of assets\n   - Financing cash flow: loans, equity\n   - Net change dalam cash\n4. Preparation process:\n   - Gather trial balance\n   - Make adjusting entries\n   - Prepare statements\n   - Review untuk accuracy\n   - Footnotes explaining items\n5. Analysis\n   - Trends: compare previous periods\n   - Ratios: profitability, liquidity\n   - Red flags: declining performance",
+                "instruction": "Buat Income Statement (Laporan Laba Rugi) yang menyajikan total pendapatan dikurangi biaya operasional, bunga, dan pajak untuk menghasilkan laba bersih — selalu untuk periode tertentu. Susun Balance Sheet yang menampilkan snapshot kondisi keuangan pada tanggal tertentu: aset lancar dan tetap di satu sisi, liabilitas jangka pendek dan panjang serta ekuitas di sisi lain. Buat Cash Flow Statement yang membagi arus kas menjadi tiga aktivitas: operasional, investasi, dan pendanaan. Lakukan analisis tren dengan membandingkan antar periode dan hitung rasio keuangan untuk menilai kesehatan bisnis.",
                 "description": "Menyiapkan laporan keuangan yang menunjukkan kondisi finansial perusahaan. Report yang baik penting untuk stakeholders dan decision-making.",
                 "output": "Complete financial statements",
-                "tools": ["Accounting software", "Spreadsheet"],
+                "tools": [
+                    "Accounting software",
+                    "Spreadsheet"
+                ],
                 "level": "intermediate",
                 "duration": "1 hari"
             },
             {
                 "skill_id": "audit",
                 "title": "Internal Audit",
-                "instruction": "1. Audit purpose:\n   - Verify accuracy dari financial records\n   - Ensure compliance dengan policies\n   - Identify weaknesses dalam controls\n   - Provide recommendations\n2. Audit procedures:\n   - Review transactions (sample basis)\n   - Verify supporting documentation\n   - Reconcile accounts\n   - Tes internal controls\n3. Tesing approach:\n   - Risk assessment: focus pada high-risk areas\n   - Tes design effectiveness: do controls work?\n   - Tes operating effectiveness: berfungsi consistently?\n4. Audit findings:\n   - Discrepancies: differences found\n   - Control deficiencies: gaps dalam controls\n   - Recommendations: how to improve\n5. Documentation:\n   - Audit program: procedures to perform\n   - Workpapers: evidence of audit work\n   - Audit memo: findings summary\n6. Audit report\n   - Findings\n   - Recommendations\n   - Management responsee\n   - Follow-up actions",
+                "instruction": "Pahami tujuan audit internal: memverifikasi keakuratan catatan keuangan, memastikan kepatuhan terhadap kebijakan, dan mengidentifikasi kelemahan pengendalian. Lakukan prosedur audit dengan meninjau sampel transaksi, memverifikasi dokumen pendukungnya, merekonsiliasi akun, dan menguji efektivitas kontrol internal. Gunakan pendekatan berbasis risiko dengan fokus pada area yang paling berisiko. Dokumentasikan semua temuan dalam workpapers, susun laporan audit yang berisi temuan, rekomendasi, dan rencana tindak lanjut, lalu pastikan manajemen merespons setiap rekomendasi.",
                 "description": "Melakukan audit internal untuk ensure accuracy dan compliance. Audit yang baik mencegah fraud dan meningkatkan operational efficiency.",
                 "output": "Internal audit report dengan findings",
-                "tools": ["Audit templates", "Spreadsheet"],
+                "tools": [
+                    "Audit templates",
+                    "Spreadsheet"
+                ],
                 "level": "advanced",
                 "duration": "1-2 hari"
             },
             {
                 "skill_id": "budgeting",
                 "title": "Budget Planning & Variance Analysis",
-                "instruction": "1. Budget preparation:\n   - Historical data: previous year performance\n   - Forecast assumptions: growth, inflation\n   - Department budgets: input dari each area\n   - Review dan approval\n2. Budget types:\n   - Operating budget: daily operations\n   - Capital budget: long-term investments\n   - Cash budget: cash flow projections\n   - Project budget: specific projects\n3. Budget components:\n   - Revenue forecast\n   - Operating expenses: salary, rent, supplies\n   - Capital expenses\n   - Contingency: reserve untuk unexpected\n4. Variance analysis:\n   - Actual vs budget comparison\n   - Calculate differences (variance)\n   - Percentage variance: actual/budget\n   - Investigate large variances\n   - Root cause analysis\n5. Corrective actions:\n   - When to intervene\n   - Cost control measures\n   - Revenue improvement\n6. Reporting\n   - Monthly variance reports\n   - Trend analysis\n   - Forecast revisions",
+                "instruction": "Siapkan anggaran dengan mengacu pada data historis tahun lalu, asumsi pertumbuhan dan inflasi, serta masukan dari setiap departemen. Buat beberapa jenis anggaran: operasional untuk kegiatan sehari-hari, modal untuk investasi jangka panjang, dan kas untuk proyeksi arus kas. Setiap bulan, bandingkan realisasi dengan anggaran untuk menghitung variance (selisih) dan persentasenya. Investigasi variance yang signifikan untuk menemukan penyebabnya, ambil tindakan korektif jika diperlukan, dan sajikan laporan variance bulanan kepada manajemen beserta analisis trendnya.",
                 "description": "Merencanakan keuangan perusahaan dengan budget yang realistic dan monitoring variance. Budgeting yang baik helps dengan financial control dan planning.",
                 "output": "Annual budget dan variance analysis reports",
-                "tools": ["Excel", "Budget software"],
+                "tools": [
+                    "Excel",
+                    "Budget software"
+                ],
                 "level": "advanced",
                 "duration": "1-2 hari"
             },
             {
                 "skill_id": "financial_analysis",
                 "title": "Financial Analysis & Ratios",
-                "instruction": "1. Key financial ratios:\n   - Profitability: Net income / Revenue = profit margin\n   - Liquidity: Current assets / Current liabilities\n   - Efficiency: Revenue / Total assets = asset turnover\n   - Leverage: Total debt / Total equity\n2. Trend analysis:\n   - Compare over time: 3-5 years\n   - Identify patterns\n   - Spot problems early\n3. Comparative analysis:\n   - Industry benchmarks\n   - Competitor comparison\n   - Best practices\n4. Cash flow analysis:\n   - Operating cash flow: sustainable?\n   - Free cash flow: after capital expenses\n   - Cash flow to earnings: quality of earnings\n5. Performance indicators:\n   - ROI (Return on Investment)\n   - ROE (Return on Equity)\n   - DuPont analysis: break down ROE\n6. Forecasting\n   - Project future performance\n   - Sensitivity analysis: what-if scenarios\n   - Scenario planning: best/worst case",
+                "instruction": "Hitung rasio keuangan utama: profitabilitas (net income / revenue), likuiditas (current assets / current liabilities), efisiensi (revenue / total assets), dan leverage (total debt / total equity). Lakukan analisis tren dengan membandingkan data tiga hingga lima tahun terakhir untuk menemukan pola dan mendeteksi masalah lebih awal. Bandingkan dengan benchmark industri atau kompetitor untuk konteks yang lebih bermakna. Analisis arus kas bebas dan kualitas laba, hitung ROI dan ROE, serta buat proyeksi keuangan dengan skenario terbaik dan terburuk untuk mendukung pengambilan keputusan strategis.",
                 "description": "Menganalisis laporan keuangan untuk understand kondisi bisnis dan identify opportunities. Financial analysis helps dengan strategic decision-making.",
                 "output": "Financial analysis report dengan insights",
-                "tools": ["Spreadsheet", "Analytics tools"],
+                "tools": [
+                    "Spreadsheet",
+                    "Analytics tools"
+                ],
                 "level": "advanced",
                 "duration": "1-2 hari"
             },
             {
                 "skill_id": "business_accounting",
                 "title": "Business Accounting Management",
-                "instruction": "1. Small business accounting:\n   - Single-entry atau double-entry bookkeeping\n   - Managing receivables/payables\n   - Inventory tracking\n   - Tax planning\n2. Chart of accounts design:\n   - Logical organization\n   - Easy to understand\n   - Facilitates reporting\n   - Flexibility untuk growth\n3. Month-end procedures:\n   - Complete all transactions\n   - Adjusting entries (accruals, prepaid)\n   - Trial balance\n   - Financial statements\n   - Reconciliations\n4. Controls and procedures:\n   - Check approvals\n   - Segregation of duties\n   - Documentation requirements\n   - Review procedures\n5. Communication:\n   - Present financial results ke management\n   - Explain variances\n   - Provide insights\n   - Recommendations\n6. System maintenance\n   - Updates\n   - Compliance\n   - Training",
+                "instruction": "Kelola akuntansi bisnis kecil dengan menerapkan double-entry bookkeeping, mengelola piutang dan utang secara aktif, serta memantau stok jika ada. Rancang chart of accounts yang logis dan mudah dipahami, cukup fleksibel untuk mendukung pertumbuhan bisnis. Jalankan prosedur penutupan bulanan: selesaikan semua transaksi, buat jurnal penyesuaian (akrual dan prepaid), susun neraca saldo, buat laporan keuangan, dan rekonsiliasi semua akun. Terapkan kontrol internal seperti persetujuan untuk pengeluaran besar dan pemisahan tugas. Presentasikan hasil keuangan kepada manajemen secara rutin beserta insight dan rekomendasinya.",
                 "description": "Mengelola akuntansi untuk bisnis dengan organized dan professional. Good accounting management provides financial clarity dan supports growth.",
                 "output": "Well-managed accounting system",
-                "tools": ["Accounting software", "Spreadsheet"],
+                "tools": [
+                    "Accounting software",
+                    "Spreadsheet"
+                ],
                 "level": "advanced",
                 "duration": "1 hari"
             }

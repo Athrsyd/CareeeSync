@@ -56,14 +56,29 @@ const CareerHooks = () => {
         }
     };
 
+    const updateMasterySkill = async (skillId, mastered) => {
+        const token = localStorage.getItem('token');
+        setCareerLoading(true);
+        try {
+            const response = await API.put(`/career/${skillId}`, mastered , {
+                headers: {
+                    'Authorization': `Bearer ${token}`
+                }
+            });
+            console.log('Mastery skill updated successfully:', response.data);
+        } catch (error) {
+            console.error('Error updating mastery skill:', error);
+        } finally {
+            setCareerLoading(false);
+        }
+    };
+
     const GetSkills = async () => {
         const careerData = await GetCareer();
         return careerData[0]?.skills_mastery || [];
     };
 
-
-    return { postCareer, handleChange, GetCareer, GetSkills };
+    return { postCareer, handleChange, GetCareer, GetSkills, updateMasterySkill };
 }
-
 
 export default CareerHooks
