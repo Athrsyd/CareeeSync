@@ -23,7 +23,7 @@ const Auth = () => {
     const navigate = useNavigate();
 
         useEffect(() => {
-        if (user) {
+        if (user && localStorage.getItem('token')) {
             navigate('/dashboard');
         }
     }, [user, navigate]);

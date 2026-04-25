@@ -12,6 +12,7 @@ const CareerProvider = ({ children }) => {
     const { GetCareer, GetSkills } = CareerHooks()
     const [careerData, setCareerData] = useState(null)
     const [skillsMastery, setSkillsMastery] = useState([])
+    const [unFinishedProjects, setUnfinishedProjects] = useState([])
     const [readiness, setReadiness] = useState(0)
     const [projects, setProjects] = useState([])
     const { setCurrentProject } = useCurrentProject();
@@ -53,6 +54,7 @@ const CareerProvider = ({ children }) => {
                 return !skill || !skill.mastered;
             });
             console.log("project yang belum dikuasai untuk", careerData.career_name, 'adalah', projectsUnfinished);
+            setUnfinishedProjects(projectsUnfinished);
 
             const firstSkill = projectsUnfinished[0];
 
@@ -75,7 +77,7 @@ const CareerProvider = ({ children }) => {
     }, [])
 
     return (
-        <CareerContext.Provider value={{ careerData, skillsMastery, readiness, fetchCareer, setSkillsMastery, projects }}>
+        <CareerContext.Provider value={{ careerData, skillsMastery, readiness, fetchCareer, setSkillsMastery, projects, unFinishedProjects }}>
             {children}
         </CareerContext.Provider>
     )

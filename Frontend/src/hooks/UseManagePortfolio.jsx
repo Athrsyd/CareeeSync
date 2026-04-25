@@ -85,6 +85,72 @@ const useManagePortfolio = () => {
         }
     }
 
+    const fetchPortfolioByUsername = async (username) => {
+        setLoading(true)
+        setError('')
+        try {
+            const response = await API.get(`/portfolio/${username}`)
+            return response.data.data || null
+        } catch (err) {
+            console.log('Portfolio not found for:', username)
+            return null
+        } finally {
+            setLoading(false)
+        }
+    }
+
+    const updatePortfolio = async (formData, portfolioId) => {
+        setLoading(true)
+        setError('')
+
+        try {
+            const token = localStorage.getItem('token')
+            const data = new FormData()
+            
+            console.log('Updating portfolio:', portfolioId)
+            
+            const stringFields = ['fullname', 'about_me', 'address', 'education', 'hobbies', 'experience', 'email', 'linkedin_link', 'instagram_link', 'phone_number', 'career_id', 'user_id', 'style']
+            
+            stringFields.forEach(key => {
+                if (formData[key] !== null && formData[key] !== '') {
+                    data.append(key, String(formData[key]))
+                }
+            })
+
+            if (formData.photo && formData.photo instanceof File) {
+                data.append('photo', formData.photo)
+            }
+
+            const response = await API.post(`/portfolio/${portfolioId}`, data, {
+                headers: {
+                    'Authorization': `Bearer ${token}`,
+                    'Content-Type': 'multipart/form-data',
+                }
+            })
+
+            console.log('Portfolio updated:', response.data)
+            setPortfolioId(portfolioId)
+            setShowSuccess(true)
+            return true
+        } catch (err) {
+            let errorMessage = 'Gagal memperbarui portfolio'
+            
+            if (err.response?.data?.message) {
+                errorMessage = typeof err.response.data.message === 'string' 
+                    ? err.response.data.message 
+                    : 'Terjadi kesalahan pada server'
+            } else if (err.message) {
+                errorMessage = err.message
+            }
+            
+            setError(errorMessage)
+            console.error('Error updating portfolio:', err)
+            return false
+        } finally {
+            setLoading(false)
+        }
+    }
+
     return {
         loading,
         error,
@@ -92,6 +158,8 @@ const useManagePortfolio = () => {
         portfolioId,
         initialFormData,
         submitPortfolio,
+        fetchPortfolioByUsername,
+        updatePortfolio,
         setShowSuccess,
         setError
     }

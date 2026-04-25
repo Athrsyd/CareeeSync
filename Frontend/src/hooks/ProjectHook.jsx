@@ -6,6 +6,7 @@ const ProjectHook = () => {
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState(null);
     const [message, setMessage] = useState(null);
+    
 
     const postProject = async (projectData) => {
         setLoading(true);
@@ -14,9 +15,9 @@ const ProjectHook = () => {
         const token = localStorage.getItem('token');
 
         try {
-            const response = await API.post('/projects-finished', projectData,{
+            const response = await API.post('/projects-finished', projectData, {
                 headers: {
-                    Authorization : `Bearer ${token}`,
+                    Authorization: `Bearer ${token}`,
                 }
             });
             setProjectData(response.data);
@@ -28,7 +29,22 @@ const ProjectHook = () => {
         }
     };
 
-    return { projectData, loading, error, message, postProject };
+    const fetchProject = async (id) => {
+        setLoading(true);
+        setError(null);
+        try {
+            const response = await API.get(`/projects-finished/${id}`);
+            setProjectData(response.data.data);
+            console.log('Fetched project data:', response.data.data);
+        } catch (error) {
+            setError(error.response?.data?.message || 'Failed to fetch projects.');
+            setProjectData(null);
+        } finally {
+            setLoading(false);
+        }
+    };
+
+    return { projectData, loading, error, message, postProject, fetchProject };
 };
 
 export default ProjectHook

@@ -24,6 +24,7 @@ const PortfolioHooks = () => {
             setLoading(false);
         }
     }
+    
     return {
         portfolioData,
         loading,

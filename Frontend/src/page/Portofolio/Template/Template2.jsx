@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { FiMenu, FiX, FiArrowRight, FiMail, FiZap, FiCode } from 'react-icons/fi';
 import { FaGithub, FaLinkedin, FaInstagram } from 'react-icons/fa';
-const Template2 = ({ data, skillsData }) => {
+const Template2 = ({ data, skillsData, projectsData }) => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [activeNav, setActiveNav] = useState('home');
     const [visibleSkills, setVisibleSkills] = useState(3);
@@ -21,17 +21,17 @@ const Template2 = ({ data, skillsData }) => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        
+
         if (!formData.name || !formData.email || !formData.subject || !formData.message) {
             alert('Semua field harus diisi!');
             return;
         }
-        
+
         // Kirim ke email user (dari backend)
         const mailtoLink = `mailto:${data.email}?subject=${encodeURIComponent(`New Message: ${formData.subject}`)}&body=${encodeURIComponent(`From: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`)}`;
-        
+
         window.location.href = mailtoLink;
-        
+
         // Reset form
         setFormData({ name: '', email: '', subject: '', message: '' });
     };
@@ -78,50 +78,7 @@ const Template2 = ({ data, skillsData }) => {
     //     },
     // ];
 
-    const projectsData = [
-        {
-            id: 1,
-            title: 'E-Commerce Platform',
-            description: 'Platform e-commerce lengkap dengan fitur cart, checkout, dan payment gateway integration.',
-            icon: '🛍️',
-            techs: ['React', 'Node.js', 'MongoDB', 'Stripe']
-        },
-        {
-            id: 2,
-            title: 'Social Media App',
-            description: 'Aplikasi media sosial dengan fitur feed, messaging, dan real-time notifications.',
-            icon: '📱',
-            techs: ['React', 'Firebase', 'Tailwind CSS']
-        },
-        {
-            id: 3,
-            title: 'Task Management System',
-            description: 'Sistem manajemen tugas dengan fitur kolaborasi tim dan tracking progress.',
-            icon: '✅',
-            techs: ['React', 'Express', 'PostgreSQL']
-        },
-        {
-            id: 4,
-            title: 'Blog Platform',
-            description: 'Platform blogging modern dengan editor yang user-friendly dan SEO optimization.',
-            icon: '📝',
-            techs: ['Next.js', 'GraphQL', 'Prisma']
-        },
-        {
-            id: 5,
-            title: 'Weather Dashboard',
-            description: 'Dashboard cuaca real-time dengan visualisasi data dan forecast jangka panjang.',
-            icon: '🌤️',
-            techs: ['React', 'Weather API', 'Chart.js']
-        },
-        {
-            id: 6,
-            title: 'Video Streaming Service',
-            description: 'Layanan streaming video dengan fitur upload, transcode, dan adaptive bitrate.',
-            icon: '🎬',
-            techs: ['Node.js', 'FFmpeg', 'AWS S3']
-        },
-    ];
+
 
 
 
@@ -293,19 +250,21 @@ const Template2 = ({ data, skillsData }) => {
                 <div className="max-w-7xl mx-15 px-4 sm:px-6 lg:px-8">
                     <h2 className="text-4xl font-bold text-gray-900 mb-12 text-center">Featured Projects</h2>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                        {projectsData.slice(0, visibleProjects).map((project) => (
+                        {(projectsData || []).slice(0, visibleProjects).map((project, i) => (
                             <div
                                 key={project.id}
                                 className="bg-gray-50 rounded-lg overflow-hidden hover:shadow-lg transition-shadow duration-300"
                             >
                                 <div className="h-48 bg-linear-to-r from-blue-600 to-blue-400 flex items-center justify-center">
-                                    <div className="text-6xl">{project.icon}</div>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="5em" height="5em" viewBox="0 0 24 24">
+                                        <path fill="#fff" d="M19 4h-4.18a2.988 2.988 0 0 0-5.64 0H5a2.006 2.006 0 0 0-2 2v14a2.006 2.006 0 0 0 2 2h14a2.006 2.006 0 0 0 2-2V6a2.006 2.006 0 0 0-2-2m-7 0a1 1 0 1 1-1 1a1.003 1.003 0 0 1 1-1m-2 5l2.79 2.794l2.52-2.52L14 8h4v4l-1.276-1.311l-3.932 3.935L10 11.83l-2.586 2.584L6 13Zm9 10H5v-2h14Z" />
+                                    </svg>
                                 </div>
                                 <div className="p-6">
-                                    <h3 className="text-2xl font-semibold text-gray-900 mb-2">{project.title}</h3>
-                                    <p className="text-gray-600 mb-4">{project.description}</p>
+                                    <h3 className="text-2xl font-semibold text-gray-900 mb-2">{project.project_title}</h3>
+                                    <p className="text-gray-600 mb-4">{project.project_description}</p>
                                     <div className="flex flex-wrap gap-2">
-                                        {project.techs.map((tech, idx) => (
+                                        {project.tools_used.map((tech, idx) => (
                                             <span
                                                 key={idx}
                                                 className="bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-sm font-medium"
@@ -320,7 +279,7 @@ const Template2 = ({ data, skillsData }) => {
                     </div>
 
                     {/* See More / Show Less Button */}
-                    {projectsData.length > 2 && (
+                    {(projectsData && projectsData.length > 2) && (
                         <div className="flex justify-center mt-12">
                             {visibleProjects < projectsData.length ? (
                                 <button
@@ -439,7 +398,7 @@ const Template2 = ({ data, skillsData }) => {
                                     type="submit"
                                     className="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
                                 >
-                                        Send Message
+                                    Send Message
                                 </button>
                             </form>
                         </div>

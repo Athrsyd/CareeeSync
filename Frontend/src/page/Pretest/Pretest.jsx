@@ -85,7 +85,6 @@ const Pretest = () => {
 
         if (skillsWithWeight.length === 0) {
             console.error('Tidak ada skill yang valid');
-            return;
         }
 
         const totalWeight = skillsWithWeight.reduce((acc, skill) => acc + skill.weight, 0);
@@ -93,8 +92,8 @@ const Pretest = () => {
 
         const payload = {
             career_name: selectedCareerName,
-            skills_mastery: skillsWithWeight,
-            level: level
+            skills_mastery: skillsWithWeight || [],
+            level: level || 'Basic'
         };
         console.log('Data yang dikirim:', payload);
 

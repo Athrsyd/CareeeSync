@@ -150,7 +150,7 @@ const NavDash = () => {
         ))}
 
         <div className="md:w-20 lg:w-35 h-[1.25px] bg-primary mt-auto"></div>
-        <div className="flex flex-row items-center lg:justify-start md:20 lg:w-35 h-10 md:pl-0 lg:pl-2 lg:pr-0 md:pr-2   
+        <div onClick={Logout} className="flex flex-row items-center lg:justify-start md:20 lg:w-35 h-10 md:pl-0 lg:pl-2 lg:pr-0 md:pr-2   
         cursor-pointer hover:bg-white hover:scale-105 transition-all ease-in-out duration-300 rounded-full">
           <div className="flex flex-col justify-center items-center h-12 w-full lg:w-12">
             <svg
@@ -172,7 +172,7 @@ const NavDash = () => {
               />
             </svg>
           </div>
-          <div onClick={Logout} className="w-20 hidden lg:block">
+          <div className="w-20 hidden lg:block">
             <h1 className=" hidden lg:block text-sm font-bold font-inclusive-sans ml-2">
               Logout
             </h1>
