@@ -48,9 +48,9 @@ class ProjectsFinishedController extends Controller
         ], 201);
     }
 
-    public function GetProjectsFinished()
+    public function GetProjectsFinished(string $id)
     {
-        $projectsFinished = ProjectsFinished::where('user_id', Auth::id())->get();
+        $projectsFinished = ProjectsFinished::where('user_id', $id)->get();
 
         if (!$projectsFinished) {
             return response()->json([

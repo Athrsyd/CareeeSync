@@ -29,10 +29,11 @@ Route::prefix('v1')->group(function () {
         // Ini Endpoint buat feedback AI, ada start sama refresh dam
         Route::post('/feedback', [PortfolioController::class, 'StartFeedback']);
         Route::post('/feedback/refresh', [PortfolioController::class, 'RefreshFeedback']);
-        
+
 
         Route::post('/projects-finished', [ProjectsFinishedController::class, 'Create']);
     });
 
+    Route::get('/projects-finished/{id}', [ProjectsFinishedController::class, 'GetProjectsFinished']);
     Route::get('/portfolio/{username}', [PortfolioController::class, 'GetPortfolio']);
 });

@@ -3,25 +3,62 @@ import { useUser } from '../../context/UserContext'
 import { useCareer } from '../../context/CareerContext'
 import useManagePortfolio from '../../hooks/UseManagePortfolio'
 import { PORTFOLIO_STYLES, PORTFOLIO_TIPS } from '../../data/portfolioData'
+import { useNavigate } from 'react-router-dom'
+
 
 const ManagePortfolio = () => {
     const { user } = useUser()
     const { careerData } = useCareer()
-    const { loading, error, showSuccess, portfolioId, initialFormData, submitPortfolio, setShowSuccess, setError } = useManagePortfolio()
+    const navigate = useNavigate()
+    const { loading, error, showSuccess, portfolioId, initialFormData, submitPortfolio, fetchPortfolioByUsername, updatePortfolio, setShowSuccess, setError } = useManagePortfolio()
     const [selectedStyle, setSelectedStyle] = useState('style1')
     const [formData, setFormData] = useState(initialFormData)
     const [photoPreview, setPhotoPreview] = useState(null)
+    const [mode, setMode] = useState('create')
+    const [existingPortfolioId, setExistingPortfolioId] = useState(null)
 
-    // Initialize career_id saat component mount
+    // Initialize career_id saat component mount dan check existing portfolio
     useEffect(() => {
-        if (careerData?.id) {
-            setFormData(prev => ({ 
-                ...prev, 
-                career_id: careerData.id,
-                user_id: user?.id || ''
-            }))
+        const initializePortfolio = async () => {
+            if (careerData?.id && user?.id) {
+                setFormData(prev => ({ 
+                    ...prev, 
+                    career_id: careerData.id,
+                    user_id: user?.id || ''
+                }))
+
+                // Check if portfolio already exists for this user
+                const existingPortfolio = await fetchPortfolioByUsername(user.username)
+                if (existingPortfolio) {
+                    setMode('update')
+                    setExistingPortfolioId(existingPortfolio.id)
+                    // Pre-fill form with existing data
+                    setFormData(prev => ({
+                        ...prev,
+                        fullname: existingPortfolio.fullname || '',
+                        about_me: existingPortfolio.about_me || '',
+                        address: existingPortfolio.address || '',
+                        education: existingPortfolio.education || '',
+                        hobbies: existingPortfolio.hobbies || '',
+                        experience: existingPortfolio.experience || '',
+                        email: existingPortfolio.email || '',
+                        linkedin_link: existingPortfolio.linkedin_link || '',
+                        instagram_link: existingPortfolio.instagram_link || '',
+                        phone_number: existingPortfolio.phone_number || '',
+                        style: existingPortfolio.style || 'style1',
+                        photo: null
+                    }))
+                    setSelectedStyle(existingPortfolio.style || 'style1')
+                    if (existingPortfolio.photo) {
+                        setPhotoPreview(existingPortfolio.photo)
+                    }
+                } else {
+                    setMode('create')
+                }
+            }
         }
-    }, [careerData?.id, user?.id])
+        initializePortfolio()
+    }, [careerData?.id, user?.id, user?.username])
 
     const handleChange = (e) => {
         const { name, value } = e.target
@@ -44,14 +81,17 @@ const ManagePortfolio = () => {
     const handleSubmit = async (e) => {
         e.preventDefault()
         
-        // Pastikan user dan career id ada
         if (!user?.id) {
             setError('User ID tidak ditemukan')
             return
         }
         
-        // Jangan override career_id yang sudah di-set, gunakan dari careerData
-        const success = await submitPortfolio(formData)
+        let success
+        if (mode === 'update' && existingPortfolioId) {
+            success = await updatePortfolio(formData, existingPortfolioId)
+        } else {
+            success = await submitPortfolio(formData)
+        }
 
         if (success) {
             setFormData(initialFormData)
@@ -59,6 +99,8 @@ const ManagePortfolio = () => {
             setSelectedStyle('style1')
         }
     }
+
+
 
     const portfolioUrl = portfolioId && user?.username 
         ? `${window.location.origin}/portfolio/${user.username}`
@@ -77,10 +119,13 @@ const ManagePortfolio = () => {
         <div className="ml-45 mr-7 pb-10 w-full">
             <div className="mt-8 mb-8">
                 <h1 className="text-3xl font-bold text-[#021124] font-montserrat mb-2">
-                    Buat Portfolio Anda
+                    {mode === 'update' ? 'Perbarui Portfolio Anda' : 'Buat Portfolio Anda'}
                 </h1>
                 <p className="text-gray-600 font-medium">
-                    Lengkapi informasi berikut untuk membuat portfolio profesional Anda
+                    {mode === 'update' 
+                        ? 'Ubah informasi portfolio Anda untuk diperbarui'
+                        : 'Lengkapi informasi berikut untuk membuat portfolio profesional Anda'
+                    }
                 </p>
             </div>
 
@@ -339,7 +384,7 @@ const ManagePortfolio = () => {
                                     disabled={loading}
                                     className="flex-1 px-6 py-3 bg-primary text-white font-bold rounded-xl hover:bg-[#4a6fa5] transition-all disabled:opacity-50 disabled:cursor-not-allowed shadow-lg"
                                 >
-                                    {loading ? 'Membuat Portfolio...' : 'Buat Portfolio'}
+                                    {loading ? (mode === 'update' ? 'Memperbarui...' : 'Membuat...') : (mode === 'update' ? 'Perbarui Portfolio' : 'Buat Portfolio')}
                                 </button>
                                 <button
                                     type="reset"
@@ -433,10 +478,10 @@ const ManagePortfolio = () => {
                         </div>
 
                         <h3 className="text-2xl font-bold text-center text-[#021124] mb-3">
-                            Portfolio Berhasil Dibuat!
+                            {mode === 'update' ? 'Portfolio Berhasil Diperbarui!' : 'Portfolio Berhasil Dibuat!'}
                         </h3>
                         <p className="text-center text-gray-600 mb-6 font-medium">
-                            Portfolio Anda sudah siap dibagikan kepada dunia.
+                            {mode === 'update' ? 'Portfolio Anda sudah diperbarui.' : 'Portfolio Anda sudah siap dibagikan kepada dunia.'}
                         </p>
 
                         <div className="bg-blue-50 rounded-2xl p-4 mb-6 border-2 border-blue-200">

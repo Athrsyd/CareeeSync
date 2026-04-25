@@ -8,6 +8,7 @@ import Portfolio from '../page/Portofolio/Portfolio';
 import ManagePortfolio from '../page/ManagePortfolio/ManagePortfolio';
 import Analysis from '../page/Analysis/Analysis';
 import Project from '../page/Project/Project';
+import ProtectedRoute from '../utils/ProtectedRoute';
 
 import Progress from '../page/Progress/Progress';
 // import Template2 from '../page/Portofolio/Template2';
@@ -38,10 +39,10 @@ const Router = () => {
         <Routes>
             <Route path="/" element={'hello'} />
             <Route path="/auth" element={<Auth />} />
-            <Route path="/pretest" element={<Pretest />} />
+            <Route path="/pretest" element={<ProtectedRoute><Pretest /></ProtectedRoute>} />
             
             {/* Nested routes dengan layout */}
-            <Route path="/dashboard" element={<DashboardLayout />}>
+            <Route path="/dashboard" element={<ProtectedRoute><DashboardLayout /></ProtectedRoute>}>
                 <Route index element={<Dashboard />} />
                 <Route path="project" element={<Project/>} />
                 <Route path="portfolio" element={<ManagePortfolio />} />
