@@ -36,7 +36,33 @@ const Progress = () => {
     if (!careerData) return;
 
     const skill = CareerOptions.careers.find(career => career.name === careerData.career_name)
-    const skillsMasteryProgress = skill.skills.filter(s => skillsMastery.some(sm => sm.skill_id === s.id && sm.mastered));
+    
+    console.log("Skills mastery from backend:", skillsMastery);
+    console.log("Career skills from careerOptions:", skill.skills.map(s => ({ id: s.id, name: s.name })));
+    
+    const skillsMasteryProgress = skill.skills.filter(s => {
+      const found = skillsMastery.some(sm => {
+        // Case-insensitive comparison
+        const backendId = String(sm.skill_id).toLowerCase().trim();
+        const localId = String(s.id).toLowerCase().trim();
+        const isMastered = sm.mastered === true || sm.mastered === 'true';
+        
+        const isMatch = backendId === localId && isMastered;
+        
+        if (isMatch) {
+          console.log(`✓ Matched: ${localId} (mastered: ${sm.mastered})`);
+        }
+        
+        return isMatch;
+      });
+      
+      if (!found) {
+        console.log(`✗ Not matched: ${s.id}`);
+      }
+      
+      return found;
+    });
+    
     console.log("skill yang dikuasai untuk", careerData.career_name, 'adalah', skillsMasteryProgress);
     setSkillsMastery(skillsMasteryProgress);
   }

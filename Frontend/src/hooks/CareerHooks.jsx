@@ -8,8 +8,6 @@ const CareerHooks = () => {
     const [careerLoading, setCareerLoading] = useState(false);
 
 
-
-
     const postCareer = async (data) => {
         const token = localStorage.getItem('token');
         setCareerLoading(true);
@@ -60,7 +58,7 @@ const CareerHooks = () => {
         const token = localStorage.getItem('token');
         setCareerLoading(true);
         try {
-            const response = await API.put(`/career/${skillId}`, mastered , {
+            const response = await API.put(`/career/${skillId}`, mastered, {
                 headers: {
                     'Authorization': `Bearer ${token}`
                 }
@@ -78,7 +76,24 @@ const CareerHooks = () => {
         return careerData[0]?.skills_mastery || [];
     };
 
-    return { postCareer, handleChange, GetCareer, GetSkills, updateMasterySkill };
+    const postReadinessScore = async (score) => {
+        const token = localStorage.getItem('token');
+        setCareerLoading(true);
+        try {
+            const response = await API.post('/progress', score, {
+                headers: {
+                    'Authorization': `Bearer ${token}`
+                }
+            });
+            console.log('Readiness score posted successfully:', response.data);
+        } catch (error) {
+            console.error('Error posting readiness score:', error);
+        } finally {
+            setCareerLoading(false);
+        }
+    };
+
+    return { postCareer, handleChange, GetCareer, GetSkills, updateMasterySkill, postReadinessScore };
 }
 
 export default CareerHooks

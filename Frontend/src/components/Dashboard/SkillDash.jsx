@@ -7,7 +7,6 @@ import CareerOptions from '../../data/careerOptions.json'
 const Skill = () => {
   const { skillsMastery } = useCareer();
 
-  // 1. Buat lookup object dari careeroptions berdasarkan skill id
   const skillsLookup = {};
   CareerOptions.careers.forEach((career) => {
     career.skills.forEach((skill) => {
@@ -15,7 +14,6 @@ const Skill = () => {
     });
   });
 
-  // 2. Map skillsMastery dan gabungkan dengan data dari careeroptions
   const SkillItem = skillsMastery.map((skill) => {
     const skillData = skillsLookup[skill.skill_id];
     return {
@@ -38,13 +36,24 @@ const Skill = () => {
 }
 
 const SkillDash = ({ data }) => {
+  const { skillsMastery } = useCareer();
+
   return (
     <>
       <h1 className="self-start text-2xl font-bold font-montserrat text-[#021124]">
         Your Skills
       </h1>
       <div className="flex flex-row max-w-full items-center gap-8">
-        <Skill />
+        {skillsMastery && skillsMastery.length > 0 ? (
+          <Skill />
+        ) : (
+          <div className="overflow-x-scroll self-start w-13/20 flex flex-col justify-center items-center my-10 gap-2">
+            <p className="text-gray-500">Belum ada skill yang dikuasai.</p>
+            <button className="px-2 py-1 bg-blue-500 text-sm text-white rounded-lg hover:bg-blue-600">
+              Selesaikan project untuk menguasai skill!
+            </button>
+          </div>
+        )}
         <div className="flex flex-col w-1/4 justify-center items-center gap-2 mt-5 ml-8 md:mr-4 lg:mr-0">
           <h1 className="md:text-[22px] lg:text-3xl font-semibold font-montserrat text-[#021124]">
             You are at the

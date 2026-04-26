@@ -49,16 +49,20 @@ const JobReadinessScore = ({ score = 78, role = "Web Developer" }) => {
                         fontWeight="500"
                         fill="#1e3a5f"
                     >
-                        {score.toFixed(2)}%
+                        {score > 100 ? '100' : score.toFixed(0)}%
                     </text>
                 </svg>
             </div>
             <p className="md:text-md lg:text-[14px] font-montserrat text-[#06275A] md:w-[50%] lg:w-full text-center leading-relaxed">
-                Top <span className="font-semibold text-slate-800">{topPercent.toFixed(2)}%</span>{" "}
-                closer to becoming a{" "}
-                <span className="font-semibold text-slate-800">{role}</span>
-            </p>
-        </div>
+                {score >= 100 ? (
+                    <span className="font-semibold text-slate-800">Selamat! Anda siap masuk ke dunia kerja!</span>
+                ) : <>
+                    Top<span className="font-semibold text-slate-800">{topPercent.toFixed(0)}%</span>{" "}
+                    closer to becoming a{" "}
+                    <span className="font-semibold text-slate-800">{role}</span>
+                </>}
+            </p >
+        </div >
     );
 }
 

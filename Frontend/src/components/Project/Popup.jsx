@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Popup = ({ currentProject, setShowModal, handleSubmitProject }) => {
+const Popup = ({ currentProject, setShowModal, handleSubmitProject, loading }) => {
     return (
         <div className="fixed inset-0 bg-black/60 backdrop-blur-sm flex items-center justify-center z-50 px-4">
             <div className="bg-white rounded-lg p-8 max-w-md w-full shadow-lg">
@@ -23,8 +23,9 @@ const Popup = ({ currentProject, setShowModal, handleSubmitProject }) => {
                     <button
                         onClick={handleSubmitProject}
                         className="px-6 py-2 bg-blue-500 hover:bg-blue-600 text-white font-semibold rounded-lg transition-colors duration-200"
+                        disabled={loading}
                     >
-                        Konfirmasi
+                        {loading ? 'Sedang Diproses...' : 'Konfirmasi'}
                     </button>
                 </div>
             </div>

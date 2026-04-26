@@ -29,18 +29,43 @@ const ProgressGrafic = () => {
 
     useEffect(() => {
         progressUser();
-    }, []);
+    }, [progressUser]);
 
-    // Process data untuk chart
-    const chartData = progressData && progressData.length > 0 
+    const parsingData = () => {
+        if (!progressData || progressData.length === 0) return null;
+
+        const uniqueData = [];
+        const seen = new Set();
+
+        for (const item of progressData) {
+            const dateKey = new Date(item.progress_date).toISOString().split('T')[0];
+            const readinessPoint = Number(item.readiness_point);
+            const uniqueKey = `${dateKey}|${readinessPoint}`;
+
+            if (!seen.has(uniqueKey)) {
+                seen.add(uniqueKey);
+                uniqueData.push({
+                    date: dateKey,
+                    readiness: readinessPoint,
+                });
+            }
+        }
+
+        return {
+            labels: uniqueData.map(item => new Date(item.date).toLocaleDateString('id-ID')),
+            values: uniqueData.map(item => item.readiness),
+        };
+    };
+
+    const parsedData = parsingData();
+
+    const chartData = parsedData
         ? {
-            labels: progressData
-                .map(item => new Date(item.progress_date).toLocaleDateString('id-ID')),
+            labels: parsedData.labels,
             datasets: [
                 {
                     label: 'Readiness Point',
-                    data: progressData
-                        .map(item => item.readiness_point).reverse(),
+                    data: parsedData.values,
                     borderColor: 'rgba(59, 130, 246, 1)',
                     backgroundColor: 'rgba(59, 130, 246, 0.1)',
                     borderWidth: 3,

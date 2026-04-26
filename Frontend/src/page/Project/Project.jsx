@@ -11,6 +11,7 @@ import Popup from '../../components/Project/Popup';
 import CareerHooks from '../../hooks/CareerHooks';
 import careerOptions from '../../data/careerOptions.json'
 import ProjectHook from '../../hooks/ProjectHook';
+import {Link} from 'react-router-dom';
 
 
 const Project = () => {
@@ -20,7 +21,7 @@ const Project = () => {
   const [showModal, setShowModal] = useState(false);
   const { updateMasterySkill } = CareerHooks();
   const [currentSkillState, setCurrentSkill] = useState(null);
-  const { postProject } = ProjectHook();
+  const { postProject, loading } = ProjectHook();
 
 
   const handleSubmitProject = async () => {
@@ -41,7 +42,7 @@ const Project = () => {
       return skill;
     });
 
-    
+
     if (!updatedSkillsMastery.find(s => s.skill_id === currentProject.skill_id)) {
       updatedSkillsMastery.push({
         skill_id: currentProject.skill_id,
@@ -64,16 +65,16 @@ const Project = () => {
       tools_used: currentProject.tools,
     };
 
+    // Scroll to top immediately
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+    document.documentElement.scrollTop = 0;
+
     await updateMasterySkill(careerData.id, payload);
     await postProject(payloadProject);
     await fetchCareer();
     setShowModal(false);
-
-    setTimeout(() => {
-      window.location.reload(); 
-    }, 3000);
   };
-  
+
 
 
 
@@ -125,79 +126,75 @@ const Project = () => {
               currentProject={currentProject}
               setShowModal={setShowModal}
               handleSubmitProject={handleSubmitProject}
+              loading={loading}
             />
           )}
         </>
-      ): (
-                <section className="min-h-screen flex items-center justify-center px-5 md:px-10">
-          <div className="text-center max-w-2xl">
-            {/* Achievement Badge */}
-            <div className="flex justify-center mb-8">
-              <div className="relative w-32 h-32">
-                <div className="absolute inset-0 bg-gradient-to-br from-yellow-400 via-yellow-300 to-orange-400 rounded-full animate-pulse"></div>
-                <div className="absolute inset-2 bg-white rounded-full flex items-center justify-center">
-                  <div className="text-6xl">🏆</div>
-                </div>
-              </div>
-            </div>
-
+      ) : (
+        <section className="min-h-screen flex items-center justify-center px-5 md:px-10">
+          <div className="flex flex-col w-full max-w-2xl">
             {/* Congratulation Text */}
-            <h1 className="text-5xl font-bold text-[#021124] mb-4">
+            <h1 className="text-4xl md:text-5xl font-bold text-black font-montserrat mb-4 text-center">
               Luar Biasa! 🎉
             </h1>
-            <p className="text-2xl text-primary font-semibold mb-6">
+            <p className="text-lg md:text-xl text-black/60 font-montserrat mb-8 text-center font-medium">
               Anda telah menguasai semua skill {careerData?.career_name}!
             </p>
 
             {/* Achievement Stats */}
-            <div className="grid grid-cols-3 gap-4 mb-10">
-              <div className="bg-blue-50 rounded-2xl p-6 border-2 border-primary">
-                <p className="text-3xl font-bold text-primary mb-2">
+            <div className="grid grid-cols-3 gap-3 md:gap-4 mb-10">
+              <div className="bg-white rounded-2xl p-4 md:p-6 shadow-xl outline-2 outline-primary">
+                <p className="text-2xl md:text-3xl font-bold text-primary font-montserrat mb-2">
                   {projects?.length || 0}
                 </p>
-                <p className="text-gray-600 font-semibold text-sm">Project Diselesaikan</p>
+                <p className="text-black/60 font-montserrat font-medium text-sm md:text-base">Project Diselesaikan</p>
               </div>
-              <div className="bg-green-50 rounded-2xl p-6 border-2 border-green-500">
-                <p className="text-3xl font-bold text-green-600 mb-2">
+              <div className="bg-white rounded-2xl p-4 md:p-6 shadow-xl outline-2 outline-primary">
+                <p className="text-2xl md:text-3xl font-bold text-primary font-montserrat mb-2">
                   {skillsMastery?.filter(s => s.mastered)?.length || 0}
                 </p>
-                <p className="text-gray-600 font-semibold text-sm">Skill Dikuasai</p>
+                <p className="text-black/60 font-montserrat font-medium text-sm md:text-base">Skill Dikuasai</p>
               </div>
-              <div className="bg-purple-50 rounded-2xl p-6 border-2 border-purple-500">
-                <p className="text-3xl font-bold text-purple-600 mb-2">
+              <div className="bg-white rounded-2xl p-4 md:p-6 shadow-xl outline-2 outline-primary">
+                <p className="text-2xl md:text-3xl font-bold text-primary font-montserrat mb-2">
                   {careerData?.level || 'N/A'}
                 </p>
-                <p className="text-gray-600 font-semibold text-sm">Level Saat Ini</p>
+                <p className="text-black/60 font-montserrat font-medium text-sm md:text-base">Level Saat Ini</p>
               </div>
             </div>
 
             {/* Description */}
-            <p className="text-lg text-gray-700 mb-8 leading-relaxed">
-              Perjalanan Anda sebagai {careerData?.career_name} sudah mencapai milestone yang mengesankan. 
-              Semua project telah diselesaikan dengan sempurna dan skill telah terasah dengan baik!
+            <p className="text-base md:text-lg text-black/60 font-montserrat mb-8 leading-relaxed text-center font-medium">
+              Perjalanan Anda menuju {careerData?.career_name} sudah mencapai pencapaian yang mengesankan.
+              Semua project telah diselesaikan dengan sempurna dan skill telah terasah dengan baik! <br />
+              <strong>Anda siap untuk masuk ke dunia industri</strong>
             </p>
 
             {/* Action Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link to={'/dashboard'}>
+                <button
+                className="px-8 py-3 md:py-4 bg-white border-2 border-primary text-primary font-semibold font-montserrat rounded-xl hover:bg-primary hover:text-white transition-all duration-200 shadow-lg"
+                >
+                  Kembali ke Dashboard
+                </button>
+              </Link>
+
+              <Link to={'/dashboard/portfolio'}>
               <button
-                onClick={() => window.location.href = '/dashboard'}
-                className="px-8 py-4 bg-primary text-white font-bold rounded-xl hover:bg-[#4a6fa5] transition-all shadow-lg hover:shadow-xl"
-              >
-                Kembali ke Dashboard
-              </button>
-              <button
-                onClick={() => window.location.href = '/dashboard/progress'}
-                className="px-8 py-4 bg-white border-2 border-primary text-primary font-bold rounded-xl hover:bg-blue-50 transition-all"
+                className="px-8 py-3 md:py-4 bg-white border-2 border-primary text-primary font-semibold font-montserrat rounded-xl hover:bg-primary hover:text-white transition-all duration-200 shadow-lg"
               >
                 Lihat Progress Lengkap
               </button>
-            </div>
+              </Link>
 
-            {/* Celebration Animation */}
-            <div className="mt-12 flex justify-center gap-8">
-              <div className="text-4xl animate-bounce" style={{ animationDelay: '0s' }}>⭐</div>
-              <div className="text-4xl animate-bounce" style={{ animationDelay: '0.2s' }}>✨</div>
-              <div className="text-4xl animate-bounce" style={{ animationDelay: '0.4s' }}>🌟</div>
+              <Link to={'/dashboard/portfolio'}>
+              <button
+                className="px-8 py-3 md:py-4 bg-white border-2 border-primary text-primary font-semibold font-montserrat rounded-xl hover:bg-primary hover:text-white transition-all duration-200 shadow-lg"
+              >
+                Buat Portofolio Anda
+              </button>
+              </Link>
             </div>
           </div>
         </section>)}

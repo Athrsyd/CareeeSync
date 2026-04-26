@@ -43,7 +43,7 @@ class UserController extends Controller
         ]);
 
         return response()->json([
-            'message' => 'Selamat, registrasi berhasil! silahkan login',
+            'message' => 'Selamat, registrasi berhasil! silahkan sign in',
             "data" => $buatAkun
         ]);
     }

@@ -1,6 +1,6 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable react-refresh/only-export-components */
-import { useContext, createContext, useState, useEffect } from 'react'
+import { useContext, createContext, useState, useEffect, use } from 'react'
 import CareerHooks from '../hooks/CareerHooks'
 import { useLocation } from 'react-router-dom'
 import ProjectsData from '../data/projectsComplete.json'
@@ -9,7 +9,7 @@ import { useCurrentProject } from './CurrentProjectContext';
 const CareerContext = createContext()
 
 const CareerProvider = ({ children }) => {
-    const { GetCareer, GetSkills } = CareerHooks()
+    const { GetCareer, GetSkills, postReadinessScore } = CareerHooks()
     const [careerData, setCareerData] = useState(null)
     const [skillsMastery, setSkillsMastery] = useState([])
     const [unFinishedProjects, setUnfinishedProjects] = useState([])
@@ -53,6 +53,7 @@ const CareerProvider = ({ children }) => {
                 const skill = skillsMastery?.find(skill => skill.skill_id === project.skill_id);
                 return !skill || !skill.mastered;
             });
+
             console.log("project yang belum dikuasai untuk", careerData.career_name, 'adalah', projectsUnfinished);
             setUnfinishedProjects(projectsUnfinished);
 
@@ -69,8 +70,26 @@ const CareerProvider = ({ children }) => {
             if (currentProject) {
                 setCurrentProject(currentProject);
             }
+        } else if (careerData && skillsMastery.length === 0) {
+            const projectsData = ProjectsData.find(project => project.career_name === careerData.career_name);
+            console.log("project untuk", careerData.career_name, 'adalah', projectsData);
+
+            setUnfinishedProjects(projectsData?.projects || []);
+            const firstProject = projectsData?.projects?.[0] || null;
+            setCurrentProject(firstProject);
         }
     }, [careerData, skillsMastery])
+
+    useEffect(() => {
+        const now = new Date();
+        const payload = {
+            user_id: careerData?.user_id,
+            readiness_point: readiness.toFixed(0),
+            progress_date: now.toISOString().split('T')[0]
+        };
+        postReadinessScore(payload);
+    }, [readiness])
+
 
     useEffect(() => {
         fetchCareer()

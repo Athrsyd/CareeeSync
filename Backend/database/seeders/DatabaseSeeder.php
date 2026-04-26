@@ -25,6 +25,6 @@ class DatabaseSeeder extends Seeder
 
         // $this->call(PortfolioSeeder::class);
         
-        $this->call(ProgressSeeder::class);
+        // $this->call(ProgressSeeder::class);
     }
 }
