@@ -8,6 +8,7 @@ import Portfolio from '../page/Portofolio/Portfolio';
 import ManagePortfolio from '../page/ManagePortfolio/ManagePortfolio';
 import Analysis from '../page/Analysis/Analysis';
 import Project from '../page/Project/Project';
+import LandingPage from '../page/LandingPage/LandingPage';
 import ProtectedRoute from '../utils/ProtectedRoute';
 
 import Progress from '../page/Progress/Progress';
@@ -27,17 +28,17 @@ const Router = () => {
     const navigate = useNavigate();
     const location = useLocation();
 
-    useEffect(() => {
-        if (location.pathname === '/') {
-            navigate('/auth');
-        } else if (location.pathname === '/portfolio') {
-            navigate('/dashboard');
-        }
-    }, [location.pathname, navigate]);
+    // useEffect(() => {
+    //     if (location.pathname === '/') {
+    //         navigate('/auth');
+    //     } else if (location.pathname === '/portfolio') {
+    //         navigate('/dashboard');
+    //     }
+    // }, [location.pathname, navigate]);
 
     return (
         <Routes>
-            <Route path="/" element={'hello'} />
+            <Route path="/" element={<LandingPage/>} />
             <Route path="/auth" element={<Auth />} />
             <Route path="/pretest" element={<ProtectedRoute><Pretest /></ProtectedRoute>} />
             
