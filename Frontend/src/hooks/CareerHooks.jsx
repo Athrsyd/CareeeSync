@@ -9,7 +9,7 @@ const CareerHooks = () => {
 
 
     const postCareer = async (data) => {
-        const token = localStorage.getItem('token');
+        const token = localStorage.getItem('tokenCareerSync');
         setCareerLoading(true);
         try {
             const response = await API.post('/career', data, {
@@ -37,7 +37,7 @@ const CareerHooks = () => {
     }
 
     const GetCareer = async () => {
-        const token = localStorage.getItem('token');
+        const token = localStorage.getItem('tokenCareerSync');
         setCareerLoading(true);
         try {
             const response = await API.get('/career', {
@@ -55,7 +55,7 @@ const CareerHooks = () => {
     };
 
     const updateMasterySkill = async (skillId, mastered) => {
-        const token = localStorage.getItem('token');
+        const token = localStorage.getItem('tokenCareerSync');
         setCareerLoading(true);
         try {
             const response = await API.put(`/career/${skillId}`, mastered, {
@@ -77,7 +77,7 @@ const CareerHooks = () => {
     };
 
     const postReadinessScore = async (score) => {
-        const token = localStorage.getItem('token');
+        const token = localStorage.getItem('tokenCareerSync');
         setCareerLoading(true);
         try {
             const response = await API.post('/progress', score, {

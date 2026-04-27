@@ -29,7 +29,7 @@ const useManagePortfolio = () => {
         setError('')
 
         try {
-            const token = localStorage.getItem('token')
+            const token = localStorage.getItem('tokenCareerSync')
             const data = new FormData()
             
             // Debug: log form data sebelum kirim
@@ -104,7 +104,7 @@ const useManagePortfolio = () => {
         setError('')
 
         try {
-            const token = localStorage.getItem('token')
+            const token = localStorage.getItem('tokenCareerSync')
             const data = new FormData()
             
             console.log('Updating portfolio:', portfolioId)

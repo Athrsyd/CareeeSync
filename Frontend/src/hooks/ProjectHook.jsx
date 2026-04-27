@@ -12,7 +12,7 @@ const ProjectHook = () => {
         setLoading(true);
         setError(null);
         setMessage(null);
-        const token = localStorage.getItem('token');
+        const token = localStorage.getItem('tokenCareerSync');
 
         try {
             const response = await API.post('/projects-finished', projectData, {

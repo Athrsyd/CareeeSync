@@ -4,35 +4,35 @@ import { useCareer } from '../../context/CareerContext'
 import useManagePortfolio from '../../hooks/UseManagePortfolio'
 import { PORTFOLIO_STYLES, PORTFOLIO_TIPS } from '../../data/portfolioData'
 import { useNavigate } from 'react-router-dom'
+import PortfolioHooks from '../../hooks/PortfolioHooks'
 
 
 const ManagePortfolio = () => {
     const { user } = useUser()
     const { careerData } = useCareer()
     const navigate = useNavigate()
-    const { loading, error, showSuccess, portfolioId, initialFormData, submitPortfolio, fetchPortfolioByUsername, updatePortfolio, setShowSuccess, setError } = useManagePortfolio()
+    const { loading, error, showSuccess, portfolioId, initialFormData,
+        submitPortfolio, fetchPortfolioByUsername, updatePortfolio,
+        setShowSuccess, setError } = useManagePortfolio()
     const [selectedStyle, setSelectedStyle] = useState('style1')
     const [formData, setFormData] = useState(initialFormData)
     const [photoPreview, setPhotoPreview] = useState(null)
     const [mode, setMode] = useState('create')
     const [existingPortfolioId, setExistingPortfolioId] = useState(null)
 
-    // Initialize career_id saat component mount dan check existing portfolio
     useEffect(() => {
         const initializePortfolio = async () => {
             if (careerData?.id && user?.id) {
-                setFormData(prev => ({ 
-                    ...prev, 
+                setFormData(prev => ({
+                    ...prev,
                     career_id: careerData.id,
                     user_id: user?.id || ''
                 }))
 
-                // Check if portfolio already exists for this user
                 const existingPortfolio = await fetchPortfolioByUsername(user.username)
                 if (existingPortfolio) {
                     setMode('update')
-                    setExistingPortfolioId(existingPortfolio.id)
-                    // Pre-fill form with existing data
+                    setExistingPortfolioId(user?.username)
                     setFormData(prev => ({
                         ...prev,
                         fullname: existingPortfolio.fullname || '',
@@ -80,12 +80,12 @@ const ManagePortfolio = () => {
 
     const handleSubmit = async (e) => {
         e.preventDefault()
-        
+
         if (!user?.id) {
             setError('User ID tidak ditemukan')
             return
         }
-        
+
         let success
         if (mode === 'update' && existingPortfolioId) {
             success = await updatePortfolio(formData, existingPortfolioId)
@@ -102,7 +102,7 @@ const ManagePortfolio = () => {
 
 
 
-    const portfolioUrl = portfolioId && user?.username 
+    const portfolioUrl = portfolioId && user?.username
         ? `${window.location.origin}/portfolio/${user.username}`
         : ''
     const [copied, setCopied] = useState(false)
@@ -122,7 +122,7 @@ const ManagePortfolio = () => {
                     {mode === 'update' ? 'Perbarui Portfolio Anda' : 'Buat Portfolio Anda'}
                 </h1>
                 <p className="text-gray-600 font-medium">
-                    {mode === 'update' 
+                    {mode === 'update'
                         ? 'Ubah informasi portfolio Anda untuk diperbarui'
                         : 'Lengkapi informasi berikut untuk membuat portfolio profesional Anda'
                     }
@@ -345,8 +345,8 @@ const ManagePortfolio = () => {
                                                 setFormData(prev => ({ ...prev, style: style.id }))
                                             }}
                                             className={`relative p-4 rounded-2xl cursor-pointer transition-all duration-300 border-2 ${selectedStyle === style.id
-                                                    ? 'border-primary bg-primary/10 shadow-lg'
-                                                    : 'border-gray-300 bg-white/5 hover:border-primary/50'
+                                                ? 'border-primary bg-primary/10 shadow-lg'
+                                                : 'border-gray-300 bg-white/5 hover:border-primary/50'
                                                 }`}
                                         >
                                             {selectedStyle === style.id && (
@@ -496,8 +496,8 @@ const ManagePortfolio = () => {
                                 <button
                                     onClick={copyToClipboard}
                                     className={`px-4 py-2 rounded-lg font-medium transition-all duration-300 whitespace-nowrap ${copied
-                                            ? 'bg-green-500 text-white'
-                                            : 'bg-blue-500 text-white hover:bg-blue-600'
+                                        ? 'bg-green-500 text-white'
+                                        : 'bg-blue-500 text-white hover:bg-blue-600'
                                         }`}
                                 >
                                     {copied ? '✓ Disalin' : 'Salin'}

@@ -10,6 +10,8 @@
     --color-nav: #C3E9FE;
     --color-primary: #5482B4;
     --color-secondary: #E6F1FE;
+
+    --animate-naikTurun : naikTurun 3s ease-in-out infinite;
 }
 
 *{
@@ -20,4 +22,16 @@
     width: 0px;
     height: 0px;
     background: transparent; 
+}
+
+@keyframes naikTurun {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-15px);
+    }
+    100% {
+        transform: translateY(0);
+    }
 }

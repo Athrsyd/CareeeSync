@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { FiMenu, FiX, FiArrowRight, FiMail, FiZap, FiCode } from 'react-icons/fi';
 import { FaGithub, FaLinkedin, FaInstagram } from 'react-icons/fa';
+
 const Template2 = ({ data, skillsData, projectsData }) => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [activeNav, setActiveNav] = useState('home');
@@ -45,55 +46,19 @@ const Template2 = ({ data, skillsData, projectsData }) => {
 
 
 
-    // const skillsData = [
-    //     {
-    //         id: 1,
-    //         title: 'HTML',
-    //         description: 'Membuat struktur halaman web menggunakan elemen dan tag HTML yang semantik.'
-    //     },
-    //     {
-    //         id: 2,
-    //         title: 'CSS',
-    //         description: 'Mendesain dan mengatur tampilan website dengan styling yang responsif dan menarik.'
-    //     },
-    //     {
-    //         id: 3,
-    //         title: 'JavaScript',
-    //         description: 'Menambahkan interaktivitas dan logika dinamis pada aplikasi web dengan JavaScript modern.'
-    //     },
-    //     {
-    //         id: 4,
-    //         title: 'React',
-    //         description: 'Membangun aplikasi web yang cepat dan scalable menggunakan React dan komponen reusable.'
-    //     },
-    //     {
-    //         id: 5,
-    //         title: 'Tailwind CSS',
-    //         description: 'Menggunakan utility-first CSS framework untuk membuat desain yang konsisten dan efisien.'
-    //     },
-    //     {
-    //         id: 6,
-    //         title: 'Node.js',
-    //         description: 'Mengembangkan backend server yang powerful dengan Node.js dan Express.js.'
-    //     },
-    // ];
-
 
 
 
 
     return (
         <div className="bg-white text-gray-900">
-            {/* NAVBAR */}
             <nav className="fixed top-0 left-0 right-0 bg-white shadow-md z-50">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="flex justify-between items-center h-16">
-                        {/* Logo */}
                         <div className="shrink-0">
                             <a href="#" className="text-2xl font-bold text-blue-600">Portfolio</a>
                         </div>
 
-                        {/* Desktop Menu */}
                         <div className="hidden md:flex gap-8">
                             {['home', 'about', 'skills', 'projects', 'contact'].map((item) => (
                                 <button
@@ -109,18 +74,15 @@ const Template2 = ({ data, skillsData, projectsData }) => {
                             ))}
                         </div>
 
-                        {/* Mobile Menu Button */}
                         <div className="md:hidden">
                             <button
                                 onClick={() => setIsMenuOpen(!isMenuOpen)}
                                 className="text-gray-600 hover:text-blue-600"
                             >
-                                {/* {isMenuOpen ? <X size={24} /> : <Menu size={24} />} */}
                             </button>
                         </div>
                     </div>
 
-                    {/* Mobile Menu */}
                     {isMenuOpen && (
                         <div className="md:hidden pb-4 space-y-2">
                             {['home', 'about', 'skills', 'projects', 'contact'].map((item) => (
@@ -137,7 +99,6 @@ const Template2 = ({ data, skillsData, projectsData }) => {
                 </div>
             </nav>
 
-            {/* HERO SECTION */}
             <section id="home" className="pt-32 pb-20 bg-linear-to-b from-blue-50 to-white">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="flex flex-col md:flex-row justify-center h-screen -mt-20 gap-12 items-center">
@@ -165,8 +126,12 @@ const Template2 = ({ data, skillsData, projectsData }) => {
                         </div>
                         {photo ? (
                             <div className="flex justify-center w-1/2">
-                                <div className="w-80 h-80 bg-linear-to-br from-blue-600 to-blue-400 rounded-full flex items-center justify-center">
-                                    <div className="text-6xl font-bold text-white">💻</div>
+                                <div className="w-80 h-80 animate-naikTurun">
+                                    <img
+                                        src={data.photo}
+                                        alt="Profile"
+                                        className="w-full h-full object-cover rounded-full border-4 border-blue-600 shadow-lg"
+                                    />
                                 </div>
                             </div>
                         ) : null}
@@ -174,8 +139,7 @@ const Template2 = ({ data, skillsData, projectsData }) => {
                 </div>
             </section>
 
-            {/* ABOUT ME SECTION */}
-            <section id="about" className="py-20 bg-white">
+            \            <section id="about" className="py-20 bg-white">
                 <div className="max-w-7xl mx-15 px-4 sm:px-6 lg:px-8">
                     <h2 className="text-4xl font-bold text-gray-900 mb-12 text-center">About Me</h2>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
@@ -202,7 +166,6 @@ const Template2 = ({ data, skillsData, projectsData }) => {
                 </div>
             </section>
 
-            {/* SKILLS SECTION */}
             <section id="skills" className="py-20 px-15 bg-gray-50">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <h2 className="text-4xl font-bold text-gray-900 mb-12 text-center">My Skills</h2>
@@ -222,7 +185,6 @@ const Template2 = ({ data, skillsData, projectsData }) => {
                         ))}
                     </div>
 
-                    {/* See More / Show Less Button */}
                     {skillsData.length > 3 && (
                         <div className="flex justify-center mt-12">
                             {visibleSkills < skillsData.length ? (
@@ -245,7 +207,6 @@ const Template2 = ({ data, skillsData, projectsData }) => {
                 </div>
             </section>
 
-            {/* PROJECTS SECTION */}
             <section id="projects" className="py-20 bg-white">
                 <div className="max-w-7xl mx-15 px-4 sm:px-6 lg:px-8">
                     <h2 className="text-4xl font-bold text-gray-900 mb-12 text-center">Featured Projects</h2>
@@ -278,7 +239,6 @@ const Template2 = ({ data, skillsData, projectsData }) => {
                         ))}
                     </div>
 
-                    {/* See More / Show Less Button */}
                     {(projectsData && projectsData.length > 2) && (
                         <div className="flex justify-center mt-12">
                             {visibleProjects < projectsData.length ? (
@@ -301,19 +261,15 @@ const Template2 = ({ data, skillsData, projectsData }) => {
                 </div>
             </section>
 
-            {/* CONTACT SECTION */}
             <section id="contact" className="py-20 bg-gray-50">
                 <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
                     <h2 className="text-4xl font-bold text-gray-900 mb-12 text-center">Get In Touch</h2>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-                        {/* Contact Info */}
                         <div>
                             <p className="text-lg text-gray-600 mb-8">
-                                Have a project in mind? Let's talk about it. I'm always interested in hearing about new opportunities.
                             </p>
                             <div className="space-y-6">
                                 <div className="flex items-start gap-4">
-                                    {/* <Mail className="w-6 h-6 text-blue-600 flex-shrink-0 mt-1" /> */}
                                     <div>
                                         <h4 className="font-semibold text-gray-900">Email</h4>
                                         <a href={`mailto:${data.email}`} className="text-gray-600 hover:text-blue-600">
@@ -322,28 +278,28 @@ const Template2 = ({ data, skillsData, projectsData }) => {
                                     </div>
                                 </div>
                                 <div className="flex items-start gap-4">
-                                    {/* <Linkedin className="w-6 h-6 text-blue-600 flex-shrink-0 mt-1" /> */}
-                                    <div>
-                                        <h4 className="font-semibold text-gray-900">LinkedIn</h4>
-                                        <a href={data.linkedin_link} className="text-gray-600 hover:text-blue-600" target="_blank" rel="noopener noreferrer">
-                                            {data.linkedin_link}
-                                        </a>
-                                    </div>
+                                    {data.linkedin_link && (
+                                        <div>
+                                            <h4 className="font-semibold text-gray-900">LinkedIn</h4>
+                                            <a href={data.linkedin_link} className="text-gray-600 hover:text-blue-600" target="_blank" rel="noopener noreferrer">
+                                                {data.linkedin_link}
+                                            </a>
+                                        </div>
+                                    )}
                                 </div>
                                 <div className="flex items-start gap-4">
-                                    {/* <Instagram className="w-6 h-6 text-blue-600 flex-shrink-0 mt-1" /> */}
-                                    <div>
-                                        <h4 className="font-semibold text-gray-900">Instagram</h4>
-                                        <a href={data.instagram_link} className="text-gray-600 hover:text-blue-600" target="_blank" rel="noopener noreferrer">
-                                            {data.instagram_link}
-                                        </a>
-                                    </div>
+                                    {data.instagram_link && (
+                                        <div>
+                                            <h4 className="font-semibold text-gray-900">Instagram</h4>
+                                            <a href={data.instagram_link} className="text-gray-600 hover:text-blue-600" target="_blank" rel="noopener noreferrer">
+                                                {data.instagram_link}
+                                            </a>
+                                        </div>
+                                    )}
                                 </div>
 
                             </div>
                         </div>
-
-                        {/* Contact Form */}
                         <div>
                             <form className="space-y-4" onSubmit={handleSubmit}>
                                 <div>
@@ -406,24 +362,35 @@ const Template2 = ({ data, skillsData, projectsData }) => {
                 </div>
             </section>
 
-            {/* FOOTER */}
             <footer className="bg-gray-900 text-gray-300 py-8">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="flex flex-col md:flex-row justify-between items-center mb-6">
                         <p className="text-center md:text-left mb-4 md:mb-0">&copy; 2025 Your Name. All rights reserved.</p>
                         <div className="flex gap-4">
-                            <a href={data.github_link} className="hover:text-blue-400 transition-colors" target="_blank" rel="noopener noreferrer">
-                                <FaGithub size={20} />
-                            </a>
-                            <a href={data.linkedin_link} className="hover:text-blue-400 transition-colors" target="_blank" rel="noopener noreferrer">
-                                <FaLinkedin size={20} />
-                            </a>
-                            <a href={data.instagram_link} className="hover:text-blue-400 transition-colors" target="_blank" rel="noopener noreferrer">
-                                <FaInstagram size={20} />
-                            </a>
-                            <a href={`mailto:${data.email}`} className="hover:text-blue-400 transition-colors">
-                                <FiMail size={20} />
-                            </a>
+                            {data.github_link && (
+
+                                <a href={data.github_link} className="hover:text-blue-400 transition-colors" target="_blank" rel="noopener noreferrer">
+                                    <FaGithub size={20} />
+                                </a>
+                            )}
+                            {data.linkedin_link && (
+
+                                <a href={data.linkedin_link} className="hover:text-blue-400 transition-colors" target="_blank" rel="noopener noreferrer">
+                                    <FaLinkedin size={20} />
+                                </a>
+                            )}
+
+                            {data.instagram_link && (
+                                <a href={data.instagram_link} className="hover:text-blue-400 transition-colors" target="_blank" rel="noopener noreferrer">
+                                    <FaInstagram size={20} />
+                                </a>
+                            )}
+
+                            {data.email && (
+                                <a href={`mailto:${data.email}`} className="hover:text-blue-400 transition-colors">
+                                    <FiMail size={20} />
+                                </a>
+                            )}
                         </div>
                     </div>
                     <div className="border-t border-gray-700 pt-6 text-center text-sm">

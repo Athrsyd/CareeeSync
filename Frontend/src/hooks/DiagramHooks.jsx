@@ -14,7 +14,7 @@ const DiagramHooks = () => {
     const { careerData } = useCareer();
     
     const progressUser = async () => {
-        const token = localStorage.getItem('token');
+        const token = localStorage.getItem('tokenCareerSync');
         try {
             setLoading(true);
             const response = await API.get('/progress', {

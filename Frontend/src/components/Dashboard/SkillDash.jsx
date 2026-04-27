@@ -2,6 +2,7 @@ import React from 'react'
 import SkillDisplay from './SkillDisplay';
 import { useCareer } from '../../context/CareerContext';
 import CareerOptions from '../../data/careerOptions.json'
+import { Link } from 'react-router-dom';
 
 
 const Skill = () => {
@@ -49,9 +50,11 @@ const SkillDash = ({ data }) => {
         ) : (
           <div className="overflow-x-scroll self-start w-13/20 flex flex-col justify-center items-center my-10 gap-2">
             <p className="text-gray-500">Belum ada skill yang dikuasai.</p>
-            <button className="px-2 py-1 bg-blue-500 text-sm text-white rounded-lg hover:bg-blue-600">
-              Selesaikan project untuk menguasai skill!
-            </button>
+            <Link to='/dashboard/project'>
+              <button className="px-2 py-1 bg-blue-500 text-sm text-white rounded-lg hover:bg-blue-600">
+                Selesaikan project untuk menguasai skill!
+              </button>
+            </Link>
           </div>
         )}
         <div className="flex flex-col w-1/4 justify-center items-center gap-2 mt-5 ml-8 md:mr-4 lg:mr-0">

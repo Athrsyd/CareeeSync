@@ -20,16 +20,38 @@ const PortfolioHooks = () => {
             console.error('Portfolio fetch error:', errorMsg);
             setError(errorMsg);
             setPortfolioData(null);
-        } finally { 
+        } finally {
             setLoading(false);
         }
     }
-    
+
+    const updatePortfolio = async (formData, portfolioId) => {
+        setLoading(true)
+        setError('')
+        const token = localStorage.getItem('tokenCareerSync')
+        try {
+            const response = await API.put(`/portfolio/${portfolioId}`, formData, {
+                headers: {
+                    Authorization: `Bearer ${token}`
+                }
+            })
+            console.log('Portfolio updated:', response.data)
+        } catch (error) {
+            const errorMsg = error.response?.data?.message || 'Gagal mengupdate portfolio';
+            console.error('Portfolio update error:', errorMsg);
+            setError(errorMsg);
+        } finally {
+            setLoading(false);
+        }
+    }
+
+
     return {
         portfolioData,
         loading,
         error,
-        fetchPortfolio
+        fetchPortfolio,
+        updatePortfolio
     }
 }
 

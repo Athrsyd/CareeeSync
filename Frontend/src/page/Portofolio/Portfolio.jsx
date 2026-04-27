@@ -13,7 +13,7 @@ const Portfolio = () => {
     const [projectsData, setProjectsData] = useState([]);
     const { user } = useUser();
     const { careerData } = useCareer();
-    const { portfolioData, loading, error, fetchPortfolio } = PortfolioHooks();
+    const { portfolioData, loading, error, fetchPortfolio, updatePortfolio } = PortfolioHooks();
     const { id } = useParams();
     const careerOptions = CareerOptions.careers.find(c => c.name === careerData?.career_name);
     const { projectData, fetchProject } = ProjectHook();
@@ -68,6 +68,9 @@ const Portfolio = () => {
     // setTimeout(() => {
     //     console.log(portfolioData || 'No portfolio data after timeout');
     // }, 5000);
+    useEffect(() => {
+        console.log('**Portfolio data updated:', portfolioData);
+    }, [portfolioData]);
 
     console.log('___ projectData:', projectData);
 
@@ -87,8 +90,8 @@ const Portfolio = () => {
             )}
 
             {portfolioData ? (
-                <Template2 
-                    data={portfolioData} 
+                <Template2
+                    data={portfolioData}
                     skillsData={skillsData}
                     projectsData={projectData}
                 />

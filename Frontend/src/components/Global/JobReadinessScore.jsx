@@ -57,8 +57,8 @@ const JobReadinessScore = ({ score = 78, role = "Web Developer" }) => {
                 {score >= 100 ? (
                     <span className="font-semibold text-slate-800">Selamat! Anda siap masuk ke dunia kerja!</span>
                 ) : <>
-                    Top<span className="font-semibold text-slate-800">{topPercent.toFixed(0)}%</span>{" "}
-                    closer to becoming a{" "}
+                    Anda butuh peningkatan skill<span className="font-semibold text-slate-800">{" "}{topPercent.toFixed(0)}%</span>{" "}
+                    untuk siap menjadi {" "}
                     <span className="font-semibold text-slate-800">{role}</span>
                 </>}
             </p >

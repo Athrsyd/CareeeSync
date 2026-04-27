@@ -67,7 +67,7 @@ const AuthHooks = () => {
             setEmail('');
             setPassword('');
             const token = response.data.token;
-            localStorage.setItem('token', token);
+            localStorage.setItem('tokenCareerSync', token);
 
             const userCareer = await GetCareer();
             console.log('User career data:', userCareer.length);
@@ -89,7 +89,7 @@ const AuthHooks = () => {
 
     const GetUser = async () => {
         setAuthLoading(true);
-        const token = localStorage.getItem('token');
+        const token = localStorage.getItem('tokenCareerSync');
         if (token) {
             try {
                 const response = await API.get('/user', {
@@ -113,14 +113,14 @@ const AuthHooks = () => {
 
         setAuthLoading(true);
         try {
-            const token = localStorage.getItem('token');
+            const token = localStorage.getItem('tokenCareerSync');
             const response = await API.post('/logout', {}, {
                 headers: {
                     Authorization: `Bearer ${token}`
                 }
             });
             alert(response.data.message);
-            localStorage.removeItem('token');
+            localStorage.removeItem('tokenCareerSync');
             navigate('/auth');
 
         } catch (error) {

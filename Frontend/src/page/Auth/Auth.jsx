@@ -23,7 +23,7 @@ const Auth = () => {
     const navigate = useNavigate();
 
         useEffect(() => {
-        if (user && localStorage.getItem('token')) {
+        if (user && localStorage.getItem('tokenCareerSync')) {
             navigate('/dashboard');
         }
     }, [user, navigate]);

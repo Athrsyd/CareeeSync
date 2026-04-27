@@ -8,14 +8,17 @@ import TitleProgress from '../../components/Progress/TitleProgress';
 import ProgressSkill from '../../components/Progress/ProgressSkill';
 import Navbar from '../../components/Global/Navbar';
 import CareerOptions from '../../data/careerOptions.json'
+import {useCurrentProjectContext} from '../../context/CurrentProjectContext'
 
 const Progress = () => {
   const { user } = useUser();
   const { careerData,skillsMastery } = useCareer();
-  const [skillsBasic, setSkillsBasic] = useState([]); //ini state buat nyimpen skill yang diambil dari careerData, 
-  const [skillsIntermediate, setSkillsIntermediate] = useState([]); //ini state buat nyimpen skill yang diambil dari careerData, 
-  const [skillsAdvanced, setSkillsAdvanced] = useState([]); //ini state buat nyimpen skill yang diambil dari careerData, 
-  const [skillsMasteryProgress, setSkillsMastery] = useState([]); //ini state buat nyimpen skill yang dikuasai dari careerData,
+  const [skillsBasic, setSkillsBasic] = useState([]); 
+  const [skillsIntermediate, setSkillsIntermediate] = useState([]); 
+  const [skillsAdvanced, setSkillsAdvanced] = useState([]); 
+  const [skillsMasteryProgress, setSkillsMastery] = useState([]); 
+  const { currentProject } = useCurrentProjectContext();
+  const [curProjectId, setCurProjectId] = useState(null);
   
   const getSkillbyCareerName = () => {
     if (!careerData) return;
@@ -72,6 +75,12 @@ const Progress = () => {
     getMasteredSkillFromBackend();
   }, [careerData]);
 
+  useEffect(() => {
+    console.log('Current project updated:', currentProject);
+    if (currentProject) {
+      setCurProjectId(currentProject.skill_id);
+    }
+  }, [currentProject]);
   // const sortedSkills = skills.sort((a, b) => {
   //   const basicSkills = 
 
@@ -87,6 +96,7 @@ const Progress = () => {
           skillsIntermediate={skillsIntermediate}
           skillsAdvanced={skillsAdvanced}
           skillsMastery={skillsMasteryProgress}
+          curProjectId={curProjectId}
         />
       </div>
     </main>
