@@ -12,7 +12,7 @@ const HeaderAnalysis = () => {
         <header className='px-2 py-5 flex flex-row items-center justify-between pr-20'>
             <div className="flex flex-col">
                 <h1 className='font-bold text-4xl'>Skill Analysis</h1>
-                <p className='text-xl text-gray-500'>see how your skills match industry standards.</p>
+                <p className='text-xl text-gray-500'>Lihat seberapa baik keterampilan Anda sesuai dengan standar industri.</p>
             </div>
             <div className="buttons">
                 <button onClick={() => handleStartAnalysis()} className='bg-blue-200 hover:bg-blue-300 hover:text-primary transition-all

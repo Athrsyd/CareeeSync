@@ -64,7 +64,7 @@ const ProgressGrafic = () => {
             labels: parsedData.labels,
             datasets: [
                 {
-                    label: 'Readiness Point',
+                    label: 'Point Kesiapan Kerja',
                     data: parsedData.values,
                     borderColor: 'rgba(59, 130, 246, 1)',
                     backgroundColor: 'rgba(59, 130, 246, 0.1)',
@@ -81,7 +81,7 @@ const ProgressGrafic = () => {
 
     const options = {
         responsive: true,
-        maintainAspectRatio: false, // Penting: agar chart bisa fill container height
+        maintainAspectRatio: false, 
         plugins: {
             legend: {
                 display: true,
@@ -109,11 +109,10 @@ const ProgressGrafic = () => {
                     <img src={Proggress} alt="AI Icon" width="40" height="40" />
                 </div>
                 <div className="">
-                    <h1 className='font-bold text-xl '>Skill Growth Progress</h1>
-                    <p className='text-md text-gray-500'>Track how your skills improve over time</p>
+                    <h1 className='font-bold text-xl '>Kemajuan Pertumbuhan Keterampilan</h1>
+                    <p className='text-md text-gray-500'>Lacak bagaimana keterampilan Anda meningkat seiring waktu</p>
                 </div>
             </div>
-            {/* Chart Container dengan fixed height */}
             <div className="w-full h-96 bg-white rounded-xl p-7 mt-5">
                 {chartData ? (
                     <Line data={chartData} options={options} />

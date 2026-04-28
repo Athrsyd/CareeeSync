@@ -10,7 +10,7 @@ const FeedbackAI = () => {
                     <img src={IconAI} alt="AI Icon" width="30" height="30" />
                     <div className="">
                         <h1 className='font-bold text-xl '>AI Insight</h1>
-                        <p className='text-md text-gray-500'>Based on your responses, here's your current skill evaluation.</p>
+                        <p className='text-md text-gray-500'>Berdasarkan data anda, berikut adalah evaluasi keterampilan Anda saat ini.</p>
                     </div>
                 </div>
             </div>

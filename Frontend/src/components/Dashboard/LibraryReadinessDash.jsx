@@ -4,18 +4,18 @@ import { Link } from 'react-router-dom';
 const ProjectsAndSkills = [
   {
     id: 1,
-    title: "Explore Real Projects",
+    title: "Latih skill dengan project",
     description:
-      "Explore over 50 real-world briefs to build a competitive industry portfolio.",
-    hrefDesc: "Browse all projects",
+      "Selesaikan project yang dirancang untuk meningkatkan skill yang kamu butuhkan.",
+    hrefDesc: "Kerjakan Projek",
     path: "/dashboard/project"
   },
   {
     id: 2,
-    title: "Analyze Your Readiness",
+    title: "Analisis kesiapan kerja anda",
     description:
-      "Compare your profile against top-tier tech company requirements.",
-    hrefDesc: "Check Readiness",
+      "Bandingkan profil Anda dengan kebutuhan industri saat ini",
+    hrefDesc: "Cek Kesiapan Kerja",
     path: "/dashboard/analysis"
   }
 ];

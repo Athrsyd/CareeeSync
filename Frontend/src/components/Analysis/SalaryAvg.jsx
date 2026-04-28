@@ -25,8 +25,8 @@ const SalaryAvg = () => {
                     </div>
                     <div className="flex flex-row justify-between items-center w-full">
                         <div className="">
-                            <h1 className='font-bold text-lg '>Avarage Salary</h1>
-                            <p className='text-xs text-gray-500'>for {careerData?.career_name || 'web developers'}</p>
+                            <h1 className='font-bold text-lg '>Rata-rata gaji</h1>
+                            <p className='text-xs text-gray-500'>{careerData?.career_name || 'web developers'}</p>
                         </div>
                     </div>
                 </div>

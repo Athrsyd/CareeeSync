@@ -14,7 +14,7 @@ const Navbar = () => {
             <div className="relative md:w-100 lg:w-190 ml-5 mt-3">
                 <input
                     type="search"
-                    placeholder="Explore..."
+                    placeholder="Jelajahi..."
                     className="bg-[#D9D9D9]/30 text-sm rounded-xl md:w-95 lg:w-180 h-10 outline-0 pl-10"
                 />
                 <img

@@ -34,7 +34,7 @@ const DemandGrafic = () => {
         labels: dataKebutuhanIndustri.years || [2020, 2021, 2022, 2023, 2024, 2025],
         datasets: [
             {
-                label: `${careerData?.career_name} Demand`,
+                label: `Permintaan ${careerData?.career_name}`,
                 data: careerDemand
                     ? dataKebutuhanIndustri.years.map(year => careerDemand.values[year])
                     : [0, 0, 0, 0, 0, 0],
@@ -78,8 +78,8 @@ const DemandGrafic = () => {
     return (
         <div className="w-2/3 h-100 bg-white border-2 flex flex-col justify-center border-primary rounded-xl p-5">
             <div className="">
-                <h1 className='font-bold text-xl'>Industry Demand</h1>
-                <p className='text-md text-gray-500'>{careerData?.career_name || 'Web Developer'} demand over the last 5 years</p>
+                <h1 className='font-bold text-xl'>Permintaan Industri</h1>
+                <p className='text-md text-gray-500'>Permintaan {careerData?.career_name || 'Web Developer'} 5 tahun terakhir</p>
             </div>
             <div className="container h-80 mt-4">
                 {careerDemand ? (

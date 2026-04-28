@@ -40,13 +40,13 @@ const LevelAndTools = ({ project }) => {
           </div>
           <div className="flex flex-col ml-2 gap-1">
             <h1 className="text-sm font-semibold font-montserrat text-black/50 tracking-tight leading-3">
-              Difficulty Level
+              Level Kesulitan
             </h1>
             <h2 className={`text-2xl font-bold font-montserrat ${project?.level === 'basic' ? 'text-green-500' : project?.level === 'intermediate' ? 'text-yellow-500' : project?.level === 'advanced' ? 'text-red-500' : 'text-black'}`}>
               {project?.level || null}
             </h2>
             <h2 className="text-sm font-semibold font-montserrat bg-[#ECECEC] py-1 px-4 rounded-4xl mt-2 text-black/50">
-              Estimated time: {project?.duration || null}
+              Waktu Estimasi: {project?.duration || null}
             </h2>
           </div>
         </div>
@@ -69,7 +69,7 @@ const LevelAndTools = ({ project }) => {
           </div>
           <div className="flex flex-col ml-2 gap-2">
             <h1 className="text-md font-semibold font-montserrat text-black/50 tracking-tight leading-3">
-              Tools and Technologies
+              Alat yang digunakan
             </h1>
             <div className="flex flex-row">
             <StyleTools tools={project?.tools || []} />

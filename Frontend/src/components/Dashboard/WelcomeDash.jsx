@@ -3,6 +3,7 @@ import { useEffect, useRef } from "react";
 import Bintang from "../../assets/Bintang.svg"
 import { useCareer } from '../../context/CareerContext';
 import JobReadinessScore from '../Global/JobReadinessScore';
+import { Link } from 'react-router-dom';
 const CIRCUMFERENCE = 2 * Math.PI * 54;
 
 
@@ -17,21 +18,21 @@ const WelcomeDash = ({user, data}) => {
         <div className="relative md:w-160 lg:w-180 md:h-60 lg:h-60 rounded-2xl shadow-xl backdrop-blur-md flex flex-col px-10 bg-primary">
           <div className="flex flex-col items-start justify-center  mt-10">
             <h1 className="text-4xl font-bold text-white font-poppins leading-10">
-              Hello, {user?.username || 'Guest'}!
+              Hallo, {user?.username || 'Guest'}!
             </h1>
             <h2 className="text-xl font-[450] text-white font-poppins">
-              Your career as a {data?.career_name || 'No career selected'} starts here.
+              Karier Anda sebagai {data?.career_name || 'No career selected'} dimulai di sini.
             </h2>
             <p className="text-md text-white/80 font-poppins w-[75%] mt-2">
-              Track your progress, improve your skills, and get closer to
-              becoming a professional
+              Lacak kemajuan Anda, tingkatkan keterampilan Anda, dan dekatkan diri Anda
+              untuk menjadi profesional
             </p>
-            <a
-              href="#"
+            <Link
+              to="/dashboard/progress"
               className="text-md font-[250] font-montserrat text-white hover:scale-105 transition-all ease-in-out duration-300 bg-black px-7 py-[2.25px] rounded-lg mt-4"
             >
-              <button>More</button>
-            </a>
+              <button>Lebih Banyak</button>
+            </Link>
           </div>
           <img
             src={Bintang}

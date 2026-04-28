@@ -133,7 +133,6 @@ const Project = () => {
       ) : (
         <section className="min-h-screen flex items-center justify-center px-5 md:px-10">
           <div className="flex flex-col w-full max-w-2xl">
-            {/* Congratulation Text */}
             <h1 className="text-4xl md:text-5xl font-bold text-black font-montserrat mb-4 text-center">
               Luar Biasa! 🎉
             </h1>
@@ -141,7 +140,6 @@ const Project = () => {
               Anda telah menguasai semua skill {careerData?.career_name}!
             </p>
 
-            {/* Achievement Stats */}
             <div className="grid grid-cols-3 gap-3 md:gap-4 mb-10">
               <div className="bg-white rounded-2xl p-4 md:p-6 shadow-xl outline-2 outline-primary">
                 <p className="text-2xl md:text-3xl font-bold text-primary font-montserrat mb-2">
@@ -162,15 +160,12 @@ const Project = () => {
                 <p className="text-black/60 font-montserrat font-medium text-sm md:text-base">Level Saat Ini</p>
               </div>
             </div>
-
-            {/* Description */}
             <p className="text-base md:text-lg text-black/60 font-montserrat mb-8 leading-relaxed text-center font-medium">
               Perjalanan Anda menuju {careerData?.career_name} sudah mencapai pencapaian yang mengesankan.
               Semua project telah diselesaikan dengan sempurna dan skill telah terasah dengan baik! <br />
               <strong>Anda siap untuk masuk ke dunia industri</strong>
             </p>
 
-            {/* Action Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link to={'/dashboard'}>
                 <button

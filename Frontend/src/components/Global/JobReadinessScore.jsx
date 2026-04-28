@@ -15,11 +15,10 @@ const JobReadinessScore = ({ score = 78, role = "Web Developer" }) => {
     return (
         <div className="bg-white/10 rounded-2xl outline-2 outline-primary shadow-xl backdrop-blur-md p-6 flex flex-col items-center gap-2 md:w-160 lg:w-72 h-full">
             <h2 className="md:font-semibold text-base font-montserrat lg:font-[450] text-[#06275A] tracking-tight">
-                Job Readiness Score
+                Score Kesiapan Kerja
             </h2>
             <div className="">
                 <svg width="100" height="100" viewBox="0 0 140 140">
-                    {/* Background track */}
                     <circle
                         cx="70"
                         cy="70"

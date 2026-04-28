@@ -56,11 +56,11 @@ const Auth = () => {
                 >
                     <div className={`realtive ${isSignIn ? 'text-end items-end px-10' : 'items-start text-justify pl-10 p-17'}`}>
                         <h1 className='text-4xl font-bold mb-2'>
-                            {isSignIn ? 'Keep Proving Your Skills' : 'Build Your Future Skills'}
+                            {isSignIn ? 'Terus tingkatkan skill mu' : 'Ayo bangun skill masa depan'}
                         </h1>
                         <p className={`${isSignIn ? 'text-xl' : 'text-lg'}`}>
-                            {isSignIn ? 'Continue your journey and track your career progress.' :
-                                'Discover your potential, close your skill gap, and prove your value through real projects.'}
+                            {isSignIn ? 'Lanjutkan perjalanan belajar mu dan raih impian karirmu dengan terus meningkatkan skill yang kamu miliki.' :
+                                'Capai impian karirmu dengan membangun skill yang relevan untuk masa depan. Mulai perjalanan belajarmu sekarang dan raih kesuksesan di dunia kerja.'}
                         </p>
                     </div>
                 </div>
@@ -72,18 +72,18 @@ const Auth = () => {
                         <div className="container w-3/4 h-full flex flex-col items-start justify-center gap-4">
                             <h1 className={`font-bold text-3xl text-start px-5 transition-all duration-300 ease-in-out 
                                 ${isSignIn ? '-translate-x-1' : 'translate-x-0'}`}>
-                                {isSignIn ? 'Welcome Back!' : 'Create Your Account'}
+                                {isSignIn ? 'Selamat Datang Kembali!' : 'Buat Akun Anda'}
                             </h1>
                             <form action="" method="post" className='flex flex-col justify-center items-start w-9/10 pl-5 py-3 gap-10' onSubmit={isSignIn ? handleLoginSubmit : handleRegister}>
                                 {!isSignIn && (
                                     <>
-                                        <input autoComplete='off' type="text" name='username' placeholder='Your Name' onChange={handleChange}
+                                        <input autoComplete='off' type="text" name='username' placeholder='Nama Anda' onChange={handleChange}
                                             className='w-full outline-0 border-b border-b-white/50 py-2 transition-opacity duration-300' />
 
-                                        <input autoComplete='off' type="text" name='email' placeholder='Your Email' onChange={handleChange}
+                                        <input autoComplete='off' type="text" name='email' placeholder='Email Anda' onChange={handleChange}
                                             className='w-full outline-0 border-b border-b-white/50 py-2 transition-opacity duration-300' />
                                         <div className="relative w-full flex items-center transition-opacity duration-300">
-                                            <input autoComplete='off' type={showPassword ? "text" : "password"} name='password' placeholder='Create Password'
+                                            <input autoComplete='off' type={showPassword ? "text" : "password"} name='password' placeholder='Buat Password'
                                                 className='w-full outline-0 border-b border-b-white/50 py-2' onChange={handleChange} />
                                             <button className='opacity-50 w-10 h-10 hover:opacity-100 transition-opacity' type="button" onClick={() => setShowPassword(!showPassword)}>
                                                 {showPassword ? <EyeOff size={20} /> : <Eye size={20} />}
@@ -93,10 +93,10 @@ const Auth = () => {
                                 )}
                                 {isSignIn && (
                                     <>
-                                        <input autoComplete='off' type="text" name='email' placeholder='Your Email' onChange={handleChange}
+                                        <input autoComplete='off' type="text" name='email' placeholder='Email Anda' onChange={handleChange}
                                             className='w-full outline-0 border-b border-b-white/50 py-2 transition-opacity duration-300' />
                                         <div className="relative w-full flex items-center flex-row transition-opacity duration-300">
-                                            <input autoComplete='off' type={showPassword ? "text" : "password"} name='password' placeholder='Your Password' onChange={handleChange}
+                                            <input autoComplete='off' type={showPassword ? "text" : "password"} name='password' placeholder='Password Anda' onChange={handleChange}
                                                 className='w-full outline-0 border-b border-b-white/50 py-2' />
                                             <button className='opacity-50 w-10 h-10 hover:opacity-100 transition-opacity' type='button' onClick={() => setShowPassword(!showPassword)}>
                                                 {showPassword ? <EyeOff size={20} /> : <Eye size={20} />}
@@ -110,7 +110,7 @@ const Auth = () => {
                                        {AuthLoading ? (isSignIn ? 'Signing In...' : 'Signing Up...') : (isSignIn ? 'Sign In' : 'Sign Up')}
                                     </button>
                                     <p className='text-center font-light text-white/50'>
-                                        {isSignIn ? 'Don\'t have an account?' : 'Already have an account?'}
+                                        {isSignIn ? 'Belum punya akun?' : 'Sudah punya akun?'}
                                         <span onClick={() => { toggleButton(); setMessage('') }} className='text-primary font-semibold cursor-pointer hover:text-white transition-colors duration-300'>
                                             {' '}{isSignIn ? 'Sign Up' : 'Sign In'}
                                         </span>
@@ -120,7 +120,7 @@ const Auth = () => {
                         </div>
                         <div className="container w-1/10 h-full flex opacity-50 flex-col items-center justify-center gap-3">
                             <div className="garis bg-white w-0.5 h-35"></div>
-                            <p className='text-white'>OR</p>
+                            <p className='text-white'>ATAU</p>
                             <div className="garis bg-white w-0.5 h-35"></div>
                         </div>
                         <div className="flex flex-col items-center justify-center gap-5 w-1/10">

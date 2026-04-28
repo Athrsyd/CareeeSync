@@ -42,7 +42,7 @@ const SkillDash = ({ data }) => {
   return (
     <>
       <h1 className="self-start text-2xl font-bold font-montserrat text-[#021124]">
-        Your Skills
+        Skill yang sudah dikuasai
       </h1>
       <div className="flex flex-row max-w-full items-center gap-8">
         {skillsMastery && skillsMastery.length > 0 ? (
@@ -59,13 +59,13 @@ const SkillDash = ({ data }) => {
         )}
         <div className="flex flex-col w-1/4 justify-center items-center gap-2 mt-5 ml-8 md:mr-4 lg:mr-0">
           <h1 className="md:text-[22px] lg:text-3xl font-semibold font-montserrat text-[#021124]">
-            You are at the
+            Kamu berada di
           </h1>
           <h1 className="md:text-[22px] lg:text-2xl font-semibold font-montserrat bg-primary px-4 py-1 rounded-lg text-white">
             {data?.level || 'N/A'} level
           </h1>
           <p className="md:text-md lg:text-lg font-[450] font-montserrat text-[#021124]">
-            Level Up Your Skills
+            Terus tingkatkan skill-mu
           </p>
         </div>
       </div>

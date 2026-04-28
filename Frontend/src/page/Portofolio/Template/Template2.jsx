@@ -1,6 +1,7 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, use } from 'react';
 import { FiMenu, FiX, FiArrowRight, FiMail, FiZap, FiCode } from 'react-icons/fi';
 import { FaGithub, FaLinkedin, FaInstagram } from 'react-icons/fa';
+import logo from '../../../assets/Logo_CareerSync.svg';
 
 const Template2 = ({ data, skillsData, projectsData }) => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -44,6 +45,16 @@ const Template2 = ({ data, skillsData, projectsData }) => {
         setIsMenuOpen(false);
     };
 
+    const checkPhoto = () => {
+        if (data.photo) {
+            setPhoto(true);
+        } else {
+            setPhoto(false);
+        }
+    };
+    useEffect(() => {
+        checkPhoto();
+    }, [data.photo]);
 
 
 
@@ -124,7 +135,7 @@ const Template2 = ({ data, skillsData, projectsData }) => {
                                 </button>
                             </div>
                         </div>
-                        {photo ? (
+                        {photo == null ? (
                             <div className="flex justify-center w-1/2">
                                 <div className="w-80 h-80 animate-naikTurun">
                                     <img
@@ -365,7 +376,7 @@ const Template2 = ({ data, skillsData, projectsData }) => {
             <footer className="bg-gray-900 text-gray-300 py-8">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="flex flex-col md:flex-row justify-between items-center mb-6">
-                        <p className="text-center md:text-left mb-4 md:mb-0">&copy; 2025 Your Name. All rights reserved.</p>
+                        <p className="text-center md:text-left mb-4 md:mb-0">&copy; 2025 {data.fullname || 'Your Name'}. All rights reserved.</p>
                         <div className="flex gap-4">
                             {data.github_link && (
 
@@ -393,8 +404,9 @@ const Template2 = ({ data, skillsData, projectsData }) => {
                             )}
                         </div>
                     </div>
-                    <div className="border-t border-gray-700 pt-6 text-center text-sm">
-                        <p>Crafted with ❤️ using React & Tailwind CSS</p>
+                    <div className="border-t border-gray-700 pt-6 text-center text-sm flex flex-row justify-center items-center gap-2">
+                        <p>Build with CareerSync </p>
+                        <img src={logo} alt="" width={25}/>
                     </div>
                 </div>
             </footer>
