@@ -4,7 +4,7 @@ import logo from '../../assets/Logo_CareerSync.svg'
 import { useNavigate } from 'react-router-dom';
 import { useUser } from '../../context/UserContext';
 import AuthHooks from '../../hooks/AuthHooks';
-    
+
 
 const PopUp = ({ onClose, onclick, onclick2, username }) => {
     return (
@@ -43,7 +43,7 @@ const LandingPage = () => {
     }
     return (
         <div className="relative w-full h-screen flex items-center justify-center">
-            <div className="bg absolute -z-10 opacity-50 blur-lg h-full w-full">
+            <div className="bg absolute -z-10 opacity-50 blur-xl h-full w-full">
                 <img src={background} alt="" className='h-screen' />
             </div>
             <div className="relative flex flex-col h-screen justify-center my-10 items-center">

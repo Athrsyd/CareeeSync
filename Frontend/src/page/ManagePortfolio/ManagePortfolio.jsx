@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import { useState, useEffect } from 'react'
 import { useUser } from '../../context/UserContext'
 import { useCareer } from '../../context/CareerContext'
@@ -379,7 +380,7 @@ const ManagePortfolio = () => {
 
                             {/* Submit Button */}
                             <div className="mt-8 flex gap-4 flex-col">
-                                {selectedStyle !=='style1' && (
+                                {selectedStyle !== 'style1' && (
                                     <p className=' font-semibold text-center text-yellow-500'> mohon maaf untuk saat ini, anda hanya bisa menggunakan style 1</p>
                                 )}
                                 <div className="flex flex-row gap-5">

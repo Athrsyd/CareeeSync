@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import React, { useState, useEffect, use } from 'react';
 import { FiMenu, FiX, FiArrowRight, FiMail, FiZap, FiCode } from 'react-icons/fi';
 import { FaGithub, FaLinkedin, FaInstagram } from 'react-icons/fa';

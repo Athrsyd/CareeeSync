@@ -37,10 +37,10 @@ class UserController extends Controller
             'email' => $request->email,
             'password' => Hash::make($request->password)
         ]);
-        $buatProgress = $buatAkun->progress()->create([
-            'readiness_point' => 0,
-            'progress_date' => now(),
-        ]);
+        // $buatProgress = $buatAkun->progress()->create([
+        //     'readiness_point' => 0,
+        //     'progress_date' => now(),
+        // ]);
 
         return response()->json([
             'message' => 'Selamat, registrasi berhasil! silahkan sign in',
