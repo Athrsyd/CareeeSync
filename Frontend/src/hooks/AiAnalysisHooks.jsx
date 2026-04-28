@@ -14,10 +14,12 @@ const runAnalysis = async (careerData, skillsMastery, readiness) => {
 
     const prompt = aiPrompt(careerData, skillsMastery, readiness);
     console.log("Prompt:", prompt);
-    console.log("API KEY:", API_KEY);
+    console.log("API KEY:", API_KEY)
+    // console.log("RESPONSE:", res.data);
+    // console.log("TEXT RESULT:", text);
 
     const res = await axios.post(
-        `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${API_KEY}`,
+        `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=${API_KEY}`,
         {
         contents: [
             {
@@ -32,18 +34,6 @@ const runAnalysis = async (careerData, skillsMastery, readiness) => {
         "Tidak Ada Hasil";
 
     console.log("FULL RESPONSE:", res.data);
-
-    const token = localStorage.getItem('tokenCareerSync');
-
-    await API.post(
-        "/feedback",
-        { result: text },
-        {
-        headers: {
-            Authorization: `Bearer ${token}`,
-        },
-        },
-    );
 
     SetResult(text);
     SetLoading(false);

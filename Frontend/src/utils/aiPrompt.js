@@ -1,15 +1,16 @@
-const aiPrompt = (careerData, SkillsMastery, readiness) => {
-  return `Kamu adalah AI career analyst.
+const aiPrompt = (careerData, skillsMastery, readiness) => {
+  return `
+Kamu adalah AI career analyst profesional.
 
 Berikut data user:
 
 Career: ${careerData?.career_name}
 
 Skills:
-${SkillsMastery
+${(skillsMastery || [])
   .map(
     (skill) => `
-- ${skill.name} (${skill.mastered ? "dikuasai" : "belum"}) bobot: ${skill.weight}
+- ${skill.name} (${skill.mastered ? "dikuasai" : "belum"}) | bobot: ${skill.weight}
 `,
   )
   .join("")}
@@ -17,10 +18,24 @@ ${SkillsMastery
 Readiness Score: ${readiness}%
 
 Tugas kamu:
-1. Analisis kondisi skill user
-2. Jelaskan kekurangan utama
-3. Berikan saran konkret untuk improvement
-4. Gunakan bahasa profesional tapi mudah dipahami
-`;}
+Analisis kondisi user berdasarkan data di atas.
+
+⚠️ WAJIB gunakan format berikut:
+
+=== RINGKASAN ===
+(Tuliskan ringkasan kondisi user secara singkat)
+
+=== KELEBIHAN ===
+(Sebutkan skill yang sudah kuat)
+
+=== KEKURANGAN ===
+(Sebutkan skill yang masih lemah atau belum dikuasai)
+
+=== SARAN ===
+(Berikan saran konkret dan actionable untuk meningkatkan skill)
+
+Gunakan bahasa Indonesia yang profesional, jelas, dan tidak bertele-tele.
+`;
+};
 
 export default aiPrompt;
