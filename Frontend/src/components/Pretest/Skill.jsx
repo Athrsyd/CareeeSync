@@ -14,9 +14,9 @@ const Skill = ({ skillName, onClick, isSelected }) => {
 
     return (
         <button
-            className={`bg-linear-to-br from-[#021124]/60 to-[#0a2847]/40 border-2
-            w-full rounded-2xl text-white py-4 px-6 hover:-translate-y-0.5 cursor-pointer
-            hover:bg-[#5482B4]/10 transition-all duration-300 font-semibold ${isSelect ? 'border-white bg-[#5482B4]/10 shadow-lg' : 'border-[#5482B4]/30'} shadow-0`}
+            className={`bg-linear-to-br from-[#021124]/60 to-[#0a2847]/40 border-2 h-30
+            w-full rounded-2xl text-white py-2 hover:-translate-y-0.5 cursor-pointer
+            hover:bg-primary/10 transition-all duration-300 font-semibold ${isSelect ? 'border-white bg-primary/10 shadow-lg' : 'border-primary/30'} shadow-0`}
             onClick={handleClick}
         >
             {skillName}

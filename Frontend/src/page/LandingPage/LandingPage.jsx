@@ -4,7 +4,7 @@ import logo from '../../assets/Logo_CareerSync.svg'
 import { useNavigate } from 'react-router-dom';
 import { useUser } from '../../context/UserContext';
 import AuthHooks from '../../hooks/AuthHooks';
-
+    
 
 const PopUp = ({ onClose, onclick, onclick2, username }) => {
     return (

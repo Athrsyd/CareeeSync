@@ -116,7 +116,6 @@ const Pretest = () => {
             <div className="background flex justify-start w-full h-screen relative -z-30" >
                 <img src={background} alt="background" className=' object-cover' />
             </div>
-            {/* <div className='container px-10 z-10 bg-[#021124]/60 w-3/5 h-4/5 rounded-xl backdrop-blur-xl flex items-center gap-6 flex-col justify-between py-5'> */}
             <div className={`container px-4 py-6 sm:px-6 sm:py-10 lg:px-10 lg:py-15 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-40 bg-[#021124]/30 w-11/12 sm:w-4/5 lg:w-3/5 max-h-[90vh] rounded-xl
                 backdrop-blur-xl flex flex-col items-center justify-center gap-6 sm:gap-8 lg:gap-10 overflow-hidden`}>
                 <Header data={page} />
@@ -125,13 +124,13 @@ const Pretest = () => {
                     <>
                         <div className="container flex flex-col items-center justify-center gap-4 w-full">
                             <div className="w-full sm:w-17/20 flex items-start justify-start px-4 sm:px-0">
-                                <h1 className='text-lg sm:text-xl md:text-2xl text-start font-bold mb-2 text-white'>What is your primary career goal?</h1>
+                                <h1 className='text-lg sm:text-xl md:text-2xl text-start font-bold mb-2 text-white'>Apa tujuan karir Anda?</h1>
                             </div>
                             <select name="careerGoal" id="careerGoal"
                                 className='bg-[#021124] text-white placeholder:text-gray-500 border border-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500 w-11/12 sm:w-17/20 h-16 sm:h-20 p-4 sm:p-5 rounded-2xl text-sm sm:text-base'
                                 onChange={handleCareerChange}
                             >
-                                <option value="">Select your career goal</option>
+                                <option value="">Pilih tujuan karir Anda</option>
                                 {dataCareer.map((career, index) => (
                                     <option key={index} value={career.id}>{career.name}</option>
                                 ))}
@@ -151,7 +150,7 @@ const Pretest = () => {
                 ) : page === 2 ? (
                     <>
                         <div className="container flex flex-col items-center justify-center gap-4 w-full flex-1">
-                            <h1 className='text-lg sm:text-xl md:text-2xl text-center font-bold mb-2 text-white px-2'>Which skills do you already have in this field?</h1>
+                            <h1 className='text-lg sm:text-xl md:text-2xl text-center font-bold mb-2 text-white px-2'>Apa saja skill yang sudah anda kuasai ?</h1>
                             <div className="w-full sm:w-17/20 h-50 sm:h-60 pt-2 px-3 sm:px-0 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-2 sm:gap-4 overflow-auto">
                                 {skillList.map((skill, index) => (
                                     <Skill
@@ -205,9 +204,9 @@ const Pretest = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className="buttons flex w-full flex-col sm:flex-row items-center justify-center gap-4 mt-5 sm:gap-10 px-4 sm:px-0">
-                            <button onClick={() => setPage(page - 1)} className='bg-primary w-full sm:w-9/10 rounded-2xl text-white py-2 sm:py-3 px-4 sm:px-6 text-sm sm:text-base hover:bg-[#0a3d7a] transition-colors duration-300 font-semibold'>Prev</button>
-                            <button onClick={handleSubmit} className='bg-primary w-full sm:w-9/10 rounded-2xl text-white py-2 sm:py-3 px-4 sm:px-6 text-sm sm:text-base hover:bg-[#0a3d7a] transition-colors duration-300 font-semibold'>Let's Proof Your Skill</button>
+                        <div className="buttons mt-6 lg:-mt-6 flex w-full flex-col sm:flex-row items-center justify-center gap-4  sm:gap-10 px-4 sm:px-0">
+                            <button onClick={() => setPage(page - 1)} className='bg-primary w-full sm:w-9/10 rounded-2xl text-white py-2 sm:py-3 px-4 sm:px-6 text-sm sm:text-base hover:bg-[#0a3d7a] transition-colors duration-300 font-semibold'>Sebelumnya</button>
+                            <button onClick={handleSubmit} className='bg-primary w-full sm:w-9/10 rounded-2xl text-white py-2 sm:py-3 px-4 sm:px-6 text-sm sm:text-base hover:bg-[#0a3d7a] transition-colors duration-300 font-semibold'>Ayo buktikan skill mu</button>
                         </div>
                     </>
                 ) : null}
