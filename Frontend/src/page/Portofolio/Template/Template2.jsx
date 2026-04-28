@@ -67,7 +67,7 @@ const Template2 = ({ data, skillsData, projectsData }) => {
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="flex justify-between items-center h-16">
                         <div className="shrink-0">
-                            <a href="#" className="text-2xl font-bold text-blue-600">Portfolio</a>
+                            <a href="#" className="text-xl font-bold text-blue-600">Portfolio {data.fullname}</a>
                         </div>
 
                         <div className="hidden md:flex gap-8">
@@ -406,7 +406,7 @@ const Template2 = ({ data, skillsData, projectsData }) => {
                     </div>
                     <div className="border-t border-gray-700 pt-6 text-center text-sm flex flex-row justify-center items-center gap-2">
                         <p>Build with CareerSync </p>
-                        <img src={logo} alt="" width={25}/>
+                        <img src={logo} alt="" width={25} />
                     </div>
                 </div>
             </footer>

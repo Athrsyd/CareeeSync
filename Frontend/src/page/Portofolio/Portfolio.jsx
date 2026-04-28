@@ -17,6 +17,7 @@ const Portfolio = () => {
     const { id } = useParams();
     const careerOptions = CareerOptions.careers.find(c => c.name === careerData?.career_name);
     const { projectData, fetchProject } = ProjectHook();
+    const [skill, setSkill] = useState(null);
 
     const getSkillsData = () => {
         if (careerData?.skills_mastery && careerOptions) {
@@ -29,6 +30,26 @@ const Portfolio = () => {
             console.log('Skills updated:', skills);
         } else {
             setSkillsData([]);
+        }
+    };
+
+    const getSkill = () => {
+        const skillData = portfolioData?.skills_mastery;
+        const careerName = portfolioData?.career_name; 
+        const SkillOptions = CareerOptions.careers.find(c => c.name === careerName)?.skills || [];
+        
+        if (skillData?.length > 0 && SkillOptions.length > 0) {
+            const transformedSkills = skillData.map((skill, idx) => {
+                const skillInfo = SkillOptions.find(so => so.id === skill.skill_id);
+                return {
+                    id: idx + 1,
+                    title: skillInfo?.name || skill.skill_id,
+                    description: skillInfo?.description || 'No description'
+                };
+            });
+            setSkill(transformedSkills);
+        } else {
+            setSkill([]); // fallback ke array kosong
         }
     };
 
@@ -63,7 +84,7 @@ const Portfolio = () => {
 
     useEffect(() => {
         getSkillsData();
-    }, [careerData, careerOptions]);  // ✅ Re-run saat careerData berubah
+    }, [careerData, careerOptions]);
 
     // setTimeout(() => {
     //     console.log(portfolioData || 'No portfolio data after timeout');
@@ -72,7 +93,12 @@ const Portfolio = () => {
         console.log('**Portfolio data updated:', portfolioData);
     }, [portfolioData]);
 
+    useEffect(() => {
+        getSkill();
+    }, [portfolioData, careerData]); 
+
     console.log('___ projectData:', projectData);
+    console.log('portfolioData.skills_mastery:', portfolioData?.skills_mastery);
 
     return (
         <div className="min-h-screen bg-gray-50">
@@ -92,8 +118,8 @@ const Portfolio = () => {
             {portfolioData ? (
                 <Template2
                     data={portfolioData}
-                    skillsData={skillsData}
-                    projectsData={projectData}
+                    skillsData={skill || []}  // ← tambah || []
+                    projectsData={portfolioData.projects || []}
                 />
             ) : !loading && !error ? (
                 <div className="p-6 text-center text-gray-500">No portfolio data available</div>
