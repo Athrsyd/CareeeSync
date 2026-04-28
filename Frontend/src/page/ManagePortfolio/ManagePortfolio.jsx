@@ -378,20 +378,26 @@ const ManagePortfolio = () => {
                             </div>
 
                             {/* Submit Button */}
-                            <div className="mt-8 flex gap-4">
-                                <button
-                                    type="submit"
-                                    disabled={loading}
-                                    className="flex-1 px-6 py-3 bg-primary text-white font-bold rounded-xl hover:bg-[#4a6fa5] transition-all disabled:opacity-50 disabled:cursor-not-allowed shadow-lg"
-                                >
-                                    {loading ? (mode === 'update' ? 'Memperbarui...' : 'Membuat...') : (mode === 'update' ? 'Perbarui Portfolio' : 'Buat Portfolio')}
-                                </button>
-                                <button
-                                    type="reset"
-                                    className="flex-1 px-6 py-3 bg-gray-300 text-[#021124] font-bold rounded-xl hover:bg-gray-400 transition-all"
-                                >
-                                    Reset
-                                </button>
+                            <div className="mt-8 flex gap-4 flex-col">
+                                {selectedStyle !=='style1' && (
+                                    <p className=' font-semibold text-center text-yellow-500'> mohon maaf untuk saat ini, anda hanya bisa menggunakan style 1</p>
+                                )}
+                                <div className="flex flex-row gap-5">
+
+                                    <button
+                                        type="submit"
+                                        disabled={loading}
+                                        className="flex-1 px-6 py-3 bg-primary text-white font-bold rounded-xl hover:bg-[#4a6fa5] transition-all disabled:opacity-50 disabled:cursor-not-allowed shadow-lg"
+                                    >
+                                        {loading ? (mode === 'update' ? 'Memperbarui...' : 'Membuat...') : (mode === 'update' ? 'Perbarui Portfolio' : 'Buat Portfolio')}
+                                    </button>
+                                    <button
+                                        type="reset"
+                                        className="flex-1 px-6 py-3 bg-gray-300 text-[#021124] font-bold rounded-xl hover:bg-gray-400 transition-all"
+                                    >
+                                        Reset
+                                    </button>
+                                </div>
                             </div>
                         </form>
                     </div>

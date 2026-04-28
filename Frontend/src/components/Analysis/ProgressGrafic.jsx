@@ -29,7 +29,7 @@ const ProgressGrafic = () => {
 
     useEffect(() => {
         progressUser();
-    }, [progressUser]);
+    }, []);
 
     const parsingData = () => {
         if (!progressData || progressData.length === 0) return null;

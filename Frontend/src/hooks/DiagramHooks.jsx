@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useCallback } from 'react'
 import API from '../services/api';
 import { useCareer } from '../context/CareerContext';
 import { useUser } from '../context/UserContext';
@@ -13,7 +13,7 @@ const DiagramHooks = () => {
     const [error, setError] = useState(null);
     const { careerData } = useCareer();
     
-    const progressUser = async () => {
+    const progressUser = useCallback(async () => {
         const token = localStorage.getItem('tokenCareerSync');
         try {
             setLoading(true);
@@ -34,7 +34,7 @@ const DiagramHooks = () => {
         } finally {
             setLoading(false);
         }
-    };
+    }, []);
 
     const demandIndustry = () => {
         if (!careerData) return;
