@@ -28,8 +28,8 @@ Route::prefix('v1')->group(function () {
         Route::post('/progress', [ProgressController::class, 'store']);
 
         // Ini Endpoint buat feedback AI, ada start sama refresh dam
-        Route::post('/feedback', [PortfolioController::class, 'StartFeedback']);
-        Route::post('/feedback/refresh', [PortfolioController::class, 'RefreshFeedback']);
+        Route::post('/feedback', [UserCareerController::class, 'StartFeedback']);
+        Route::post('/feedback/refresh', [UserCareerController::class, 'RefreshFeedback']);
 
 
         Route::post('/projects-finished', [ProjectsFinishedController::class, 'Create']);
