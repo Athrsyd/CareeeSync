@@ -62,7 +62,7 @@ const DiagramHooks = () => {
     }
     useEffect(() => {
         progressUser();
-    }, []);
+    }, [progressUser]);
 
     useEffect(() => {
         demandIndustry();

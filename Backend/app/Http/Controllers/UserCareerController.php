@@ -81,7 +81,7 @@ class UserCareerController extends Controller
             'data' => $userCareer
         ], 200);
     }
-    public function StartAnalysis(string $id)
+    public function StartAnalysis(string $id,Request $request)
     {
         $userCareer = UserCareer::find($id);
         if (!$userCareer) {
@@ -91,6 +91,7 @@ class UserCareerController extends Controller
         }
 
         $userCareer->ever_analyzed = true;
+        $userCareer->ai_feedback = $request->ai_feedback;
         $userCareer->save();
 
         return response()->json([

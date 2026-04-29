@@ -15,12 +15,13 @@ class UserController extends Controller
 
         $validate = Validator::make($request->all(), [
             'username' => "string|required",
-            'email' => "email|required",
+            'email' => "email|required|unique:users,email",
             'password' => 'min:6|string|required'
         ],[
             'username.required' => "Username wajib diisi!",
             'email.required' => "Email wajib diisi!",
             'email.email' => "Format email tidak valid!",
+            'email.unique' => "Email sudah terdaftar!",
             'password.required' => "Password wajib diisi!",
             'password.min' => "Password minimal 6 karakter!"
         ]);

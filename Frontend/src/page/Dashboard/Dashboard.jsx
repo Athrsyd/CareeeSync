@@ -11,6 +11,8 @@ import { useUser } from '../../context/UserContext';
 import { useCareer } from '../../context/CareerContext';
 import { Car } from 'lucide-react';
 import { useCurrentProject } from '../../context/CurrentProjectContext';
+import Skeleton from 'react-loading-skeleton'
+import 'react-loading-skeleton/dist/skeleton.css'
 
 const Dashboard = () => {
   const { user } = useUser();
@@ -34,13 +36,20 @@ const Dashboard = () => {
         <WelcomeDash user={user} data={careerData} />
       </div>
       <div className="flex flex-col mt-10 ml-15">
-        <SkkillDash data={careerData} />
+        {careerData?
+          <SkkillDash data={careerData} /> :
+        <Skeleton count={2} widwth={690} height={150} style={{borderRadius:'1rem'}}/>
+        }
       </div>
       <div className="flex flex-col mt-8 ml-15">
-        <RecommendProject
-          project={currentProject}
-          career={careerData}
-        />
+        {currentProject? (
+          <RecommendProject
+            project={currentProject}
+            career={careerData}
+          />
+        ) : (
+          <Skeleton count={1} width={990} height={250} style={{borderRadius:'1rem'}}/>
+        )}
       </div>
       <div className="flex flex-col mt-8 md:ml-20 lg:ml-5">
         <LibraryReadinessDash />

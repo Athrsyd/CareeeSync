@@ -51,6 +51,8 @@ const ProgressGrafic = () => {
             }
         }
 
+        uniqueData.sort((a, b) => new Date(a.date) - new Date(b.date));
+
         return {
             labels: uniqueData.map(item => new Date(item.date).toLocaleDateString('id-ID')),
             values: uniqueData.map(item => item.readiness),

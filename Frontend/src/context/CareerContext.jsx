@@ -80,15 +80,7 @@ const CareerProvider = ({ children }) => {
         }
     }, [careerData, skillsMastery])
 
-    useEffect(() => {
-        const now = new Date();
-        const payload = {
-            user_id: careerData?.user_id,
-            readiness_point: readiness.toFixed(0),
-            progress_date: now.toISOString().split('T')[0]
-        };
-        postReadinessScore(payload);
-    }, [readiness])
+
 
 
     useEffect(() => {

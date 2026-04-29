@@ -1,5 +1,7 @@
 const CIRCUMFERENCE = 2 * Math.PI * 54;
 import React, { useEffect, useRef } from 'react'
+import Skeleton from 'react-loading-skeleton'
+import 'react-loading-skeleton/dist/skeleton.css'
 
 const JobReadinessScore = ({ score = 78, role = "Web Developer" }) => {
     const arcRef = useRef(null);
@@ -12,6 +14,9 @@ const JobReadinessScore = ({ score = 78, role = "Web Developer" }) => {
     }, [score]);
     const topPercent = Math.max(1, 100 - score);
 
+    if (!score || !role) {
+        return <Skeleton width={300} height={230} style={{borderRadius:'1rem'}}/>;
+    }
     return (
         <div className="bg-white/10 rounded-2xl outline-2 outline-primary shadow-xl backdrop-blur-md p-6 flex flex-col items-center gap-2 md:w-160 lg:w-72 h-full">
             <h2 className="md:font-semibold text-base font-montserrat lg:font-[450] text-[#06275A] tracking-tight">

@@ -16,6 +16,7 @@ const AuthHooks = () => {
     const [AuthLoading, setAuthLoading] = useState(false);
     const [password, setPassword] = useState('');
     const [user, setUser] = useState(null);
+    
 
 
     const handleRegister = async (e) => {
@@ -35,7 +36,7 @@ const AuthHooks = () => {
 
         } catch (error) {
             console.error('Error during registration:', error);
-            setMessage(error.response?.data?.message || 'Registration failed');
+            setMessage(error.response?.data?.errors?.email?.[0]);
         }
         finally {
             setAuthLoading(false);
@@ -108,7 +109,7 @@ const AuthHooks = () => {
     };
 
     const Logout = async () => {
-        const confirmed = confirm('Are you sure you want to logout?');
+        const confirmed = confirm('Apakah anda yakin ingin logout?');
         if (!confirmed) return;
 
         setAuthLoading(true);

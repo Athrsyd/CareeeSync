@@ -11,18 +11,19 @@ import Popup from '../../components/Project/Popup';
 import CareerHooks from '../../hooks/CareerHooks';
 import careerOptions from '../../data/careerOptions.json'
 import ProjectHook from '../../hooks/ProjectHook';
-import {Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
+
 
 
 const Project = () => {
   const { user } = useUser();
-  const { careerData, fetchCareer, projects, skillsMastery, unFinishedProjects } = useCareer();
+  const { careerData, fetchCareer, projects, skillsMastery, unFinishedProjects,p } = useCareer();
   const { currentProject } = useCurrentProject();
   const [showModal, setShowModal] = useState(false);
-  const { updateMasterySkill } = CareerHooks();
+  const { updateMasterySkill, postReadinessScore } = CareerHooks();
   const [currentSkillState, setCurrentSkill] = useState(null);
   const { postProject, loading } = ProjectHook();
-
+  const { readiness } = useCareer();
 
   const handleSubmitProject = async () => {
     if (!careerData?.id || !currentProject?.skill_id) return;
@@ -58,6 +59,13 @@ const Project = () => {
       level: careerData.level || 'basic',
     };
 
+    const now = new Date();
+    const payloadReadiness = {
+      user_id: careerData?.user_id,
+      readiness_point: readiness.toFixed(0),
+      progress_date: now.toISOString().split('T')[0]
+    };
+
     const payloadProject = {
       project_title: currentProject.title,
       project_description: currentProject.description,
@@ -71,10 +79,10 @@ const Project = () => {
 
     await updateMasterySkill(careerData.id, payload);
     await postProject(payloadProject);
+    await postReadinessScore(payloadReadiness);
     await fetchCareer();
     setShowModal(false);
   };
-
 
 
 
@@ -169,26 +177,26 @@ const Project = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link to={'/dashboard'}>
                 <button
-                className="px-8 py-3 md:py-4 bg-white border-2 border-primary text-primary font-semibold font-montserrat rounded-xl hover:bg-primary hover:text-white transition-all duration-200 shadow-lg"
+                  className="px-8 py-3 md:py-4 bg-white border-2 border-primary text-primary font-semibold font-montserrat rounded-xl hover:bg-primary hover:text-white transition-all duration-200 shadow-lg"
                 >
                   Kembali ke Dashboard
                 </button>
               </Link>
 
               <Link to={'/dashboard/portfolio'}>
-              <button
-                className="px-8 py-3 md:py-4 bg-white border-2 border-primary text-primary font-semibold font-montserrat rounded-xl hover:bg-primary hover:text-white transition-all duration-200 shadow-lg"
-              >
-                Lihat Progress Lengkap
-              </button>
+                <button
+                  className="px-8 py-3 md:py-4 bg-white border-2 border-primary text-primary font-semibold font-montserrat rounded-xl hover:bg-primary hover:text-white transition-all duration-200 shadow-lg"
+                >
+                  Lihat Progress Lengkap
+                </button>
               </Link>
 
               <Link to={'/dashboard/portfolio'}>
-              <button
-                className="px-8 py-3 md:py-4 bg-white border-2 border-primary text-primary font-semibold font-montserrat rounded-xl hover:bg-primary hover:text-white transition-all duration-200 shadow-lg"
-              >
-                Buat Portofolio Anda
-              </button>
+                <button
+                  className="px-8 py-3 md:py-4 bg-white border-2 border-primary text-primary font-semibold font-montserrat rounded-xl hover:bg-primary hover:text-white transition-all duration-200 shadow-lg"
+                >
+                  Buat Portofolio Anda
+                </button>
               </Link>
             </div>
           </div>
