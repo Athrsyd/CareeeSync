@@ -41,7 +41,6 @@ const useManagePortfolio = () => {
                 photo: formData.photo?.name || 'no photo'
             })
             
-            // Append hanya string/number fields
             const stringFields = ['fullname', 'about_me', 'address', 'education', 'hobbies', 'experience', 'email', 'linkedin_link', 'instagram_link', 'phone_number', 'career_id', 'user_id', 'style']
             
             stringFields.forEach(key => {
@@ -50,7 +49,6 @@ const useManagePortfolio = () => {
                 }
             })
 
-            // Append photo secara terpisah
             if (formData.photo && formData.photo instanceof File) {
                 data.append('photo', formData.photo)
             }

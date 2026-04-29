@@ -22,7 +22,7 @@ const Auth = () => {
     const [showPassword, setShowPassword] = useState(false);
     const navigate = useNavigate();
 
-        useEffect(() => {
+    useEffect(() => {
         if (user && localStorage.getItem('tokenCareerSync')) {
             navigate('/dashboard');
         }
@@ -107,7 +107,7 @@ const Auth = () => {
                                 <div className="w-full flex flex-col items-center justify-center gap-2">
                                     {message && <p className='text-white'>{message}</p>}
                                     <button disabled={AuthLoading} onClick={() => setShowPassword(false)} className={`w-full py-2 rounded-lg bg-primary text-white font-semibold hover:bg-[#4a6fa3] transition-colors duration-300 ${AuthLoading ? 'cursor-not-allowed opacity-70' : ''}`}>
-                                       {AuthLoading ? (isSignIn ? 'Signing In...' : 'Signing Up...') : (isSignIn ? 'Sign In' : 'Sign Up')}
+                                        {AuthLoading ? (isSignIn ? 'Signing In...' : 'Signing Up...') : (isSignIn ? 'Sign In' : 'Sign Up')}
                                     </button>
                                     <p className='text-center font-light text-white/50'>
                                         {isSignIn ? 'Belum punya akun?' : 'Sudah punya akun?'}

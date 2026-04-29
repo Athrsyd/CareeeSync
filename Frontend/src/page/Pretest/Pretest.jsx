@@ -6,8 +6,10 @@ import CareerOptions from '../../data/careerOptions.json'
 import CareerHooks from '../../hooks/CareerHooks';
 import background from '../../assets/bg-auth.jpeg'
 import { useCareer } from '../../context/CareerContext';
+import { useUser } from '../../context/UserContext';
 
 const Pretest = () => {
+    const { user } = useUser();
     const [page, setPage] = useState(1);
     const [dataCareer, setDataCareer] = useState([]);
     const [selectedCareer, setSelectedCareer] = useState('');
@@ -17,7 +19,7 @@ const Pretest = () => {
     const [preventNext, setPreventNext] = useState(false);
     const [loading, setLoading] = useState(false);
     const { fetchCareer } = useCareer();
-    const { postCareer } = CareerHooks();
+    const { postCareer, postReadinessScore } = CareerHooks();
 
     const navigate = useNavigate();
 
@@ -95,10 +97,16 @@ const Pretest = () => {
             skills_mastery: skillsWithWeight || [],
             level: level || 'Basic'
         };
+        const payloadReadiness = {
+            user_id: user?.id, // Akan diisi setelah mendapatkan data user
+            readiness_point: totalWeight.toFixed(0),
+            progress_date: new Date().toISOString().split('T')[0]
+        };
         console.log('Data yang dikirim:', payload);
 
         try {
             await postCareer(payload);
+            await postReadinessScore(payloadReadiness);
             console.log('Success!');
             navigate('/dashboard');
             await fetchCareer();
