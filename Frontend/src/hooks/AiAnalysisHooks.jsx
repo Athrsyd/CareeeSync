@@ -15,11 +15,9 @@ const runAnalysis = async (careerData, skillsMastery, readiness) => {
     const prompt = aiPrompt(careerData, skillsMastery, readiness);
     console.log("Prompt:", prompt);
     console.log("API KEY:", API_KEY)
-    // console.log("RESPONSE:", res.data);
-    // console.log("TEXT RESULT:", text);
 
     const res = await axios.post(
-        `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=${API_KEY}`,
+        `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent?key=${API_KEY}`,
         {
         contents: [
             {
@@ -37,9 +35,11 @@ const runAnalysis = async (careerData, skillsMastery, readiness) => {
 
     SetResult(text);
     SetLoading(false);
+    return text; // Return text agar bisa diambil di frontend
     } catch (error) {
     console.error("AI ERROR:", error.response?.data || error.message);
     SetLoading(false);
+    return null;
     }
 
     
