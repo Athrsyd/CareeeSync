@@ -4,6 +4,8 @@ import Notif from "../../assets/Notif.svg";
 import { useState } from 'react';
 import { useUser } from '../../context/UserContext'
 import { useCareer } from '../../context/CareerContext'
+import Skeleton from 'react-loading-skeleton'
+import 'react-loading-skeleton/dist/skeleton.css'
 
 
 const Navbar = () => {
@@ -26,16 +28,25 @@ const Navbar = () => {
                 <img src={Notif} className="w-5" />
                 <div className="w-[1.25px] h-10 ml-2 bg-black/10"></div>
                 <div className="flex flex-col justify-center md:leading-4 lg:leading-2 ml-2 -mt-1">
-                    <h1 className=" md:text-[13px] lg:text-sm font-bold font-montserrat">{user?.username || 'Guest'}</h1>
-                    <h2 className="md:text-[12px] lg:text-[13px] font-semibold font-montserrat text-black/30">
-                        {careerData?.career_name || 'No career selected'}
-                    </h2>
+                    {user? <h1 className=" md:text-[13px] lg:text-sm font-bold font-montserrat">{user?.username}</h1>:<Skeleton width={100} height={10} />}
+                    {careerData?.career_name ? (
+                        <h2 className="md:text-[12px] lg:text-[13px] font-semibold font-montserrat text-black/30">
+                            {careerData?.career_name}
+                        </h2>
+                    ) : (
+                        <Skeleton width={150} height={10} />
+                    )}
                 </div>
-                <div className="md:w-8 lg:w-10 md:h-8 lg:h-10 rounded-4xl ml-3 flex justify-center items-center bg-nav">
-                    <h1 className="text-primary text-lg font-bold flex items-center justify-center h-full">
-                        {user?.username ? user.username[0].toUpperCase() : 'G'}
+                {user?.username ?
+
+                    <div className="md:w-8 lg:w-10 md:h-8 lg:h-10 rounded-4xl ml-3 flex justify-center items-center bg-nav">
+                        <h1 className="text-primary text-lg font-bold flex items-center justify-center h-full">
+                            {user?.username ? user.username[0].toUpperCase() : 'G'}
                         </h1>
-                </div>
+                    </div>
+                    :
+                    <Skeleton circle={true} width={40} height={40} />
+                }
             </div>
         </div>)
 }

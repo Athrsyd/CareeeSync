@@ -15,7 +15,7 @@ ${(skillsMastery || [])
   )
   .join("")}
 
-Readiness Score: ${readiness}%
+Readiness Score: ${readiness.toFixed(0)}%
 
 Tugas kamu:
 Analisis kondisi user berdasarkan data di atas.

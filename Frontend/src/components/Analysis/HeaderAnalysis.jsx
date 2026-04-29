@@ -5,7 +5,7 @@ const HeaderAnalysis = ({ runAnalysis, loading }) => {
     const { setProgress, progress } = useProgress()
 
     const handleStartAnalysis = () => {
-         runAnalysis();
+        runAnalysis();
     }
 
     return (
