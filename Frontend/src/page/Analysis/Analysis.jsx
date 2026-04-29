@@ -63,7 +63,7 @@ const enrichedSkills = useMemo(() => {
             const generatedFeedback = await runAnalysis(careerData, enrichedSkills, readiness);
             
             // Kirim feedback ke backend untuk disimpan via endpoint /feedback
-            const response = await API.post(`/feedback`, {
+            const response = await API.post(`/feedback/${careerData.id}` , {
                 ai_feedback: generatedFeedback,
                 // careerData: careerData,
                 // skillsMastery: enrichedSkills,
