@@ -81,7 +81,7 @@ class UserCareerController extends Controller
             'data' => $userCareer
         ], 200);
     }
-    public function StartAnalysis(string $id,Request $request)
+    public function StartAnalysis(string $id, Request $request)
     {
         $userCareer = UserCareer::find($id);
         if (!$userCareer) {
@@ -126,6 +126,26 @@ class UserCareerController extends Controller
         return response()->json([
             'message' => "AI feedback berhasil diperbarui!",
             'data' => $userCareer
+        ], 200);
+    }
+
+
+    public function getAiFeedback(string $id)
+    {
+
+        $userCareer = UserCareer::find($id);
+        if (!$userCareer) {
+            return response()->json([
+                'message' => "Career tidak ditemukan!"
+            ], 404);
+        }
+
+        return response()->json([
+            'message' => "AI feedback berhasil diambil!",
+            'data' => [
+                'ai_feedback' => $userCareer->ai_feedback, 
+                'ever_analyzed' => $userCareer->ever_analyzed 
+                ]
         ], 200);
     }
 }

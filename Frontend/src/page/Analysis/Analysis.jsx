@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { use } from 'react'
 import { useEffect, useState, useMemo } from 'react';
 import CareerOptions from '../../data/careerOptions.json'
 import Navbar from '../../components/Global/Navbar';
@@ -18,31 +18,31 @@ import API from '../../services/api';
 const Analysis = () => {
     const { readiness, careerData, skillsMastery } = useCareer();
     const { progress } = useProgress();
-    const { runAnalysis, loading: aiLoading } = useAI();
+    const { runAnalysis, loading: aiLoading, getFeedback } = useAI();
     const [analysisStarted, setAnalysisStarted] = useState(false);
     const [feedback, setFeedback] = useState(null);
     const [feedbackLoading, setFeedbackLoading] = useState(false);
-    
+
     console.log("careerData:", careerData);
     console.log("readiness:", readiness);
 
-const enrichedSkills = useMemo(() => {
-    if (!careerData || skillsMastery.length === 0) return [];
+    const enrichedSkills = useMemo(() => {
+        if (!careerData || skillsMastery.length === 0) return [];
 
-    const career = CareerOptions.careers.find(
-        (c) => c.name === careerData.career_name,
-    );
-
-    return skillsMastery.map((sm) => {
-        const foundSkill = career?.skills.find(
-        (s) => String(s.id) === String(sm.skill_id),
+        const career = CareerOptions.careers.find(
+            (c) => c.name === careerData.career_name,
         );
 
-        return {
-        ...sm,
-        name: foundSkill?.name || "Unknown Skill",
-        };
-    });
+        return skillsMastery.map((sm) => {
+            const foundSkill = career?.skills.find(
+                (s) => String(s.id) === String(sm.skill_id),
+            );
+
+            return {
+                ...sm,
+                name: foundSkill?.name || "Unknown Skill",
+            };
+        });
     }, [careerData, skillsMastery]);
 
     console.log("ENRICHED SKILLS:", enrichedSkills);
@@ -50,20 +50,46 @@ const enrichedSkills = useMemo(() => {
     // Fetch feedback dari backend ketika analysis dimulai
     useEffect(() => {
         if (analysisStarted && careerData && enrichedSkills.length > 0) {
-            generateAndSendFeedback();
+
+            getFeedback(careerData.id).then((data) => {
+                if (data) {
+                    setFeedback(data.ai_feedback);
+
+                } else {
+                    setFeedback("Gagal mengambil feedback. Silakan coba lagi.");
+                }
+            });
+            if (!feedback) {
+                generateAndSendFeedback();
+            }
         }
     }, [analysisStarted, careerData, enrichedSkills]);
+
+    useEffect(() => {
+        if (careerData?.id) {
+            getFeedback(careerData.id)
+                .then((data) => {
+                    if (data) {
+                        setAnalysisStarted(data.ever_analyzed);
+                        console.log(data.ever_analyzed)
+                    }
+                })
+                .catch((error) => {
+                    console.error("Error fetching feedback:", error);
+                });
+        }
+    }, [careerData?.id, getFeedback]);
 
     const generateAndSendFeedback = async () => {
         try {
             setFeedbackLoading(true);
             const token = localStorage.getItem('tokenCareerSync');
-            
+
             // Generate feedback dari Gemini (frontend)
             const generatedFeedback = await runAnalysis(careerData, enrichedSkills, readiness);
-            
+
             // Kirim feedback ke backend untuk disimpan via endpoint /feedback
-            const response = await API.post(`/feedback/${careerData.id}` , {
+            const response = await API.post(`/feedback/${careerData.id}`, {
                 ai_feedback: generatedFeedback,
                 // careerData: careerData,
                 // skillsMastery: enrichedSkills,
@@ -74,10 +100,10 @@ const enrichedSkills = useMemo(() => {
                     'Content-Type': 'application/json',
                 }
             });
-            
+
             setFeedback(generatedFeedback);
             console.log("Feedback saved:", response.data);
-            
+
         } catch (error) {
             console.error("Error generating feedback:", error);
             setFeedback("Gagal membuat analisis. Silakan coba lagi.");
@@ -87,19 +113,22 @@ const enrichedSkills = useMemo(() => {
     };
 
     const handleStartAnalysis = async () => {
-        setAnalysisStarted(true);
-        // Feedback akan di-generate & dikirim otomatis melalui useEffect
+
     };
+    const handleRefresh = async () => {
+        await generateAndSendFeedback();
+    }
 
     return (
         <div className='md:ml-20 lg:ml-40 overflow-x-hidden pb-5'>
             <Navbar />
             <div className="wrapper ml-10 mt-5">
-                <HeaderAnalysis 
-                    runAnalysis={() => runAnalysis(careerData, enrichedSkills, readiness)} 
+                <HeaderAnalysis
+                    runAnalysis={() => runAnalysis(careerData, enrichedSkills, readiness)}
                     loading={feedbackLoading}
                     isAnalysisStarted={analysisStarted}
                     onStartAnalysis={handleStartAnalysis}
+                    handleRefresh={handleRefresh}
                 />
                 {analysisStarted && (
                     <>
