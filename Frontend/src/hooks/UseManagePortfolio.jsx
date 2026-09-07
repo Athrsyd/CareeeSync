@@ -25,14 +25,37 @@ const useManagePortfolio = () => {
     }
 
     /**
-     * Build FormData dari object formData.
-     * Field string selalu dikirim (termasuk yang kosong) supaya BE tidak
-     * raise 422 "field required" untuk field yang nullable.
+     * Parse error response dari BE menjadi pesan yang user-friendly.
+     * Menangani: error_code khusus, validation object, string biasa.
      */
+    const parseErrorMessage = (err) => {
+        const data = err.response?.data
+
+        if (!data) return err.message || 'Terjadi kesalahan. Silakan coba lagi.'
+
+        // Error code khusus dari BE
+        if (data.error_code === 'NO_PROJECT') {
+            return '📋 Anda belum bisa membuat portfolio. Kerjakan minimal 1 project terlebih dahulu di menu Project.'
+        }
+        if (data.error_code === 'NO_CAREER') {
+            return '💼 Anda belum bisa membuat portfolio. Silakan lengkapi data karir terlebih dahulu di menu Career.'
+        }
+
+        // Pesan string langsung dari BE
+        if (typeof data.message === 'string') return data.message
+
+        // Validation errors object — ambil pesan pertama
+        if (typeof data.message === 'object') {
+            const first = Object.values(data.message).flat()[0]
+            return first || 'Terjadi kesalahan validasi. Periksa kembali form Anda.'
+        }
+
+        return 'Terjadi kesalahan. Silakan coba lagi.'
+    }
+
     const buildFormData = (formData, includeMethod = null) => {
         const data = new FormData()
 
-        // Field yang wajib selalu terkirim meskipun kosong
         const stringFields = [
             'fullname', 'about_me', 'address', 'education',
             'hobbies', 'experience', 'email', 'phone_number',
@@ -41,11 +64,8 @@ const useManagePortfolio = () => {
         ]
 
         stringFields.forEach(key => {
-            // Kirim string kosong kalau null/undefined, supaya BE tahu field ini ada
             const val = formData[key] ?? ''
-            if (val !== null) {
-                data.append(key, String(val))
-            }
+            data.append(key, String(val))
         })
 
         if (formData.photo && formData.photo instanceof File) {
@@ -78,14 +98,7 @@ const useManagePortfolio = () => {
             setShowSuccess(true)
             return true
         } catch (err) {
-            const msg = err.response?.data?.message
-            if (msg && typeof msg === 'object') {
-                // Validasi errors — ambil pesan pertama dari tiap field
-                const first = Object.values(msg).flat()[0]
-                setError(first || 'Terjadi kesalahan validasi')
-            } else {
-                setError(msg || err.message || 'Gagal membuat portfolio')
-            }
+            setError(parseErrorMessage(err))
             console.error('Error creating portfolio:', err.response?.data || err)
             return false
         } finally {
@@ -122,13 +135,7 @@ const useManagePortfolio = () => {
             setShowSuccess(true)
             return true
         } catch (err) {
-            const msg = err.response?.data?.message
-            if (msg && typeof msg === 'object') {
-                const first = Object.values(msg).flat()[0]
-                setError(first || 'Terjadi kesalahan validasi')
-            } else {
-                setError(msg || err.message || 'Gagal memperbarui portfolio')
-            }
+            setError(parseErrorMessage(err))
             console.error('Error updating portfolio:', err.response?.data || err)
             return false
         } finally {
